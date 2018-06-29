@@ -3,132 +3,186 @@
 class Xhtmltotex{
 
 	public $mapping = array("br.b"=>"\\\\",
-						"br.a"=>"",
-						"em.b"=>"\\textit{",
-						"em.a"=>"}",
-						"strong.b"=>"\\textbf{",
-						"strong.a"=>"}",						
-						"span.b"=>"\\general{",
-						"span.a"=>"}",						
-						"sup.b"=>"\\supskpt{",
-						"sup.a"=>"}"
-					);
+		"br.a"=>"",
+		"em.b"=>"\\textit{",
+		"em.a"=>"}",
+		"strong.b"=>"\\textbf{",
+		"strong.a"=>"}",						
+		"span.b"=>"\\general{",
+		"span.a"=>"}",						
+		"sup.b"=>"\\supskpt{",
+		"sup.a"=>"}",
+		"tr.b"=>"",
+		"tr.a"=>"\\\\",
+		"td.b"=>"",
+		"td.a"=>"",		
+		"th.b"=>"\\textbf{",
+		"th.a"=>"}",
+		"li.b"=>"\\item ",
+		"li.a"=>"",		
+		"small.b"=>"{\\small ",
+		"small.a"=>"}"	
+		);
 
 	public $attrMapping = array(
-						"text-center.b" => "\n\\begin{center}\n",
-						"text-center.a" => "\n\\end{center}\n",
-						"title.b" => "\\bookTitle{",
-						"title.a" => "}\n",
-						"titleauthor.b" => "\\titleauthor{",
-						"titleauthor.a" => "}",
-						"text-right.b" => "\n\\begin{flushright}\n",
-						"text-right.a" => "\n\\end{flushright}\n",
-						"text-left.b" => "\n\\begin{flushleft}\n",
-						"text-left.a" => "\n\\end{flushleft}\n",
-						"level1-title.b" => "\\chapter{",
-						"level1-title.a" => "}",
-						"level2-title.b" => "\\section{",
-						"level2-title.a" => "}",
-						"level3-title.b" => "\\subsection{",
-						"level3-title.a" => "}",
-						"level4-title.b" => "\\subsubsection{",
-						"level4-title.a" => "}",						
-						"level5-title.b" => "\\paragraph{",
-						"level5-title.a" => "}",						
-						"en.b" => "\\eng{",
-						"en.a" => "}",
-					);
+		"text-center.b" => "\n\\begin{center}\n",
+		"text-center.a" => "\n\\end{center}\n",
+		"title.b" => "\\bookTitle{",
+		"title.a" => "}\n",
+		"titleauthor.b" => "\\titleauthor{",
+		"titleauthor.a" => "}",
+		"text-right.b" => "\n\\begin{flushright}\n",
+		"text-right.a" => "\n\\end{flushright}\n",
+		"text-left.b" => "\n\\begin{flushleft}\n",
+		"text-left.a" => "\n\\end{flushleft}\n",
+		"level1-title.b" => "\\chapter{",
+		"level1-title.a" => "}",
+		"level2-title.b" => "\\section{",
+		"level2-title.a" => "}",
+		"level3-title.b" => "\\subsection{",
+		"level3-title.a" => "}",
+		"level4-title.b" => "\\subsubsection{",
+		"level4-title.a" => "}",						
+		"level5-title.b" => "\\paragraph{",
+		"level5-title.a" => "}",						
+		"en.b" => "\\eng{",
+		"en.a" => "}",						
+		"vertical-delimiter.b" => "\\delimiter",
+		"vertical-delimiter.a" => "",						
+		"footnote-head.b" => "\\section*{",
+		"footnote-head.a" => "}",
+		"noindent.b" => "\\noindent\n",
+		"noindent.a" => "",
+		"num.b"=>"\\num{",
+		"num.a"=>"}",
+		"myquote.b" => "\n\\begin{myquote}\n",
+		"myquote.a" => "\n\\end{myquote}\n",						
+		"verse.b" => "\n\\begin{verse}\n",
+		"verse.a" => "\n\\end{verse}\n",
+		"quote-author.b" => "\n\\begin{flushright}\n",
+		"quote-author.a" => "\n\\end{flushright}\n",
+		"itemize.b" => "\n\\begin{itemize}\n",
+		"itemize.a" => "\n\\end{itemize}\n",									
+		"enumerate.b" => "\n\\begin{enumerate}\n",
+		"enumerate.a" => "\n\\end{enumerate}\n",
+		"verse-num.b"=>"\\versenum{",
+		"verse-num.a"=>"}"											
+		);
 
 	public $footnotes = array();
 
-	public function __construct() {
+	public function __construct($id) {
 
-		$this->loadFootnotes();
+		$this->loadFootnotes($id);
 		// var_dump($this->footnotes);
 	}
 
-	public function loadFootnotes(){
+	public function loadFootnotes($id){
 
-		$footNoteFile = $this->getFootNoteFile(); 
+		$footNoteFile = $this->getFootNoteFile($id); 
 
 		if($footNoteFile == '') return;
 
 		$dom = new DOMDocument();
 		libxml_use_internal_errors(true);
-		$dom->loadHTMLFile($footNoteFile);
+		if(!$dom->loadHTMLFile($footNoteFile))
+			echo "not able to open the file\n";
 
-		$asideElements = $dom -> getElementsByTagName( "aside" );
+		$asideElements = $dom->getElementsByTagName("aside");
+		// var_dump($asideElements);
 
 		if (!is_null($asideElements)) {
-		  foreach ($asideElements as $aside) {
-		    // echo "\n". $aside->nodeName. ": ";
 
-		  	$idValue = $aside->getAttribute('id'); 
+			foreach ($asideElements as $aside) {
+				// echo "\n". $aside->nodeName. ": ";
 
-		    $nodes = $aside->childNodes;
-		    foreach ($nodes as $node) {
-				 // echo "\n". $node->nodeName. ": ";
-		    	if (preg_match('/p|div/', $node->nodeName))
-			    	$node = $this->deleteFirstchildOrChar($node);
-		      	if (preg_match('/p|div/', $node->nodeName)) 
-		  			$this->footnotes[$idValue] = $this->parseParaElement($node); 
-		    	}
-		  	}
+				$idValue = $aside->getAttribute('id'); 
+
+				$nodes = $aside->childNodes;
+				$count = 0;
+				foreach ($nodes as $node) {
+					
+					// echo "\n". $node->nodeName. ": ";
+					// if (preg_match('/p|div/', $node->nodeName))
+					if($node->nodeName != '#text')
+						$node = $this->deleteFirstchildOrChar($node);
+					if (preg_match('/p|div/', $node->nodeName)) {
+						if($count > 0)	$this->footnotes[$idValue] .= "\n\n" . rtrim($this->parseBlockElement($node)); 
+						else $this->footnotes[$idValue] = rtrim($this->parseBlockElement($node));
+					}
+
+					$count++;
+				}
+			}
 		}
 	}
 
-	public function deleteFirstchildOrChar($node){
+	public function deleteFirstchildOrChar($blockElement){
 
-		$firstChild = $node->childNodes->item(0);
-		if($firstChild->nodeName == '#text'){
+		// echo "\n\nft" . $blockElement->nodeName . "ft\n\n";
 
-			$node->childNodes->item(0)->nodeValue = substr($firstChild->nodeValue, 1); 
+		$nodes = $blockElement->childNodes;
+
+		foreach ($nodes as $node) {
+
+			$attributes = $this->getAttributesForElement($node);
+			// var_dump($attributes);
+
+			if($attributes['class'][0] == 'ftmark')
+				$blockElement->removeChild($node);
+
 		}
-		else{
 
-			$node->removeChild($firstChild); 
-		}
-
-		// echo "\t --> " . $node->nodeName . ' -> ' . $node->nodeValue . "\n";
-
-		return $node; 
+		return $blockElement; 
 	}
 
-	public function getFootNoteFile(){
+	public function getFootNoteFile($id){
 
-		$xhtmlFiles = $this->getXhtmlFiles();
+		$xhtmlFiles = $this->getXhtmlFiles($id);
 		$footNoteFile = preg_grep("/.*\/999-.*\.xhtml/", $xhtmlFiles);
 
 		if(empty(array_filter($footNoteFile))) return '';
 		else {
-			
+
 			foreach ($footNoteFile as $file) {
 				return $file;
 			}	
 		}
 	}
 
-	public function getXhtmlFiles() {
+	public function getXhtmlFiles($id) {
 
 		$allFiles = [];
-		
-		$folderPath = '/home/sriranga/projects/Nagpur_Ashram_ebook/unicode-src/H002/';
-		
-	    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($folderPath));
 
-	    foreach($iterator as $file => $object) {
-	    	
-	    	if(preg_match('/.*\/\d+.*\.xhtml$/',$file)) array_push($allFiles, $file);
-	    }
+		$folderPath = UNICODE_SRC . $id;
 
-	    sort($allFiles);
+		$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($folderPath));
+
+		foreach($iterator as $file => $object) {
+
+			if(preg_match('/.*\/\d+.*\.xhtml$/',$file)) array_push($allFiles, $file);
+		}
+
+		sort($allFiles);
 
 		return $allFiles;
 	}	
 
-	public function processFiles($xhtmlFiles){
+	public function processFiles($id,$xhtmlFiles){
 
-		$ouputDir = 'output/src/';
+		$ouputDir = TEXOUT . $id . '/src/';
+
+		if (!file_exists(TEXOUT . $id)) {
+
+			mkdir(TEXOUT . $id, 0775);
+			echo "Directory " . $id . " is created in TeX folder\n";
+
+			if (!file_exists(TEXOUT . $id . '/src/')) {
+
+				mkdir(TEXOUT . $id . '/src/', 0775);
+				echo "src folder created in " . $id . " folder\n";
+			}
+		}
 
 		foreach ($xhtmlFiles as $xhtmlFile) {		
 
@@ -167,17 +221,17 @@ class Xhtmltotex{
 		// var_dump($bodyTag);
 
 		if (!is_null($bodyTag)) {
-		 
-		  foreach ($bodyTag as $element) {
 
-		    // echo "<br/>". $element->nodeName. ": ";
-		    $nodes = $element->childNodes;
-		    foreach ($nodes as $node) {
+			foreach ($bodyTag as $element) {
 
-		      if($node->nodeName == 'section')
-		      	$data = $data . $this->parseSectionElement($node);
-		    }
-		  }
+				// echo "<br/>". $element->nodeName. ": ";
+				$nodes = $element->childNodes;
+				foreach ($nodes as $node) {
+
+					if($node->nodeName == 'section')
+						$data = $data . $this->parseSectionElement($node);
+				}
+			}
 		}
 
 		if($data != '') 
@@ -188,20 +242,28 @@ class Xhtmltotex{
 
 	public function parseSectionElement($section){
 
+		// echo "\t --> " . $section->nodeName . "\n";
 		$lines = '';
- 	  	$nodes = $section->childNodes;
+		$nodes = $section->childNodes;
 
 		if (!is_null($nodes)) {
 
-		  foreach ($nodes as $node) {
+			foreach ($nodes as $node) {
 
-		  	if($node->nodeName == 'img')
-		  		$lines = $lines . "\n" . $this->parseImgElement($node);
-		  	elseif (preg_match('/h[1-6]|p/', $node->nodeName)) 
-		  		$lines = $lines . "\n" . $this->parseBlockElement($node); 
-  		    }
+				if($node->nodeName == 'img')
+					$lines = $lines . "\n" . $this->parseImgElement($node);
+				elseif($node->nodeName == 'section')
+					$lines = $lines . "\n\n" . $this->parseSectionElement($node);
+				elseif (preg_match('/h[1-6]|p|ul|ol/', $node->nodeName)) 
+					$lines = $lines . "\n" . $this->parseBlockElement($node);
+				elseif($node->nodeName == 'table')
+					$lines = $lines . "\n\n" . $this->parseTableElement($node);		  		 
+				elseif($node->nodeName != '#text'){
+					// echo "\t --> " . $node->nodeName . "\n";
+				}
+			}
 
-  		    $lines = $lines . "\n";
+			$lines = $lines . "\n";
 		}	
 
 		if($lines != '') 
@@ -219,6 +281,7 @@ class Xhtmltotex{
 
 		foreach ($attributes as $key => $value) {
 			
+			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if(in_array('hide', $value)) return ;			
 		}
 
@@ -227,32 +290,180 @@ class Xhtmltotex{
 
 		if (!is_null($nodes)) {
 
-		  foreach ($nodes as $node) {
+			foreach ($nodes as $node) {
 
-		  	if($node->nodeName != '#text')
-				$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
-			else
-				$line .= $node->nodeValue;				
-			  	// echo "\t --> " . $node->nodeName . " ";
-		  }
+				// echo $node->nodeName . "\n";
 
-		  if($attributes){
+				if($node->nodeName != '#text'){
 
-		  	foreach ($attributes as $key => $values) {
-
-		  		foreach($values as $value)
-			  		$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+					if( ($node->nodeName == 'span') || ($node->nodeName == 'sup') )
+						$line .= $this->parseInlineElement($node);				
+					else if( ($node->nodeName == 'li') )
+						$line .= "\\item " . $this->parseBlockElement($node);				
+					else{
+			
+						$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
+						// echo "\t --> " . $line . "\n";
+					}
+				}
+				else{
+						
+					$line .= $node->nodeValue;				
+					// echo $node->nodeValue . "\t --> " . $node->nodeName . "\n";
+				}
 			}
-		}
 
-		  $line = $this->generalReplacements($line);
-		  $line .= "\n";
-		  //echo "\t --> " . $line . "\n";
-		  
-		  return $line;
+			if($attributes){
+
+				foreach ($attributes as $key => $values) {
+
+					foreach($values as $value)
+						$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+				}
+			}
+
+			$line = $this->generalReplacements($line);
+			$line .= "\n";
+			// echo "\t --> " . $line . "\n";
+
+			return $line;
 		}
 
 		return '';
+	}
+
+	public function parseInlineElement($inlineNode){
+
+		$inlineNodeName = $inlineNode->nodeName;
+		// echo $inlineNodeName . "\n";
+
+		$attributes = $this->getAttributesForElement($inlineNode);
+		// var_dump($attributes);
+
+		if(array_key_exists('href', $attributes)){
+
+			$footNoteText = $this->getFootNoteText($attributes);
+			// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
+		}
+
+		$tmpString = '';
+
+		$nodes = $inlineNode->childNodes;
+		// var_dump($nodes);
+		if (!is_null($nodes)) {
+
+			foreach ($nodes as $node) {
+
+				if($node->nodeName != '#text'){
+					
+					// echo $node->nodeName . "\n";
+					if($node->nodeName != 'a')
+						$tmpString .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
+					else
+						$tmpString .= $this->parseInlineElement($node);	
+				}
+				else{
+
+					if($node->nodeName != 'a')
+						$tmpString .= $node->nodeValue;
+					// echo $tmpString . "-->" . $node->nodeName . "\n";
+				}
+			}
+		}
+
+		if($attributes){
+			// var_dump($attributes);
+			// echo 'HH'. "->" . $node->nodeName . "\n";	
+			foreach ($attributes as $key => $values) {
+
+				// echo "\t --> " . $key . ' -> ' . "\n";
+				foreach($values as $value){
+					
+					// echo "\t --> " . $key . ' -> ' . $value . "\n";
+					if($key == 'href'){
+						$tmpString = '\footnote{' . $footNoteText . '}';
+						// echo $tmpString . "\n";
+					}
+					else{
+
+						// echo "\t --> " . $key . ' -> ' . $value . "\n";
+						$tmpString = $this->attrMapping[$value . ".b"] . $tmpString . $this->attrMapping[$value . ".a"];
+						// echo $tmpString . "-->" . $node->nodeName . "\n";
+
+					}
+				}
+			}
+		}
+
+		// echo "\n.." . $tmpString . "..\n";
+		return $tmpString;
+	}
+
+
+	public function parseTableElement($tableElement){
+
+		// echo $tableElement->nodeName . "\n";
+
+		$attributes = $this->getAttributesForElement($tableElement);
+		// var_dump($attributes);
+
+		foreach ($attributes as $key => $value) {
+			
+			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
+			if(in_array('hide', $value)) return ;			
+		}
+
+		$nodes = $tableElement->childNodes;
+
+		if($attributes['data-tex'])
+			$line = '\begin{tabular}{'. $attributes['data-tex'][0] .'}' . "\n";
+		else
+			$line = '\begin{tabular}{}';
+
+		if (!is_null($nodes)) {
+
+			foreach ($nodes as $node) {
+
+				// echo $node->nodeName . "\n";	
+				if( ($node->nodeName == 'tr') ) {
+					$trValue = $this->parseTrElement($node);
+					$trValue = preg_replace("/&\s$/", '', $trValue);
+					$line .=  $trValue . '\\\\' . "\n";
+				}
+			}
+		}
+
+		$line .= '\\end{tabular}' . "\n";
+		return $line;
+	}	
+
+	public function parseTrElement($trElement){
+
+		// echo $trElement->nodeName . "\n";
+
+		$attributes = $this->getAttributesForElement($trElement);
+		// var_dump($attributes);
+
+		foreach ($attributes as $key => $value) {
+			
+			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
+			if(in_array('hide', $value)) return ;			
+		}
+
+		$nodes = $trElement->childNodes;		
+		$line = '';		
+
+		if (!is_null($nodes)) {
+
+			foreach ($nodes as $node) {
+
+				// echo $node->nodeName . "\n";	
+				if( ($node->nodeName == 'td') || ($node->nodeName == 'th') )
+					$line .= $this->mapping[$node->nodeName . ".b"] . $node->nodeValue . $this->mapping[$node->nodeName . ".a"] . ' & ';
+			}
+		}
+
+		return $line;		
 	}
 
 	public function parseImgElement($imgNode){
@@ -271,76 +482,6 @@ class Xhtmltotex{
 		// echo "\t --> " . $line . "\n";
 	} 
 
-	public function parseInlineElement($inlineNode){
-
-		$inlineNodeName = $inlineNode->nodeName;
-		// echo $inlineNodeName . "\n";
-
-		$attributes = $this->getAttributesForElement($inlineNode);
-
-		if(array_key_exists('href', $attributes)){
-
-			$footNoteText = $this->getFootNoteText($attributes);
-			// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
-		}
-
-		$tmpString = '';
-
-		$nodes = $inlineNode->childNodes;
-
-		if (!is_null($nodes)) {
-		  foreach ($nodes as $node) {
-
-		  	if($node->nodeName != '#text'){
-				// echo $node->nodeName . "\n";
-				// $tmpString .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
-		  		if($node->nodeName != 'a')
-					$tmpString .= $this->mapping[$node->nodeName . ".b"]; 
-	
-				$inLine = $this->parseInlineElement($node);
-
-				  if($attributes){
-				  	// echo 'HH';	
-				  	foreach ($attributes as $key => $values) {
-				  			// echo "\t --> " . $key . ' -> ' . "\n";
-					  		foreach($values as $value){
-					  			if($key == 'href')
-									$inLine = '\footnote{' . $footNoteText . '}';
-						  		else
-							  		$inLine = $this->attrMapping[$value . ".b"] . $inLine . $this->attrMapping[$value . ".a"];
-					  		}
-						}
-					}
-
-				$tmpString .= $inLine;	
-
-		  		if($node->nodeName != 'a')
-					$tmpString .=  $this->mapping[$node->nodeName . ".a"];	
-		  	}
-			else{
-
-					$inLine = $node->nodeValue;
-
-				  if($attributes){
-				  	// echo 'HH';	
-				  	foreach ($attributes as $key => $values) {
-				  		  		
-			  		  		foreach($values as $value){
-			  		  			if($key == 'href')
-			  						$inLine = '\footnote{' . $footNoteText . '}';
-			  			  		else
-			  				  		$inLine = $this->attrMapping[$value . ".b"] . $inLine . $this->attrMapping[$value . ".a"];
-			  		  		}
-						}
-					}
-
-				$tmpString .= $inLine;
-			}
-		  }
-		}
-
-		return $tmpString;
-	}
 
 	public function getAttributesForElement($element){
 
@@ -350,12 +491,12 @@ class Xhtmltotex{
 
 		for ($i = 0; $i < $length; ++$i) {
 
-		    $name = $element->attributes->item($i)->name;
-		    
-		    if(!preg_match('/epub:type|alt/',$name)){
-			 
-			    $value = $element->getAttribute($name);
-			    $attrs[$name] = preg_split('/ /', $value);
+			$name = $element->attributes->item($i)->name;
+
+			if(!preg_match('/epub:type|alt/',$name)){
+
+				$value = $element->getAttribute($name);
+				$attrs[$name] = preg_split('/ /', $value);
 			}
 		}
 
@@ -381,7 +522,13 @@ class Xhtmltotex{
 		$data = preg_replace("/[\t ]+/", " ", $data);		
 		$data = preg_replace("/\\\\begin\{(.*?)\}\n *\n/u", '\begin{' . "$1" . "}\n", $data);
 		$data = preg_replace("/\n *\n\\\\end\{(.*?)\}/u", "\n" . '\end{' . "$1" . "}", $data);
-		$data = preg_replace("/(\\\\\\\\)(\\\\)/u", "$1" . "\n" . "$2", $data);
+		$data = preg_replace("/(\\\\\\\\)/u", "$1", $data);
+		// $data = str_replace("/(\\\\\\\\)/u", "$1", $data);
+		$data = str_replace('\\\\', '\\', $data);
+		$data = str_replace('\\\\', '\\', $data);
+		$data = preg_replace("/\\\\chapter\{\\\\num\{.*?\} *(.*)\}/u", '\chapter{' . "$1" . "}", $data);
+		$data = preg_replace("/ ([?!;:,.])/u", "$1", $data);
+		$data = preg_replace("/&/u", "\\\\&", $data);
 
 		return $data;
 	}
@@ -393,11 +540,11 @@ class Xhtmltotex{
 
 	public function parseHeadingElement($headingNode){
 
-		echo $headingNode->nodeName . "\n";
+		// echo $headingNode->nodeName . "\n";
 		$attributes = $this->getAttributesForElement($headingNode);
 
 		foreach ($attributes as $key => $value) {
-			
+
 			if(in_array('hide', $value)) return ;			
 		}
 
@@ -407,27 +554,27 @@ class Xhtmltotex{
 
 		if (!is_null($nodes)) {
 
-		  foreach ($nodes as $node) {
+			foreach ($nodes as $node) {
 
-		  	if($node->nodeName != '#text')
-				$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
-			else
-				$line .= $node->nodeValue;				
-			  	// echo "\t --> " . $node->nodeName . " ";
-		    }
+				if($node->nodeName != '#text')
+					$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
+				else
+					$line .= $node->nodeValue;				
+				// echo "\t --> " . $node->nodeName . " ";
+			}
 		}  
-	
+
 		if($attributes){
 
-		  	foreach ($attributes as $key => $values) {
+			foreach ($attributes as $key => $values) {
 
-		  		foreach($values as $value)
-			  		$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
-		  	}
+				foreach($values as $value)
+					$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+			}
 		}
 
-		  $line = $this->generalReplacements($line);
-		  echo "\t --> " . $line . "\n";
+		$line = $this->generalReplacements($line);
+		// echo "\t --> " . $line . "\n";
 	}
 
 	public function parseParaElement($paragraph){
@@ -442,27 +589,27 @@ class Xhtmltotex{
 
 		if (!is_null($nodes)) {
 
-		  foreach ($nodes as $node) {
+			foreach ($nodes as $node) {
 
-		  	if($node->nodeName != '#text')
-				$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
-			else
-				$line .= $node->nodeValue;				
-			  	// echo "\t --> " . $node->nodeName . " ";
-		  }
-
-		  if($attributes){
-
-		  	foreach ($attributes as $key => $values) {
-
-		  		foreach($values as $value)
-			  		$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+				if($node->nodeName != '#text')
+					$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
+				else
+					$line .= $node->nodeValue;				
+				// echo "\t --> " . $node->nodeName . " ";
 			}
-		}
 
-		  $line = $this->generalReplacements($line);
-		  return $line;
-		  // echo "\t --> " . $line . "\n";
+			if($attributes){
+
+				foreach ($attributes as $key => $values) {
+
+					foreach($values as $value)
+						$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+				}
+			}
+
+			$line = $this->generalReplacements($line);
+			return $line;
+			// echo "\t --> " . $line . "\n";
 		}
 	}
 
