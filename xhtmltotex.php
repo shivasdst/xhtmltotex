@@ -66,10 +66,21 @@ class Xhtmltotex{
 		"enumerate.b" => "\n\\begin{enumerate}\n",
 		"enumerate.a" => "\n\\end{enumerate}\n",
 		"verse-num.b"=>"\\versenum{",
-		"verse-num.a"=>"}"											
+		"verse-num.a"=>"}",		
+		"bibliography.b"=>"\\begin{thebibliography}{99}\n",
+		"bibliography.a"=>"\\end{thebibliography}\n",		
+		"bibitem.b"=>"\\bibitem{",
+		"bibitem.a"=>"}",		
+		"publisher.b"=>"\\publisher{",
+		"publisher.a"=>"}",		
+		"place.b"=>"\\place{",
+		"place.a"=>"}"											
 		);
 
 	public $footnotes = array();
+
+	public $numbered = True;
+	public $bibliography = False;
 
 	public function __construct($id) {
 
@@ -125,10 +136,10 @@ class Xhtmltotex{
 
 		foreach ($nodes as $node) {
 
-			$attributes = $this->getAttributesForElement($node);
-			// var_dump($attributes);
-
-			if($attributes['class'][0] == 'ftmark')
+			if($node->nodeName !='#text')
+				$attributes = $this->getAttributesForElement($node);
+	
+			if(isset($attributes['class']) && ($attributes['class'][0] == 'ftmark'))
 				$blockElement->removeChild($node);
 
 		}
@@ -176,12 +187,12 @@ class Xhtmltotex{
 
 			mkdir(TEXOUT . $id, 0775);
 			echo "Directory " . $id . " is created in TeX folder\n";
+		}
 
-			if (!file_exists(TEXOUT . $id . '/src/')) {
+		if (!file_exists(TEXOUT . $id . '/src/') && file_exists(TEXOUT . $id) ) {
 
-				mkdir(TEXOUT . $id . '/src/', 0775);
-				echo "src folder created in " . $id . " folder\n";
-			}
+			mkdir(TEXOUT . $id . '/src/', 0775);
+			echo "src folder created in " . $id . " folder\n";
 		}
 
 		foreach ($xhtmlFiles as $xhtmlFile) {		
@@ -195,9 +206,14 @@ class Xhtmltotex{
 
 			$data = $this->xhtmlToTeX($xhtmlFile);
 
+			if(preg_match('/.*\/(000a-title\.xhtml|000b-copyright\.xhtml)$/', $xhtmlFile)) 
+				$data = "\\thispagestyle{empty}\n" . $data;
+
 			// var_dump($data);
 			if($data != ''){
-
+				
+				$data = preg_replace("/ *\n *\n *\n/u", "\n\n", $data);
+				$data = preg_replace("/ *\n *\n *\n/u", "\n\n", $data);
 				file_put_contents($texFile, $data);
 			}
 			else{
@@ -246,14 +262,22 @@ class Xhtmltotex{
 		$lines = '';
 		$nodes = $section->childNodes;
 
+		$attributes = $this->getAttributesForElement($section);
+		$this->numbered = (isset($attributes['class']) && in_array('numbered', $attributes['class']))? True : False;
+
 		if (!is_null($nodes)) {
 
 			foreach ($nodes as $node) {
 
 				if($node->nodeName == 'img')
 					$lines = $lines . "\n" . $this->parseImgElement($node);
-				elseif($node->nodeName == 'section')
+				elseif($node->nodeName == 'section'){
+
+					$attributes = $this->getAttributesForElement($node);
+					$this->numbered = (isset($attributes['class']) && in_array('numbered', $attributes['class']))? True : False;
+					// echo $node->nodeName . "->\t->" . $this->numbered . "\n";
 					$lines = $lines . "\n\n" . $this->parseSectionElement($node);
+				}
 				elseif (preg_match('/h[1-6]|p|ul|ol/', $node->nodeName)) 
 					$lines = $lines . "\n" . $this->parseBlockElement($node);
 				elseif($node->nodeName == 'table')
@@ -278,12 +302,25 @@ class Xhtmltotex{
 		// echo $blockElement->nodeName . "\n";
 
 		$attributes = $this->getAttributesForElement($blockElement);
+		$blockElementId = '';
+
+		// var_dump($attributes);	
 
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if(in_array('hide', $value)) return ;			
+			if(in_array('bibliography', $value)) $this->bibliography = True;			
+			if($key == 'id') $blockElementId = $value[0];			
 		}
+
+		if(isset($attributes['id'])) unset($attributes['id']);
+
+		if( isset($attributes['data-tex']) && $blockElement->nodeName == 'p' ){
+
+			return $blockElement->nodeValue . "\n";
+		}
+
 
 		$nodes = $blockElement->childNodes;
 		$line = '';
@@ -299,7 +336,7 @@ class Xhtmltotex{
 					if( ($node->nodeName == 'span') || ($node->nodeName == 'sup') )
 						$line .= $this->parseInlineElement($node);				
 					else if( ($node->nodeName == 'li') )
-						$line .= "\\item " . $this->parseBlockElement($node);				
+						$line .=  $this->parseBlockElement($node);				
 					else{
 			
 						$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
@@ -317,13 +354,46 @@ class Xhtmltotex{
 
 				foreach ($attributes as $key => $values) {
 
-					foreach($values as $value)
-						$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+					foreach($values as $value){
+
+						if( !($this->numbered) && preg_match('/h[1-6]/', $blockElement->nodeName)){
+							
+							$line = str_replace('{', '*{', $this->attrMapping[$value . ".b"]) . $line . $this->attrMapping[$value . ".a"];
+							// echo "$line\n";
+						}
+						elseif($blockElement->nodeName == 'li'){
+ 							
+ 							if( ($blockElementId != '') && $this->bibliography)
+								$line = $this->attrMapping[$value . ".b"] . $blockElementId . $this->attrMapping[$value . ".a"] . " " . $line;
+							else
+								$line = "\\item " . $line;		
+
+							echo "\n-->" . $line . "<--\n";								
+						}
+						else{
+
+							$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+						}
+					}
 				}
 			}
 
+			if (preg_match('/h[1-6]/', $blockElement->nodeName)) {
+
+				// echo "h[1-h6]->" . $line . "\n";
+				$line = preg_replace("/\\\\footnote/", '\protect\footnote', $line);
+			}
+
+			if( ($blockElement->nodeName == 'li') && !($attributes))
+				$line = "\\item " . $line;
+
+			if( ($blockElement->nodeName == 'ol') && ($this->bibliography) )
+				$this->bibliography = False;
+
 			$line = $this->generalReplacements($line);
 			$line .= "\n";
+			
+
 			// echo "\t --> " . $line . "\n";
 
 			return $line;
@@ -337,15 +407,22 @@ class Xhtmltotex{
 		$inlineNodeName = $inlineNode->nodeName;
 		// echo $inlineNodeName . "\n";
 
-		$attributes = $this->getAttributesForElement($inlineNode);
-		// var_dump($attributes);
+		if($inlineNode->nodeName != '#text'){
+			$attributes = $this->getAttributesForElement($inlineNode);
+			// var_dump($attributes);
 
-		if(array_key_exists('href', $attributes)){
+			if(array_key_exists('href', $attributes)){
 
-			$footNoteText = $this->getFootNoteText($attributes);
-			// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
+				$footNoteText = $this->getFootNoteText($attributes);
+				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
+			}
+
+			if( isset($attributes['data-tex']) && $inlineNode->nodeName == 'span' ){
+				// var_dump($attributes['data-tex'][0]);
+				// echo "\t data-tex -> " . $attributes['data-tex'][0] . "\n";
+				return $attributes['data-tex'][0];
+			}
 		}
-
 		$tmpString = '';
 
 		$nodes = $inlineNode->childNodes;
@@ -415,7 +492,7 @@ class Xhtmltotex{
 
 		$nodes = $tableElement->childNodes;
 
-		if($attributes['data-tex'])
+		if(isset($attributes['data-tex']))
 			$line = '\begin{tabular}{'. $attributes['data-tex'][0] .'}' . "\n";
 		else
 			$line = '\begin{tabular}{}';
@@ -485,9 +562,13 @@ class Xhtmltotex{
 
 	public function getAttributesForElement($element){
 
-		// echo "\t --> " . $element->nodeName . "\n";
-		$length = $element->attributes->length;
+		// echo "\t Attr --> " . $element->nodeName . " Attr\n";
+
 		$attrs = array();
+
+		// if($element->nodeName == '#text') return ;
+
+		$length = $element->attributes->length;
 
 		for ($i = 0; $i < $length; ++$i) {
 
@@ -522,13 +603,16 @@ class Xhtmltotex{
 		$data = preg_replace("/[\t ]+/", " ", $data);		
 		$data = preg_replace("/\\\\begin\{(.*?)\}\n *\n/u", '\begin{' . "$1" . "}\n", $data);
 		$data = preg_replace("/\n *\n\\\\end\{(.*?)\}/u", "\n" . '\end{' . "$1" . "}", $data);
-		$data = preg_replace("/(\\\\\\\\)/u", "$1", $data);
+		// $data = preg_replace("/(\\\\\\\\)/u", "$1", $data);
 		// $data = str_replace("/(\\\\\\\\)/u", "$1", $data);
-		$data = str_replace('\\\\', '\\', $data);
-		$data = str_replace('\\\\', '\\', $data);
+		$data = str_replace("\\\\\\\\", '\\\\', $data);
+		$data = str_replace("\\\\\\\\", '\\\\', $data);
+		$data = preg_replace('/\\\\\\\\\n\\\\end\{(.*?)\}/u', "\n" . '\end{' . "$1" . "}", $data);
+		// $data = str_replace('\\\\', '\\', $data);
 		$data = preg_replace("/\\\\chapter\{\\\\num\{.*?\} *(.*)\}/u", '\chapter{' . "$1" . "}", $data);
 		$data = preg_replace("/ ([?!;:,.])/u", "$1", $data);
-		$data = preg_replace("/&/u", "\\\\&", $data);
+		$data = str_replace("&", "\&", $data);
+		$data = str_replace("\\\\&", "\&", $data);
 
 		return $data;
 	}

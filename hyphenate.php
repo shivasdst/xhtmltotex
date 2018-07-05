@@ -52,7 +52,30 @@ class Hyphenate{
 
 		$hyphenatedWords = $this->hyphenateWords($words);
 
+		$this->dumpJunk($words);
+
 		$this->printDictionary($id,$hyphenatedWords);
+
+	}
+
+	public function dumpJunk($wordsList){
+
+		foreach($wordsList as $word){
+
+			$word = str_replace('-', '', $word);
+
+			$characters = preg_split('//u', $word, -1, PREG_SPLIT_NO_EMPTY);
+	
+			// echo $word . "\n";
+
+			foreach ($characters as $character) {
+				
+				if(!((ord($character) >= ord('ಁ')) && (ord($character) <= ord('ೲ'))))
+					echo "$word\t -> " . $character . "\n";
+			}
+
+		}
+
 
 	}
 
@@ -79,52 +102,54 @@ class Hyphenate{
 		{
 			
 			//~ echo $wordsList[$i] . "\n";
-			$word = preg_replace("/($syllable)/", "$1-", $word);
-			$word = preg_replace("/(.*?)-$/", "$1", $word);
-			$word = preg_replace("/-ಂ/", "ಂ-", $word);
-			$word = preg_replace("/-ಃ/", "ಃ-", $word);
-			$word = preg_replace("/^(.*?)-(.*)$/","$1$2",$word);
-			$word = preg_replace("/^(.*)-(.*)$/","$1$2",$word);
-			$word = str_replace('--','-',$word);
-			$word = str_replace('--','-',$word);
+			// $word = preg_replace("/($syllable)/", "$1-", $word);
+			// $word = preg_replace("/(.*?)-$/", "$1", $word);
+			// $word = preg_replace("/-ಂ/", "ಂ-", $word);
+			// $word = preg_replace("/-ಃ/", "ಃ-", $word);
+			// $word = preg_replace("/^(.*?)-(.*)$/","$1$2",$word);
+			// $word = preg_replace("/^(.*)-(.*)$/","$1$2",$word);
+			// $word = str_replace('--','-',$word);
+			// $word = str_replace('--','-',$word);
 
 			$word = preg_replace("/^-/","",$word);
 
-			$word = str_replace('ಗ-ಳಲ್ಲಿ','ಗಳಲ್ಲಿ',$word);
-			$word = str_replace('ಗ-ಳನ್ನೂ','ಗಳನ್ನೂ',$word);
-			$word = str_replace('ಗ-ಳನ್ನು','ಗಳನ್ನು',$word);
-			$word = str_replace('ಗ-ಳಿಂದ','ಗಳಿಂದ',$word);
-			$word = str_replace('ಗ-ಳ-ನ್ನೆಲ್ಲ','ಗಳನ್ನೆಲ್ಲ',$word);
-			$word = str_replace('ಲಾ-ಗಿದೆ','ಲಾಗಿದೆ',$word);
-			$word = str_replace('ಮಾ-ನವ','ಮಾನವ',$word);
-			$word = str_replace('ಸಂ-ನ್ಯಾಸಿ','ಸಂನ್ಯಾಸಿ',$word);
-			$word = str_replace('ವಿವೇ-ಕಾ-ನಂದ','ವಿವೇಕಾನಂದ',$word);
-			$word = str_replace('ವಿವೇ-ಕಾ-ನಂ-ದ','ವಿವೇಕಾನಂದ',$word);
-			$word = str_replace('ವು-ದನ್ನು','ವುದನ್ನು',$word);
-			$word = str_replace('ಯಾ-ಗಿ-ದ್ದಾನೆ','ಯಾಗಿದ್ದಾನೆ',$word);
-			$word = str_replace('ಯಾ-ಗಿಯೂ','ಯಾಗಿಯೂ',$word);
-			$word = str_replace('ಶ್ಶ-ಕ್ತಿ','ಶ್ಶಕ್ತಿ',$word);
-			$word = str_replace('ಶ್ಶು-ದ್ಧಿ','ಶ್ಶುದ್ಧಿ',$word);
-			$word = str_replace('ಸ್ಸ-ತ್ತ್ವ-','ಸ್ಸತ್ತ್ವ-',$word);
-			$word = str_replace('ಸ್ಸ-ತ್ವ-','ಸ್ಸತ್ವ-',$word);
-			$word = str_replace('ವ-ರೆಲ್ಲ','ವರೆಲ್ಲ',$word);
-			$word = str_replace('ವ-ರೆ-','ವರೆ-',$word);
-			$word = str_replace('ಅಂಥ-ವ','ಅಂಥವ',$word);
-			$word = str_replace('ವೆಂ-ದರೆ','ವೆಂದರೆ',$word);
-			$word = str_replace('ವೇ-ನೆಂ-ದರೆ','ವೇನೆಂದರೆ',$word);
-			$word = str_replace('ಕಾ-ರ-ಣ','ಕಾರಣ',$word);
-			$word = str_replace('ದ-ಲ್ಲೆಲ್ಲ','ದಲ್ಲೆಲ್ಲ',$word);
-			$word = str_replace('ಪ-ಕ್ಕ','ಪಕ್ಕ',$word);
-			$word = str_replace('ಕಾ-ಳು','ಕಾಳು',$word);
-			$word = str_replace('ಬೇ-ಳೆ','ಬೇಳೆ',$word);
-			$word = str_replace('-ಡಾ-ನಂ-ದ','ಡಾನಂದ',$word);
-			$word = str_replace('ಅಗ-ತ್ಯ','ಅಗತ್ಯ',$word);
-			$word = str_replace('ಪ-ರೀ-ಕ್ಷೆ','ಪರೀಕ್ಷೆ-',$word);
-			$word = str_replace('ಅಚ್ಚ-ರಿ','ಅಚ್ಚರಿ',$word);
-			$word = str_replace('ಅಜ್ಞಾ-ನ','ಅಜ್ಞಾನ',$word);
-			$word = str_replace('ಅಡ-ಗಿ','ಅಡಗಿ',$word);
-			$word = str_replace('-ದಾ-ರಿ','-ದಾರಿ',$word);
-			$word = str_replace('-ಗಿ-ಳಿ-','-ಗಿಳಿ-',$word);
+			// $word = str_replace('ಗ-ಳಲ್ಲಿ','ಗಳಲ್ಲಿ',$word);
+			// $word = str_replace('ಗ-ಳನ್ನೂ','ಗಳನ್ನೂ',$word);
+			// $word = str_replace('ಗ-ಳನ್ನು','ಗಳನ್ನು',$word);
+			// $word = str_replace('ಗ-ಳಿಂದ','ಗಳಿಂದ',$word);
+			// $word = str_replace('ಗ-ಳ-ನ್ನೆಲ್ಲ','ಗಳನ್ನೆಲ್ಲ',$word);
+			// $word = str_replace('ಲಾ-ಗಿದೆ','ಲಾಗಿದೆ',$word);
+			// $word = str_replace('ಮಾ-ನವ','ಮಾನವ',$word);
+			// $word = str_replace('ಸಂ-ನ್ಯಾಸಿ','ಸಂನ್ಯಾಸಿ',$word);
+			// $word = str_replace('ವಿವೇ-ಕಾ-ನಂದ','ವಿವೇಕಾನಂದ',$word);
+			// $word = str_replace('ವಿವೇ-ಕಾ-ನಂ-ದ','ವಿವೇಕಾನಂದ',$word);
+			// $word = str_replace('ವು-ದನ್ನು','ವುದನ್ನು',$word);
+			// $word = str_replace('ಯಾ-ಗಿ-ದ್ದಾನೆ','ಯಾಗಿದ್ದಾನೆ',$word);
+			// $word = str_replace('ಯಾ-ಗಿಯೂ','ಯಾಗಿಯೂ',$word);
+			// $word = str_replace('ಶ್ಶ-ಕ್ತಿ','ಶ್ಶಕ್ತಿ',$word);
+			// $word = str_replace('ಶ್ಶು-ದ್ಧಿ','ಶ್ಶುದ್ಧಿ',$word);
+			// $word = str_replace('ಸ್ಸ-ತ್ತ್ವ-','ಸ್ಸತ್ತ್ವ-',$word);
+			// $word = str_replace('ಸ್ಸ-ತ್ವ-','ಸ್ಸತ್ವ-',$word);
+			// $word = str_replace('ವ-ರೆಲ್ಲ','ವರೆಲ್ಲ',$word);
+			// $word = str_replace('ವ-ರೆ-','ವರೆ-',$word);
+			// $word = str_replace('ಅಂಥ-ವ','ಅಂಥವ',$word);
+			// $word = str_replace('ವೆಂ-ದರೆ','ವೆಂದರೆ',$word);
+			// $word = str_replace('ವೇ-ನೆಂ-ದರೆ','ವೇನೆಂದರೆ',$word);
+			// $word = str_replace('ಕಾ-ರ-ಣ','ಕಾರಣ',$word);
+			// $word = str_replace('ದ-ಲ್ಲೆಲ್ಲ','ದಲ್ಲೆಲ್ಲ',$word);
+			// $word = str_replace('ಪ-ಕ್ಕ','ಪಕ್ಕ',$word);
+			// $word = str_replace('ಕಾ-ಳು','ಕಾಳು',$word);
+			// $word = str_replace('ಬೇ-ಳೆ','ಬೇಳೆ',$word);
+			// $word = str_replace('-ಡಾ-ನಂ-ದ','ಡಾನಂದ',$word);
+			// $word = str_replace('ಅಗ-ತ್ಯ','ಅಗತ್ಯ',$word);
+			// $word = str_replace('ಪ-ರೀ-ಕ್ಷೆ','ಪರೀಕ್ಷೆ-',$word);
+			// $word = str_replace('ಅಚ್ಚ-ರಿ','ಅಚ್ಚರಿ',$word);
+			// $word = str_replace('ಅಜ್ಞಾ-ನ','ಅಜ್ಞಾನ',$word);
+			// $word = str_replace('ಅಡ-ಗಿ','ಅಡಗಿ',$word);
+			// $word = str_replace('-ದಾ-ರಿ','-ದಾರಿ',$word);
+			// $word = str_replace('-ಗಿ-ಳಿ-','-ಗಿಳಿ-',$word);
+
+			$word = $this->generalReplacements($word); 
 
 			if(trim($word) != '')
 				array_push($hyphenatedWords, $word);
@@ -181,6 +206,7 @@ class Hyphenate{
 
 		$data = preg_replace("/\n/", " ", $data);
 		$data = preg_replace('/\s+/', ' ', $data);
+		$data = preg_replace("/\\\\-/", '', $data);
 		$data = trim($data);
 		// echo $data . "\n";
 
@@ -207,6 +233,7 @@ class Hyphenate{
 				// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 				if(in_array('hide', $value)) return ' ';			
 				if(in_array('en', $value)) return ' ';			
+				if($key == 'data-tex') return ' ';			
 			}
 		}
 
@@ -267,7 +294,7 @@ class Hyphenate{
 	public function generalReplacements($data){
 
 		$data = preg_replace("/[\t ]+/", " ", $data);		
-		$data = preg_replace("/([0-9೦-೯?!;:,.&“”‘’`'\"()\*\–=।॥])/u", "", $data);
+		$data = preg_replace("/([0-9೦-೯+~?!;:,.&“”‘’`'%\"()\*\–—=।॥­​÷a-zA-Z‡¦\|ó©Ï\[\]])/u", "", $data);
 
 		return $data;
 	}
