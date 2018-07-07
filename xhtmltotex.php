@@ -45,8 +45,10 @@ class Xhtmltotex{
 		"level4-title.a" => "}",						
 		"level5-title.b" => "\\paragraph{",
 		"level5-title.a" => "}",						
-		"en.b" => "\\eng{",
-		"en.a" => "}",						
+		"en.b" => "\\enginline{",
+		"en.a" => "}",		
+		"enfoot.b" => "\\eng{",
+		"enfoot.a" => "}",						
 		"vertical-delimiter.b" => "\\delimiter",
 		"vertical-delimiter.a" => "",						
 		"footnote-head.b" => "\\section*{",
@@ -613,6 +615,7 @@ class Xhtmltotex{
 		$data = preg_replace("/ ([?!;:,.])/u", "$1", $data);
 		$data = str_replace("&", "\&", $data);
 		$data = str_replace("\\\\&", "\&", $data);
+		$data = str_replace("ಶ್ರೀ", "ಶ‍್ರೀ", $data);
 
 		return $data;
 	}
