@@ -413,7 +413,7 @@ class Xhtmltotex{
 			$attributes = $this->getAttributesForElement($inlineNode);
 			// var_dump($attributes);
 
-			if(array_key_exists('href', $attributes)){
+			if( array_key_exists('href', $attributes) && (preg_match('/^999\-aside/', $attributes['href'][0])) ){
 
 				$footNoteText = $this->getFootNoteText($attributes);
 				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
@@ -438,14 +438,16 @@ class Xhtmltotex{
 					// echo $node->nodeName . "\n";
 					if($node->nodeName != 'a')
 						$tmpString .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
-					else
+					else{
+
 						$tmpString .= $this->parseInlineElement($node);	
+						// echo "a -> ". $tmpString . "\n";
+					}
 				}
 				else{
 
-					if($node->nodeName != 'a')
 						$tmpString .= $node->nodeValue;
-					// echo $tmpString . "-->" . $node->nodeName . "\n";
+						// echo $tmpString . "-->" . $node->nodeName . "\n";
 				}
 			}
 		}
@@ -460,8 +462,9 @@ class Xhtmltotex{
 					
 					// echo "\t --> " . $key . ' -> ' . $value . "\n";
 					if($key == 'href'){
-						$tmpString = '\footnote{' . $footNoteText . '}';
-						// echo $tmpString . "\n";
+
+						if(preg_match('/^999\-aside/', $attributes['href'][0]))
+							$tmpString = '\footnote{' . $footNoteText . '}';
 					}
 					else{
 
@@ -494,8 +497,8 @@ class Xhtmltotex{
 
 		$nodes = $tableElement->childNodes;
 
-		if(isset($attributes['data-tex']))
-			$line = '\begin{tabular}{'. $attributes['data-tex'][0] .'}' . "\n";
+		if(isset($attributes['data-table']) && isset($attributes['data-tex']))
+			$line = '\begin{'. $attributes['data-table'][0] .'}'. $attributes['data-tex'][0] . "\n";
 		else
 			$line = '\begin{tabular}{}';
 
@@ -505,14 +508,25 @@ class Xhtmltotex{
 
 				// echo $node->nodeName . "\n";	
 				if( ($node->nodeName == 'tr') ) {
+
+					$trAttributes = $this->getAttributesForElement($node);	
+					$endrow = '\\\\';
+
+					if(isset($trAttributes['data-endrow']))
+						$endrow = $trAttributes['data-endrow'][0];
+
 					$trValue = $this->parseTrElement($node);
 					$trValue = preg_replace("/&\s$/", '', $trValue);
-					$line .=  $trValue . '\\\\' . "\n";
+					$line .=  $trValue . $endrow . "\n";
 				}
 			}
 		}
 
-		$line .= '\\end{tabular}' . "\n";
+		if(isset($attributes['data-table'][0]))
+			$line .= '\end{'. $attributes['data-table'][0] . '}' . "\n";
+		else
+			$line = '\end{tabular}{}';
+
 		return $line;
 	}	
 
@@ -522,11 +536,13 @@ class Xhtmltotex{
 
 		$attributes = $this->getAttributesForElement($trElement);
 		// var_dump($attributes);
+		$endrow = '\\';
 
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if(in_array('hide', $value)) return ;			
+			if($key == 'data-endrow') $endrow = $value[0];			
 		}
 
 		$nodes = $trElement->childNodes;		
@@ -616,6 +632,10 @@ class Xhtmltotex{
 		$data = str_replace("&", "\&", $data);
 		$data = str_replace("\\\\&", "\&", $data);
 		$data = str_replace("ಶ್ರೀ", "ಶ‍್ರೀ", $data);
+
+		//for sanskrit and hindi texts
+		$data = str_replace(" ।", "~।", $data);
+		$data = str_replace(" ॥", "~॥", $data);
 
 		return $data;
 	}
