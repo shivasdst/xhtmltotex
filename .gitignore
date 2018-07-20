@@ -5,5 +5,8 @@
 /*/*/*.aux
 /*/*/*.dvi
 /*/*/*.ent
-
+/TeX/src/
+/TeX/test01/
+/unicode-src/src/
+/unicode-src/test01/
 
