@@ -16,12 +16,14 @@ class Xhtmltotex{
 		"tr.a"=>"\\\\",
 		"td.b"=>"",
 		"td.a"=>"",		
-		"th.b"=>"\\textbf{",
-		"th.a"=>"}",
+		"th.b"=>"",
+		"th.a"=>"",
 		"li.b"=>"\\item ",
 		"li.a"=>"",		
 		"small.b"=>"{\\small ",
-		"small.a"=>"}"	
+		"small.a"=>"}",			
+		"p.b"=>"",
+		"p.a"=>"\n"	
 		);
 
 	public $attrMapping = array(
@@ -47,7 +49,7 @@ class Xhtmltotex{
 		"level5-title.a" => "}",						
 		"en.b" => "\\enginline{",
 		"en.a" => "}",		
-		"enfoot.b" => "\\eng{",
+		"enfoot.b" => "\\engfoot{",
 		"enfoot.a" => "}",						
 		"vertical-delimiter.b" => "\\delimiter",
 		"vertical-delimiter.a" => "",						
@@ -76,7 +78,11 @@ class Xhtmltotex{
 		"publisher.b"=>"\\publisher{",
 		"publisher.a"=>"}",		
 		"place.b"=>"\\place{",
-		"place.a"=>"}"											
+		"place.a"=>"}",		
+		"para-title.b"=>"\\section*{",
+		"para-title.a"=>"}",		
+		"verse-author.b"=>"\\vauthor{",
+		"verse-author.a"=>"}"											
 		);
 
 	public $footnotes = array();
@@ -305,6 +311,7 @@ class Xhtmltotex{
 
 		$attributes = $this->getAttributesForElement($blockElement);
 		$blockElementId = '';
+		$itemSep = '';
 
 		// var_dump($attributes);	
 
@@ -314,6 +321,7 @@ class Xhtmltotex{
 			if(in_array('hide', $value)) return ;			
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
+			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}			
 		}
 
 		if(isset($attributes['id'])) unset($attributes['id']);
@@ -337,8 +345,10 @@ class Xhtmltotex{
 
 					if( ($node->nodeName == 'span') || ($node->nodeName == 'sup') )
 						$line .= $this->parseInlineElement($node);				
-					else if( ($node->nodeName == 'li') )
+					elseif( ($node->nodeName == 'li') )
 						$line .=  $this->parseBlockElement($node);				
+					elseif($node->nodeName == 'img')
+						$line .= $this->parseImgElement($node);
 					else{
 			
 						$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
@@ -372,6 +382,13 @@ class Xhtmltotex{
 
 							echo "\n-->" . $line . "<--\n";								
 						}
+						elseif($blockElement->nodeName == 'ol'){
+
+							if($itemSep != '')
+								$line = $this->attrMapping[$value . ".b"] . '\itemsep=' . $itemSep . "\n" . $line . $this->attrMapping[$value . ".a"];
+							else
+								$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+						} 
 						else{
 
 							$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
@@ -407,6 +424,8 @@ class Xhtmltotex{
 	public function parseInlineElement($inlineNode){
 
 		$inlineNodeName = $inlineNode->nodeName;
+		$footcmd = '\footnote';
+		$endnotemark = '';
 		// echo $inlineNodeName . "\n";
 
 		if($inlineNode->nodeName != '#text'){
@@ -417,6 +436,20 @@ class Xhtmltotex{
 
 				$footNoteText = $this->getFootNoteText($attributes);
 				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
+			}			
+
+			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('endnote', $attributes['footertype']) ){
+
+				$footcmd = '\endnote';
+				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
+				unset($attributes['footertype']);
+			}			
+
+			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('endnotemark', $attributes['footertype']) ){
+
+				$endnotemark = '\endnotemark[\theendnote]';
+				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
+				unset($attributes['footertype']);
 			}
 
 			if( isset($attributes['data-tex']) && $inlineNode->nodeName == 'span' ){
@@ -452,7 +485,7 @@ class Xhtmltotex{
 			}
 		}
 
-		if($attributes){
+		if(isset($attributes)){
 			// var_dump($attributes);
 			// echo 'HH'. "->" . $node->nodeName . "\n";	
 			foreach ($attributes as $key => $values) {
@@ -463,8 +496,11 @@ class Xhtmltotex{
 					// echo "\t --> " . $key . ' -> ' . $value . "\n";
 					if($key == 'href'){
 
-						if(preg_match('/^999\-aside/', $attributes['href'][0]))
-							$tmpString = '\footnote{' . $footNoteText . '}';
+						if($endnotemark != '')
+							$tmpString = $endnotemark;
+						elseif(preg_match('/^999\-aside/', $attributes['href'][0]) && $endnotemark == '' )
+							$tmpString = $footcmd. '{' . $footNoteText . '}';
+
 					}
 					else{
 
@@ -554,9 +590,44 @@ class Xhtmltotex{
 
 				// echo $node->nodeName . "\n";	
 				if( ($node->nodeName == 'td') || ($node->nodeName == 'th') )
-					$line .= $this->mapping[$node->nodeName . ".b"] . $node->nodeValue . $this->mapping[$node->nodeName . ".a"] . ' & ';
+					$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseTdThElement($node) . $this->mapping[$node->nodeName . ".a"] . ' & ';
 			}
 		}
+
+		return $line;		
+	}	
+
+	public function parseTdThElement($tdElement){
+
+		// echo $trElement->nodeName . "\n";
+
+		$attributes = $this->getAttributesForElement($tdElement);
+		$multicol = '';
+
+		foreach ($attributes as $key => $value) {
+			
+			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
+			if($key == 'data-colspan') $multicol = '\multicolumn{'. $value[0] .'}';
+			if($key == 'data-align') $multicol .= '{'. $value[0] . '}';
+		}
+
+		$nodes = $tdElement->childNodes;		
+		$line = '';		
+
+		if (!is_null($nodes)) {
+
+			foreach ($nodes as $node) {
+
+				// echo $node->nodeName . "\n";	
+				if( ($node->nodeName != '#text'))
+					$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
+				else
+					$line .= $node->nodeValue;
+			}
+		}
+
+		if($multicol != '') 
+			return $multicol . '{' . $line . '}';
 
 		return $line;		
 	}
@@ -566,12 +637,16 @@ class Xhtmltotex{
 		// echo $imgNode->nodeName . "\n";	
 
 		$attributes = $this->getAttributesForElement($imgNode);
-		$line = "\\begin{center}\n";
-		$line .= "\\includegraphics{\"" . $attributes['src'][0] . "\"}\n"; 
-		$line .= "\\end{center}";
+		// var_dump($attributes);
+
+		if(isset($attributes['data-scale']))
+			$line = "\\includegraphics[scale=". $attributes['data-scale'][0] ."]{\"" . $attributes['src'][0] . "\"}"; 
+		else
+			$line = "\\includegraphics{\"" . $attributes['src'][0] . "\"}"; 
+
 
 		$line = $this->generalReplacements($line);
-		$line .= "\n\n";
+		// $line .= "\n\n";
 
 		return $line;
 		// echo "\t --> " . $line . "\n";

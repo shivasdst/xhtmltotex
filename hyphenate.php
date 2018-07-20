@@ -361,6 +361,7 @@ class Hyphenate{
 		$data = preg_replace("/\n/", " ", $data);
 		$data = preg_replace('/\s+/', ' ', $data);
 		$data = preg_replace("/\\\\-/", '', $data);
+		$data = preg_replace("/\\\\- /", '', $data);
 		$data = trim($data);
 		// echo $data . "\n";
 
