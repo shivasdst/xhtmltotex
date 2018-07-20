@@ -82,7 +82,11 @@ class Xhtmltotex{
 		"para-title.b"=>"\\section*{",
 		"para-title.a"=>"}",		
 		"verse-author.b"=>"\\vauthor{",
-		"verse-author.a"=>"}"											
+		"verse-author.a"=>"}",
+		"shloka.b"=>"\\begin{shloka}\n",
+		"shloka.a"=>"\n\\end{shloka}\n",											
+		"artha.b"=>"\\begin{artha}\n",
+		"artha.a"=>"\n\\end{artha}\n"													
 		);
 
 	public $footnotes = array();
@@ -382,7 +386,7 @@ class Xhtmltotex{
 
 							echo "\n-->" . $line . "<--\n";								
 						}
-						elseif($blockElement->nodeName == 'ol'){
+						elseif( ($blockElement->nodeName == 'ol') || ($blockElement->nodeName == 'ul') ){
 
 							if($itemSep != '')
 								$line = $this->attrMapping[$value . ".b"] . '\itemsep=' . $itemSep . "\n" . $line . $this->attrMapping[$value . ".a"];
