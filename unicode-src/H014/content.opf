@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="isbn">
+	<metadata  xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<dc:title>कर्मयोग / Karma Yoga</dc:title>
+		<dc:language>hi</dc:language>
+		<dc:identifier id="isbn">urn:isbn:9789387784147</dc:identifier>
+		<dc:description>‘कर्मयोग’ स्वामी विवेकानन्दजी की एक अत्यन्त महत्त्वपूर्ण पुस्तक है। इस पुस्तक में उनके जो व्याख्यान संकलित किये गये हैं, उनका मुख्य उद्देश्य मनुष्य जीवन को गढ़ना ही है। इन व्याख्यानों को पढ़ने से हमें ज्ञात होगा कि स्वामीजी के विचार किस उच्च कोटि के तथा हमारे दैनिक जीवन के लिए कितने उपयोगी रहे हैं। आज की परिस्थिति में संसार के लिए कर्मयोग का असली रूप समझ लेना बहुत आवश्यक है और विशेषकर भारतवर्ष के लिए। हम आशा करते हैं कि यह पुस्तक भिन्न भिन्न क्षेत्रों में कार्य करनेवाले सज्जनों के लिए बहुत ही उपयोगी सिद्ध होगी। आवश्यकता इतनी ही है कि इसके भावों एवं विचारों का मनन कर उन्हें कार्यरूप में परिणत किया जाय।</dc:description>
+		
+		<dc:creator id="author1">Swami Vivekananda</dc:creator>
+		<meta refines="#author1" property="role" scheme="marc:relators">aut</meta>    
+				
+		<dc:creator id="bookDesigner1">Sriranga Digital Software Technologies Private Limited</dc:creator>
+		<meta refines="#bookDesigner1" property="role" scheme="marc:relators">bkd</meta>    
+				
+		<dc:publisher>Ramakrishna Math, Nagpur</dc:publisher>
+		<meta property="schema:accessMode">textual</meta>
+		<meta property="schema:accessMode">visual</meta>
+		<meta property="schema:accessModeSufficient">textual,visual</meta>		
+		<meta property="schema:accessibilityHazard">none</meta>
+		<meta property="schema:accessibilityFeature">tableOfContents</meta>
+		<meta property="schema:accessibilitySummary">The publication is missing alternative text for complex diagrams.</meta>
+		<meta property="schema:accessibilityAPI">ARIA</meta>
+		<meta property="dcterms:modified">2018-06-27T21:21:04Z</meta>
+	</metadata>
+	<manifest>
+		<item id="id-000a-title_xhtml" href="000a-title.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-000b-copyright_xhtml" href="000b-copyright.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-000c-preface_xhtml" href="000c-preface.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-001-chapter001_xhtml" href="001-chapter001.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-002-chapter002_xhtml" href="002-chapter002.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-003-chapter003_xhtml" href="003-chapter003.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-004-chapter004_xhtml" href="004-chapter004.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-005-chapter005_xhtml" href="005-chapter005.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-006-chapter006_xhtml" href="006-chapter006.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-007-chapter007_xhtml" href="007-chapter007.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-008-chapter008_xhtml" href="008-chapter008.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-999-aside_xhtml" href="999-aside.xhtml" media-type="application/xhtml+xml" />
+		<item id="id-css_AdobeDevanagari-Bold_otf" href="css/AdobeDevanagari-Bold.otf" media-type="application/vnd.ms-opentype" />
+		<item id="id-css_AdobeDevanagari-BoldItalic_otf" href="css/AdobeDevanagari-BoldItalic.otf" media-type="application/vnd.ms-opentype" />
+		<item id="id-css_AdobeDevanagari-Italic_otf" href="css/AdobeDevanagari-Italic.otf" media-type="application/vnd.ms-opentype" />
+		<item id="id-css_AdobeDevanagari-Regular_otf" href="css/AdobeDevanagari-Regular.otf" media-type="application/vnd.ms-opentype" />
+		<item id="id-css_style_css" href="css/style.css" media-type="text/css" />
+		<item properties="cover-image" id="id-images_cover_jpg" href="images/cover.jpg" media-type="image/jpeg" />
+		<item id="id-images_logo_png" href="images/logo.png" media-type="image/png" />
+		<item id="id-toc_ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+		<item properties="nav" id="id-toc_xhtml" href="toc.xhtml" media-type="application/xhtml+xml" />
+
+	</manifest>
+	<spine toc="id-toc_ncx">
+		<itemref idref="id-000a-title_xhtml" linear="yes" />
+		<itemref idref="id-000b-copyright_xhtml" linear="yes" />
+		<itemref idref="id-000c-preface_xhtml" linear="yes" />
+		<itemref idref="id-001-chapter001_xhtml" linear="yes" />
+		<itemref idref="id-002-chapter002_xhtml" linear="yes" />
+		<itemref idref="id-003-chapter003_xhtml" linear="yes" />
+		<itemref idref="id-004-chapter004_xhtml" linear="yes" />
+		<itemref idref="id-005-chapter005_xhtml" linear="yes" />
+		<itemref idref="id-006-chapter006_xhtml" linear="yes" />
+		<itemref idref="id-007-chapter007_xhtml" linear="yes" />
+		<itemref idref="id-008-chapter008_xhtml" linear="yes" />
+		<itemref idref="id-999-aside_xhtml" linear="yes" />
+
+	</spine>
+</package>

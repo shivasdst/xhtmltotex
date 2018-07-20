@@ -1,0 +1,170 @@
+%%importing packages
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{xstring}
+\usepackage{fancyhdr}
+\usepackage{polyglossia}
+\usepackage{xpatch}
+
+
+\setdefaultlanguage{hindi} % main language
+
+\setotherlanguages{english} % other languages 
+
+\setmainfont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701} % main font
+
+% font declarations for the other languages
+\newfontfamily\englishfont[
+	Script=Latin,
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{GentiumBasic}
+
+\newfontfamily\devanagarifont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701}
+
+
+%%page settings for the book
+\usepackage[papersize={123mm,180mm},textwidth=90.5mm,
+textheight=145mm,headheight=5mm,headsep=5mm,topmargin=12.5mm,botmargin=12.5mm,
+leftmargin=16.25mm,rightmargin=16.25mm,cropmarks]{zwpagelayout}
+
+
+%%user defined commands
+\long\def\bookTitle#1{\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}}
+\def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}}
+\newenvironment{myquote}[1]{\medskip\par\bgroup\fontsize{10}{12}\selectfont\noindent\leftskip=10pt\rightskip=10pt#1}{\par\egroup\medskip}
+\def\delimiter{\smallskip\centerline{{\small *\quad*\quad*}}\smallskip}
+\def\general#1{#1}
+\def\supskpt#1{$^{#1}$}
+
+\def\publisher#1{{\large\bfseries #1}}
+\def\place#1{{\large #1}}
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\dev#1{{\devanagarifont\textsanskrit{#1}}}
+
+\def\devinline#1{{\fontsize{14}{16}\selectfont\dev{#1}}}
+\def\enginline#1{{\fontsize{11}{13}\selectfont\eng{#1}}}
+
+\newcommand{\arabictodevnag}[1]%
+{%
+  \StrSubstitute{#1}{0}{०}[\num]%
+  \StrSubstitute{\num}{1}{१}[\num]%
+  \StrSubstitute{\num}{2}{२}[\num]%
+  \StrSubstitute{\num}{3}{३}[\num]%
+  \StrSubstitute{\num}{4}{४}[\num]%
+  \StrSubstitute{\num}{5}{५}[\num]%
+  \StrSubstitute{\num}{6}{६}[\num]%
+  \StrSubstitute{\num}{7}{७}[\num]%
+  \StrSubstitute{\num}{8}{८}[\num]%
+  \StrSubstitute{\num}{9}{९}%
+}
+
+%redefining commands
+
+\xpatchcmd{\verse}{\itemsep}{\advance\topsep-0.6em\itemsep}{}{}
+\xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+\xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+
+
+\makeatletter
+
+\addto\captionshindi{%
+\renewcommand{\contentsname}{अनुक्रमणिका}%
+}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         %~ \addcontentsline{toc}{chapter}{\protect\numberline{\arabictodevnag{\thechapter}}#1}%
+                         \addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{\protect\arabictodevnag{\thechapter}}#1}{\protect\arabictodevnag{\thepage}}}
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+
+\def\@makechapterhead#1{%
+  \vskip 1cm%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 0.6cm
+  }}
+
+\def\@makeschapterhead#1{%
+  \vskip 1cm%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 0.6cm
+  }}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\def\@fnsymbol#1{\ifcase#1\or $*$\or $\dagger$\or $\ddagger$\or
+   $\mathsection$\or $\mathparagraph$\or $\|$\or $**$\or $\dagger\dagger$
+   \or $\ddagger\ddagger$ \else\@ctrerr\fi}
+
+
+\makeatother
+
+
+
+
+%%general settings
+
+\linespread{1}
+
+\tolerance=6000
+\parindent=15pt
+\setlength{\parskip}{0pt}
+
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[]{}
+}
+
+\renewcommand{\headrulewidth}{0pt}
+
+
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+
+\lhead[\arabictodevnag{\thepage}]{}
+\rhead[]{\arabictodevnag{\thepage}}
+\chead[कर्मयोग]{\leftmark}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+
+
+

@@ -1,0 +1,234 @@
+%%importing packages
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{xstring}
+\usepackage{fancyhdr}
+\usepackage{polyglossia}
+\usepackage{xpatch}
+\usepackage{titlesec}
+\usepackage{endnotes}
+\usepackage{enumitem}
+\usepackage{array}
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+\setdefaultlanguage{hindi} % main language
+
+\setotherlanguages{english} % other languages 
+
+\setmainfont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701} % main font
+
+% font declarations for the other languages
+\newfontfamily\englishfont[
+	Script=Latin,
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{GentiumBasic}
+
+\newfontfamily\devanagarifont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701}
+
+
+%%page settings for the book
+\usepackage[papersize={142mm,218mm},textwidth=110mm,
+textheight=175mm,headheight=6mm,headsep=4mm,topmargin=16.5mm,botmargin=16.5mm,
+leftmargin=16mm,rightmargin=16mm,cropmarks]{zwpagelayout}
+
+
+%%user defined commands
+\long\def\bookTitle#1{\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}}
+\def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}}
+\newenvironment{myquote}[1]{\medskip\par\bgroup\fontsize{10}{12}\selectfont\noindent\leftskip=10pt\rightskip=10pt#1}{\par\egroup\medskip}
+\def\delimiter{\smallskip\centerline{{\small *\quad*\quad*}}\smallskip}
+\def\general#1{#1}
+\def\supskpt#1{$^{#1}$}
+\def\vauthor#1{\hfill\textbf{#1}}
+\def\dedication#1{~\vfill\thispagestyle{empty}{\huge\textbf{#1}}\vfill}
+
+\def\publisher#1{{\large\bfseries #1}}
+\def\place#1{{\large #1}}
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\dev#1{{\devanagarifont\textsanskrit{#1}}}
+
+\def\devinline#1{{\fontsize{14}{15}\selectfont\dev{#1}}}
+\def\enginline#1{{\fontsize{11}{13}\selectfont\eng{#1}}}
+
+\def\toendnotes#1{\addtoendnotes{\protect\bigskip\centerline{{\noindent\Large\bfseries #1}}}}
+
+\def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em \rightskip=2.3em\fontsize{12}{14}\selectfont\noindent}}
+
+\def\addsectiontoTOC#1{\addtocontents{toc}{\protect\contentsline{section}{#1}{}}}
+
+\long\def\engfoot#1{{\fontsize{9}{11}\selectfont\eng{#1}}}
+
+\def\enoteformat{\indent\hangafter=1 \hangindent=1.62em \llap{\makeenmark}}
+
+\def\stretchpara{\parfillskip=0pt}
+
+\newcommand{\arabictodevnag}[1]%
+{%
+  \StrSubstitute{#1}{0}{०}[\num]%
+  \StrSubstitute{\num}{1}{१}[\num]%
+  \StrSubstitute{\num}{2}{२}[\num]%
+  \StrSubstitute{\num}{3}{३}[\num]%
+  \StrSubstitute{\num}{4}{४}[\num]%
+  \StrSubstitute{\num}{5}{५}[\num]%
+  \StrSubstitute{\num}{6}{६}[\num]%
+  \StrSubstitute{\num}{7}{७}[\num]%
+  \StrSubstitute{\num}{8}{८}[\num]%
+  \StrSubstitute{\num}{9}{९}%
+}
+
+%redefining commands
+
+\xpatchcmd{\verse}{\itemsep}{\advance\topsep-0.6em\itemsep}{}{}
+\xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+\xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+
+\titleformat*{\section}{\centering\large\bfseries}
+\titlespacing*{\section}{0pt}{*1.15}{*1}
+
+\renewcommand\labelenumi{\protect\arabictodevnag{\theenumi}.}
+
+\makeatletter
+
+\addto\captionshindi{%
+\renewcommand{\contentsname}{अनुक्रमणिका}%
+}
+
+
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 0.5em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \setcounter{endnote}{0}
+                    \secdef\@chapter\@schapter}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         %~ \addcontentsline{toc}{chapter}{\protect\numberline{\arabictodevnag{\thechapter}}#1}%
+                         \addtocontents{toc}{\protect\contentsline{chapter}{#1}{\protect\arabictodevnag{\thepage}}}
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+
+\def\@makechapterhead#1{%
+  \vskip 1cm%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 0.6cm
+  }}
+
+\def\@makeschapterhead#1{%
+  \vskip 1cm%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 0.6cm
+  }}
+
+%%sections in toc with page numbers - as paragraph
+%~ \def\@dottedtocline#1#2#3#4#5{%
+  %~ \ifnum #1>\c@tocdepth \else%
+    %~ {{#4}\hb@xt@\@pnumwidth{\normalfont\normalcolor\kern3pt#5;}}
+  %~ \fi}
+
+%%sections in toc without page numbers - as paragraph
+\def\@dottedtocline#1#2#3#4#5{%
+  \ifnum #1>\c@tocdepth \else%
+    {{#4;}}
+  \fi}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\def\@fnsymbol#1{\ifcase#1\or $*$\or $\dagger$\or $\ddagger$\or
+   $\mathsection$\or $\mathparagraph$\or $\|$\or $**$\or $\dagger\dagger$
+   \or $\ddagger\ddagger$ \else\@ctrerr\fi}
+
+\def\enoteheading{}
+
+\def\@makeenmark{\hbox{\@textsuperscript{\textbf{\arabictodevnag{\@theenmark}}} }}
+
+\makeatother
+
+
+
+
+%%general settings
+
+\linespread{1}
+
+\tolerance=6000
+\parindent=15pt
+\setlength{\parskip}{0pt}
+
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[]{}
+}
+
+\renewcommand{\headrulewidth}{0pt}
+
+
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+
+\lhead[\eng{\thepage}]{}
+\rhead[]{\eng{\thepage}}
+\chead[मेरा भारत, अमर भारत]{\leftmark}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+
+
+
