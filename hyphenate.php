@@ -451,7 +451,7 @@ class Hyphenate{
 		$data = preg_replace("/[\t ]+/", " ", $data);		
 		$data = preg_replace("/--/", "-", $data);		
 		$data = preg_replace("/್\-(.)/u", "್$1", $data);		
-		$data = preg_replace("/([0-9೦-೯+~?!;:,.&“”‘’`'%\"()\*\–—=।॥­​÷a-zA-Z‡¦\|ó©Ï\[\]‍])/u", "", $data);
+		$data = preg_replace("/([0-9೦-೯+~?!;:,.&“”‘’`'%\"()\*\–—=।॥­​÷a-zA-Z‡¦\|ó©Ï‌\[\]‍])/u", "", $data);
 		$data = preg_replace("/^-ರಲ್ಲಿ$/", "", $data);
 		$data = preg_replace("/^-ರಿಂದ$/", "", $data);
 		$data = str_replace("\\", "", $data);
