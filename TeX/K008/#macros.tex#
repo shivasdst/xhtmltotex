@@ -96,14 +96,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 ಎಂಟು\or
 ಒಂಬತ್ತು\or
 ಹತ್ತು\or
-ಹನ್ನೊಂದು\or
-ಹನ್ನೆರಡು\or
-ಹದಿಮೂರು\or
-ಹದಿನಾಲ್ಕು\or
-ಹದಿನೈದು\or
-ಹದಿನಾರು\or
-ಹದಿನೇಳು\or
-ಹದಿನೆಂಟು
+
 \else
 I need more words\fi}
 
