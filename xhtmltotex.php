@@ -715,6 +715,7 @@ class Xhtmltotex{
 		//for sanskrit and hindi texts
 		$data = str_replace(" ।", "~।", $data);
 		$data = str_replace(" ॥", "~॥", $data);
+		$data = str_replace("-", "–", $data);
 
 		return $data;
 	}
