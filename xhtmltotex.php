@@ -332,7 +332,18 @@ class Xhtmltotex{
 
 		if( isset($attributes['data-tex']) && $blockElement->nodeName == 'p' ){
 
-			return $blockElement->nodeValue . "\n";
+			if($attributes['data-tex'][0] == 'vfill')
+				return '\\vfill' . "\n";
+			elseif($attributes['data-tex'][0] == 'bigskip')
+				return '\\bigskip' . "\n";			
+			elseif($attributes['data-tex'][0] == 'smallskip')
+				return '\\smallskip' . "\n";			
+			elseif($attributes['data-tex'][0] == 'medskip')
+				return '\\medskip' . "\n";
+			elseif($attributes['data-tex'][0] == 'newpage')
+				return '\\newpage' . "\n";
+			else	
+				return $blockElement->nodeValue . "\n";
 		}
 
 
@@ -459,7 +470,16 @@ class Xhtmltotex{
 			if( isset($attributes['data-tex']) && $inlineNode->nodeName == 'span' ){
 				// var_dump($attributes['data-tex'][0]);
 				// echo "\t data-tex -> " . $attributes['data-tex'][0] . "\n";
-				return $attributes['data-tex'][0];
+				
+				if(isset($attributes['data-tex'])){	
+		
+					if($attributes['data-tex'][0] == 'hfill')
+						return '\\hfill' . " ";
+					elseif($attributes['data-tex'][0] == 'break')
+						return '\\break' . " ";
+					else	
+						return $attributes['data-tex'][0];
+				}
 			}
 		}
 		$tmpString = '';
@@ -716,6 +736,7 @@ class Xhtmltotex{
 		$data = str_replace(" ।", "~।", $data);
 		$data = str_replace(" ॥", "~॥", $data);
 		$data = str_replace("-", "–", $data);
+		$data = str_replace('\–', '\-', $data);
 
 		return $data;
 	}
