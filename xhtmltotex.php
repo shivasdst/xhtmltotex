@@ -52,7 +52,7 @@ class Xhtmltotex{
 		"enfoot.b" => "\\engfoot{",
 		"enfoot.a" => "}",						
 		"vertical-delimiter.b" => "\\delimiter",
-		"vertical-delimiter.a" => "",						
+		"vertical-delimiter.a" => "",
 		"footnote-head.b" => "\\section*{",
 		"footnote-head.a" => "}",
 		"noindent.b" => "\\noindent\n",
@@ -60,33 +60,39 @@ class Xhtmltotex{
 		"num.b"=>"\\num{",
 		"num.a"=>"}",
 		"myquote.b" => "\n\\begin{myquote}\n",
-		"myquote.a" => "\n\\end{myquote}\n",						
+		"myquote.a" => "\n\\end{myquote}\n",				
 		"verse.b" => "\n\\begin{verse}\n",
 		"verse.a" => "\n\\end{verse}\n",
 		"quote-author.b" => "\n\\begin{flushright}\n",
 		"quote-author.a" => "\n\\end{flushright}\n",
 		"itemize.b" => "\n\\begin{itemize}\n",
-		"itemize.a" => "\n\\end{itemize}\n",									
+		"itemize.a" => "\n\\end{itemize}\n",					
 		"enumerate.b" => "\n\\begin{enumerate}\n",
 		"enumerate.a" => "\n\\end{enumerate}\n",
 		"verse-num.b"=>"\\versenum{",
-		"verse-num.a"=>"}",		
+		"verse-num.a"=>"}",
 		"bibliography.b"=>"\\begin{thebibliography}{99}\n",
-		"bibliography.a"=>"\\end{thebibliography}\n",		
+		"bibliography.a"=>"\\end{thebibliography}\n",
 		"bibitem.b"=>"\\bibitem{",
-		"bibitem.a"=>"}",		
+		"bibitem.a"=>"}",
 		"publisher.b"=>"\\publisher{",
-		"publisher.a"=>"}",		
+		"publisher.a"=>"}",
 		"place.b"=>"\\place{",
-		"place.a"=>"}",		
+		"place.a"=>"}",
 		"para-title.b"=>"\\section*{",
-		"para-title.a"=>"}",		
+		"para-title.a"=>"}",
 		"verse-author.b"=>"\\vauthor{",
 		"verse-author.a"=>"}",
 		"shloka.b"=>"\\begin{shloka}\n",
-		"shloka.a"=>"\n\\end{shloka}\n",											
+		"shloka.a"=>"\n\\end{shloka}\n",
 		"artha.b"=>"\\begin{artha}\n",
-		"artha.a"=>"\n\\end{artha}\n"													
+		"artha.a"=>"\n\\end{artha}\n",
+		"article-author.b"=>"\\Authorline{",
+		"article-author.a"=>"}\n",
+		"url.b"=>"\\url{",
+		"url.a"=>"}",
+		"quote-author-inline.b"=>"\\hfill ",
+		"quote-author-inline.a"=>""													
 		);
 
 	public $footnotes = array();
@@ -96,8 +102,26 @@ class Xhtmltotex{
 
 	public function __construct($id) {
 
+		$this->overrideMappings($id);
 		$this->loadFootnotes($id);
 		// var_dump($this->footnotes);
+	}
+
+	public function overrideMappings($id){
+
+		$jsonPath = MAPPING . $id . '.json';
+		if(file_exists($jsonPath)){
+
+			$contents = json_decode(file_get_contents($jsonPath),true);
+			
+			foreach($contents as $key=>$value){
+
+				if(array_key_exists($key, $this->mapping))
+					$this->mapping[$key] = $value; 					
+				if(array_key_exists($key, $this->attrMapping))
+					$this->attrMapping[$key] = $value; 
+			}
+		}
 	}
 
 	public function loadFootnotes($id){
@@ -256,8 +280,15 @@ class Xhtmltotex{
 				$nodes = $element->childNodes;
 				foreach ($nodes as $node) {
 
-					if($node->nodeName == 'section')
+					if($node->nodeName == 'section'){
+
 						$data = $data . $this->parseSectionElement($node);
+						$data = str_replace('ZZ38ZZ', '&', $data);
+						$data = str_replace('ZZ35ZZ', '#', $data);
+						$data = str_replace('<', '\textless', $data);
+						$data = str_replace('>', '\textgreater', $data);
+						$data = str_replace('\\general{\-}', '\-', $data);
+					}
 				}
 			}
 		}
@@ -275,7 +306,7 @@ class Xhtmltotex{
 		$nodes = $section->childNodes;
 
 		$attributes = $this->getAttributesForElement($section);
-		$this->numbered = (isset($attributes['class']) && in_array('numbered', $attributes['class']))? True : False;
+		$this->numbered = (isset($attributes['class']) && in_array('numbered', preg_split('/ /', $attributes['class'][0])))? True : False;
 
 		if (!is_null($nodes)) {
 
@@ -286,7 +317,7 @@ class Xhtmltotex{
 				elseif($node->nodeName == 'section'){
 
 					$attributes = $this->getAttributesForElement($node);
-					$this->numbered = (isset($attributes['class']) && in_array('numbered', $attributes['class']))? True : False;
+					$this->numbered = (isset($attributes['class']) && in_array('numbered', preg_split('/ /', $attributes['class'][0])))? True : False;
 					// echo $node->nodeName . "->\t->" . $this->numbered . "\n";
 					$lines = $lines . "\n\n" . $this->parseSectionElement($node);
 				}
@@ -316,6 +347,7 @@ class Xhtmltotex{
 		$attributes = $this->getAttributesForElement($blockElement);
 		$blockElementId = '';
 		$itemSep = '';
+		$optionalTitle = '';
 
 		// var_dump($attributes);	
 
@@ -326,6 +358,7 @@ class Xhtmltotex{
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
 			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}			
+			if($key == 'title-option') {$optionalTitle = $value[0]; unset($attributes['title-option']);}			
 		}
 
 		if(isset($attributes['id'])) unset($attributes['id']);
@@ -345,7 +378,8 @@ class Xhtmltotex{
 			else	
 				return $blockElement->nodeValue . "\n";
 		}
-
+		if(isset($attributes['data-tex-vskip']))
+			return $this->getVskipValue($attributes['data-tex-vskip'][0]);
 
 		$nodes = $blockElement->childNodes;
 		$line = '';
@@ -359,13 +393,26 @@ class Xhtmltotex{
 				if($node->nodeName != '#text'){
 
 					if( ($node->nodeName == 'span') || ($node->nodeName == 'sup') )
-						$line .= $this->parseInlineElement($node);				
+						$line .= $this->parseInlineElement($node);
+					elseif($node->nodeName == 'a'){
+
+						$tmpString = $this->parseInlineElement($node);
+	
+						if($this->getAttributesForElement($node)['class'][0] == 'url'){
+							$tmpString = str_replace('&', 'ZZ38ZZ', $tmpString);
+							$tmpString = str_replace('#', 'ZZ35ZZ', $tmpString);
+							// echo $tmpString . "\n";
+						}
+	
+						$line .= $tmpString;
+					}
 					elseif( ($node->nodeName == 'li') )
 						$line .=  $this->parseBlockElement($node);				
 					elseif($node->nodeName == 'img')
 						$line .= $this->parseImgElement($node);
 					else{
-			
+						
+						// echo "\n" . $node->nodeName . "\n";
 						$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
 						// echo "\t --> " . $line . "\n";
 					}
@@ -395,7 +442,7 @@ class Xhtmltotex{
 							else
 								$line = "\\item " . $line;		
 
-							echo "\n-->" . $line . "<--\n";								
+							// echo "\n-->" . $line . "<--\n";								
 						}
 						elseif( ($blockElement->nodeName == 'ol') || ($blockElement->nodeName == 'ul') ){
 
@@ -415,6 +462,9 @@ class Xhtmltotex{
 			if (preg_match('/h[1-6]/', $blockElement->nodeName)) {
 
 				// echo "h[1-h6]->" . $line . "\n";
+				if($optionalTitle != '')
+					$line = preg_replace("/(.*?)\{(.*)\}/", '$1[' . $optionalTitle. ']{$2}', $line);
+	
 				$line = preg_replace("/\\\\footnote/", '\protect\footnote', $line);
 			}
 
@@ -481,6 +531,13 @@ class Xhtmltotex{
 						return $attributes['data-tex'][0];
 				}
 			}
+			if(isset($attributes['data-index-primary'])){
+
+				$indexValue = $this->getIndexValue($attributes);
+				return $indexValue;
+			}
+			if(isset($attributes['data-tex-hskip']))
+				return $this->getHskipValue($attributes['data-tex-hskip'][0]);			
 		}
 		$tmpString = '';
 
@@ -541,6 +598,56 @@ class Xhtmltotex{
 		return $tmpString;
 	}
 
+	public function getVskipValue($vskipValue){
+
+		$parts = preg_split('/:/', $vskipValue);
+		if(sizeof($parts) == 1)
+			return '\\' . $vskipValue . "\n";
+
+		return '\\' . $parts[0] . ' ' . $parts[1] . "\n"; 
+	}	
+
+	public function getHskipValue($hskipValue){
+
+		$parts = preg_split('/:/', $hskipValue);
+		if(sizeof($parts) == 1)
+			return '\\' . $hskipValue . " ";
+
+		return '\\' . $parts[0] . ' ' . $parts[1] . " "; 
+	}
+
+	public function getIndexValue($attributes){
+
+		// var_dump($attributes);
+		$indexValue = '\index{';
+
+		if(isset($attributes['data-index-primary-sort']))
+			$indexValue .= $attributes['data-index-primary-sort'][0] . '@';
+		$indexValue .= $attributes['data-index-primary'][0];
+
+
+		if(isset($attributes['data-index-secondary'])){
+
+			$indexValue .= '!';
+
+			if(isset($attributes['data-index-secondary-sort']))
+				$indexValue .= $attributes['data-index-secondary-sort'][0] . '@';
+
+			$indexValue .= $attributes['data-index-secondary'][0];
+		}
+
+		$indexValue = str_replace('<b>', '\\textbf{', $indexValue);
+		$indexValue = str_replace('</b>', '}', $indexValue);		
+		$indexValue = str_replace('<i>', '\\textit{', $indexValue);
+		$indexValue = str_replace('</i>', '}', $indexValue);
+
+		if(isset($attributes['data-range']))
+			$indexValue .= $attributes['data-range'][0];
+		
+		$indexValue .= '}';		
+
+		return $indexValue;
+	}
 
 	public function parseTableElement($tableElement){
 
@@ -693,8 +800,9 @@ class Xhtmltotex{
 
 			if(!preg_match('/epub:type|alt/',$name)){
 
+				$attrs[$name] = [];
 				$value = $element->getAttribute($name);
-				$attrs[$name] = preg_split('/ /', $value);
+				array_push($attrs[$name],$value);
 			}
 		}
 
@@ -728,14 +836,19 @@ class Xhtmltotex{
 		// $data = str_replace('\\\\', '\\', $data);
 		$data = preg_replace("/\\\\chapter\{\\\\num\{.*?\} *(.*)\}/u", '\chapter{' . "$1" . "}", $data);
 		$data = preg_replace("/ ([?!;:,.])/u", "$1", $data);
+
 		$data = str_replace("&", "\&", $data);
+		$data = str_replace('#', '\#', $data);
+		$data = str_replace("\\\\#", '\#', $data);
 		$data = str_replace("\\\\&", "\&", $data);
 		$data = str_replace("ಶ್ರೀ", "ಶ‍್ರೀ", $data);
 
 		//for sanskrit and hindi texts
 		$data = str_replace(" ।", "~।", $data);
 		$data = str_replace(" ॥", "~॥", $data);
-		$data = str_replace("-", "–", $data);
+
+		//below line is for rkmath mysore books
+		// $data = str_replace("-", "–", $data);
 		$data = str_replace('\–', '\-', $data);
 
 		return $data;
