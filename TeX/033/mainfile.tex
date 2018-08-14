@@ -1,0 +1,62 @@
+\documentclass[10pt,twoside]{book}
+
+\input macros
+\AtBeginEnvironment{quote}{\vspace{0.005\baselineskip}}% Stuff before {quote}
+\AtEndEnvironment{quote}{\vspace{0.005\baselineskip}}% Stuff after {quote}
+\begin{document}
+\frontmatter
+
+%~ \lhead[\small\thepage]{}
+%~ \rhead[]{\small\thepage}
+%~ \chead[]{}
+%~ \cfoot[]{}
+%~ 
+%~ \input src/titlepage
+%~ \newpage
+ %~ 
+%~ \input src/copyright
+%~ \newpage
+ %~ 
+%~ \input src/contents
+%~ \newpage
+ %~ 
+%~ \input src/trans_scheme
+%~ \newpage
+ %~ 
+%~ \input src/about
+%~ \newpage
+ %~ 
+%~ \input src/key_partners
+%~ \newpage
+ %~ 
+%~ \input src/ack
+%~ \newpage
+ %~ 
+%~ \input src/editorial
+%~ \newpage
+%~ \centerline{\small\textsl{This page left blank intentionally}}
+%~ \thispagestyle{empty}
+%~ \newpage 
+%~ \centerline{\small\textsl{This page left blank intentionally}}
+%~ \thispagestyle{empty}
+%~ \newpage 
+\mainmatter
+
+\lhead[\small\thepage\quad ]{}
+%~ \chead[]{}
+%~ \cfoot[]{}
+
+\makeatother
+
+%~ \selectlanguage{sanskrit}
+%~ \input src/chapter-01
+\setcounter{chapter}{1}
+\selectlanguage{english}
+\rhead[]{\small\thechapter. {\normalsize Professor Sheldon Pollock on History in India}\quad\small\thepage}
+\input src/02-chapter2.tex
+\theendnotes
+\clearpage
+\rhead[]{\small\thechapter. {\normalsize The Science and Nescience of Mīmāṁsā}\quad\small\thepage}
+\input src/03-chapter3.tex
+\theendnotes
+\end{document}
