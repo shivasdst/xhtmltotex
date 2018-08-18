@@ -114,13 +114,16 @@ class Xhtmltotex{
 
 			$contents = json_decode(file_get_contents($jsonPath),true);
 			
-			foreach($contents as $key=>$value){
+			if( isset($contents['attrmapping']) && (sizeof($contents['attrmapping']) > 0) ){
 
-				if(array_key_exists($key, $this->mapping))
-					$this->mapping[$key] = $value; 					
-				if(array_key_exists($key, $this->attrMapping))
-					$this->attrMapping[$key] = $value; 
-			}
+				foreach($contents['attrmapping'] as $key=>$value)
+						$this->attrMapping[$key] = $value; 
+			}			
+			if( isset($contents['tagmapping']) && (sizeof($contents['tagmapping']) > 0) ){
+
+				foreach($contents['tagmapping'] as $key=>$value)
+						$this->mapping[$key] = $value; 
+			}			
 		}
 	}
 
@@ -397,8 +400,8 @@ class Xhtmltotex{
 					elseif($node->nodeName == 'a'){
 
 						$tmpString = $this->parseInlineElement($node);
-	
-						if($this->getAttributesForElement($node)['class'][0] == 'url'){
+						$tmpAttrs = $this->getAttributesForElement($node); 
+						if(isset($tmpAttrs['class'][0]) && $tmpAttrs['class'][0] == 'url'){
 							$tmpString = str_replace('&', 'ZZ38ZZ', $tmpString);
 							$tmpString = str_replace('#', 'ZZ35ZZ', $tmpString);
 							// echo $tmpString . "\n";
@@ -639,7 +642,12 @@ class Xhtmltotex{
 		$indexValue = str_replace('<b>', '\\textbf{', $indexValue);
 		$indexValue = str_replace('</b>', '}', $indexValue);		
 		$indexValue = str_replace('<i>', '\\textit{', $indexValue);
-		$indexValue = str_replace('</i>', '}', $indexValue);
+		$indexValue = str_replace('</i>', '}', $indexValue);		
+
+		$indexValue = str_replace('&lt;b&gt;', '\\textbf{', $indexValue);
+		$indexValue = str_replace('&lt;/b&gt;', '}', $indexValue);		
+		$indexValue = str_replace('&lt;i&gt;', '\\textit{', $indexValue);
+		$indexValue = str_replace('&lt;/i&gt;', '}', $indexValue);
 
 		if(isset($attributes['data-range']))
 			$indexValue .= $attributes['data-range'][0];
@@ -837,11 +845,18 @@ class Xhtmltotex{
 		$data = preg_replace("/\\\\chapter\{\\\\num\{.*?\} *(.*)\}/u", '\chapter{' . "$1" . "}", $data);
 		$data = preg_replace("/ ([?!;:,.])/u", "$1", $data);
 
+		//single and double quotes
+		$data = str_replace('&lsquo;', '‘', $data);
+		$data = str_replace('&rsquo;', '’', $data);
+		$data = str_replace('&ldquo;', '“', $data);
+		$data = str_replace('&rdquo;', '”', $data);
+
 		$data = str_replace("&", "\&", $data);
 		$data = str_replace('#', '\#', $data);
 		$data = str_replace("\\\\#", '\#', $data);
 		$data = str_replace("\\\\&", "\&", $data);
 		$data = str_replace("ಶ್ರೀ", "ಶ‍್ರೀ", $data);
+		$data = str_replace("%", "\%", $data);
 
 		//for sanskrit and hindi texts
 		$data = str_replace(" ।", "~।", $data);
@@ -850,6 +865,8 @@ class Xhtmltotex{
 		//below line is for rkmath mysore books
 		// $data = str_replace("-", "–", $data);
 		$data = str_replace('\–', '\-', $data);
+
+
 
 		return $data;
 	}
