@@ -357,7 +357,7 @@ class Xhtmltotex{
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
-			if(in_array('hide', $value)) return ;			
+			if(in_array('level1-title hide', $value)) return ;	
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
 			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}			
@@ -434,7 +434,7 @@ class Xhtmltotex{
 					foreach($values as $value){
 
 						if( !($this->numbered) && preg_match('/h[1-6]/', $blockElement->nodeName)){
-							
+
 							$line = str_replace('{', '*{', $this->attrMapping[$value . ".b"]) . $line . $this->attrMapping[$value . ".a"];
 							// echo "$line\n";
 						}
@@ -511,6 +511,7 @@ class Xhtmltotex{
 				$footcmd = '\endnote';
 				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
 				unset($attributes['footertype']);
+				unset($attributes['id']);
 			}			
 
 			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('endnotemark', $attributes['footertype']) ){
@@ -518,6 +519,7 @@ class Xhtmltotex{
 				$endnotemark = '\endnotemark[\theendnote]';
 				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
 				unset($attributes['footertype']);
+				unset($attributes['id']);
 			}
 
 			if( isset($attributes['data-tex']) && $inlineNode->nodeName == 'span' ){
@@ -662,12 +664,15 @@ class Xhtmltotex{
 		// echo $tableElement->nodeName . "\n";
 
 		$attributes = $this->getAttributesForElement($tableElement);
+		$hline = "";
+		$firstRowFlag = 0;
 		// var_dump($attributes);
 
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
-			if(in_array('hide', $value)) return ;			
+			if(in_array('hide', $value)) return ;	
+			if($key == 'data-tex-hrule') {$hline = '\\' . $value[0]; $firstRowFlag=1;}
 		}
 
 		$nodes = $tableElement->childNodes;
@@ -693,6 +698,13 @@ class Xhtmltotex{
 					$trValue = $this->parseTrElement($node);
 					$trValue = preg_replace("/&\s$/", '', $trValue);
 					$line .=  $trValue . $endrow . "\n";
+					
+					if($hline != ''){
+						
+						$line .= $hline . "\n";	 
+					}
+
+					$firstRowFlag = 0;
 				}
 			}
 		}
@@ -716,7 +728,7 @@ class Xhtmltotex{
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
-			if(in_array('hide', $value)) return ;			
+			if(in_array('hide', $value)) return ;
 			if($key == 'data-endrow') $endrow = $value[0];			
 		}
 
@@ -863,7 +875,7 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-		// $data = str_replace("-", "–", $data);
+		$data = str_replace("-", "–", $data);
 		$data = str_replace('\–', '\-', $data);
 
 
