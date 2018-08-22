@@ -10,6 +10,8 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{enumitem}
+\usepackage{color}
+\usepackage{longfbox}
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
@@ -84,6 +86,13 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 \def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em\rightskip=2.3em\fontsize{11}{13}\selectfont\noindent}}
 \def\addsectiontoTOC#1{\addcontentsline{toc}{section}{#1}}
 \def\chapterend{\label{chap\thechapter:end}}
+
+\long\def\myframe#1{
+\begin{longfbox}[width=5.5cm,padding=6pt,rounded,border-width=0.6pt]
+\small #1
+\end{longfbox}
+}
+
 
 \newcommand\numinwords[1]{\expandafter\xwords\csname c@#1\endcsname}
 \def\xwords#1{\ifcase#1\or
@@ -234,7 +243,7 @@ I need more words\fi}
 %~ \hyphenpenalty=10000
 %~ \hbadness=10000
 
-
+\brokenpenalty9999
 
 \newcommand{\sethyphenation}[3][]{%
   \sbox0{\begin{otherlanguage}[#1]{#2}
