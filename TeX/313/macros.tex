@@ -12,6 +12,8 @@
 \usepackage{enumitem}
 \usepackage{color}
 \usepackage{longfbox}
+\usepackage{ifthen}
+\usepackage{pifont}
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
@@ -76,8 +78,8 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 \def\supskpt#1{$^{#1}$}
 
 \def\enginline#1{{\fontsize{10.5}{12.5}\selectfont\eng{#1}}}
-\def\publisher#1{{\large\bfseries #1}}
-\def\place#1{{\large #1}}
+\def\publisher#1{{\fontsize{16pt}{20pt}\selectfont\bfseries #1}}
+\def\place#1{{\fontsize{14pt}{16pt}\selectfont #1}}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
@@ -85,12 +87,18 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 
 \def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em\rightskip=2.3em\fontsize{11}{13}\selectfont\noindent}}
 \def\addsectiontoTOC#1{\addcontentsline{toc}{section}{#1}}
-\def\chapterend{\label{chap\thechapter:end}}
+\def\chapterend{%
+\vskip 20pt
+\centerline{{\small\rule[3.25pt]{1cm}{0.6pt}$\;$\ding{105}$\;$\ding{105}$\;$\ding{105}$\;$\rule[3.25pt]{1cm}{0.6pt}}}
+\label{chap\thechapter:end}%
+}
 
 \long\def\myframe#1{
-\begin{longfbox}[width=5.5cm,padding=6pt,rounded,border-width=0.6pt]
-\small #1
+\begin{center}
+\begin{longfbox}[width=7cm,padding=6pt,rounded,border-width=0.6pt]
+\large #1~\hfill\phantom{.}
 \end{longfbox}
+\end{center}
 }
 
 
@@ -153,15 +161,21 @@ I need more words\fi}
 
 \renewcommand\labelitemi{\eng{\textbullet}}
 
+\renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+
 \renewcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
-    \vskip 0.6em \@plus\p@
+    \vskip 0.2em \@plus\p@
     \setlength\@tempdima{1.5em}%
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode \bfseries
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
       #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
@@ -173,7 +187,7 @@ I need more words\fi}
                        \if@mainmatter
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter.}%
-                         \addcontentsline{toc}{chapter}{\protect\numberline{\protect\arabictokannada{\thechapter}}#1}%
+                         \addcontentsline{toc}{chapter}{\protect\numberline{\protect\arabictokannada{\thechapter}.}#1}%
                        \else
                          \addcontentsline{toc}{chapter}{#1}%
                        \fi

@@ -1,6 +1,10 @@
 {
 	"attrmapping": {
 		"myframe.b":"\n\n\\myframe{",
-		"myframe.a":"}"			
+		"myframe.a":"}",
+		"typesetter.b":"\n\\begin{flushleft}{\\small\n",
+		"typesetter.a":"\n}\\end{flushleft}\n",					
+		"printer.b":"\n\\begin{flushleft}{\\small\n",
+		"printer.a":"\n}\\end{flushleft}\n"					
 	}
 }
