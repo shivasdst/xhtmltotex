@@ -7,7 +7,7 @@ class Xhtmltotex{
 		"em.b"=>"\\textit{",
 		"em.a"=>"}",
 		"strong.b"=>"\\textbf{",
-		"strong.a"=>"}",						
+		"strong.a"=>"}",		
 		"span.b"=>"\\general{",
 		"span.a"=>"}",						
 		"sup.b"=>"\\supskpt{",
@@ -23,7 +23,13 @@ class Xhtmltotex{
 		"small.b"=>"{\\small ",
 		"small.a"=>"}",			
 		"p.b"=>"",
-		"p.a"=>"\n"	
+		"p.a"=>"\n",		
+		"figure.b"=>"\n\\begin{figure}",
+		"figure.a"=>"\\end{figure}\n",		
+		"figcaption.b"=>"\\caption{",
+		"figcaption.a"=>"}",		
+		"caption.b"=>"\\caption{",
+		"caption.a"=>"}"	
 		);
 
 	public $attrMapping = array(
@@ -288,6 +294,7 @@ class Xhtmltotex{
 						$data = $data . $this->parseSectionElement($node);
 						$data = str_replace('ZZ38ZZ', '&', $data);
 						$data = str_replace('ZZ35ZZ', '#', $data);
+						$data = str_replace('ZZ95ZZ', '_', $data);
 						$data = str_replace('<', '\textless', $data);
 						$data = str_replace('>', '\textgreater', $data);
 						$data = str_replace('\\general{\-}', '\-', $data);
@@ -327,9 +334,15 @@ class Xhtmltotex{
 				elseif (preg_match('/h[1-6]|p|ul|ol/', $node->nodeName)) 
 					$lines = $lines . "\n" . $this->parseBlockElement($node);
 				elseif($node->nodeName == 'table')
-					$lines = $lines . "\n\n" . $this->parseTableElement($node);		  		 
+					$lines = $lines . "\n\n" . $this->parseTableElement($node);				
+				elseif($node->nodeName == 'figure')
+					$lines = $lines . "\n\n" . $this->parseFigureElement($node);		  		 
 				elseif($node->nodeName != '#text'){
-					// echo "\t --> " . $node->nodeName . "\n";
+					// echo "\t --> " . $node->nodeName . "-->\n";
+				}
+				else{
+
+					// echo "\t --> " . $node->nodeName . "--> not handled\n";	
 				}
 			}
 
@@ -351,6 +364,7 @@ class Xhtmltotex{
 		$blockElementId = '';
 		$itemSep = '';
 		$optionalTitle = '';
+		$captionStar = '';
 
 		// var_dump($attributes);	
 
@@ -360,8 +374,9 @@ class Xhtmltotex{
 			if(in_array('level1-title hide', $value)) return ;	
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
-			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}			
+			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}	
 			if($key == 'title-option') {$optionalTitle = $value[0]; unset($attributes['title-option']);}			
+			if($key == 'data-tex-caption-prefix') {$captionStar = $value[0]; unset($attributes[$key]);}			
 		}
 
 		if(isset($attributes['id'])) unset($attributes['id']);
@@ -404,6 +419,7 @@ class Xhtmltotex{
 						if(isset($tmpAttrs['class'][0]) && $tmpAttrs['class'][0] == 'url'){
 							$tmpString = str_replace('&', 'ZZ38ZZ', $tmpString);
 							$tmpString = str_replace('#', 'ZZ35ZZ', $tmpString);
+							$tmpString = str_replace('_', 'ZZ95ZZ', $tmpString);
 							// echo $tmpString . "\n";
 						}
 	
@@ -475,7 +491,21 @@ class Xhtmltotex{
 				$line = "\\item " . $line;
 
 			if( ($blockElement->nodeName == 'ol') && ($this->bibliography) )
-				$this->bibliography = False;
+				$this->bibliography = False;	
+			if( ($blockElement->nodeName == 'figcaption') ){
+				
+				if($captionStar != '')
+					$line = "\n\\caption*{" . $line . "}";
+				else
+					$line = "\n\\caption{" . $line . "}";
+			}			
+			if( ($blockElement->nodeName == 'caption') ){
+				
+				if($captionStar != '')
+					$line = "\n\\caption*{" . $line . "}";
+				else
+					$line = "\n\\caption{" . $line . "}";
+			}
 
 			$line = $this->generalReplacements($line);
 			$line .= "\n";
@@ -494,6 +524,7 @@ class Xhtmltotex{
 		$inlineNodeName = $inlineNode->nodeName;
 		$footcmd = '\footnote';
 		$endnotemark = '';
+		$crossRef = '';
 		// echo $inlineNodeName . "\n";
 
 		if($inlineNode->nodeName != '#text'){
@@ -521,7 +552,18 @@ class Xhtmltotex{
 				unset($attributes['footertype']);
 				unset($attributes['id']);
 			}
+			if( ($inlineNode->nodeName == 'a') && isset($attributes['class']) && in_array('crossref', $attributes['class']) ){
 
+				$crossRef = '\\ref{';
+				$idRef = $attributes['href'][0];
+				$idRef = str_replace('#', '', $idRef);
+				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
+				$crossRef = $crossRef . $idRef . "}";
+				// echo $crossRef . "\n";
+				unset($attributes['class']);
+				unset($attributes['href']);
+				return $crossRef;
+			}
 			if( isset($attributes['data-tex']) && $inlineNode->nodeName == 'span' ){
 				// var_dump($attributes['data-tex'][0]);
 				// echo "\t data-tex -> " . $attributes['data-tex'][0] . "\n";
@@ -598,6 +640,10 @@ class Xhtmltotex{
 				}
 			}
 		}
+		else{
+
+			echo $crossRef . "\n";
+		}
 
 		// echo "\n.." . $tmpString . "..\n";
 		return $tmpString;
@@ -659,6 +705,67 @@ class Xhtmltotex{
 		return $indexValue;
 	}
 
+
+	public function parseFigureElement($figureElement){
+
+		$attributes = $this->getAttributesForElement($figureElement);
+		$floatParams = '';
+		// var_dump($attributes);
+
+		foreach ($attributes as $key => $value) {
+			
+			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
+			if($key == 'data-tex-float-params') {$floatParams = $value[0]; unset($attributes[$key]);}
+		}
+
+		$nodes = $figureElement->childNodes;
+
+		if( $floatParams != '' )
+			$line = $this->mapping[$figureElement->nodeName . ".b"] . $floatParams . "\n";
+		else
+			$line = $this->mapping[$figureElement->nodeName . ".b"] . "\n";
+
+		if (!is_null($nodes)) {
+
+			foreach ($nodes as $node) {
+
+				// echo $node->nodeName . "\n";
+				if( ($node->nodeName == 'img') )
+					$line .= $this->parseImgElement($node);	
+				elseif( ($node->nodeName == 'figcaption') ){
+
+					$line .= $this->parseBlockElement($node);
+					// echo $line . "\n";
+				}
+			}
+		}
+
+		if(isset($attributes)){
+			// var_dump($attributes);
+			// echo 'HH'. "->" . $node->nodeName . "\n";	
+			foreach ($attributes as $key => $values) {
+
+				// echo "\t --> " . $key . ' -> ' . "\n";
+				foreach($values as $value){
+					
+					// echo "\t --> " . $key . ' -> ' . $value . "\n";
+					if($key == 'id'){
+
+						$label = "\\label{" . $value . "}";
+						// echo $line . "\n";
+						$line = preg_replace("/(\\\\caption\*?\{.*\})/",  "$1" . $label, $line);	
+					}
+				}
+			}
+		}
+
+		$line = $line . $this->mapping[$figureElement->nodeName . ".a"] . "\n";		
+		$line = preg_replace("/\n\n\\\\caption/u", "\n" . '\\caption', $line);
+		$line = preg_replace("/}\\\\end\{figure\}/u", "}\n" . '\\end{figure}', $line);
+
+		return $line;
+	}
+
 	public function parseTableElement($tableElement){
 
 		// echo $tableElement->nodeName . "\n";
@@ -666,6 +773,7 @@ class Xhtmltotex{
 		$attributes = $this->getAttributesForElement($tableElement);
 		$hline = "";
 		$firstRowFlag = 0;
+		$floatParams = '';
 		// var_dump($attributes);
 
 		foreach ($attributes as $key => $value) {
@@ -673,14 +781,21 @@ class Xhtmltotex{
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if(in_array('hide', $value)) return ;	
 			if($key == 'data-tex-hrule') {$hline = '\\' . $value[0]; $firstRowFlag=1;}
+			if($key == 'data-tex-float-params') {$floatParams = $value[0]; unset($attributes[$key]);}
 		}
 
 		$nodes = $tableElement->childNodes;
 
-		if(isset($attributes['data-table']) && isset($attributes['data-tex']))
+		if( isset($attributes['data-table']) && isset($attributes['data-tex']) )
 			$line = '\begin{'. $attributes['data-table'][0] .'}'. $attributes['data-tex'][0] . "\n";
 		else
-			$line = '\begin{tabular}{}';
+			$line = '\begin{tabular}{}' . "\n";
+
+		if($hline != ''){
+
+			$line .= $hline . "\n";			
+		}
+
 
 		if (!is_null($nodes)) {
 
@@ -706,6 +821,15 @@ class Xhtmltotex{
 
 					$firstRowFlag = 0;
 				}
+				elseif( ($node->nodeName == 'caption') ){
+
+					$line = $this->parseBlockElement($node) . $line;
+					 // echo $node->nodeName . "\n";
+				}				
+				else{
+
+					// echo $node->nodeName . "\n";
+				}
 			}
 		}
 
@@ -713,6 +837,18 @@ class Xhtmltotex{
 			$line .= '\end{'. $attributes['data-table'][0] . '}' . "\n";
 		else
 			$line = '\end{tabular}{}';
+
+		if($floatParams != '')
+			$line = '\\begin{table}' . $floatParams . "\n" . $line . "\\end{table}\n";
+
+		$line = preg_replace("/\n\n\\\\caption/u", "\n" . '\\caption', $line);
+
+		if(isset($attributes['id'])){
+
+			$label = "\\label{" . $attributes['id'][0] . "}";
+			// echo $label . "\n";
+			$line = preg_replace("/(\\\\caption\*?\{.*\})/",  "$1" . $label, $line);	
+		}
 
 		return $line;
 	}	
@@ -861,7 +997,11 @@ class Xhtmltotex{
 		$data = str_replace('&lsquo;', '‘', $data);
 		$data = str_replace('&rsquo;', '’', $data);
 		$data = str_replace('&ldquo;', '“', $data);
-		$data = str_replace('&rdquo;', '”', $data);
+		$data = str_replace('&rdquo;', '”', $data);		
+
+		// $data = str_replace('_', '\_', $data);
+		// $data = str_replace('{', '\{', $data);
+		// $data = str_replace('}', '\}', $data);
 
 		$data = str_replace("&", "\&", $data);
 		$data = str_replace('#', '\#', $data);
@@ -875,8 +1015,8 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-		$data = str_replace("-", "–", $data);
-		$data = str_replace('\–', '\-', $data);
+		// $data = str_replace("-", "–", $data);
+		// $data = str_replace('\–', '\-', $data);
 
 
 
