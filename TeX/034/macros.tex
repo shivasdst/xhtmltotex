@@ -1,0 +1,267 @@
+%importing packages
+\usepackage[utf8]{inputenc}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\usepackage{endnotes}
+\usepackage{setspace}
+\usepackage{imakeidx}
+\usepackage{amsmath,lscape}
+\usepackage{rotating}
+\usepackage{xfrac}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{longtable}
+
+\floatstyle{plain}
+%~ \floatplacement{Figure}{H}
+
+%%page settings for the book
+\usepackage[papersize={140mm,215mm},textwidth=100mm,
+textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
+leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\setdefaultlanguage{english} % (english)
+\setotherlanguage{sanskrit}
+
+\setmainfont[
+	Script=Latin,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic
+]{GentiumBasic}
+
+
+\newfontfamily\englishfont[
+	Script=Latin,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic
+]{GentiumBasic}
+
+\newfontfamily\devanagarifont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701}
+
+\newfontfamily\slanteddev[Script=Devanagari,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
+
+%%defining fonts
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\dev#1{{\devanagarifont\textsanskrit{#1}}}
+
+\def\devinline#1{{\fontsize{13}{15}\selectfont\dev{#1}}}
+\def\enginline#1{{\fontsize{10}{12}\selectfont\eng{#1}}}
+\long\def\bookTitle#1{\vfill\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}\vfill}
+\def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
+\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
+\def\general#1{#1}
+\def\supskpt#1{$^{#1}$}
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[{\thepage}]{{\thepage}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+%%user defined commands
+\newenvironment{myquote}[1]{\par\bgroup\sizenine\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
+\newenvironment{normalmyquote}[1]{\par\bgroup\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
+
+\def\Authorline#1{\hfill{\iflanguage{english}{\englishfont\Large\sl\bfseries -- \,#1}{\devanagarifont\Large\sl\bfseries --\,#1}}%
+\lhead[\small\thepage\quad #1]{}}
+
+\def\sizenine{\fontsize{9}{11}\selectfont}
+
+
+%%general settings
+\pretolerance=9000
+\parindent=0pt
+\setlength{\parskip}{5pt}
+
+
+%%redefining macros
+\makeatletter
+
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+
+\renewcommand\frontmatter{%
+    \cleardoublepage
+  \@mainmatterfalse
+  \pagenumbering{arabic}}
+\renewcommand\mainmatter{%
+    \cleardoublepage
+  \@mainmattertrue
+}
+
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+		\setcounter{endnote}{0}%
+        \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \bfseries #2\par}%
+    \@endpart}
+
+ 
+\def\notesname{Notes}%  
+
+\def\enoteformat{\rightskip\z@ \leftskip\z@ \parindent=0.3em
+  \leavevmode\llap{\makeenmark}}
+
+\def\enoteheading{\section*{\notesname}%
+  \mbox{}\par\vskip-\baselineskip}
+
+\usepackage{lipsum}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\renewenvironment{thebibliography}[1]
+     {%\@mkboth{\bibname}{\bibname}%
+      \list{\hangindent=30pt\hangafter=1}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin10pt%
+            \advance\leftmargin\labelsep%
+            \setlength\itemindent{-15pt}%
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\renewcommand\@biblabel[1]{}
+
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.2ex \@plus -1.3ex \@minus -.3ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\iflanguage{sanskrit}{\devanagarifont\Large\bfseries}{\englishfont\Large\bfseries}}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\iflanguage{sanskrit}{\devanagarifont\large\bfseries}{\englishfont\large\bfseries}}}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {3.25ex\@plus -4ex \@minus -.6ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {-3.25ex \@plus -1ex \@minus -.2ex}%
+                                    {1em}%
+                                    {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
+                                     
+
+\renewcommand\thesection{\@arabic\c@section}
+
+\renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\def\Break{\break }
+\def\passim#1{\textsl{passim}}
+%~ \makeindex
+%~ \makeindex[title=Index,program=makeindex,options=-s mystyle.ist,columnseprule=true,columns=2]
+\makeindex[title=Index,program=xindy,options=-C utf8 -M mystyle.xdy -L english,columnseprule=true,columns=2]
+
+\usepackage{caption}
+\DeclareCaptionFormat{empty}{#1}
+\renewcommand*\figurename{Figure}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\makeatletter
+\usepackage{etoolbox}
+\newcounter{savedchapter}% for remembering the last chapter number
+\preto\appendix{\setcounter{savedchapter}{\arabic{chapter}}}% remembering!
+\newcommand\resumechapters{% the \appendix command with some tweaks
+  \setcounter{chapter}{\arabic{savedchapter}}% restore chapter number
+  \setcounter{section}{0}% reset section counter
+  \gdef\@chapapp{\chaptername}% reset chapter name
+  \gdef\thechapter{\@arabic\c@chapter}% make chapter numbers arabic
+}
+\makeatother
+
+\def\fsize#1#2{\fontsize{#1}{#2}\selectfont }
+
+

@@ -1,0 +1,81 @@
+\documentclass[10pt,twoside]{book}
+
+\input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
+
+\begin{document}
+%~ \frontmatter
+%~ 
+%~ \lhead[\small\thepage]{}
+%~ \rhead[]{\small\thepage}
+%~ \chead[]{}
+%~ \cfoot[]{}
+%~ 
+%~ \input src/titlepage
+%~ \newpage
+%~ 
+%~ \input src/copyright
+%~ \newpage
+%~ 
+%~ \input src/contents
+%~ \newpage
+%~ 
+%~ \input src/trans_scheme
+%~ \newpage
+%~ 
+%~ \input src/about
+%~ \newpage
+%~ 
+%~ \input src/key_partners
+%~ \newpage
+%~ 
+%~ \input src/ack
+%~ \newpage
+%~ 
+%~ \input src/editorial
+
+\mainmatter
+
+\lhead[\small\thepage\quad ]{}
+\rhead[]{\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+%\input src/chapter1
+%~ \setcounter{chapter}{1}
+%\input src/02-chapter2
+%~ \setcounter{chapter}{2}
+%~ \rhead[]{\thechapter. The A of ABC of Indian chronology\quad\small\thepage}
+%~ \input src/03-chapter3
+%~ \setcounter{chapter}{3}
+%\input src/04-chapter4
+\setcounter{chapter}{4}
+\rhead[]{\thechapter. The Vedic Hindu culture and the ancient Tamils...\quad\small\thepage}
+\input src/05-chapter5
+%~ \setcounter{chapter}{5}
+%\input src/06-chapter6
+%~ \setcounter{chapter}{6}
+%\input src/07-chapter7
+
+%\input src/biodata
+%~ \newpage
+%~ ~\phantom{a}
+%~ \thispagestyle{empty}
+\newpage
+\makeatletter
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+
+\lhead[\small\thepage\quad Index]{}
+\rhead[]{Index\quad\small\thepage}
+\label{index}
+\printindex
+
+
+\end{document}
