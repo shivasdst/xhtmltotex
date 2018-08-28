@@ -1,0 +1,16 @@
+{
+	"tagmapping": {
+		"u.b":"\\underline{",
+		"u.a":"}",
+		"span.b":"",
+		"span.a":""			
+	},
+	"attrmapping": {
+		"dev.b":"\\dev{",
+		"dev.a":"}",
+		"quote-author.b":"\n\n~\\hfill ",
+		"quote-author.a":"",		
+		"myframe.b":"\n\n\\myframe{",
+		"myframe.a":"}"	
+	}
+}
