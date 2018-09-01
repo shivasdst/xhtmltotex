@@ -73,7 +73,7 @@ class Xhtmltotex{
 		"quote-author.a" => "\n\\end{flushright}\n",
 		"itemize.b" => "\n\\begin{itemize}\n",
 		"itemize.a" => "\n\\end{itemize}\n",					
-		"enumerate.b" => "\n\\begin{enumerate}\n",
+		"enumerate.b" => "\n\\begin{enumerate}",
 		"enumerate.a" => "\n\\end{enumerate}\n",
 		"verse-num.b"=>"\\versenum{",
 		"verse-num.a"=>"}",
@@ -298,6 +298,8 @@ class Xhtmltotex{
 						$data = str_replace('<', '\textless', $data);
 						$data = str_replace('>', '\textgreater', $data);
 						$data = str_replace('\\general{\-}', '\-', $data);
+						$data = str_replace('ZZ3CZZ', '<', $data);
+						$data = str_replace('ZZ3EZZ', '>', $data);
 					}
 				}
 			}
@@ -365,6 +367,7 @@ class Xhtmltotex{
 		$itemSep = '';
 		$optionalTitle = '';
 		$captionStar = '';
+		$dataItemFormat = '';
 
 		// var_dump($attributes);	
 
@@ -377,6 +380,7 @@ class Xhtmltotex{
 			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}	
 			if($key == 'title-option') {$optionalTitle = $value[0]; unset($attributes['title-option']);}			
 			if($key == 'data-tex-caption-prefix') {$captionStar = $value[0]; unset($attributes[$key]);}			
+			if($key == 'data-item-format') {$dataItemFormat = $value[0]; unset($attributes[$key]);}			
 		}
 
 		if(isset($attributes['id'])) unset($attributes['id']);
@@ -465,10 +469,14 @@ class Xhtmltotex{
 						}
 						elseif( ($blockElement->nodeName == 'ol') || ($blockElement->nodeName == 'ul') ){
 
+							$tmpString = $this->attrMapping[$value . ".b"];	
+							
+							if($dataItemFormat != '')
+								$tmpString = $tmpString . $dataItemFormat;
 							if($itemSep != '')
-								$line = $this->attrMapping[$value . ".b"] . '\itemsep=' . $itemSep . "\n" . $line . $this->attrMapping[$value . ".a"];
+								$line = $tmpString . "\n" . '\itemsep=' . $itemSep . "\n" . $line . $this->attrMapping[$value . ".a"];
 							else
-								$line = $this->attrMapping[$value . ".b"] . $line . $this->attrMapping[$value . ".a"];
+								$line = $tmpString . "\n" . $line . $this->attrMapping[$value . ".a"];
 						} 
 						else{
 
@@ -786,6 +794,12 @@ class Xhtmltotex{
 
 		$nodes = $tableElement->childNodes;
 
+		if(isset($attributes['data-tex'])){
+			$attributes['data-tex'] = str_replace('<', 'ZZ3CZZ', $attributes['data-tex']);
+			$attributes['data-tex'] = str_replace('>', 'ZZ3EZZ', $attributes['data-tex']);
+		}
+
+
 		if( isset($attributes['data-table']) && isset($attributes['data-tex']) )
 			$line = '\begin{'. $attributes['data-table'][0] .'}'. $attributes['data-tex'][0] . "\n";
 		else
@@ -808,7 +822,7 @@ class Xhtmltotex{
 					$endrow = '\\\\';
 
 					if(isset($trAttributes['data-endrow']))
-						$endrow = $trAttributes['data-endrow'][0];
+						$endrow = '\\' . $trAttributes['data-endrow'][0];
 
 					$trValue = $this->parseTrElement($node);
 					$trValue = preg_replace("/&\s$/", '', $trValue);
@@ -865,7 +879,7 @@ class Xhtmltotex{
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if(in_array('hide', $value)) return ;
-			if($key == 'data-endrow') $endrow = $value[0];			
+			if($key == 'data-endrow') $endrow = "\\" . $value[0];
 		}
 
 		$nodes = $trElement->childNodes;		
