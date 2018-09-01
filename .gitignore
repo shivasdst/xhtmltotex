@@ -5,9 +5,12 @@
 /*/*/*.aux
 /*/*/*.dvi
 /*/*/*.ent
+/*/*/*.idx
+/*/*/*.ind
 /TeX/src/
 /TeX/test01/
 /unicode-src/src/
 /unicode-src/test01/
 /TeX/*/originalsrc/
 /TeX/*/.junk/
+/TeX/*/proofs/

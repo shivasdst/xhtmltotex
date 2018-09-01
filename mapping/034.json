@@ -11,6 +11,10 @@
 		"quote-author.b":"\n\n~\\hfill ",
 		"quote-author.a":"",		
 		"myframe.b":"\n\n\\myframe{",
-		"myframe.a":"}"	
+		"myframe.a":"}",	
+		"tamil.b":"\\tamil{",
+		"tamil.a":"}",	
+		"img-center.b":"\\centerline{",
+		"img-center.a":"}"	
 	}
 }
