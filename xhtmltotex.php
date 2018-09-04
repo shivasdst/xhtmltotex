@@ -66,7 +66,9 @@ class Xhtmltotex{
 		"num.b"=>"\\num{",
 		"num.a"=>"}",
 		"myquote.b" => "\n\\begin{myquote}\n",
-		"myquote.a" => "\n\\end{myquote}\n",				
+		"myquote.a" => "\n\\end{myquote}\n",		
+		"quote.b" => "\n\\begin{quote}\n",
+		"quote.a" => "\n\\end{quote}\n",				
 		"verse.b" => "\n\\begin{verse}\n",
 		"verse.a" => "\n\\end{verse}\n",
 		"quote-author.b" => "\n\\begin{flushright}\n",
@@ -105,6 +107,7 @@ class Xhtmltotex{
 
 	public $numbered = True;
 	public $bibliography = False;
+	public $currentFile;
 
 	public function __construct($id) {
 
@@ -242,6 +245,8 @@ class Xhtmltotex{
 
 		foreach ($xhtmlFiles as $xhtmlFile) {		
 
+			$this->currentFile = $xhtmlFile;
+
 			if(preg_match('/.*\/999.*\.xhtml$/', $xhtmlFile)) continue;
 
 			$texFile = basename($xhtmlFile);
@@ -295,6 +300,7 @@ class Xhtmltotex{
 						$data = str_replace('ZZ38ZZ', '&', $data);
 						$data = str_replace('ZZ35ZZ', '#', $data);
 						$data = str_replace('ZZ95ZZ', '_', $data);
+						$data = str_replace('ZZ37ZZ', '%', $data);
 						$data = str_replace('<', '\textless', $data);
 						$data = str_replace('>', '\textgreater', $data);
 						$data = str_replace('\\general{\-}', '\-', $data);
@@ -424,12 +430,13 @@ class Xhtmltotex{
 							$tmpString = str_replace('&', 'ZZ38ZZ', $tmpString);
 							$tmpString = str_replace('#', 'ZZ35ZZ', $tmpString);
 							$tmpString = str_replace('_', 'ZZ95ZZ', $tmpString);
+							$tmpString = str_replace('%', 'ZZ37ZZ', $tmpString);
 							// echo $tmpString . "\n";
 						}
 	
 						$line .= $tmpString;
 					}
-					elseif( ($node->nodeName == 'li') )
+					elseif( ($node->nodeName == 'li') || ($node->nodeName == 'ul') || ($node->nodeName == 'ol') )
 						$line .=  $this->parseBlockElement($node);				
 					elseif($node->nodeName == 'img')
 						$line .= $this->parseImgElement($node);
@@ -581,7 +588,9 @@ class Xhtmltotex{
 					if($attributes['data-tex'][0] == 'hfill')
 						return '\\hfill' . " ";
 					elseif($attributes['data-tex'][0] == 'break')
-						return '\\break' . " ";
+						return '\\break' . " ";					
+					elseif($attributes['data-tex'][0] == '-')
+						return '\\-';
 					else	
 						return $attributes['data-tex'][0];
 				}
