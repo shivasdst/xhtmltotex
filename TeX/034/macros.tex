@@ -34,17 +34,17 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \setmainfont[
 	Script=Latin,
 	BoldFont=GentiumBasic-Bold,
-	ItalicFont=GentiumPlus-Italic,
+	ItalicFont=GentiumBasic-Italic,
 	BoldItalicFont=GentiumBasic-BoldItalic
-]{GentiumPlus}
+]{GentiumBasic}
 
 
 \newfontfamily\englishfont[
 	Script=Latin,
 	BoldFont=GentiumBasic-Bold,
-	ItalicFont=GentiumPlus-Italic,
+	ItalicFont=GentiumBasic-Italic,
 	BoldItalicFont=GentiumBasic-BoldItalic
-]{GentiumPlus}
+]{GentiumBasic}
 
 \newfontfamily\devanagarifont[
 	Script=Devanagari,
@@ -89,6 +89,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\Authorline#1{\hfill{\iflanguage{english}{\englishfont\Large\sl\bfseries -- \,#1}{\devanagarifont\Large\sl\bfseries --\,#1}}%
 \lhead[\small\thepage\quad #1]{}}
+\def\authoraffiliation#1{{~\hfill\fontsize{11}{13}\selectfont #1}}
 
 \def\sizenine{\fontsize{9}{11}\selectfont}
 
@@ -228,7 +229,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
                                      {\iflanguage{sanskrit}{\devanagarifont\large\bfseries}{\englishfont\large\bfseries}}}
 
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                                     {3.25ex\@plus -4ex \@minus -.6ex}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
                                      {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
 
@@ -239,7 +240,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
                                      
 
 \renewcommand\thesection{\@arabic\c@section}
-
+\renewcommand\thesubsubsection{\@arabic\c@subsubsection}
 \renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
