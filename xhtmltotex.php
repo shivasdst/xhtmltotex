@@ -295,7 +295,7 @@ class Xhtmltotex{
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
-			if(in_array('level1-title hide', $value)) return ;	
+			if(in_array('hide', $value)) return ;	
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
 			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}	
@@ -899,7 +899,11 @@ class Xhtmltotex{
 
 				$attrs[$name] = [];
 				$value = $element->getAttribute($name);
-				array_push($attrs[$name],$value);
+
+				if($name == 'class')
+					$attrs[$name] = preg_split('/ /', $value);
+				else
+					array_push($attrs[$name],$value);
 			}
 		}
 
