@@ -27,7 +27,11 @@
 		"figcaption.b":"\\caption{",
 		"figcaption.a":"}",		
 		"caption.b":"\\caption{",
-		"caption.a":"}"		
+		"caption.a":"}",
+		"ul.b":"\n\\begin{itemize}\n",
+		"ul.a":"\n\\end{itemize}\n",					
+		"ol.b":"\n\\begin{enumerate}",
+		"ol.a":"\n\\end{enumerate}\n"		
 	},
 	"attrmapping": {
 		"text-center.b":"\n\\begin{center}\n",
