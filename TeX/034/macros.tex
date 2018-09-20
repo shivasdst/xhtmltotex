@@ -25,6 +25,7 @@
 \usepackage[papersize={140mm,215mm},textwidth=100mm,
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
 leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
+\usepackage[justification=centering]{caption}
 
 \defaultfontfeatures{Ligatures=TeX}
 
@@ -51,6 +52,10 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 	BoldFont=SHREE_DEV_OTF_0702
 ]{SHREE_DEV_OTF_0701}
 
+\newfontfamily\gentiumplus[
+	Script=Latin
+]{GentiumPlus}
+
 \newfontfamily\slanteddev[Script=Devanagari,AutoFakeSlant=0.15]{SHREE_DEV_OTF_0701}
 
 \newfontfamily\tamilfont[
@@ -60,6 +65,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 %%defining fonts
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
+\def\gplus#1{{\gentiumplus #1}}
 \def\dev#1{{\devanagarifont\textsanskrit{#1}}}
 \def\tamil#1{{\tamilfont\texttamil{#1}}}
 
@@ -274,4 +280,3 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 \def\fsize#1#2{\fontsize{#1}{#2}\selectfont }
 \renewcommand\arraystretch{1.15}
-
