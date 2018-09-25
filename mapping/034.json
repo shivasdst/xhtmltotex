@@ -17,6 +17,8 @@
 		"img-center.b":"\\centerline{",
 		"img-center.a":"}",	
 		"author-affiliation.b":"\\authoraffiliation{",
-		"author-affiliation.a":"}"
+		"author-affiliation.a":"}",
+		"gplus.b":"\\gplus{",
+		"gplus.a":"}"
 	}
 }
