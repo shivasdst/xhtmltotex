@@ -163,6 +163,7 @@ class Xhtmltotex{
 			$this->currentFile = $xhtmlFile;
 
 			if(preg_match('/.*\/999.*\.xhtml$/', $xhtmlFile)) continue;
+			if(preg_match('/.*\/toc\.xhtml$/', $xhtmlFile)) continue;
 
 			$texFile = basename($xhtmlFile);
 			$texFile = str_replace('.xhtml', '.tex', $texFile);
@@ -296,6 +297,7 @@ class Xhtmltotex{
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if(in_array('hide', $value)) return ;	
+			if(in_array('level1-title hide', $value)) return ;	
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
 			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}	
@@ -470,6 +472,14 @@ class Xhtmltotex{
 			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('endnote', $attributes['footertype']) ){
 
 				$footcmd = '\endnote';
+				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
+				unset($attributes['footertype']);
+				unset($attributes['id']);
+			}			
+
+			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('footnote', $attributes['footertype']) ){
+
+				$footcmd = '\footnote';
 				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
 				unset($attributes['footertype']);
 				unset($attributes['id']);
@@ -900,9 +910,9 @@ class Xhtmltotex{
 				$attrs[$name] = [];
 				$value = $element->getAttribute($name);
 
-				if($name == 'class')
-					$attrs[$name] = preg_split('/ /', $value);
-				else
+				// if($name == 'class')
+				// 	$attrs[$name] = preg_split('/ /', $value);
+				// else
 					array_push($attrs[$name],$value);
 			}
 		}
