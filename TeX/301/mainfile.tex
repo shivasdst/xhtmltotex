@@ -18,7 +18,7 @@
 \tableofcontents
 \mainmatter
 \rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
-\begin{raggedright}
+
 \input src/001-chapter001.tex
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
@@ -84,5 +84,4 @@
 \input src/056-chapter056.tex
 \input src/057-chapter057.tex
 \chapterend
-\end{raggedright}
 \end{document}
