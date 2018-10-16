@@ -1,8 +1,8 @@
 {
 	"tagmapping": {
-		"sup.b":"_",
+		"sup.b":"^",
 		"sup.a":"",
-		"sub.b":"^",
+		"sub.b":"_",
 		"sub.a":""
 	},
 	"attrmapping": {
@@ -29,6 +29,8 @@
 		"eq-inline.b":"$",
 		"eq-inline.a":"$",
 		"eq-rm.b":"{\\rm ",
-		"eq-rm.a":"}"
+		"eq-rm.a":"}",
+		"group-data.b":"{",
+		"group-data.a":"}"
 	}
 }
