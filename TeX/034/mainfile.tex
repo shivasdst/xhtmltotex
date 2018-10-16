@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside]{book}
+\documentclass[10pt,twoside,openany]{book}
 
 \input macros
 
@@ -14,7 +14,7 @@
 \rhead[]{\small\thepage}
 \chead[]{}
 \cfoot[]{}
-%~ 
+
 %~ \input src/titlepage
 %~ \newpage
 %~ 
@@ -23,24 +23,18 @@
 %~ 
 %~ \input src/contents
 %~ \newpage
-%~ 
+
 %~ \input src/trans_scheme
 %~ \newpage
-%~ 
-%~ \input src/about
-%~ \newpage
-%~ 
-%~ \input src/key_partners
-%~ \newpage
-%~ 
-%~ \input src/ack
-%~ \newpage
-%~ 
-%~ \input src/editorial
+
+\input src/000d-about
+\newpage
+
+\input src/000e-key-partners
+\input src/000f-acknowledgements.tex
 
 \rhead[]{Introduction\quad\small\thepage}
 \input src/01-chapter1
-
 
 \mainmatter
 
@@ -88,12 +82,47 @@
 \rhead[]{\thechapter. Reaffirming Āgama Nigama Samanvaya...\quad\small\thepage}
 \input src/11-chapter11
 
-%\input src/biodata
-%~ \newpage
+\clearpage
+
+\makeatletter
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries Appendix\\[4pt] #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+\makeatother
+
+\lhead[\small\thepage\quad Appendix - Our Contributors]{}
+\rhead[]{\small Appendix - Our Contributors\quad \thepage}
+\chead[]{}
+\cfoot[]{}
+\input src/12-our-contributors12
+
+\newpage
+\lhead[\small\thepage\quad Appendix - Table 3]{}
+\rhead[]{\small Appendix - Table 3\quad \thepage}
+
+\input src/Appendixtable3
+
 %~ \phantom{a}
 %~ \thispagestyle{empty}
 \newpage
 \makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
 \renewcommand{\@idxitem}{\par\hangindent 20\p@}
 \renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
 \renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}

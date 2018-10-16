@@ -19,6 +19,10 @@
 		"author-affiliation.b":"\\authoraffiliation{",
 		"author-affiliation.a":"}",
 		"gplus.b":"\\gplus{",
-		"gplus.a":"}"
+		"gplus.a":"}",
+		"para-title.b":"\\section{",
+		"para-title.a":"}",		
+		"namesinorder.b":"\\namesinorder{",
+		"namesinorder.a":"}"		
 	}
 }
