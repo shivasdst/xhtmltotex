@@ -216,6 +216,10 @@ topmargin=15mm,botmargin=19mm,leftmargin=15mm,rightmargin=15mm,footskip=6mm,crop
   %~ \fi
   %~ \vskip\belowcaptionskip}
 
+\usepackage{float}
+\floatstyle{plain}
+\floatplacement{Figure}{H}
+
 %%for centering floats
 \def \@floatboxreset {%
         \reset@font
@@ -224,6 +228,8 @@ topmargin=15mm,botmargin=19mm,leftmargin=15mm,rightmargin=15mm,footskip=6mm,crop
         \centering
 }
 \setlength{\textfloatsep}{4pt}
+
+
 
 
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
