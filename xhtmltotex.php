@@ -654,28 +654,45 @@ class Xhtmltotex{
 
 		$attributes = $this->getAttributesForElement($figureElement);
 		$floatParams = '';
+		$floatEnv = '';
+		$imgLine = '';
+		$floatCenter = '';
 		// var_dump($attributes);
 
 		foreach ($attributes as $key => $value) {
 			
 			// echo "\t --> " . $key . ' -> ' . $value[0] . "\n";
 			if($key == 'data-tex-float-params') {$floatParams = $value[0]; unset($attributes[$key]);}
+			if($key == 'data-tex-float-env') {$floatEnv = $value[0]; unset($attributes[$key]);}
+			if($key == 'data-tex-float-center') {$floatCenter = '\\' . $value[0]; unset($attributes[$key]);}
 		}
 
 		$nodes = $figureElement->childNodes;
 
-		if( $floatParams != '' )
-			$line = $this->mapping[$figureElement->nodeName . ".b"] . $floatParams . "\n";
+		if($floatEnv != '')
+			$line = '\\begin{' . $floatEnv . "}";
 		else
-			$line = $this->mapping[$figureElement->nodeName . ".b"] . "\n";
+			$line = $this->mapping[$figureElement->nodeName . ".b"];
+
+		if( $floatParams != '' )
+			$line = $line . $floatParams . "\n";
+		else
+			$line = $line . "\n";
 
 		if (!is_null($nodes)) {
 
 			foreach ($nodes as $node) {
 
 				// echo $node->nodeName . "\n";
-				if( ($node->nodeName == 'img') )
-					$line .= $this->parseImgElement($node);	
+				if( ($node->nodeName == 'img') ){
+
+					$imgLine = $this->parseImgElement($node);
+
+					if($floatCenter != '')
+						$line .= $floatCenter . "\n" . $imgLine;	
+					else
+						$line .= $imgLine;	
+				}
 				elseif( ($node->nodeName == 'figcaption') ){
 
 					$line .= $this->parseBlockElement($node);
@@ -703,7 +720,11 @@ class Xhtmltotex{
 			}
 		}
 
-		$line = $line . $this->mapping[$figureElement->nodeName . ".a"] . "\n";		
+		if($floatEnv != '')
+			$line = $line . '\\end{' . $floatEnv ."}\n";		
+		else
+			$line = $line . $this->mapping[$figureElement->nodeName . ".a"] . "\n";		
+
 		$line = preg_replace("/\n\n\\\\caption/u", "\n" . '\\caption', $line);
 		$line = preg_replace("/}\\\\end\{figure\}/u", "}\n" . '\\end{figure}', $line);
 
