@@ -1,0 +1,36 @@
+{
+	"tagmapping": {
+		"sup.b":"^",
+		"sup.a":"",
+		"sub.b":"_",
+		"sub.a":""
+	},
+	"attrmapping": {
+		"level2-title.b":"\\heading{",
+		"level2-title.a":"}",
+		"title1.b":"\\titleA{",
+		"title1.a":"}",
+		"subtitle1.b":"\\subtitleA{",
+		"subtitle1.a":"}",
+		"subtitle2.b":"\\subtitleB{",
+		"subtitle2.a":"}",
+		"subtitle.b":"\\subtitle{",
+		"subtitle.a":"}",
+		"translation.b":"\\translation{",
+		"translation.a":"}",
+		"translator.b":"\\translator{",
+		"translator.a":"}",
+		"figcaption.b":"\\figcaption{",
+		"figcaption.a":"}",
+		"sketch.b":"\\begin{sketch}\n",
+		"sketch.a":"\n\\end{sketch}",
+		"publisherlogo.b":"\\publisherlogo{",
+		"publisherlogo.a":"}\n",
+		"eq-inline.b":"$",
+		"eq-inline.a":"$",
+		"eq-rm.b":"{\\rm ",
+		"eq-rm.a":"}",
+		"group-data.b":"{",
+		"group-data.a":"}"
+	}
+}
