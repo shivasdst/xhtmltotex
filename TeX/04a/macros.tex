@@ -1,0 +1,279 @@
+%%importing packages
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec,graphicx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{xstring}
+\usepackage{polyglossia}
+\usepackage{titlesec}
+\usepackage{xpatch}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{longfbox}
+\usepackage{ifthen}
+\usepackage{rotating}
+
+\usepackage[margin=10pt,font=small,labelfont=bf,labelformat=empty]{caption}
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+%%longtable settings
+\setlength\LTleft{0pt}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+\xpatchcmd{\verse}{\itemsep}{\advance\topsep-0.6em\itemsep}{}{}
+\xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+\xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+
+\setmainlanguage[numerals=Kannada]{kannada}
+\setotherlanguages{english}
+
+\usepackage[papersize={140mm,220mm},textwidth=11mm,textheight=170mm,headheight=6mm,headsep=4mm,
+topmargin=15mm,botmargin=19mm,leftmargin=15mm,rightmargin=15mm,footskip=6mm,cropmarks]{zwpagelayout}
+
+%%defining fonts
+\setmainfont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+\newfontfamily\kannadafont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\newfontfamily\englishfont[
+	Script=Latin,
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{GentiumBasic}
+
+
+%%user defined commands
+\long\def\bookTitle#1{\thispagestyle{empty}\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}\bigskip}
+\long\def\subtitle#1{\thispagestyle{empty}\centerline{{\fontsize{40}{42}\selectfont\textbf{#1}}}\vfill}
+\def\titleauthor#1{\centerline{{\huge\textbf{#1}}}\vfill}
+\def\translation#1{\centerline{{\large\bfseries #1}}\medskip}
+\def\translator#1{\centerline{{\huge\bfseries #1}}\vfill}
+\def\publisherlogo#1{\centerline{#1}}
+\def\publisher#1{\centerline{{\fontsize{16pt}{20pt}\selectfont\bfseries #1}}\smallskip}
+\def\place#1{\centerline{{\fontsize{14pt}{16pt}\selectfont #1}}}
+
+
+\newenvironment{myquote}[1]{\medskip\par\bgroup\fontsize{10}{12}\selectfont\noindent\leftskip=10pt\rightskip=10pt#1}{\par\egroup\medskip}
+\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
+\def\general#1{#1}
+\def\vauthor#1{{\hfill #1}}
+\def\supskpt#1{$^{#1}$}
+
+\def\titleA#1{\thispagestyle{empty}\centerline{{\Huge\bfseries #1}}\bigskip}
+\def\subtitleA#1{\centerline{{\Huge\bfseries #1}}\bigskip}
+\def\subtitleB#1{\centerline{{\Large #1}}\vfill\eject}
+
+\def\figcaption#1{{\fontsize{12pt}{14pt}\selectfont #1}}
+\def\sketch{~\phantom{-}\vfill\thispagestyle{empty}\begin{center}}
+\def\endsketch{\vfill\end{center}\eject}
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\kan#1{{\kannadafont\textkannada{#1}}}
+\def\engfoot#1{\eng{#1}}
+\def\misccmd{\clearpage~\vfill\thispagestyle{empty}}
+
+
+\def\enginline#1{{\fontsize{10.5}{12.5}\selectfont\eng{#1}}}
+
+
+%%fancy header settings
+\chead[]{}
+\lhead[{\rm\thepage}]{{\fontsize{9pt}{11pt}\selectfont\rightmark}}
+\rhead[{\fontsize{9pt}{9pt}\selectfont ಸಿ.\ ವಿ.\ ರಾಮನ್ — ಒಂದು ನೆನಪು}]{{\rm\thepage}}
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{{\rm\thepage}} % except the center
+\renewcommand{\headrulewidth}{0pt}}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\pagestyle{fancy}
+
+\newcounter{flag}
+
+\makeatletter
+
+\titleformat*{\section}{\large\bfseries}
+\titlespacing*{\section}{0pt}{*1.5}{*1}
+
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \setcounter{flag}{1}
+    \chapter*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    \setcounter{flag}{0}
+    }
+
+\def\@schapter#1{\if@twocolumn
+                   \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                   \@makeschapterhead{#1}%
+                   \@afterheading
+                 \fi%
+                 \ifnum\value{flag}=1
+                 \else 
+					\addtocontents{toc}{\protect\thispagestyle{empty}}%
+					\addtocontents{toc}{\protect\contentsline{section}{#1}{\rm\thepage}}
+				 \fi	
+                 }
+
+\def\@makechapterhead#1{%
+ \vspace*{50\p@}%
+{\parindent \z@ \raggedright \normalfont
+ \ifnum \c@secnumdepth >\m@ne
+ \if@mainmatter
+ \huge\bfseries \@chapapp\space \rm\thechapter
+\par\nobreak
+     \vskip 20\p@
+     \fi
+    \fi
+    \interlinepenalty\@M
+    {\fontsize{16pt}{18pt}\fontseries{bx}\selectfont #1}\par\nobreak
+    \vskip 40\p@
+  }}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                     \if@mainmatter
+                       \refstepcounter{chapter}%
+						\addtocontents{toc}{\protect\thispagestyle{empty}}%
+						\addtocontents{toc}{\bigskip}%
+						\addtocontents{toc}{\protect\contentsline{chapter}{\protect\centerline{ಅಧ್ಯಾಯ\ \ \rm\thechapter}}{}}%
+						\addtocontents{toc}{\medskip}%
+                     \typeout{\@chapapp\space\thechapter.}%
+		      \else                
+                       \fi
+                    \else
+                
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    {\Large\bfseries #1}\par\nobreak
+    \vskip 40\p@
+  }}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\fontsize{12pt}{14pt}\fontseries{bx}\selectfont}}
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+%~ \long\def\@makecaption#1#2{%
+  %~ \vskip\abovecaptionskip
+  %~ \sbox\@tempboxa{#1: #2}%
+  %~ \ifdim \wd\@tempboxa >\hsize
+  %~ {\centering\fontsize{10pt}{12pt}\selectfont\bfseries #2}\par
+  %~ \else
+    %~ \global \@minipagefalse
+    %~ \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  %~ \fi
+  %~ \vskip\belowcaptionskip}
+
+\usepackage{float}
+\floatstyle{plain}
+\floatplacement{Figure}{H}
+
+%%for centering floats
+\def \@floatboxreset {%
+        \reset@font
+        \normalsize
+        \@setminipage
+        \centering
+}
+\setlength{\textfloatsep}{4pt}
+
+
+
+
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  
+\makeatother
+
+\def\figcapsize{\fontsize{10}{12}\fontseries{bx}\selectfont}                                   
+\renewenvironment{quote}
+               {\list{}{\leftmargin=0.15in\rightmargin=0.15in}%
+                \item\relax}
+               {\endlist}
+
+\def\thechapter{\arabic{chapter}}
+\renewcommand{\thesection}{}
+
+\def\heading{\futurelet\new\macA}
+\def\macA{\ifx\new[\let\next=\headingB 
+\else
+  \let\next=\headingA
+\fi 
+\next}
+
+\def\headingA#1{\vskip 0.75\baselineskip{\noindent\fontsize{13pt}{15pt}\selectfont\bf #1}\relax%
+\addtocontents{toc}{\protect\contentsline{section}{#1}{\rm\thepage}}%
+\lhead[{\rm\thepage}]{\fontsize{9pt}{11pt}\selectfont #1}%
+\vskip 0.25\baselineskip}
+
+\def\headingB[#1]#2{\vskip 0.75\baselineskip{\noindent\fontsize{13pt}{15pt}\selectfont\bf #2}\relax%
+\addtocontents{toc}{\protect\contentsline{section}{#1}{\rm\thepage}}%
+\lhead[{\rm\thepage}]{\fontsize{9pt}{11pt}\selectfont #1}%
+\vskip 0.25\baselineskip}
+
+\linespread{1}
+\pretolerance=-1
+\tolerance=4000
+\hfuzz=1pt
+\brokenpenalty9999\relax
+
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+
+\input dictionary
+

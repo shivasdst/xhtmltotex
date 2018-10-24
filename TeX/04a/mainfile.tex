@@ -1,0 +1,36 @@
+\documentclass[12pt,twoside,openany]{book}
+
+\input macros
+
+\begin{document}
+
+\frontmatter
+
+\input src/00a-titlepage
+\input src/00b-photo
+\input src/00c-titlepage
+
+\newpage
+
+\thispagestyle{empty}
+\input src/00d-copyright
+
+\newpage
+
+\tableofcontents
+
+\newpage
+ 
+\lhead[{\rm\thepage}]{{\fontsize{9pt}{11pt}\selectfont ಮುನ್ನುಡಿ}}
+\input src/00e-foreword
+\input src/00f-foreword
+
+\mainmatter
+
+\input src/01-chapter01
+\input src/02-chapter02
+\input src/03-chapter03
+\input src/04-chapter04
+\input src/05-chapter05
+\input src/06-epilogue06
+\end{document}
