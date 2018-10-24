@@ -4,7 +4,9 @@
 
 \begin{document}
 
-\fontsize{12pt}{15pt}\selectfont
+%~ \fontsize{13.5pt}{14.5pt}\selectfont
+%~ \fontsize{13.5pt}{14.75pt}\selectfont %%linespread 1 (535)
+\fontsize{13pt}{14.75pt}\selectfont %%linespread 1.04 (516) - finalized for second print
 
 \frontmatter
 
@@ -18,15 +20,16 @@
 \tableofcontents
 \mainmatter
 \rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
-
+\thispagestyle{empty}
 \input src/001-chapter001.tex
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
-                    \thispagestyle{plain}%
+                    %~ \thispagestyle{plain}%
                     \global\@topnum\z@
                     \@afterindentfalse
                     \secdef\@chapter\@schapter}
 \makeatother
+\end{document}
 \input src/002-chapter002.tex
 \input src/003-chapter003.tex
 \input src/004-chapter004.tex
