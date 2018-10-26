@@ -991,8 +991,8 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-		// $data = str_replace("-", "–", $data);
-		// $data = str_replace('\–', '\-', $data);
+		 $data = str_replace("-", "–", $data);
+		 $data = str_replace('\–', '\-', $data);
 
 
 
