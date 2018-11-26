@@ -15,24 +15,35 @@
 \chead[]{}
 \cfoot[]{}
 
-%~ \input src/titlepage
-%~ \newpage
-%~ 
-%~ \input src/copyright
-%~ \newpage
-%~ 
-%~ \input src/contents
-%~ \newpage
+\input src/titlepage
+\newpage
+ 
+\input src/copyright
+\newpage
 
-%~ \input src/trans_scheme
-%~ \newpage
+\lhead[]{}
+\input src/contents
+\newpage
+
+\input src/trans_scheme
+\newpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
 
 \input src/000d-about
 \newpage
 
 \input src/000e-key-partners
 \input src/000f-acknowledgements.tex
+\newpage
 
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
 \rhead[]{Introduction\quad\small\thepage}
 \input src/01-chapter1
 
@@ -81,7 +92,6 @@
 
 \rhead[]{\thechapter. Reaffirming Āgama Nigama Samanvaya...\quad\small\thepage}
 \input src/11-chapter11
-
 \clearpage
 
 \makeatletter
@@ -101,8 +111,8 @@
 \chead[]{}
 \cfoot[]{}
 \input src/12-our-contributors12
-
 \newpage
+
 \lhead[\small\thepage\quad Appendix - Table 3]{}
 \rhead[]{\small Appendix - Table 3\quad \thepage}
 
@@ -133,6 +143,4 @@
 \rhead[]{Index\quad\small\thepage}
 \label{index}
 \printindex
-
-
 \end{document}
