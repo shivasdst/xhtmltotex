@@ -1,0 +1,50 @@
+\documentclass[12pt,twoside,openany]{book}
+
+\input macros
+\input dictionary1
+
+\begin{document}
+
+\fontsize{13}{15}\selectfont
+\frontmatter
+
+%\input src/000a-title
+\newpage
+
+%\input src/000b-copyright
+%\rhead[]{{\fontsize{10}{12}\selectfont ಮುನ್ನುಡಿ\quad\arabictokannada{\thepage}}}
+%\input src/000c-preface
+
+\tableofcontents
+\mainmatter
+
+\thispagestyle{empty}
+%\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
+{
+\input src/001-chapter001.tex
+\input src/002-chapter002.tex
+\input src/003-chapter003.tex
+\input src/004-chapter004.tex
+\input src/005-chapter005.tex
+\input src/006-chapter006.tex
+\input src/007-chapter007.tex
+\input src/008-chapter008.tex
+\input src/009-chapter009.tex
+\input src/010-chapter010.tex
+\input src/011-chapter011.tex
+\input src/012-chapter012.tex
+\input src/013-chapter013.tex
+\input src/014-chapter014.tex
+\input src/015-chapter015.tex
+\input src/016-chapter016.tex
+}
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
+                    %~ \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+
+\chapterend
+\end{document}
