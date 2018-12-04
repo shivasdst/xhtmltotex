@@ -290,6 +290,7 @@ class Xhtmltotex{
 		$optionalTitle = '';
 		$captionStar = '';
 		$dataItemFormat = '';
+		$labelData = '';
 
 		// var_dump($attributes);	
 
@@ -305,6 +306,9 @@ class Xhtmltotex{
 			if($key == 'data-tex-caption-prefix') {$captionStar = $value[0]; unset($attributes[$key]);}			
 			if($key == 'data-item-format') {$dataItemFormat = $value[0]; unset($attributes[$key]);}			
 		}
+
+		if(isset($attributes['id']) && preg_match('/h[1-6]/', $blockElement->nodeName))	
+			$labelData = '\\label{' . $attributes['id'][0] . '}'; 
 
 		if(isset($attributes['id'])) unset($attributes['id']);
 
@@ -417,6 +421,8 @@ class Xhtmltotex{
 					$line = preg_replace("/(.*?)\{(.*)\}/", '$1[' . $optionalTitle. ']{$2}', $line);
 	
 				$line = preg_replace("/\\\\footnote/", '\protect\footnote', $line);
+				if($labelData != '')
+					$line = $line . $labelData;
 			}
 
 			if( ($blockElement->nodeName == 'li') && !($attributes))
