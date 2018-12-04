@@ -5,6 +5,12 @@
 		"typesetter.b":"\n\\begin{flushleft}{\\small\n",
 		"typesetter.a":"\n}\\end{flushleft}\n",					
 		"printer.b":"\n\\begin{flushleft}{\\small\n",
-		"printer.a":"\n}\\end{flushleft}\n"					
+		"printer.a":"\n}\\end{flushleft}\n",					
+		"hfill.b":"",
+		"hfill.a":"",
+		"s-text-right.b":"",
+		"s-text-right.a":"",
+		"clearfloat.b":"",
+		"clearfloat.a":""					
 	}
 }
