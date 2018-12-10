@@ -1,6 +1,11 @@
 \documentclass[12pt,twoside,openany]{book}
 
+
 \input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
 
 \begin{document}
 
@@ -11,5 +16,6 @@
 \mainmatter
 
 \input src/001-chapter001
+\input src/002-chapter002
 
 \end{document}

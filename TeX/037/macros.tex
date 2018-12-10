@@ -123,6 +123,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
+	\setcounter{endnote}{0}%
         \fontsize{18}{20}\fontseries{bx}\selectfont \@chapapp\space – \thechapter\space #1
         \par\nobreak
         \vskip 40\p@
@@ -135,16 +136,16 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
   
 \renewcommand\labelitemi{\eng{\textbullet}}
 
-\renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\clearpage\fi
-                    \thispagestyle{plain}%
-                    \global\@topnum\z@
-                    \@afterindentfalse
-                    \secdef\@chapter\@schapter}
+%\renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\clearpage\fi
+%                    \thispagestyle{plain}%
+%                    \global\@topnum\z@
+%                    \@afterindentfalse
+%                    \secdef\@chapter\@schapter}
 
 \def\notesname{ಅಡಿ ಟಿಪ್ಪಣಿಗಳು}%
 
 
-\def\@makeenmark{\relax{\kern1pt}\small\@theenmark}
+%\def\@makeenmark{\relax{\kern1pt}\small\@theenmark}
 \def\enoteformat{\rightskip\z@ \leftskip\z@ \parindent=1.8em
   \leavevmode\llap{\theenmark. }}
                       
