@@ -1,0 +1,16 @@
+{
+	"tagmapping": {
+		"sup.b":"^",
+		"sup.a":"",
+		"sub.b":"_",
+		"sub.a":""
+	},
+	"attrmapping": {
+		"eq-inline.b":"$",
+		"eq-inline.a":"$",
+		"eq-rm.b":"{\\rm ",
+		"eq-rm.a":"}",
+		"group-data.b":"{",
+		"group-data.a":"}"
+	}
+}
