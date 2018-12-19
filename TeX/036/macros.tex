@@ -23,8 +23,7 @@
 \usepackage{amsxtra}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage[justification=centering]{caption}
-
+\usepackage[belowskip=-7pt,aboveskip=0pt,justification=centering]{caption}
 
 \floatstyle{plain}
 
@@ -228,4 +227,19 @@ I need more words\fi}
   \sbox0{\begin{otherlanguage}[#1]{#2}
     \hyphenation{#3}\end{otherlanguage}}}
 
-
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \Large\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    \vskip 30\p@
+  }}
+  \makeatother
