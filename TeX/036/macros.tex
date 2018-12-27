@@ -27,10 +27,10 @@
 
 \floatstyle{plain}
 
-\usepackage{tikz}
-\newcommand*\mycirc[1]{%
-  \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
-}
+%~ \usepackage{tikz}
+%~ \newcommand*\mycirc[1]{%
+  %~ \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
+%~ }
 
 
 \setlist[itemize]{noitemsep, topsep=0pt}
@@ -93,8 +93,16 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 
 
 %%user defined commands
-%\long\def\bookTitle#1{\vfill\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}\vfill}
+\long\def\titlea#1{\centerline{{\fontsize{28}{30}\selectfont\textbf{#1}}}\smallskip}
+\long\def\bookTitle#1{\centerline{{\fontsize{33}{35}\selectfont\textbf{#1}}}\smallskip}
+\long\def\titleb#1{\centerline{{\fontsize{28}{30}\selectfont\textbf{#1}}}\vfill}
 \def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
+\def\titletopline#1{\hfill #1\vskip 2cm}
+\def\authorcaption#1{\centerline{{\large\bfseries #1}}\smallskip}
+\def\copyrightpub#1{\centerline{{\bfseries #1}}}
+\def\copyrightpubcaption#1{\centerline{{\bf #1}}}
+\def\copyrightpubaddr#1{\centerline{#1}}
+\def\pagecount#1{#1 \pageref{prelims}+\pageref{lastpage}}
 \newenvironment{myquote}[1]{\medskip\par\bgroup\fontsize{10}{12}\selectfont\noindent\leftskip=10pt\rightskip=10pt#1}{\par\egroup\medskip}
 \def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
 \def\general#1{#1}
@@ -102,7 +110,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 \def\supskpt#1{$^{#1}$}
 
 \def\enginline#1{{\fontsize{12}{14}\selectfont\eng{#1}}}
-\def\publisher#1{{\fontsize{16pt}{20pt}\selectfont\bfseries #1}}
+\def\publisher#1{{\fontsize{20pt}{22pt}\selectfont\bfseries #1}}
 \def\place#1{{\fontsize{14pt}{16pt}\selectfont #1}}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}

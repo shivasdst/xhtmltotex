@@ -16,6 +16,9 @@
 
 \input src/000a-title
 \newpage
+\input src/000b-copyright
+\end{document}
+\newpage
 
 %\input src/000b-copyright
 %\rhead[]{{\fontsize{10}{12}\selectfont ಮುನ್ನುಡಿ\quad\arabictokannada{\thepage}}}
@@ -23,7 +26,7 @@
 \input src/000c-preface001
 \input src/000d-preface001
 \input src/000e-preface001
-
+\label{prelims}
 
 \newpage
 \tableofcontents
@@ -48,6 +51,7 @@
 \input src/014-chapter014.tex
 \input src/015-chapter015.tex
 \input src/016-chapter016.tex
+\label{lastpage}
 }
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
@@ -56,6 +60,5 @@
                     \@afterindentfalse
                     \secdef\@chapter\@schapter}
 \makeatother
-
 \chapterend
 \end{document}

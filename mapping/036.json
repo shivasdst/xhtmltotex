@@ -11,6 +11,22 @@
 		"eq-rm.b":"{\\rm ",
 		"eq-rm.a":"}",
 		"group-data.b":"{",
-		"group-data.a":"}"
+		"group-data.a":"}",
+		"titletopline.b":"\\titletopline{",
+		"titletopline.a":"}",
+		"titlea.b":"\\titlea{",
+		"titlea.a":"}",
+		"titleb.b":"\\titleb{",
+		"titleb.a":"}",
+		"authorcaption.b":"\\authorcaption{",
+		"authorcaption.a":"}",
+		"copyrightpub.b":"\\copyrightpub{",
+		"copyrightpub.a":"}",
+		"copyrightpubcaption.b":"\\copyrightpubcaption{",
+		"copyrightpubcaption.a":"}",
+		"copyrightpubaddr.b":"\\copyrightpubaddr{",
+		"copyrightpubaddr.a":"}",
+		"pagecount.b":"\\pagecount{",
+		"pagecount.a":"}"
 	}
 }
