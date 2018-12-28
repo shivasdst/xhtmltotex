@@ -3,6 +3,8 @@
 \input macros
 \AtBeginEnvironment{quote}{\vspace{0.005\baselineskip}}% Stuff before {quote}
 \AtEndEnvironment{quote}{\vspace{0.005\baselineskip}}% Stuff after {quote}
+\AtBeginEnvironment{verse}{\vspace{-\baselineskip}}% Stuff before {quote}
+\AtEndEnvironment{verse}{\vspace{-\baselineskip}}% Stuff after {quote}
 \begin{document}
 \frontmatter
 
@@ -48,15 +50,52 @@
 
 \makeatother
 
-%~ \selectlanguage{sanskrit}
-%~ \input src/chapter-01
-\setcounter{chapter}{1}
-\selectlanguage{english}
-\rhead[]{\small\thechapter. {\normalsize Professor Sheldon Pollock on History in India}\quad\small\thepage}
-\input src/02-chapter2.tex
-\theendnotes
+\selectlanguage{sanskrit}
+\rhead[]{\thechapter. \devanagarifont\large\bfseries शेल्डन पॉलॉक एवं मीमांसा\quad\thepage}
+\input src/01-chapter1
 \clearpage
-\rhead[]{\small\thechapter. {\normalsize The Science and Nescience of Mīmāṁsā}\quad\small\thepage}
+
+\selectlanguage{english}
+\rhead[]{\thechapter. {Professor Sheldon Pollock on History in India}\quad\small\thepage}
+\input src/02-chapter2.tex
+\clearpage
+
+\selectlanguage{english}
+\rhead[]{\thechapter. {The Science and Nescience of Mīmāṁsā}\quad\small\thepage}
 \input src/03-chapter3.tex
-\theendnotes
+\clearpage
+
+\selectlanguage{sanskrit}
+\rhead[]{\thechapter. \devanagarifont\large\bfseries मीमांसा, भारतीयानाम् अनैतिहासिकत्वञ्च – पोल्लाक-कुमारस्वामि...\quad\small\thepage}
+\input src/04-chapter4.tex
+\clearpage
+
+\selectlanguage{english}
+\rhead[]{\thechapter. {The Science of Meaning...}\quad\small\thepage}
+\input src/05-chapter5.tex
+
+\newpage
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+
+\lhead[\small\thepage\quad Index]{}
+\rhead[]{Index\quad\small\thepage}
+\label{index}
+\printindex
+
 \end{document}
