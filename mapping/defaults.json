@@ -36,6 +36,8 @@
 	"attrmapping": {
 		"text-center.b":"\n\\begin{center}\n",
 		"text-center.a":"\n\\end{center}\n",
+		"text-center-inline.b":"\n\\centerline{",
+		"text-center-inline.a":"}\n",
 		"title.b":"\\bookTitle{",
 		"title.a":"}\n",
 		"titleauthor.b":"\\titleauthor{",

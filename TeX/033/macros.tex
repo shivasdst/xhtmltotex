@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{polyglossia}
 \usepackage{fontspec,graphicx,array,tabularx}
-\usepackage[hyphens]{url}
+\usepackage{xurl}
 \usepackage{fancyhdr}
 \usepackage{endnotes}
 \usepackage{setspace}
@@ -57,6 +57,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 
 
 %%fancy header settings
+\cfoot[]{}
 \fancypagestyle{plain}{%
 \chead[]{}
 \lhead[]{}
@@ -69,9 +70,15 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 %%user defined commands
 \newenvironment{myquote}[1]{\par\bgroup\eleven\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
 \newenvironment{normalmyquote}[1]{\par\bgroup\leftskip=10pt\rightskip=10pt#1}{\par\egroup}
+\def\general#1{#1}
 
-\def\Authorline#1{\hfill{\iflanguage{english}{\englishfont\Large\bfseries -- \,#1}{\devanagarifont\Large\bfseries --\,#1}}%
-\lhead[\small\thepage\quad #1]{}}
+\def\selectdev{\selectlanguage{sanskrit}\fontsize{13}{15}\selectfont}
+\def\selecteng{\selectlanguage{english}\fontsize{10}{12}\selectfont}
+
+\def\Authorline#1{\hfill\edef\remauthor{#1}{\iflanguage{english}{\englishfont\Large\bfseries -- \,#1}{\devanagarifont\Large\bfseries --\,#1}}%
+\lhead[\thepage\quad {\iflanguage{english}{\englishfont\bfseries #1}{\devanagarifont\large\bfseries #1}}]{}}
+
+\def\retainauthsanskrit{\lhead[\thepage\quad {\devanagarifont\large\bfseries \remauthor}]{}}
 
 \def\eleven{\fontsize{9}{11}\selectfont}
 
@@ -108,7 +115,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
       \fi
     \fi
     \interlinepenalty\@M
-    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \iflanguage{sanskrit}{\devanagarifont\huge\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
     \vskip 20\p@
   }}
 
@@ -117,7 +124,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
   {\parindent \z@ \raggedleft
     \normalfont
     \interlinepenalty\@M
-    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \iflanguage{sanskrit}{\devanagarifont\huge\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
     \vskip 40\p@
   }}
 
@@ -202,22 +209,22 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-2.2ex \@plus -1.3ex \@minus -.3ex}%
                                    {1ex \@plus.2ex}%
-                                   {\iflanguage{sanskrit}{\devanagarifont\Large\bfseries}{\englishfont\Large\bfseries}}}
+                                   {\iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries}{\englishfont\Large\bfseries}}}
 
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-2.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\iflanguage{sanskrit}{\devanagarifont\large\bfseries}{\englishfont\large\bfseries}}}
+                                     {\iflanguage{sanskrit}{\devanagarifont\Large\bfseries}{\englishfont\large\bfseries}}}
 
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {3.25ex\@plus -4ex \@minus -.6ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
+                                     {\iflanguage{sanskrit}{\devanagarifont\large\bfseries}{\englishfont\bfseries}}}
 
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                                     {-3.25ex \@plus -1ex \@minus -.2ex}%
                                     {1em}%
-                                    {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
+                                    {\iflanguage{sanskrit}{\devanagarifont\large\bfseries}{\englishfont\bfseries}}}
                                      
 
 \renewcommand\thesection{\@arabic\c@section}
@@ -234,7 +241,8 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\passim#1{\textsl{passim}}
 %~ \makeindex
 %~ \makeindex[title=Index,program=makeindex,options=-s mystyle.ist,columnseprule=true,columns=2]
-\makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
+%~ \makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
+\makeindex[title=Index,program=xindy,options=-C utf8 -M mystyle.xdy -L english,columnseprule=true,columns=2]
 
 \usepackage{caption}
 \DeclareCaptionFormat{empty}{#1}
