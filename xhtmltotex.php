@@ -421,6 +421,7 @@ class Xhtmltotex{
 					$line = preg_replace("/(.*?)\{(.*)\}/", '$1[' . $optionalTitle. ']{$2}', $line);
 	
 				$line = preg_replace("/\\\\footnote/", '\protect\footnote', $line);
+				$line = preg_replace("/\\\\endnote/", '\protect\endnote', $line);
 				if($labelData != '')
 					$line = $line . $labelData;
 			}
