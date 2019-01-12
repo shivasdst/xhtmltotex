@@ -25,6 +25,11 @@
 \usepackage{multicol}
 \usepackage[belowskip=-10pt,aboveskip=0pt,justification=centering]{caption}
 
+\usepackage{tfrupee}
+%~ \usepackage{newunicodechar}
+  %~ \newunicodechar{₹}{\rupee}
+
+
 \floatstyle{plain}
 
 %~ \usepackage{tikz}
@@ -93,9 +98,10 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 
 
 %%user defined commands
-\long\def\titlea#1{\centerline{{\fontsize{28}{30}\selectfont\textbf{#1}}}\smallskip}
-\long\def\bookTitle#1{\centerline{{\fontsize{33}{35}\selectfont\textbf{#1}}}\smallskip}
-\long\def\titleb#1{\centerline{{\fontsize{28}{30}\selectfont\textbf{#1}}}\vfill}
+\long\def\titlea#1{\centerline{{\fontsize{18}{30}\selectfont\textbf{#1}}}\smallskip}
+\long\def\bookTitle#1{\centerline{{\fontsize{35}{37}\selectfont\textbf{#1}}}\smallskip}
+\long\def\titleb#1{\centerline{{\fontsize{18}{30}\selectfont\textbf{#1}}}\vskip 0.75cm}
+\long\def\titlec#1{\centerline{{\fontsize{18}{22}\selectfont\textbf{#1}}}\vfill}
 \def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
 \def\titletopline#1{\hfill #1\vskip 2cm}
 \def\authorcaption#1{\centerline{{\large\bfseries #1}}\smallskip}
