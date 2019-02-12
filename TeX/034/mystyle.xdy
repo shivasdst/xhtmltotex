@@ -20,3 +20,6 @@
 (markup-locref-list :sep ", ")
 (markup-locref   :attr  "pageff"     :open "\pageff{" :close "}")
 (markup-locref   :attr  "passim"     :open "\passim{" :close "}")
+
+(markup-crossref-list :class "seealso" :open " \seealso{" :sep "; " :close "}{}")
+(define-location-class-order ("roman-page-numbers" "see" "seealso"))

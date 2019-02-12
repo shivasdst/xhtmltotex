@@ -256,6 +256,7 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
 \thispagestyle{empty}\centerline{{\small\sl This page left blank intentionally}}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
+\renewcommand*\seealso[2]{(\emph{\alsoname} #1)}
 \makeatother
 
 \setcounter{secnumdepth}{4}
