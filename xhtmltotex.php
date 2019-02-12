@@ -627,6 +627,8 @@ class Xhtmltotex{
 			$indexValue .= $attributes['data-index-primary-sort'][0] . '@';
 		$indexValue .= $attributes['data-index-primary'][0];
 
+		if(isset($attributes['data-index-primary-seealso']))
+			$indexValue .= '|seealso{' . $attributes['data-index-primary-seealso'][0] . '}';		
 
 		if(isset($attributes['data-index-secondary'])){
 
@@ -998,8 +1000,8 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-		 $data = str_replace("-", "–", $data);
-		 $data = str_replace('\–', '\-', $data);
+		//~ $data = str_replace("-", "–", $data);
+		//~ $data = str_replace('\–', '\-', $data);
 		 
 		 //replace degree symbol(°) with \circ
 		 $data = str_replace('°', '\circ', $data);
