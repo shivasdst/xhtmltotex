@@ -935,7 +935,7 @@ class Xhtmltotex{
 
 			$name = $element->attributes->item($i)->name;
 
-			if(!preg_match('/epub:type|alt/',$name)){
+			if(!preg_match('/(epub:type|alt|start)/',$name)){
 
 				$attrs[$name] = [];
 				$value = $element->getAttribute($name);
@@ -976,6 +976,11 @@ class Xhtmltotex{
 		$data = preg_replace('/\\\\\\\\\n\\\\end\{(.*?)\}/u', "\n" . '\end{' . "$1" . "}", $data);
 		// $data = str_replace('\\\\', '\\', $data);
 		$data = preg_replace("/\\\\chapter\{\\\\num\{.*?\} *(.*)\}/u", '\chapter{' . "$1" . "}", $data);
+		$data = preg_replace("/\\\\section\{\\\\num\{.*?\} *(.*)\}/u", '\section{' . "$1" . "}", $data);
+		$data = preg_replace("/\\\\subsection\{\\\\num\{.*?\} *(.*)\}/u", '\subsection{' . "$1" . "}", $data);
+		$data = preg_replace("/\\\\subsubsection\{\\\\num\{.*?\} *(.*)\}/u", '\subsubsection{' . "$1" . "}", $data);
+		$data = preg_replace("/\\\\tablenum\{.*?\} /u", "", $data);
+		$data = preg_replace("/\\\\figurenum\{.*?\} /u", "", $data);
 		$data = preg_replace("/ ([?!;:,.])/u", "$1", $data);
 
 		//single and double quotes
