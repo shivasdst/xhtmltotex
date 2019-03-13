@@ -18,6 +18,8 @@
 		"titlea.a":"}",
 		"titleb.b":"\\titleb{",
 		"titleb.a":"}",
+		"titlec.b":"\\titlec{",
+		"titlec.a":"}",
 		"authorcaption.b":"\\authorcaption{",
 		"authorcaption.a":"}",
 		"copyrightpub.b":"\\copyrightpub{",

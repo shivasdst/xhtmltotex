@@ -23,6 +23,10 @@
 		"para-title.b":"\\section{",
 		"para-title.a":"}",		
 		"namesinorder.b":"\\namesinorder{",
-		"namesinorder.a":"}"		
+		"namesinorder.a":"}",		
+		"enumalpha.b":"\n\\begin{enumerate}",
+		"enumalpha.a":"\n\\end{enumerate}\n",		
+		"enumromi.b":"\n\\begin{enumerate}",
+		"enumromi.a":"\n\\end{enumerate}\n"		
 	}
 }

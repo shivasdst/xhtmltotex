@@ -1,5 +1,7 @@
 {
 	"attrmapping": {
+		"dev.b":"\\dev{",
+		"dev.a":"}",
 		"quote-author.b":"\n\n~\\hfill ",
 		"quote-author.a":""
 	}
