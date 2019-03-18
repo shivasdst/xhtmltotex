@@ -86,7 +86,7 @@ leftmargin=16.5mm,rightmargin=16.5mm,cropmarks]{zwpagelayout}
 
 \def\eng#1{{\englishfont\textenglish{#1}}}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
-\def\engfoot#1{\eng{#1}}
+\def\engfoot#1{{\eng{#1}}}
 
 \def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em\rightskip=2.3em\fontsize{11}{13}\selectfont\noindent}}
 \def\addsectiontoTOC#1{\addcontentsline{toc}{section}{#1}}
@@ -264,7 +264,7 @@ I need more words\fi}
       \fi
     \fi
     \interlinepenalty\@M
-    \LARGE\bfseries #1\par\nobreak
+    \LARGE\bfseries #1\relax\par\nobreak
     \vskip 0.5\baselineskip
   }}
 
