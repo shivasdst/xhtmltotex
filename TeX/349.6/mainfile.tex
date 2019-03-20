@@ -16,16 +16,19 @@
 \input src/000b-copyright
 %\rhead[]{{\fontsize{10}{12}\selectfont ಮುನ್ನುಡಿ\quad\arabictokannada{\thepage}}}
 %\input src/000c-preface
-
-\tableofcontents
 \mainmatter
+\tableofcontents
+\newpage
+~\thispagestyle{empty}
+\newpage
 \rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
 \thispagestyle{empty}
 \input src/001-chapter001.tex
+\end{document}
 \input src/002-chapter002.tex
 \input src/003-chapter003.tex
 \input src/004-chapter004.tex
-\end{document}
+
 \newpage
 \input src/005-chapter005.tex
 \input src/006-chapter006.tex
