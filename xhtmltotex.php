@@ -17,6 +17,7 @@ class Xhtmltotex{
 		$this->overrideMappings($id);
 		$this->loadFootnotes($id);
 		// var_dump($this->footnotes);
+		// exit(0);
 	}
 
 	public function loadDefaultMappings(){
@@ -359,6 +360,8 @@ class Xhtmltotex{
 					}
 					elseif( ($node->nodeName == 'li') || ($node->nodeName == 'ul') || ($node->nodeName == 'ol') )
 						$line .=  $this->parseBlockElement($node);				
+					elseif($node->nodeName == 'table')
+						$line .= "\n\n" . $this->parseTableElement($node);
 					elseif($node->nodeName == 'img')
 						$line .= $this->parseImgElement($node);
 					else{
@@ -934,6 +937,7 @@ class Xhtmltotex{
 		for ($i = 0; $i < $length; ++$i) {
 
 			$name = $element->attributes->item($i)->name;
+			// echo $name . "\n";
 
 			if(!preg_match('/(epub:type|alt|start)/',$name)){
 
@@ -947,6 +951,7 @@ class Xhtmltotex{
 			}
 		}
 
+		// var_dump($element->nodeName . "->" . $attrs);
 		$attrs = array_filter($attrs);
 		return $attrs;
 	}
