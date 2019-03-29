@@ -44,8 +44,9 @@
 %\thispagestyle{empty}
 
 %\newpage
-%\rhead[]{Introduction\quad\small\thepage}
-%\input src/introduction
+\rhead[]{Introduction\quad\small\thepage}
+\rhead[]{\quad\small\thepage}
+\input src/000g-introduction
 
 \mainmatter
 
@@ -53,6 +54,8 @@
 \rhead[]{\thechapter. \leftmark\quad\small\thepage}
 \chead[]{}
 \cfoot[]{}
+
+
 
 %\newpage
 %\rhead[]{\thechapter. Dravidianism with Language Equaling Race\quad\small\thepage}
@@ -88,13 +91,14 @@
 
 \rhead[]{\thechapter. The Science and Nescience of Comparative Linguistics\quad\small\thepage}
 \input src/06-chapter6
-\clearpage
+%\clearpage
 
-~ \centerline{{\small\textsl{This page left blank intentionally}}}
-~ \thispagestyle{empty}
+%~ \centerline{{\small\textsl{This page left blank intentionally}}}
+%~ \thispagestyle{empty}
 
-~ \newpage
+%~ \newpage
 
+\setcounter{chapter}{6}
 \rhead[]{\thechapter. A Taste of Their Own Medicine: A.I.T. and The Evidence\quad\small\thepage}
 \input src/07-chapter7
 \clearpage
