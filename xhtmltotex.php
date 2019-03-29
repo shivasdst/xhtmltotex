@@ -360,8 +360,12 @@ class Xhtmltotex{
 					}
 					elseif( ($node->nodeName == 'li') || ($node->nodeName == 'ul') || ($node->nodeName == 'ol') )
 						$line .=  $this->parseBlockElement($node);				
-					elseif($node->nodeName == 'table')
-						$line .= "\n\n" . $this->parseTableElement($node);
+					elseif($node->nodeName == 'table'){
+						
+						$tmpline = $this->parseTableElement($node);
+						$line .= "\n\n" . str_replace('&', 'ZZ38ZZ', $tmpline);
+
+					}
 					elseif($node->nodeName == 'img')
 						$line .= $this->parseImgElement($node);
 					else{
