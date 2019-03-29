@@ -223,6 +223,7 @@ class Xhtmltotex{
 						$data = str_replace('\\general{\-}', '\-', $data);
 						$data = str_replace('ZZ3CZZ', '<', $data);
 						$data = str_replace('ZZ3EZZ', '>', $data);
+						$data = str_replace('\\\\%', '\%', $data);
 					}
 				}
 			}
