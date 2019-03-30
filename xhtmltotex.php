@@ -224,6 +224,7 @@ class Xhtmltotex{
 						$data = str_replace('ZZ3CZZ', '<', $data);
 						$data = str_replace('ZZ3EZZ', '>', $data);
 						$data = str_replace('\\\\%', '\%', $data);
+						$data = str_replace('\\\\_', '\_', $data);
 					}
 				}
 			}
@@ -1009,6 +1010,7 @@ class Xhtmltotex{
 		$data = str_replace("\\\\&", "\&", $data);
 		$data = str_replace("ಶ್ರೀ", "ಶ‍್ರೀ", $data);
 		$data = str_replace("%", "\\%", $data);
+		$data = preg_replace("/_/", '\_', $data);
 
 		//for sanskrit and hindi texts
 		$data = str_replace(" ।", "~।", $data);
