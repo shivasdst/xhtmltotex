@@ -305,7 +305,7 @@ class Xhtmltotex{
 			if(in_array('bibliography', $value)) $this->bibliography = True;			
 			if($key == 'id') $blockElementId = $value[0];			
 			if($key == 'data-itemsep') {$itemSep = $value[0]; unset($attributes['data-itemsep']);}	
-			if($key == 'title-option') {$optionalTitle = $value[0]; unset($attributes['title-option']);}			
+			if($key == 'data-title-option') {$optionalTitle = $value[0]; unset($attributes['data-title-option']);}			
 			if($key == 'data-tex-caption-prefix') {$captionStar = $value[0]; unset($attributes[$key]);}			
 			if($key == 'data-item-format') {$dataItemFormat = $value[0]; unset($attributes[$key]);}			
 		}
