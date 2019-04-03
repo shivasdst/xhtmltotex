@@ -107,6 +107,8 @@
 		"url.b":"\\url{",
 		"url.a":"}",
 		"quote-author-inline.b":"\\hfill ",
-		"quote-author-inline.a":""
+		"quote-author-inline.a":"",
+		"part.b":"\n\\part{",
+		"part.a":"}\n"
 	}
 }

@@ -51,17 +51,17 @@ class Hyphenate{
 
 		$words = array_unique($words); 
 
-		$subWordspatterns = $this->subWordPatterns($words);		
+		//~ $subWordspatterns = $this->subWordPatterns($words);		
 
-		//~ $hyphenatedWords = $this->splitAtAllSyllables($words);
-		//~ $hyphenatedWords = $this->removeExtreemHyphens($hyphenatedWords);
-		//~ $hyphenatedWords = $this->checkLength($hyphenatedWords);
-		//~ $hyphenatedWords = $this->removeHyphenBeforevottu($hyphenatedWords);
-		//~ $hyphenatedWords = $this->wordEndings($hyphenatedWords);
+		$hyphenatedWords = $this->splitAtAllSyllables($words);
+		$hyphenatedWords = $this->removeExtreemHyphens($hyphenatedWords);
+		$hyphenatedWords = $this->checkLength($hyphenatedWords);
+		$hyphenatedWords = $this->removeHyphenBeforevottu($hyphenatedWords);
+		$hyphenatedWords = $this->wordEndings($hyphenatedWords);
 
 		//~ $this->dumpJunk($words);
 
-		// $this->printDictionary($id,$hyphenatedWords);
+		$this->printDictionary($id,$hyphenatedWords);
 
 	}
 
@@ -506,7 +506,7 @@ class Hyphenate{
 
 	public function printDictionary($id,$words){
 
-		$dictionaryFile = TEXOUT . $id . '/dictionary.tex';
+		$dictionaryFile = TEXOUT . $id . '/dictionary_tmp.tex';
 
 		$string = "\\sethyphenation{kannada}{\n";
 

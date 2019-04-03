@@ -1,0 +1,6 @@
+{
+	"attrmapping": {
+		"dp-text-right.b":"\n\\begin{flushright}{\\fontsize{11}{13}\\selectfont\n",
+		"dp-text-right.a":"\n}\\end{flushright}\n"
+	}
+}

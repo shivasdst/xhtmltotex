@@ -33,11 +33,11 @@ class Xhtmltotex{
 	}
 
 	public function loadMappings($jsonPath){
-
+		
 		if(file_exists($jsonPath)){
 
 			$contents = json_decode(file_get_contents($jsonPath),true);
-			
+
 			if( isset($contents['attrmapping']) && (sizeof($contents['attrmapping']) > 0) ){
 
 				foreach($contents['attrmapping'] as $key=>$value)
@@ -49,8 +49,9 @@ class Xhtmltotex{
 						$this->mapping[$key] = $value; 
 			}			
 		}
-
 	}
+	
+	
 
 	public function loadFootnotes($id){
 
