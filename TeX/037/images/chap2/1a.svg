@@ -2,11 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:ns0="http://www.iki.fi/pav/software/textext/"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="531.49603"
@@ -14,9 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
-  <defs
-     id="defs4" />
+   sodipodi:docname="1a.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="298.86355"
-     inkscape:cy="186.38697"
+     inkscape:zoom="3.6073877"
+     inkscape:cx="416.13125"
+     inkscape:cy="43.775268"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,6 +36,8 @@
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
+  <defs
+     id="defs4" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -44,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -202,23 +204,6 @@
          x="441.74747"
          y="983.39911"
          id="tspan3043">(ಕ್ರಿ.ಶ. ೯೦೦ ರಿಂದ ೯೨೦)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:NudiUni01e;-inkscape-font-specification:Sans Bold"
-       x="441.5152"
-       y="1008.2893"
-       id="text3045"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3047"
-         x="441.5152"
-         y="1008.2893"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:NudiUni01eBold;-inkscape-font-specification:NudiUni01eBold Bold">ಸಗರ ತ್ರಿಣೇತ್ರ ಮಣಲೇರ****</tspan><tspan
-         sodipodi:role="line"
-         x="441.5152"
-         y="1022.0393"
-         id="tspan3049"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:NudiUni01eBold;-inkscape-font-specification:NudiUni01eBold Bold">(ಆತಕೂರು /ಮುತ್ತತ್ತಿ ಶಾಸನೋಕ್ತ. ಕ್ರಿ.ಶ.೯೨೫-೯೫೦)</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 262.85714,14.482552 0,11.91878"
@@ -266,5 +251,703 @@
        id="path3075"
        d="m 441.4016,986.46438 0,11.91878"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       transform="translate(0,627.164)"
+       sodipodi:linespacing="125%"
+       id="text3113"
+       y="461.98254"
+       x="360"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="461.98254"
+         x="360"
+         id="tspan3115"
+         sodipodi:role="line" /></text>
+    <g
+       id="g4700"
+       ns0:preamble="/home/sriranga/Desktop/package.tex"
+       ns0:text="sagara tirxNeVtarx maNaleVra****"
+       transform="scale(0.900000,0.900000)">
+      <defs
+         id="defs4702">
+        <g
+           id="g4704">
+          <symbol
+             id="textext-6b8fd8aa-0"
+             overflow="visible">
+            <path
+               id="path4707"
+               d=""
+               style="stroke:none;" />
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-1"
+             overflow="visible">
+            <path
+               id="path4710"
+               d="M 2.609375 -5.125 C 3.09375 -4.765625 3.84375 -4.203125 3.890625 -4.171875 C 3.953125 -4.140625 3.984375 -4.109375 4.0625 -4.109375 C 4.21875 -4.109375 4.328125 -4.265625 4.328125 -4.390625 C 4.328125 -4.5 4.28125 -4.578125 4.109375 -4.671875 L 2.71875 -5.328125 L 4.09375 -5.984375 C 4.28125 -6.078125 4.328125 -6.140625 4.328125 -6.265625 C 4.328125 -6.390625 4.21875 -6.546875 4.0625 -6.546875 C 3.984375 -6.546875 3.96875 -6.546875 3.703125 -6.34375 L 2.609375 -5.53125 L 2.75 -7.234375 C 2.75 -7.375 2.625 -7.484375 2.5 -7.484375 C 2.328125 -7.484375 2.21875 -7.359375 2.21875 -7.234375 C 2.21875 -7.125 2.359375 -5.75 2.375 -5.53125 L 1.140625 -6.4375 C 1 -6.546875 0.984375 -6.546875 0.921875 -6.546875 C 0.75 -6.546875 0.640625 -6.390625 0.640625 -6.265625 C 0.640625 -6.15625 0.6875 -6.078125 0.859375 -5.984375 L 2.265625 -5.328125 L 0.875 -4.671875 C 0.6875 -4.578125 0.640625 -4.515625 0.640625 -4.390625 C 0.640625 -4.375 0.640625 -4.109375 0.984375 -4.109375 L 2.375 -5.125 L 2.21875 -3.421875 C 2.21875 -3.28125 2.359375 -3.1875 2.484375 -3.1875 C 2.640625 -3.1875 2.75 -3.296875 2.75 -3.421875 C 2.75 -3.53125 2.625 -4.90625 2.609375 -5.125 Z M 2.609375 -5.125 "
+               style="stroke:none;" />
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-2"
+             overflow="visible">
+            <g
+               id="g4713"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4715"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="1" />
+              <rect
+                 id="rect4717"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="2" />
+              <rect
+                 id="rect4719"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="0" />
+              <rect
+                 id="rect4721"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-3"
+             overflow="visible">
+            <g
+               id="g4724"
+               transform="matrix(1,0,0,1,0,-6)">
+              <rect
+                 id="rect4726"
+                 height="1"
+                 width="1"
+                 y="0"
+                 x="1" />
+              <rect
+                 id="rect4728"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="1" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-4"
+             overflow="visible">
+            <g
+               id="g4731"
+               transform="matrix(1,0,0,1,0,-5)" />
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-5"
+             overflow="visible">
+            <g
+               id="g4734"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4736"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="0" />
+              <rect
+                 id="rect4738"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="1" />
+              <rect
+                 id="rect4740"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="2" />
+              <rect
+                 id="rect4742"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-6"
+             overflow="visible">
+            <g
+               id="g4745"
+               transform="matrix(1,0,0,1,0,-6)">
+              <rect
+                 id="rect4747"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="2" />
+              <rect
+                 id="rect4749"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="3" />
+              <rect
+                 id="rect4751"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="0" />
+              <rect
+                 id="rect4753"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="4" />
+              <rect
+                 id="rect4755"
+                 height="1"
+                 width="1"
+                 y="5"
+                 x="1" />
+              <rect
+                 id="rect4757"
+                 height="1"
+                 width="1"
+                 y="5"
+                 x="2" />
+              <rect
+                 id="rect4759"
+                 height="1"
+                 width="1"
+                 y="5"
+                 x="3" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-7"
+             overflow="visible">
+            <g
+               id="g4762"
+               transform="matrix(1,0,0,1,-5,0)">
+              <rect
+                 id="rect4764"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="1" />
+              <rect
+                 id="rect4766"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="2" />
+              <rect
+                 id="rect4768"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="3" />
+              <rect
+                 id="rect4770"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="4" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-8"
+             overflow="visible">
+            <g
+               id="g4773"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4775"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="0" />
+              <rect
+                 id="rect4777"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="5" />
+              <rect
+                 id="rect4779"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="1" />
+              <rect
+                 id="rect4781"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="3" />
+              <rect
+                 id="rect4783"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="0" />
+              <rect
+                 id="rect4785"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+              <rect
+                 id="rect4787"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="5" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-9"
+             overflow="visible">
+            <g
+               id="g4790"
+               transform="matrix(1,0,0,1,-1,-7)">
+              <rect
+                 id="rect4792"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="2" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-10"
+             overflow="visible">
+            <g
+               id="g4795"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4797"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="0" />
+              <rect
+                 id="rect4799"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="1" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-11"
+             overflow="visible">
+            <g
+               id="g4802"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4804"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="3" />
+              <rect
+                 id="rect4806"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="3" />
+              <rect
+                 id="rect4808"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="0" />
+              <rect
+                 id="rect4810"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="4" />
+              <rect
+                 id="rect4812"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="1" />
+              <rect
+                 id="rect4814"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="2" />
+              <rect
+                 id="rect4816"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-12"
+             overflow="visible">
+            <g
+               id="g4819"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4821"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="3" />
+              <rect
+                 id="rect4823"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="0" />
+              <rect
+                 id="rect4825"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="5" />
+              <rect
+                 id="rect4827"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="1" />
+              <rect
+                 id="rect4829"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="2" />
+              <rect
+                 id="rect4831"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+              <rect
+                 id="rect4833"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="4" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-13"
+             overflow="visible">
+            <g
+               id="g4836"
+               transform="matrix(1,0,0,1,-1,-5)">
+              <rect
+                 id="rect4838"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="1" />
+              <rect
+                 id="rect4840"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="1" />
+              <rect
+                 id="rect4842"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="2" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-14"
+             overflow="visible">
+            <g
+               id="g4845"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4847"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="0" />
+              <rect
+                 id="rect4849"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="2" />
+              <rect
+                 id="rect4851"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="3" />
+              <rect
+                 id="rect4853"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="5" />
+              <rect
+                 id="rect4855"
+                 height="1"
+                 width="1"
+                 y="3"
+                 x="3" />
+              <rect
+                 id="rect4857"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="0" />
+              <rect
+                 id="rect4859"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+              <rect
+                 id="rect4861"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="5" />
+            </g>
+          </symbol>
+          <symbol
+             id="textext-6b8fd8aa-15"
+             overflow="visible">
+            <g
+               id="g4864"
+               transform="matrix(1,0,0,1,0,-5)">
+              <rect
+                 id="rect4866"
+                 height="1"
+                 width="1"
+                 y="1"
+                 x="4" />
+              <rect
+                 id="rect4868"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="0" />
+              <rect
+                 id="rect4870"
+                 height="1"
+                 width="1"
+                 y="2"
+                 x="2" />
+              <rect
+                 id="rect4872"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="1" />
+              <rect
+                 id="rect4874"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="2" />
+              <rect
+                 id="rect4876"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="3" />
+              <rect
+                 id="rect4878"
+                 height="1"
+                 width="1"
+                 y="4"
+                 x="4" />
+            </g>
+          </symbol>
+        </g>
+      </defs>
+      <g
+         id="textext-6b8fd8aa-16">
+        <g
+           id="g4881"
+           style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+          <use
+             id="use4883"
+             y="134.765"
+             x="223.432"
+             xlink:href="#textext-6b8fd8aa-2" />
+          <use
+             id="use4885"
+             y="134.765"
+             x="226.273608"
+             xlink:href="#textext-6b8fd8aa-3" />
+          <use
+             id="use4887"
+             y="134.765"
+             x="228.477085"
+             xlink:href="#textext-6b8fd8aa-4" />
+          <use
+             id="use4889"
+             y="134.765"
+             x="231.34868"
+             xlink:href="#textext-6b8fd8aa-3" />
+          <use
+             id="use4891"
+             y="134.765"
+             x="233.552157"
+             xlink:href="#textext-6b8fd8aa-5" />
+          <use
+             id="use4893"
+             y="134.765"
+             x="236.474131"
+             xlink:href="#textext-6b8fd8aa-3" />
+        </g>
+        <g
+           id="g4895"
+           style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+          <use
+             id="use4897"
+             y="134.765"
+             x="241.40736"
+             xlink:href="#textext-6b8fd8aa-6" />
+          <use
+             id="use4899"
+             y="134.765"
+             x="246.46324"
+             xlink:href="#textext-6b8fd8aa-7" />
+          <use
+             id="use4901"
+             y="134.765"
+             x="247.430034"
+             xlink:href="#textext-6b8fd8aa-8" />
+          <use
+             id="use4903"
+             y="134.765"
+             x="251.658261"
+             xlink:href="#textext-6b8fd8aa-9" />
+          <use
+             id="use4905"
+             y="134.765"
+             x="254.021271"
+             xlink:href="#textext-6b8fd8aa-10" />
+          <use
+             id="use4907"
+             y="134.765"
+             x="257.282703"
+             xlink:href="#textext-6b8fd8aa-11" />
+          <use
+             id="use4909"
+             y="134.765"
+             x="260.234665"
+             xlink:href="#textext-6b8fd8aa-3" />
+          <use
+             id="use4911"
+             y="134.765"
+             x="262.438141"
+             xlink:href="#textext-6b8fd8aa-7" />
+        </g>
+        <g
+           id="g4913"
+           style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+          <use
+             id="use4915"
+             y="134.765"
+             x="266.124726"
+             xlink:href="#textext-6b8fd8aa-12" />
+          <use
+             id="use4917"
+             y="134.765"
+             x="270.043483"
+             xlink:href="#textext-6b8fd8aa-3" />
+          <use
+             id="use4919"
+             y="134.765"
+             x="272.246959"
+             xlink:href="#textext-6b8fd8aa-13" />
+          <use
+             id="use4921"
+             y="134.765"
+             x="274.840271"
+             xlink:href="#textext-6b8fd8aa-14" />
+          <use
+             id="use4923"
+             y="134.765"
+             x="281.412316"
+             xlink:href="#textext-6b8fd8aa-15" />
+          <use
+             id="use4925"
+             y="134.765"
+             x="285.36106"
+             xlink:href="#textext-6b8fd8aa-9" />
+          <use
+             id="use4927"
+             y="134.765"
+             x="287.724069"
+             xlink:href="#textext-6b8fd8aa-10" />
+          <use
+             id="use4929"
+             y="134.765"
+             x="290.985501"
+             xlink:href="#textext-6b8fd8aa-5" />
+          <use
+             id="use4931"
+             y="134.765"
+             x="293.907476"
+             xlink:href="#textext-6b8fd8aa-3" />
+        </g>
+        <g
+           id="g4933"
+           style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+          <use
+             id="use4935"
+             y="134.765"
+             x="296.113"
+             xlink:href="#textext-6b8fd8aa-1" />
+          <use
+             id="use4937"
+             y="134.765"
+             x="301.0943"
+             xlink:href="#textext-6b8fd8aa-1" />
+          <use
+             id="use4939"
+             y="134.765"
+             x="306.0756"
+             xlink:href="#textext-6b8fd8aa-1" />
+          <use
+             id="use4941"
+             y="134.765"
+             x="311.0569"
+             xlink:href="#textext-6b8fd8aa-1" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="436.32681"
+       y="1010.2251"
+       id="text6501"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6503"
+         x="436.32681"
+         y="1010.2251">ಸಗರ ತ್ರಿಣೇತ್ರ ಮಣಲೇರ****</tspan><tspan
+         sodipodi:role="line"
+         x="436.32681"
+         y="1026.0602"
+         id="tspan6505">(ಆತಕೂರು /ಮುತ್ತತ್ತಿ ಶಾಸನೋಕ್ತ. ಕ್ರಿ.ಶ.925-950)</tspan></text>
   </g>
 </svg>

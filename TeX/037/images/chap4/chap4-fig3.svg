@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="531.49603"
@@ -15,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="fig4.5.svg">
+   sodipodi:docname="chap4-fig3.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.3160128"
      inkscape:cx="269.954"
-     inkscape:cy="448.0134"
+     inkscape:cy="378.92915"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -47,6 +46,18 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4629"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4625"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4621"
+       effect="spiro" />
     <inkscape:path-effect
        is_visible="true"
        id="path-effect41936"
@@ -6991,7 +7002,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7018,386 +7029,115 @@
        id="path41924"
        inkscape:path-effect="#path-effect41926"
        inkscape:original-d="m 222.96087,617.32801 0,-12.80944 179.9479,0 0,12.80944" />
-    <g
-       id="g43711"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-18.813831,421.72787)">
-      <use
-         id="use43713"
-         y="134.765"
-         x="223.43201"
-         xlink:href="#textext-561c659a-1"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43715"
-         y="134.765"
-         x="228.72713"
-         xlink:href="#textext-561c659a-2"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43717"
-         y="134.765"
-         x="228.73709"
-         xlink:href="#textext-561c659a-3"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43719"
-         y="134.765"
-         x="232.38638"
-         xlink:href="#textext-561c659a-4"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43721"
-         y="134.765"
-         x="238.67876"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43723"
-         y="134.765"
-         x="238.68872"
-         xlink:href="#textext-561c659a-6"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43725"
-         y="134.765"
-         x="241.55098"
-         xlink:href="#textext-561c659a-7"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43727"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-18.813831,421.72787)">
-      <use
-         id="use43729"
-         y="134.765"
-         x="249.55592"
-         xlink:href="#textext-561c659a-8"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43731"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-18.813831,421.72787)">
-      <use
-         id="use43733"
-         y="134.765"
-         x="257.67047"
-         xlink:href="#textext-561c659a-4"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43735"
-         y="134.765"
-         x="263.96286"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43737"
-         y="134.765"
-         x="263.97281"
-         xlink:href="#textext-561c659a-9"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43739"
-         y="134.765"
-         x="266.9845"
-         xlink:href="#textext-561c659a-10"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43741"
-         y="134.765"
-         x="270.6846"
-         xlink:href="#textext-561c659a-11"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43743"
-         y="134.765"
-         x="275.44174"
-         xlink:href="#textext-561c659a-9"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43745"
-         y="134.765"
-         x="278.45346"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43747"
-         y="134.765"
-         x="278.46341"
-         xlink:href="#textext-561c659a-6"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43749"
-         y="134.765"
-         x="281.32565"
-         xlink:href="#textext-561c659a-12"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43751"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-138.75888,455.42645)">
-      <use
-         id="use43753"
-         y="146.72"
-         x="223.43201"
-         xlink:href="#textext-561c659a-4"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43755"
-         y="146.72"
-         x="229.72438"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43757"
-         y="146.72"
-         x="229.73434"
-         xlink:href="#textext-561c659a-9"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43759"
-         y="146.72"
-         x="232.74603"
-         xlink:href="#textext-561c659a-10"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43761"
-         y="146.72"
-         x="236.44614"
-         xlink:href="#textext-561c659a-13"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43763"
-         y="146.72"
-         x="242.72856"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43765"
-         y="146.72"
-         x="242.73853"
-         xlink:href="#textext-561c659a-4"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43767"
-         y="146.72"
-         x="249.0309"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43769"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-95.644518,455.42645)">
-      <use
-         id="use43771"
-         y="146.72"
-         x="251.75069"
-         xlink:href="#textext-561c659a-14"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43773"
-         y="146.72"
-         x="257.04581"
-         xlink:href="#textext-561c659a-10"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43775"
-         y="146.72"
-         x="260.74591"
-         xlink:href="#textext-561c659a-11"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43777"
-         y="146.72"
-         x="265.50305"
-         xlink:href="#textext-561c659a-9"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43779"
-         y="146.72"
-         x="268.51477"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43781"
-         y="146.72"
-         x="268.52472"
-         xlink:href="#textext-561c659a-6"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43783"
-         y="146.72"
-         x="271.38696"
-         xlink:href="#textext-561c659a-12"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43785"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-43.078911,455.42645)">
-      <use
-         id="use43787"
-         y="146.72"
-         x="281.14734"
-         xlink:href="#textext-561c659a-15"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43789"
-         y="146.72"
-         x="287.45963"
-         xlink:href="#textext-561c659a-16"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43791"
-         y="146.72"
-         x="287.4696"
-         xlink:href="#textext-561c659a-17"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43793"
-         y="146.72"
-         x="293.96124"
-         xlink:href="#textext-561c659a-3"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43795"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-43.078911,455.42645)">
-      <use
-         id="use43797"
-         y="146.72"
-         x="297.62048"
-         xlink:href="#textext-561c659a-18"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43799"
-         y="146.72"
-         x="302.80603"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43801"
-         y="146.72"
-         x="302.81598"
-         xlink:href="#textext-561c659a-19"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43803"
-         y="146.72"
-         x="308.2207"
-         xlink:href="#textext-561c659a-10"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43805"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-43.078911,455.42645)">
-      <use
-         id="use43807"
-         y="146.72"
-         x="311.91086"
-         xlink:href="#textext-561c659a-20"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43809"
-         y="146.72"
-         x="318.19327"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g43811"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,0.49555965,455.42645)">
-      <use
-         id="use43813"
-         y="146.72"
-         x="320.923"
-         xlink:href="#textext-561c659a-21"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43815"
-         y="146.72"
-         x="326.21814"
-         xlink:href="#textext-561c659a-11"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43817"
-         y="146.72"
-         x="330.97528"
-         xlink:href="#textext-561c659a-18"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43819"
-         y="146.72"
-         x="336.1608"
-         xlink:href="#textext-561c659a-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43821"
-         y="146.72"
-         x="336.17078"
-         xlink:href="#textext-561c659a-22"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use43823"
-         y="146.72"
-         x="342.46317"
-         xlink:href="#textext-561c659a-16"
-         width="531.49603"
-         height="850.39368" />
-    </g>
+    <path
+       inkscape:original-d="m 222.31429,636.86289 0,17.1682"
+       inkscape:path-effect="#path-effect4621"
+       id="path4619"
+       d="m 222.31429,636.86289 0,17.1682"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:original-d="m 150.91235,664.44036 0,-9.94262 142.38334,0 0,9.94262"
+       inkscape:path-effect="#path-effect4625"
+       id="path4623"
+       d="m 150.91235,664.44036 0,-9.94262 142.38334,0 0,9.94262"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 222.31429,655.13577 0,9.828"
+       id="path4627"
+       inkscape:path-effect="#path-effect4629"
+       inkscape:original-d="m 222.31429,655.13577 0,9.828"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="150.25824"
+       y="675.5788"
+       id="text4631"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4633"
+         x="150.25824"
+         y="675.5788">ಕಂಪಣ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="221.50137"
+       y="675.85175"
+       id="text4635"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4637"
+         x="221.50137"
+         y="675.85175">ಮಾಯಣ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="292.74451"
+       y="676.71527"
+       id="text4639"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4641"
+         x="292.74451"
+         y="676.71527">ಸಿಂಗಣ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="147.23581"
+       y="628.35632"
+       id="text4643"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4645"
+         x="147.23581"
+         y="628.35632">ಮಾಧವ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="221.0696"
+       y="630.08344"
+       id="text4647"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4649"
+         x="221.0696"
+         y="630.08344">ಸಾಯಣ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="315.90152"
+       y="630.5152"
+       id="text4651"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4653"
+         x="315.90152"
+         y="630.5152">ಭೋಗನಾಥ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="402.2569"
+       y="630.0835"
+       id="text4655"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4657"
+         x="402.2569"
+         y="630.0835">ಸಿಂಗಲೆ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="287.13141"
+       y="580.97485"
+       id="text4659"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4661"
+         x="287.13141"
+         y="580.97485">ಶ್ರೀಮತಿ + ಮಾಯಣ</tspan></text>
   </g>
 </svg>

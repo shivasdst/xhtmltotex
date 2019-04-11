@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="531.49603"
@@ -15,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="fig4.8.svg">
+   sodipodi:docname="chap4-fig7.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,15 +24,15 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.7015645"
      inkscape:cx="266.99325"
-     inkscape:cy="624.95709"
+     inkscape:cy="669.3758"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1187"
-     inkscape:window-height="399"
-     inkscape:window-x="32"
-     inkscape:window-y="321"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
      units="cm"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -47,6 +46,10 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4906"
+       is_visible="true" />
     <inkscape:path-effect
        effect="spiro"
        id="path-effect62181"
@@ -7942,7 +7945,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7957,821 +7960,83 @@
        id="path33050"
        inkscape:path-effect="#path-effect33052"
        inkscape:original-d="m 260.9677,372.17445 0,9.87187" />
-    <g
-       transform="matrix(1.2,0,0,1.2,-67.751199,204.19009)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54617">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-1"
-         x="223.43201"
-         y="134.765"
-         id="use54619" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-2"
-         x="228.61754"
-         y="134.765"
-         id="use54621" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-3"
-         x="232.31764"
-         y="134.765"
-         id="use54623" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-4"
-         x="238.62994"
-         y="134.765"
-         id="use54625" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="243.81548"
-         y="134.765"
-         id="use54627" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-6"
-         x="243.82544"
-         y="134.765"
-         id="use54629" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-1"
-         x="246.6877"
-         y="134.765"
-         id="use54631" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="251.87323"
-         y="134.765"
-         id="use54633" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-6"
-         x="251.88319"
-         y="134.765"
-         id="use54635" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-67.751199,204.19009)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54637">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-7"
-         x="257.45526"
-         y="134.765"
-         id="use54639" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="262.7504"
-         y="134.765"
-         id="use54641" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-8"
-         x="262.76035"
-         y="134.765"
-         id="use54643" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="269.05273"
-         y="134.765"
-         id="use54645" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-9"
-         x="269.06271"
-         y="134.765"
-         id="use54647" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-3"
-         x="274.37775"
-         y="134.765"
-         id="use54649" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-10"
-         x="280.69006"
-         y="134.765"
-         id="use54651" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-67.751199,204.19009)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54653">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-11"
-         x="283.42978"
-         y="134.765"
-         id="use54655" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-12"
-         x="289.72214"
-         y="134.765"
-         id="use54657" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="296.11414"
-         y="134.765"
-         id="use54659" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-6"
-         x="296.12411"
-         y="134.765"
-         id="use54661" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-13"
-         x="298.98636"
-         y="134.765"
-         id="use54663" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-14"
-         x="299.16568"
-         y="134.765"
-         id="use54665" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="305.478"
-         y="134.765"
-         id="use54667" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-15"
-         x="305.48795"
-         y="134.765"
-         id="use54669" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-16"
-         x="311.98956"
-         y="134.765"
-         id="use54671" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-17"
-         x="312.03937"
-         y="134.765"
-         id="use54673" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-18"
-         x="316.79651"
-         y="134.765"
-         id="use54675" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="319.8082"
-         y="134.765"
-         id="use54677" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-6"
-         x="319.81818"
-         y="134.765"
-         id="use54679" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-67.751199,204.19009)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54681">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-19"
-         x="322.67044"
-         y="134.765"
-         id="use54683" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-59.506207,216.93463)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54725">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-21"
-         x="223.43201"
-         y="146.72"
-         id="use54727" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="230.37294"
-         y="146.72"
-         id="use54729" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-22"
-         x="230.3829"
-         y="146.72"
-         id="use54731" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-21"
-         x="235.56844"
-         y="146.72"
-         id="use54733" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="242.50938"
-         y="146.72"
-         id="use54735" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-1"
-         x="242.51935"
-         y="146.72"
-         id="use54737" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="247.70488"
-         y="146.72"
-         id="use54739" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-59.506207,216.93463)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54741">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-14"
-         x="250.42467"
-         y="146.72"
-         id="use54743" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="256.73697"
-         y="146.72"
-         id="use54745" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-28"
-         x="256.74695"
-         y="146.72"
-         id="use54747" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-29"
-         x="263.24854"
-         y="146.72"
-         id="use54749" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-30"
-         x="263.25848"
-         y="146.72"
-         id="use54751" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-16"
-         x="269.75012"
-         y="146.72"
-         id="use54753" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-31"
-         x="269.79993"
-         y="146.72"
-         id="use54755" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-23"
-         x="273.44922"
-         y="146.72"
-         id="use54757" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-2"
-         x="279.74161"
-         y="146.72"
-         id="use54759" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-32"
-         x="283.44171"
-         y="146.72"
-         id="use54761" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-2"
-         x="289.72415"
-         y="146.72"
-         id="use54763" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-19"
-         x="293.42426"
-         y="146.72"
-         id="use54765" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-17"
-         x="294.66061"
-         y="146.72"
-         id="use54767" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-18"
-         x="299.41776"
-         y="146.72"
-         id="use54769" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="302.42944"
-         y="146.72"
-         id="use54771" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-6"
-         x="302.43939"
-         y="146.72"
-         id="use54773" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-138.91423,238.16862)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54775">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-33"
-         x="223.43201"
-         y="158.675"
-         id="use54777" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="229.74431"
-         y="158.675"
-         id="use54779" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-34"
-         x="229.75427"
-         y="158.675"
-         id="use54781" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="234.02225"
-         y="158.675"
-         id="use54783" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-35"
-         x="234.03221"
-         y="158.675"
-         id="use54785" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-8"
-         x="234.04218"
-         y="158.675"
-         id="use54787" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="240.33455"
-         y="158.675"
-         id="use54789" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-36"
-         x="240.34451"
-         y="158.675"
-         id="use54791" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-9"
-         x="245.63963"
-         y="158.675"
-         id="use54793" />
-    </g>
-    <g
-       transform="matrix(1.2,0,0,1.2,-138.91423,238.16862)"
-       style="fill:#000000;fill-opacity:1"
-       id="g54795">
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-20"
-         x="253.66451"
-         y="158.675"
-         id="use54797" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-37"
-         x="256.91531"
-         y="158.675"
-         id="use54799" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-38"
-         x="263.2276"
-         y="158.675"
-         id="use54801" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-2"
-         x="269.51999"
-         y="158.675"
-         id="use54803" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-39"
-         x="273.22009"
-         y="158.675"
-         id="use54805" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-40"
-         x="273.24002"
-         y="158.675"
-         id="use54807" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-5"
-         x="278.64471"
-         y="158.675"
-         id="use54809" />
-      <use
-         height="850.39368"
-         width="531.49603"
-         xlink:href="#textext-fbc4a5ad-27"
-         x="278.65469"
-         y="158.675"
-         id="use54811" />
-    </g>
     <path
        inkscape:original-d="m 260.9677,400.2526 0,9.99767"
        inkscape:path-effect="#path-effect57561"
        id="path57559"
        d="m 260.9677,400.2526 0,9.99767"
        style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <g
-       id="g57563"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-98.125444,253.00301)">
-      <use
-         id="use57565"
-         y="146.72"
-         x="250.42467"
-         xlink:href="#textext-fbc4a5ad-14"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57567"
-         y="146.72"
-         x="256.73697"
-         xlink:href="#textext-fbc4a5ad-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57569"
-         y="146.72"
-         x="256.74695"
-         xlink:href="#textext-fbc4a5ad-28"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57571"
-         y="146.72"
-         x="263.24854"
-         xlink:href="#textext-fbc4a5ad-29"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57573"
-         y="146.72"
-         x="263.25848"
-         xlink:href="#textext-fbc4a5ad-30"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57575"
-         y="146.72"
-         x="269.75012"
-         xlink:href="#textext-fbc4a5ad-16"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57577"
-         y="146.72"
-         x="269.79993"
-         xlink:href="#textext-fbc4a5ad-31"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57579"
-         y="146.72"
-         x="273.44922"
-         xlink:href="#textext-fbc4a5ad-23"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57581"
-         y="146.72"
-         x="279.74161"
-         xlink:href="#textext-fbc4a5ad-2"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57583"
-         y="146.72"
-         x="283.44171"
-         xlink:href="#textext-fbc4a5ad-32"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57585"
-         y="146.72"
-         x="289.72415"
-         xlink:href="#textext-fbc4a5ad-2"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57587"
-         y="146.72"
-         x="293.42426"
-         xlink:href="#textext-fbc4a5ad-19"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57589"
-         y="146.72"
-         x="294.66061"
-         xlink:href="#textext-fbc4a5ad-17"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57591"
-         y="146.72"
-         x="299.41776"
-         xlink:href="#textext-fbc4a5ad-18"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57593"
-         y="146.72"
-         x="302.42944"
-         xlink:href="#textext-fbc4a5ad-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use57595"
-         y="146.72"
-         x="302.43939"
-         xlink:href="#textext-fbc4a5ad-6"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g59986"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-122.90072,238.58458)">
-      <use
-         id="use59988"
-         y="158.675"
-         x="342.2121"
-         xlink:href="#textext-15cb48ae-28"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use59990"
-         y="158.675"
-         x="348.52438"
-         xlink:href="#textext-15cb48ae-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use59992"
-         y="158.675"
-         x="348.53436"
-         xlink:href="#textext-15cb48ae-17"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use59994"
-         y="158.675"
-         x="353.2915"
-         xlink:href="#textext-15cb48ae-38"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use59996"
-         y="158.675"
-         x="359.57391"
-         xlink:href="#textext-15cb48ae-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use59998"
-         y="158.675"
-         x="359.58389"
-         xlink:href="#textext-15cb48ae-30"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60000"
-         y="158.675"
-         x="359.59384"
-         xlink:href="#textext-15cb48ae-39"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60002"
-         y="158.675"
-         x="364.77939"
-         xlink:href="#textext-15cb48ae-23"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60004"
-         y="158.675"
-         x="364.78934"
-         xlink:href="#textext-15cb48ae-25"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60006"
-         y="158.675"
-         x="368.43863"
-         xlink:href="#textext-15cb48ae-40"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60008"
-         y="158.675"
-         x="376.1467"
-         xlink:href="#textext-15cb48ae-1"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60010"
-         y="158.675"
-         x="381.33224"
-         xlink:href="#textext-15cb48ae-5"
-         width="531.49603"
-         height="850.39368" />
-    </g>
-    <g
-       id="g60012"
-       style="fill:#000000;fill-opacity:1"
-       transform="matrix(1.2,0,0,1.2,-122.90072,238.58458)">
-      <use
-         id="use60014"
-         y="158.675"
-         x="384.05203"
-         xlink:href="#textext-15cb48ae-28"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60016"
-         y="158.675"
-         x="390.36432"
-         xlink:href="#textext-15cb48ae-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60018"
-         y="158.675"
-         x="390.3743"
-         xlink:href="#textext-15cb48ae-29"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60020"
-         y="158.675"
-         x="394.64227"
-         xlink:href="#textext-15cb48ae-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60022"
-         y="158.675"
-         x="394.65222"
-         xlink:href="#textext-15cb48ae-30"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60024"
-         y="158.675"
-         x="394.6622"
-         xlink:href="#textext-15cb48ae-8"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60026"
-         y="158.675"
-         x="400.95456"
-         xlink:href="#textext-15cb48ae-5"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60028"
-         y="158.675"
-         x="400.96454"
-         xlink:href="#textext-15cb48ae-31"
-         width="531.49603"
-         height="850.39368" />
-      <use
-         id="use60030"
-         y="158.675"
-         x="406.25964"
-         xlink:href="#textext-15cb48ae-9"
-         width="531.49603"
-         height="850.39368" />
-    </g>
     <path
        style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 196.57535,418.06822 0,-8.70735 135.27395,0 0,8.70735"
        id="path62179"
        inkscape:path-effect="#path-effect62181"
        inkscape:original-d="m 196.57535,418.06822 0,-8.70735 135.27395,0 0,8.70735" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="260.21957"
+       y="348.69455"
+       id="text4894"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4896"
+         x="260.21957"
+         y="348.69455">ಕಲಿದೇವರ ಪಾದಪದ್ಮಾರಾಧ</tspan><tspan
+         sodipodi:role="line"
+         x="260.21957"
+         y="361.19455"
+         id="tspan4898">ನಾಗಯ್ಯ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="260.58975"
+       y="394.22369"
+       id="text4900"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4902"
+         x="260.58975"
+         y="394.22369">ವೀರಬಮ್ಮಯ್ಯ</tspan></text>
+    <path
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 331.48706,432.39612 0,9.99767"
+       id="path4904"
+       inkscape:path-effect="#path-effect4906"
+       inkscape:original-d="m 331.48706,432.39612 0,9.99767"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="331.65967"
+       y="427.53772"
+       id="text4908"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4910"
+         x="331.65967"
+         y="427.53772">ಬಲ್ಲಯ್ಯ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="331.28952"
+       y="452.33817"
+       id="text4912"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4914"
+         x="331.28952"
+         y="452.33817">ಶಾಂತಯ್ಯ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       x="195.88416"
+       y="430.34976"
+       id="text4916"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4918"
+         x="195.88416"
+         y="430.34976">ಶಿಂಗನ ಮಾರೆಯ ನಾಯಕ</tspan></text>
   </g>
 </svg>
