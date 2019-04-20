@@ -206,11 +206,11 @@ I need more words\fi}
 %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
 %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictodevnag{\thepage}}}}
 \makeatletter
-
+\renewcommand\contentsname{ವಿಷಯಸೂಚಿಕೆ}
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
       \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+      \addcontentsline{toc}{part}{\hspace{1em}#1}%
     \else
       \addcontentsline{toc}{part}{#1}%
     \fi
