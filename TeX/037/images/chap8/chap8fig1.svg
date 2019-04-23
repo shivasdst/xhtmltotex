@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="425.2756pt"
+   height="680.88977pt"
+   viewBox="0 0 531.59452 851.1122"
+   id="svg3999"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="chap8fig1.svg">
+  <defs
+     id="defs4001">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3313"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect12902"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect18733"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect18737"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect18741"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect18741-3"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect18733-6"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3313-5"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.90509668"
+     inkscape:cx="185.56786"
+     inkscape:cy="731.84215"
+     inkscape:document-units="px"
+     inkscape:current-layer="textext-37351eda-29"
+     showgrid="false"
+     units="pt"
+     inkscape:window-width="1024"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4004">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-201.25005)">
+    <g
+       transform="matrix(1.2000001,0,0,1.2000001,23.709486,38.590308)"
+       id="textext-37351eda-29">
+      <path
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.83333331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         d="m 208.8366,202.49095 0,16.66667"
+         id="path3311"
+         inkscape:path-effect="#path-effect3313"
+         inkscape:original-d="m 208.8366,202.49095 0,16.66667"
+         inkscape:connector-curvature="0" />
+      <path
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.83333337;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         d="m 127.29826,322.0631 0,-20.03296 153.86979,0 0,20.03296"
+         id="path12900"
+         inkscape:path-effect="#path-effect12902"
+         inkscape:original-d="m 127.29826,322.0631 0,-20.03296 153.86979,0 0,20.03296"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g16443"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,35.153186)">
+        <use
+           id="use16445"
+           y="134.765"
+           x="223.43201"
+           xlink:href="#textext-f180281d-1"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16447"
+           y="134.765"
+           x="229.74431"
+           xlink:href="#textext-f180281d-2"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16449"
+           y="134.765"
+           x="233.44441"
+           xlink:href="#textext-f180281d-3"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16451"
+           y="134.765"
+           x="239.73679"
+           xlink:href="#textext-f180281d-4"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16453"
+           y="134.765"
+           x="245.03191"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16455"
+           y="134.765"
+           x="245.04187"
+           xlink:href="#textext-f180281d-6"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16457"
+           y="134.765"
+           x="251.54347"
+           xlink:href="#textext-f180281d-7"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16459"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,35.153186)">
+        <use
+           id="use16461"
+           y="134.765"
+           x="254.30312"
+           xlink:href="#textext-f180281d-8"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16463"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,35.153186)">
+        <use
+           id="use16465"
+           y="134.765"
+           x="262.41763"
+           xlink:href="#textext-f180281d-9"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16467"
+           y="134.765"
+           x="265.66846"
+           xlink:href="#textext-f180281d-10"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16469"
+           y="134.765"
+           x="272.60938"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16471"
+           y="134.765"
+           x="272.61935"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16473"
+           y="134.765"
+           x="277.3765"
+           xlink:href="#textext-f180281d-12"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16475"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,35.153186)">
+        <use
+           id="use16477"
+           y="134.765"
+           x="283.33713"
+           xlink:href="#textext-f180281d-4"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16479"
+           y="134.765"
+           x="288.63223"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16481"
+           y="134.765"
+           x="288.64221"
+           xlink:href="#textext-f180281d-14"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16483"
+           y="134.765"
+           x="295.13382"
+           xlink:href="#textext-f180281d-15"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16485"
+           y="134.765"
+           x="301.44614"
+           xlink:href="#textext-f180281d-16"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16487"
+           y="134.765"
+           x="305.71411"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16489"
+           y="134.765"
+           x="305.72406"
+           xlink:href="#textext-f180281d-1"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16491"
+           y="134.765"
+           x="312.03638"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16493"
+           y="134.765"
+           x="312.04633"
+           xlink:href="#textext-f180281d-17"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16495"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,56.520809)">
+        <use
+           id="use16497"
+           y="146.72"
+           x="223.43201"
+           xlink:href="#textext-f180281d-16"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16499"
+           y="146.72"
+           x="227.69998"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16501"
+           y="146.72"
+           x="227.70995"
+           xlink:href="#textext-f180281d-18"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16503"
+           y="146.72"
+           x="231.35924"
+           xlink:href="#textext-f180281d-19"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16505"
+           y="146.72"
+           x="236.65436"
+           xlink:href="#textext-f180281d-4"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16507"
+           y="146.72"
+           x="241.94948"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16509"
+           y="146.72"
+           x="241.95944"
+           xlink:href="#textext-f180281d-6"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16511"
+           y="146.72"
+           x="248.46104"
+           xlink:href="#textext-f180281d-7"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16513"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,56.520809)">
+        <use
+           id="use16515"
+           y="146.72"
+           x="251.22067"
+           xlink:href="#textext-f180281d-8"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16517"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,56.520809)">
+        <use
+           id="use16519"
+           y="146.72"
+           x="259.33521"
+           xlink:href="#textext-f180281d-9"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16521"
+           y="146.72"
+           x="262.58603"
+           xlink:href="#textext-f180281d-10"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16523"
+           y="146.72"
+           x="269.52695"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16525"
+           y="146.72"
+           x="269.53693"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16527"
+           y="146.72"
+           x="274.29407"
+           xlink:href="#textext-f180281d-12"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16529"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-112.35234,56.520809)">
+        <use
+           id="use16531"
+           y="146.72"
+           x="280.2547"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16533"
+           y="146.72"
+           x="286.54706"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16535"
+           y="146.72"
+           x="286.55704"
+           xlink:href="#textext-f180281d-21"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16537"
+           y="146.72"
+           x="289.56873"
+           xlink:href="#textext-f180281d-2"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16539"
+           y="146.72"
+           x="293.26883"
+           xlink:href="#textext-f180281d-22"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16541"
+           y="146.72"
+           x="299.58115"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16543"
+           y="146.72"
+           x="299.59109"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16545"
+           y="146.72"
+           x="305.88348"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16547"
+           y="146.72"
+           x="305.89343"
+           xlink:href="#textext-f180281d-23"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16549"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-120.62368,77.199154)">
+        <use
+           id="use16551"
+           y="158.675"
+           x="223.43201"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16553"
+           y="158.675"
+           x="229.72438"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16555"
+           y="158.675"
+           x="229.73434"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16557"
+           y="158.675"
+           x="232.5966"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16559"
+           y="158.675"
+           x="237.35374"
+           xlink:href="#textext-f180281d-25"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16561"
+           y="158.675"
+           x="243.64612"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16563"
+           y="158.675"
+           x="243.65608"
+           xlink:href="#textext-f180281d-26"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16565"
+           y="158.675"
+           x="249.94846"
+           xlink:href="#textext-f180281d-4"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16567"
+           y="158.675"
+           x="255.24358"
+           xlink:href="#textext-f180281d-2"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16569"
+           y="158.675"
+           x="258.9437"
+           xlink:href="#textext-f180281d-23"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16571"
+           y="158.675"
+           x="259.05328"
+           xlink:href="#textext-f180281d-3"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16573"
+           y="158.675"
+           x="265.34564"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16575"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-120.62368,77.199154)">
+        <use
+           id="use16577"
+           y="158.675"
+           x="270.91772"
+           xlink:href="#textext-f180281d-8"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16579"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-120.62368,77.199154)">
+        <use
+           id="use16581"
+           y="158.675"
+           x="279.03229"
+           xlink:href="#textext-f180281d-9"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16583"
+           y="158.675"
+           x="282.28308"
+           xlink:href="#textext-f180281d-10"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16585"
+           y="158.675"
+           x="289.224"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16587"
+           y="158.675"
+           x="289.23398"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16589"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-120.62368,77.199154)">
+        <use
+           id="use16591"
+           y="158.675"
+           x="293.98117"
+           xlink:href="#textext-f180281d-12"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16593"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-120.62368,77.199154)">
+        <use
+           id="use16595"
+           y="158.675"
+           x="299.95175"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16597"
+           y="158.675"
+           x="306.24411"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16599"
+           y="158.675"
+           x="306.25409"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16601"
+           y="158.675"
+           x="309.11633"
+           xlink:href="#textext-f180281d-26"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16603"
+           y="158.675"
+           x="315.40872"
+           xlink:href="#textext-f180281d-27"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16605"
+           y="158.675"
+           x="315.42865"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16607"
+           y="158.675"
+           x="321.72101"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16609"
+           y="158.675"
+           x="321.73099"
+           xlink:href="#textext-f180281d-23"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16611"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-198.85675,108.21667)">
+        <use
+           id="use16613"
+           y="170.63"
+           x="223.43201"
+           xlink:href="#textext-f180281d-16"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16615"
+           y="170.63"
+           x="227.69998"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16617"
+           y="170.63"
+           x="227.70995"
+           xlink:href="#textext-f180281d-18"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16619"
+           y="170.63"
+           x="231.35924"
+           xlink:href="#textext-f180281d-28"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16621"
+           y="170.63"
+           x="236.65436"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16623"
+           y="170.63"
+           x="236.66432"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16625"
+           y="170.63"
+           x="242.9567"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16627"
+           y="170.63"
+           x="242.96666"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16629"
+           y="170.63"
+           x="245.82892"
+           xlink:href="#textext-f180281d-26"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16631"
+           y="170.63"
+           x="252.12129"
+           xlink:href="#textext-f180281d-27"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16633"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-162.66964,109.59523)">
+        <use
+           id="use16635"
+           y="170.63"
+           x="254.85106"
+           xlink:href="#textext-f180281d-16"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16637"
+           y="170.63"
+           x="259.11902"
+           xlink:href="#textext-f180281d-2"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16639"
+           y="170.63"
+           x="262.81915"
+           xlink:href="#textext-f180281d-29"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16641"
+           y="170.63"
+           x="268.22385"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16643"
+           y="170.63"
+           x="268.23383"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16645"
+           y="170.63"
+           x="272.99097"
+           xlink:href="#textext-f180281d-21"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16647"
+           y="170.63"
+           x="276.00266"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16649"
+           y="170.63"
+           x="276.0126"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16651"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-100.63461,109.59523)">
+        <use
+           id="use16653"
+           y="170.63"
+           x="281.59467"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16655"
+           y="170.63"
+           x="287.88702"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16657"
+           y="170.63"
+           x="287.897"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16659"
+           y="170.63"
+           x="290.75925"
+           xlink:href="#textext-f180281d-30"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16661"
+           y="170.63"
+           x="295.94479"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16663"
+           y="170.63"
+           x="295.95474"
+           xlink:href="#textext-f180281d-29"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16665"
+           y="170.63"
+           x="301.35947"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16667"
+           y="170.63"
+           x="301.36942"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16669"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-55.83153,126.13791)">
+        <use
+           id="use16671"
+           y="170.63"
+           x="306.9415"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16673"
+           y="170.63"
+           x="313.23389"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16675"
+           y="170.63"
+           x="313.24384"
+           xlink:href="#textext-f180281d-21"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16677"
+           y="170.63"
+           x="316.25552"
+           xlink:href="#textext-f180281d-2"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16679"
+           y="170.63"
+           x="319.95566"
+           xlink:href="#textext-f180281d-29"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16681"
+           y="170.63"
+           x="325.36035"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16683"
+           y="170.63"
+           x="325.37033"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16685"
+           y="170.63"
+           x="330.12747"
+           xlink:href="#textext-f180281d-21"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16687"
+           y="170.63"
+           x="333.13916"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16689"
+           y="170.63"
+           x="333.14911"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <g
+         id="g16719"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-237.11169,126.1379)">
+        <use
+           id="use16721"
+           y="170.63"
+           x="389.47766"
+           xlink:href="#textext-f180281d-20"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16723"
+           y="170.63"
+           x="395.77005"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16725"
+           y="170.63"
+           x="395.78"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16727"
+           y="170.63"
+           x="398.64224"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16729"
+           y="170.63"
+           x="403.39938"
+           xlink:href="#textext-f180281d-22"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16731"
+           y="170.63"
+           x="409.7117"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16733"
+           y="170.63"
+           x="409.72165"
+           xlink:href="#textext-f180281d-4"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16735"
+           y="170.63"
+           x="415.01678"
+           xlink:href="#textext-f180281d-5"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16737"
+           y="170.63"
+           x="415.02673"
+           xlink:href="#textext-f180281d-6"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16739"
+           y="170.63"
+           x="421.52835"
+           xlink:href="#textext-f180281d-7"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <path
+         inkscape:original-d="m 208.8366,239.15769 0,16.66667"
+         inkscape:path-effect="#path-effect18733"
+         id="path18731"
+         d="m 208.8366,239.15769 0,16.66667"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.83333331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         inkscape:connector-curvature="0" />
+      <path
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.83333331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         d="m 208.8366,285.28829 0,16.66667"
+         id="path18735"
+         inkscape:path-effect="#path-effect18737"
+         inkscape:original-d="m 208.8366,285.28829 0,16.66667"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="matrix(1.2,0,0,1.2,-22.746178,109.59523)"
+         style="fill:#000000;fill-opacity:1"
+         id="g18743">
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-20"
+           x="281.59467"
+           y="170.63"
+           id="use18745" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-13"
+           x="287.88702"
+           y="170.63"
+           id="use18747" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-24"
+           x="287.897"
+           y="170.63"
+           id="use18749" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-30"
+           x="290.75925"
+           y="170.63"
+           id="use18751" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-13"
+           x="295.94479"
+           y="170.63"
+           id="use18753" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-29"
+           x="295.95474"
+           y="170.63"
+           id="use18755" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-13"
+           x="301.35947"
+           y="170.63"
+           id="use18757" />
+        <use
+           height="850.39368"
+           width="531.49603"
+           xlink:href="#textext-f180281d-24"
+           x="301.36942"
+           y="170.63"
+           id="use18759" />
+      </g>
+      <g
+         id="g16691"
+         style="fill:#000000;fill-opacity:1"
+         transform="matrix(1.2,0,0,1.2,-57.523547,125.43883)">
+        <use
+           id="use16693"
+           y="170.63"
+           x="338.72119"
+           xlink:href="#textext-f180281d-9"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16695"
+           y="170.63"
+           x="341.97198"
+           xlink:href="#textext-f180281d-31"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16697"
+           y="170.63"
+           x="348.26437"
+           xlink:href="#textext-f180281d-32"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16699"
+           y="170.63"
+           x="353.77869"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16701"
+           y="170.63"
+           x="358.53583"
+           xlink:href="#textext-f180281d-21"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16703"
+           y="170.63"
+           x="361.54752"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16705"
+           y="170.63"
+           x="361.55746"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16707"
+           y="170.63"
+           x="364.41974"
+           xlink:href="#textext-f180281d-11"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16709"
+           y="170.63"
+           x="369.17688"
+           xlink:href="#textext-f180281d-33"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16711"
+           y="170.63"
+           x="375.45929"
+           xlink:href="#textext-f180281d-34"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16713"
+           y="170.63"
+           x="380.64481"
+           xlink:href="#textext-f180281d-13"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16715"
+           y="170.63"
+           x="380.65479"
+           xlink:href="#textext-f180281d-24"
+           width="531.49603"
+           height="850.39368" />
+        <use
+           id="use16717"
+           y="170.63"
+           x="383.51703"
+           xlink:href="#textext-f180281d-12"
+           width="531.49603"
+           height="850.39368" />
+      </g>
+      <path
+         inkscape:original-d="m 204.89581,302.16109 0,21.875"
+         inkscape:path-effect="#path-effect18733-6"
+         id="path18731-7"
+         d="m 204.89581,302.16109 0,21.875"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.83333331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         inkscape:connector-curvature="0" />
+      <path
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#000000;stroke-width:0.83333331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+         d="m 208.43221,163.54689 0,16.66667"
+         id="path3311-3"
+         inkscape:path-effect="#path-effect3313-5"
+         inkscape:original-d="m 208.43221,163.54689 0,16.66667"
+         inkscape:connector-curvature="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="167.41656"
+         y="159.58855"
+         id="text4580"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4582"
+           x="167.41656"
+           y="159.58855">ಮುದವೊಳಲಿನ ಎರೆಗಾಂಕ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="156.02335"
+         y="191.81511"
+         id="text4584"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4586"
+           x="156.02335"
+           y="191.81511">ಪ್ರಧಾನ ಬಮ್ಮಿಶೆಟ್ಟಿ : (ಪತ್ನಿ) ಮಾಚಿಯಕ್ಕ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="176.20564"
+         y="231.52866"
+         id="text4588"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4590"
+           x="176.20564"
+           y="231.52866">ಗಂಧಿಸೆಟ್ಟಿ : (ಪ) ಮಾಕವ್ವೆ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="152.44261"
+         y="268.31253"
+         id="text4592"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4594"
+           x="152.44261"
+           y="268.31253">ಸೋವಿಸೆಟ್ಟಿ ಅಥವಾ ಪಟ್ಟಣ ಸ್ವಾಮಿ ಸೋಮ</tspan><tspan
+           sodipodi:role="line"
+           x="152.44261"
+           y="278.72919"
+           id="tspan4596">             (ಪ) ಮರುದೇವಿ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="111.10147"
+         y="331.13803"
+         id="text4598"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4600"
+           x="111.10147"
+           y="331.13803">ನಾರಸಿಂಗಣ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="194.43481"
+         y="331.46356"
+         id="text4602"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4604"
+           x="194.43481"
+           y="331.46356">ಸಿಂಗಣ </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.33333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="267.02597"
+         y="329.51044"
+         id="text4606"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4608"
+           x="267.02597"
+           y="329.51044">ಬೂಚಣ </tspan></text>
+    </g>
+  </g>
+</svg>
