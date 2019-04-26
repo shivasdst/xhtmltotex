@@ -88,6 +88,10 @@ leftmargin=16.5mm,rightmargin=16.5mm,cropmarks]{zwpagelayout}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
 \def\engfoot#1{{\eng{#1}}}
 
+\def\selecteng{{\selectlanguage{english}}}
+\def\selectkan{{\selectlanguage{kannada}}}
+\def\versenum#1{\qquad\quad #1}
+
 \def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em\rightskip=2.3em\fontsize{11}{13}\selectfont\noindent}}
 \def\addsectiontoTOC#1{\addcontentsline{toc}{section}{#1}}
 \def\chapterend{%
@@ -206,11 +210,26 @@ I need more words\fi}
 %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
 %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictodevnag{\thepage}}}}
 \makeatletter
+\renewcommand\partname{ಭಾಗ}
 \renewcommand\contentsname{ವಿಷಯಸೂಚಿಕೆ}
+
+\renewcommand\thepart{\@arabic\c@part}
+\def\insertlangkanintotoc{\addtocontents{toc}{\protect\select@language{kannada}}}
+
+\renewcommand\part{%
+  \thispagestyle{plain}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \secdef\@part\@spart}
+
 \def\@part[#1]#2{%
-    \ifnum \c@secnumdepth >-2\relax
       \refstepcounter{part}%
-      \addcontentsline{toc}{part}{\hspace{1em}#1}%
+    \ifnum \c@secnumdepth >-2\relax
+      \addcontentsline{toc}{part}{\hspace{1em}\partname\,–\,#1}%
     \else
       \addcontentsline{toc}{part}{#1}%
     \fi
@@ -219,15 +238,13 @@ I need more words\fi}
      \interlinepenalty \@M
      \normalfont
      \ifnum \c@secnumdepth >-2\relax
-       %\huge\bfseries \partname\nobreakspace\thepart
-       %\par
+       \huge\bfseries ಭಾಗ \nobreakspace\arabictokannada{\thepart}
+       \message{\thepart}
+       \par
        %\vskip 20\p@
      \fi
-     \Huge \bfseries #2\par}%
-     \newpage
-     ~\thispagestyle{empty}
-     \newpage
-    \@endpart}
+     \large \bfseries #2\par}%
+    }
 
 
 \titleformat*{\section}{\large\bfseries}
@@ -250,11 +267,16 @@ I need more words\fi}
     \endgroup
   \fi}
 
+\renewcommand\chapter{\thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+
 \def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
                        \if@mainmatter
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter.}%
-                         \addcontentsline{toc}{chapter}{\protect\numberline{\protect\arabictokannada{\thechapter}.}#1}%
+                         \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter.}#1}%
                        \else
                          \addcontentsline{toc}{chapter}{#1}%
                        \fi
