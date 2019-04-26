@@ -918,9 +918,9 @@ class Xhtmltotex{
 		// var_dump($attributes);
 
 		if(isset($attributes['data-scale']))
-			$line = "\\includegraphics[scale=". $attributes['data-scale'][0] ."]{\"" . $attributes['src'][0] . "\"}"; 
+			$line = "\\includegraphics[scale=". $attributes['data-scale'][0] ."]{" . $attributes['src'][0] . "}"; 
 		else
-			$line = "\\includegraphics{\"" . $attributes['src'][0] . "\"}"; 
+			$line = "\\includegraphics{" . $attributes['src'][0] . "}"; 
 
 
 		$line = $this->generalReplacements($line);
@@ -988,6 +988,7 @@ class Xhtmltotex{
 		$data = preg_replace('/\\\\\\\\\n\\\\end\{(.*?)\}/u', "\n" . '\end{' . "$1" . "}", $data);
 		// $data = str_replace('\\\\', '\\', $data);
 		$data = preg_replace("/\\\\chapter\{\\\\num\{.*?\} *(.*)\}/u", '\chapter{' . "$1" . "}", $data);
+		$data = preg_replace("/\\\\part\{\\\\num\{.*?\} *(.*)\}/u", '\part{' . "$1" . "}", $data);
 		$data = preg_replace("/\\\\section\{\\\\num\{.*?\} *(.*)\}/u", '\section{' . "$1" . "}", $data);
 		$data = preg_replace("/\\\\subsection\{\\\\num\{.*?\} *(.*)\}/u", '\subsection{' . "$1" . "}", $data);
 		$data = preg_replace("/\\\\subsubsection\{\\\\num\{.*?\} *(.*)\}/u", '\subsubsection{' . "$1" . "}", $data);
