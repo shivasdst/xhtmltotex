@@ -1,0 +1,12 @@
+{
+	"attrmapping": {
+		"part-title.b":"\n\\part{",
+		"part-title.a":"}\n",
+		"tex-large.b":"\n{\\large ",
+		"tex-large.a":"}\n",
+		"tex-Large.b":"\n{\\Large ",
+		"tex-Large.a":"}\n",
+		"sizeeleven.b":"{\\fontsize{11}{13}\\selectfont ",
+		"sizeeleven.a":"}"
+	}
+}
