@@ -508,6 +508,13 @@ class Xhtmltotex{
 				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
 				unset($attributes['footertype']);
 				unset($attributes['id']);
+			}			
+			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('footnotemark', $attributes['footertype']) ){
+
+				$endnotemark = '\footnotemark[\thefootnote]';
+				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['footertype'][0] . ' -> ' . $footcmd . "\n";
+				unset($attributes['footertype']);
+				unset($attributes['id']);
 			}
 			if( ($inlineNode->nodeName == 'a') && isset($attributes['class']) && in_array('crossref', $attributes['class']) ){
 
