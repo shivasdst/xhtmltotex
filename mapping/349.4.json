@@ -1,6 +1,14 @@
 {
 	"attrmapping": {
 		"dp-text-right.b":"\n\\begin{flushright}{\\fontsize{11}{13}\\selectfont\n",
-		"dp-text-right.a":"\n}\\end{flushright}\n"
+		"dp-text-right.a":"\n}\\end{flushright}\n",
+		"letterfrom.b":"\n{\\flushright\n",
+		"letterfrom.a":"\\par}\n",
+		"letterto.b":"\n{\\centering\n",
+		"letterto.a":"\\par}\n",
+		"letterdp.b":"\n{\\flushright\\letterdp\n",
+		"letterdp.a":"\\par}\n",
+		"pranam.b":"\n\\pranam{",
+		"pranam.a":"}"
 	}
 }
