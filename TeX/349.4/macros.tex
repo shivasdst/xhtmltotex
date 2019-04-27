@@ -26,9 +26,10 @@
 %%parskip setting
 \setlength{\parskip}{4pt}
 
-\xpatchcmd{\verse}{\itemsep}{\advance\topsep-0.6em\itemsep}{}{}
-\xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
-\xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+\xpatchcmd{\verse}{\itemsep}{\advance\topsep-0.7em\itemsep}{}{}
+\xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1.2em\itemsep}{}{}
+\xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1.2em\itemsep}{}{}
+\xpatchcmd{\centering}{\itemsep}{\advance\topsep-1.2em\itemsep}{}{}
 
 %\setmainlanguage[numerals=Kannada]{kannada}
 \setotherlanguages{english}
@@ -87,6 +88,10 @@ leftmargin=16.5mm,rightmargin=16.5mm,cropmarks]{zwpagelayout}
 \def\eng#1{{\englishfont\textenglish{#1}}}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
 \def\engfoot#1{{\eng{#1}}}
+
+\long\def\letterto#1{\begin{center}#1\end{center}}
+\long\def\pranam#1{\vskip 2pt\centerline{#1}\vskip 0.5\baselineskip}
+\long\def\letterdp{\fontsize{11}{13}\selectfont }
 
 \def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em\rightskip=2.3em\fontsize{11}{13}\selectfont\noindent}}
 \def\addsectiontoTOC#1{\addcontentsline{toc}{section}{#1}}
@@ -311,7 +316,7 @@ I need more words\fi}
       \endlist}
 
 \def\@dottedtocline#1#2#3#4#5{\ifnum #1>\c@tocdepth\else{{#4}\kern3pt{\normalfont\normalcolor\arabictokannada{#5};}}\fi}
-  
+
 \makeatother
 
 \linespread{1.0084}
@@ -325,11 +330,11 @@ I need more words\fi}
 %~ \hbadness=10000
 
 \brokenpenalty9999\relax
-
 \newcommand{\sethyphenation}[3][]{%
   \sbox0{\begin{otherlanguage}[#1]{#2}
     \hyphenation{#3}\end{otherlanguage}}}
 
 \input dictionary
-
 \frenchspacing
+
+
