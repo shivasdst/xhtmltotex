@@ -1,0 +1,14 @@
+{
+	"tagmapping": {
+		"u.b":"\\underline{",
+		"u.a":"}",
+		"span.b":"",
+		"span.a":""			
+	},
+	"attrmapping": {
+		"dev.b":"\\dev{",
+		"dev.a":"}",
+		"verse-quote.b":"\n\n~\\hfill ",
+		"verse-quote.a":""		
+	}
+}
