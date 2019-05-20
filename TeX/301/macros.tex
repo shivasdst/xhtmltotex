@@ -34,9 +34,15 @@
 \setotherlanguages{english}
 
 %%page settings for the book with zwpagelayout package
-\usepackage[papersize={135mm,216mm},textwidth=102mm,
-textheight=172mm,headheight=4mm,headsep=4mm,topmargin=15mm,botmargin=21mm,
-leftmargin=16.5mm,rightmargin=16.5mm,cropmarks]{zwpagelayout}
+%%============ old setting ==============================
+%~ \usepackage[papersize={135mm,216mm},textwidth=102mm,
+%~ textheight=172mm,headheight=4mm,headsep=4mm,topmargin=15mm,botmargin=21mm,
+%~ leftmargin=16.5mm,rightmargin=16.5mm,cropmarks]{zwpagelayout}
+
+%%============ new setting ==============================
+\usepackage[papersize={142mm,218mm},textwidth=106mm,
+textheight=172mm,headheight=4mm,headsep=4mm,topmargin=16mm,botmargin=22mm,
+leftmargin=18mm,rightmargin=18mm,cropmarks]{zwpagelayout}
 
 %%page settings for the book with geometry package
 %~ \usepackage{geometry}
@@ -207,7 +213,7 @@ I need more words\fi}
 %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictodevnag{\thepage}}}}
 \makeatletter
 
-\titleformat*{\section}{\large\bfseries}
+\titleformat*{\section}{\Large\bfseries\centering}
 \titlespacing*{\section}{0pt}{*1.5}{*1}
 
 \renewcommand\labelitemi{\eng{\textbullet}}
@@ -317,3 +323,5 @@ I need more words\fi}
 \input dictionary
 
 \frenchspacing
+
+\def\emptypage{\thispagestyle{empty}}
