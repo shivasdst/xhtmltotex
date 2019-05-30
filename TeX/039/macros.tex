@@ -18,6 +18,10 @@
 \usepackage{longtable}
 \usepackage{enumerate}
 \usepackage{multirow}
+\usepackage{xpatch}
+
+%~ \xpatchcmd{\verse}{\itemsep}{\advance\topsep-1em}{}{}
+%~ \xpatchcmd{\quote}{\itemsep}{\advance\topsep-1em}{}{}
 
 \floatstyle{plain}
 %~ \floatplacement{Figure}{H}
@@ -76,8 +80,8 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 \def\enginline#1{{\fontsize{10}{12}\selectfont\eng{#1}}}
 \def\tamilinline#1{{\fontsize{10}{12}\selectfont\tamil{#1}}}
 
-\long\def\bookTitle#1{\vfill\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}\vfill}
-\def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
+\long\def\bookTitle#1{\vfill\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}}
+\long\def\titleauthor#1{\centerline{{\LARGE #1}}}
 \def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
 \def\general#1{#1}
 \def\supskpt#1{$^{#1}$}
@@ -112,7 +116,6 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
 \parindent=0pt
 \setlength{\parskip}{5pt}
 
-
 %%redefining macros
 \makeatletter
 
@@ -144,12 +147,12 @@ leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
   }}
 
 \def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
+  \vspace*{30\p@}%
   {\parindent \z@ \raggedleft
     \normalfont
     \interlinepenalty\@M
     \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
-    \vskip 40\p@
+    \vskip 20\p@
   }}
 
 \renewcommand\part{%
