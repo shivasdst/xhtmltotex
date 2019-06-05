@@ -16,8 +16,8 @@ class Xhtmltotex{
 		$this->loadDefaultMappings();
 		$this->overrideMappings($id);
 		$this->loadFootnotes($id);
-		// var_dump($this->footnotes);
-		// exit(0);
+		//~ var_dump($this->footnotes);
+		//~ exit(0);
 	}
 
 	public function loadDefaultMappings(){
@@ -83,10 +83,15 @@ class Xhtmltotex{
 					if($node->nodeName != '#text')
 						$node = $this->deleteFirstchildOrChar($node);
 					if (preg_match('/p|div/', $node->nodeName)) {
-						if($count > 0)	$this->footnotes[$idValue] .= "\n\n" . rtrim($this->parseBlockElement($node)); 
-						else $this->footnotes[$idValue] = rtrim($this->parseBlockElement($node));
+						if($count > 0)	{
+							$this->footnotes[$idValue] .= "\n\n" . rtrim($this->parseBlockElement($node));
+							//~ $this->footnotes[$idValue] = str_replace("ZZ37ZZ","ZZZZ37ZZZZ",$this->footnotes[$idValue]);
+						}
+						else {
+							$this->footnotes[$idValue] = rtrim($this->parseBlockElement($node));
+							//~ $this->footnotes[$idValue] = str_replace("ZZ37ZZ","ZZZZ37ZZZZ",$this->footnotes[$idValue]);
+						}
 					}
-
 					$count++;
 				}
 			}
@@ -147,7 +152,7 @@ class Xhtmltotex{
 	public function processFiles($id,$xhtmlFiles){
 
 		$ouputDir = TEXOUT . $id . '/src/';
-
+		
 		if (!file_exists(TEXOUT . $id)) {
 
 			mkdir(TEXOUT . $id, 0775);
@@ -215,6 +220,7 @@ class Xhtmltotex{
 					if($node->nodeName == 'section'){
 
 						$data = $data . $this->parseSectionElement($node);
+						$data = str_replace('ZZZZ37ZZZZ', '\%', $data);
 						$data = str_replace('ZZ38ZZ', '&', $data);
 						$data = str_replace('ZZ35ZZ', '#', $data);
 						$data = str_replace('ZZ95ZZ', '_', $data);
@@ -224,6 +230,7 @@ class Xhtmltotex{
 						$data = str_replace('\\general{\-}', '\-', $data);
 						$data = str_replace('ZZ3CZZ', '<', $data);
 						$data = str_replace('ZZ3EZZ', '>', $data);
+						$data = str_replace('\\\%', '\%', $data);
 						$data = str_replace('\\\\%', '\%', $data);
 						$data = str_replace('\\\\_', '\_', $data);
 					}
@@ -350,13 +357,14 @@ class Xhtmltotex{
 					elseif($node->nodeName == 'a'){
 
 						$tmpString = $this->parseInlineElement($node);
+						//echo $tmpString . "\n";
 						$tmpAttrs = $this->getAttributesForElement($node); 
 						if(isset($tmpAttrs['class'][0]) && $tmpAttrs['class'][0] == 'url'){
 							$tmpString = str_replace('&', 'ZZ38ZZ', $tmpString);
 							$tmpString = str_replace('#', 'ZZ35ZZ', $tmpString);
 							$tmpString = str_replace('_', 'ZZ95ZZ', $tmpString);
 							$tmpString = str_replace('%', 'ZZ37ZZ', $tmpString);
-							// echo $tmpString . "\n";
+							//~ echo $tmpString . "\n";
 						}
 	
 						$line .= $tmpString;
@@ -483,7 +491,7 @@ class Xhtmltotex{
 			if( array_key_exists('href', $attributes) && (preg_match('/^999\-aside/', $attributes['href'][0])) ){
 
 				$footNoteText = $this->getFootNoteText($attributes);
-				// echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
+				//~ echo "\t --> " . $inlineNodeName . ' -> ' . $attributes['href'][0] . ' -> ' . $footNoteText . "\n";
 			}			
 
 			if( array_key_exists('footertype', $attributes) && ($inlineNode->nodeName == 'a') && in_array('endnote', $attributes['footertype']) ){
@@ -570,11 +578,10 @@ class Xhtmltotex{
 					else{
 
 						$tmpString .= $this->parseInlineElement($node);	
-						// echo "a -> ". $tmpString . "\n";
+						//~ echo "a -> ". $tmpString . "\n";
 					}
 				}
 				else{
-
 						$tmpString .= $node->nodeValue;
 						// echo $tmpString . "-->" . $node->nodeName . "\n";
 				}
@@ -594,9 +601,10 @@ class Xhtmltotex{
 
 						if($endnotemark != '')
 							$tmpString = $endnotemark;
-						elseif(preg_match('/^999\-aside/', $attributes['href'][0]) && $endnotemark == '' )
+						elseif(preg_match('/^999\-aside/', $attributes['href'][0]) && $endnotemark == '' ){
 							$tmpString = $footcmd. '{' . $footNoteText . '}';
-
+							//~ echo "\n.." . $tmpString . "..\n";
+						}
 					}
 					else{
 
@@ -613,7 +621,7 @@ class Xhtmltotex{
 			echo $crossRef . "\n";
 		}
 
-		// echo "\n.." . $tmpString . "..\n";
+		//~ echo "\n.." . $tmpString . "..\n";
 		return $tmpString;
 	}
 
@@ -976,7 +984,7 @@ class Xhtmltotex{
 
 		if(preg_match('/999(.*?)\#(.*)/', $attributes['href'][0],$matches)){
 
-			// echo "\t --> href -> " . $this->footnotes[$matches[2]];
+			//~ echo "\t --> href -> " . $this->footnotes[$matches[2]];
 			return $this->footnotes[$matches[2]];
 		}
 
@@ -1026,8 +1034,8 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-		//~ $data = str_replace("-", "–", $data);
-		//~ $data = str_replace('\–', '\-', $data);
+		$data = str_replace("-", "–", $data);
+		$data = str_replace('\–', '\-', $data);
 		 
 		 //replace degree symbol(°) with \circ
 		 $data = str_replace('°', '\circ', $data);
