@@ -7,10 +7,12 @@
 \usepackage{polyglossia}
 \usepackage{xpatch}
 \usepackage{array}
+\usepackage{amsmath, pifont}
 \usepackage{longtable}
 \usepackage{enumerate}
 \usepackage{caption}
 \usepackage{wrapfig}
+\usepackage{xcolor}
 
 \usepackage[papersize={140mm,215mm},textwidth=110mm,
 textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=17.5mm,
@@ -75,4 +77,27 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
+\makeatother
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{1\p@}%
+  \vspace*{7\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        {\fontsize{19}{12}\selectfont\bfseries \@chapapp\space\thechapter} %% previously \huge  was \LARGE 
+        \vskip 4pt
+        \hrule height 1pt 
+        \par\nobreak
+        \vskip 5\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \huge\bfseries #1\par\nobreak
+    \vskip 6pt
+
+        \hrule height 1pt 
+    \vskip 20\p@
+  }}
 \makeatother
