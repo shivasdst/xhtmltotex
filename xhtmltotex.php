@@ -1026,8 +1026,8 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-		//~ $data = str_replace("-", "–", $data);
-		//~ $data = str_replace('\–', '\-', $data);
+		//$data = str_replace("-", "–", $data);
+		//$data = str_replace('\–', '\-', $data);
 		 
 		 //replace degree symbol(°) with \circ
 		 $data = str_replace('°', '\circ', $data);
