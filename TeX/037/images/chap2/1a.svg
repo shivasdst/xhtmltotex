@@ -15,7 +15,7 @@
    height="425.19684"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="1a.svg">
   <sodipodi:namedview
      id="base"
@@ -26,12 +26,12 @@
      inkscape:pageshadow="2"
      inkscape:zoom="3.6073877"
      inkscape:cx="416.13125"
-     inkscape:cy="43.775268"
+     inkscape:cy="254.45404"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
-     inkscape:window-width="1366"
+     inkscape:window-width="1024"
      inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="24"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -126,7 +126,7 @@
          y="786.57513">ಕುಂದಾಚ್ಚಿ(ಪತಿ ಪರಮಗೂಳ)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:NudiUni01e;-inkscape-font-specification:NudiUni01e"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:NudiUni01e;-inkscape-font-specification:NudiUni01e;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
        x="440.62524"
        y="782.71802"
        id="text3011"
@@ -936,7 +936,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
        x="436.32681"
        y="1010.2251"
        id="text6501"
@@ -944,7 +944,7 @@
          sodipodi:role="line"
          id="tspan6503"
          x="436.32681"
-         y="1010.2251">ಸಗರ ತ್ರಿಣೇತ್ರ ಮಣಲೇರ****</tspan><tspan
+         y="1010.2251">ಸಗರ ತ್ರಿಣೇತ್ರ ಮಣಲೇರ*****</tspan><tspan
          sodipodi:role="line"
          x="436.32681"
          y="1026.0602"
