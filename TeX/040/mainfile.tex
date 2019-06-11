@@ -1,70 +1,28 @@
-\documentclass[12pt,twoside,openany]{book}
+\documentclass[11pt,twoside,openany]{book}
 
 \input macros
-%\input dictionary
-
-
 
 \begin{document}
 
-\fontsize{13}{15}\selectfont
 \frontmatter
 
 
 %\input src/titlepage
-
 %\newpage
-
 %\input src/copyright
-
 %\newpage
-
 %\input src/arpane
 %\input src/mununxdi
 %\input src/arike1
 %%%%\input src/arike2%%%
 %\input src/mununxdi
-
 %\newpage
-
 %\input src/preface
-
-%\input src/000a-title
-%\newpage
-
-%\input src/000b-copyright
-%\rhead[]{{\fontsize{10}{12}\selectfont ಮುನ್ನುಡಿ\quad\arabictokannada{\thepage}}}
-%\input src/000c-preface
-
-
-\newpage
-
-~
-
-\phantom{a}
-
-\thispagestyle{empty}
-
-\newpage
 
 \tableofcontents
 
-
-
 \mainmatter
 
-
-%\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
-{
 \input src/001-chapter001.tex
-}
-\makeatletter
-\renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
-                    %~ \thispagestyle{plain}%
-                    \global\@topnum\z@
-                    \@afterindentfalse
-                    \secdef\@chapter\@schapter}
-\makeatother
 
-\chapterend
 \end{document}

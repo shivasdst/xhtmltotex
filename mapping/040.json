@@ -1,0 +1,8 @@
+{
+	"attrmapping": {
+		"color-blue.b":"\\colorblue{",
+		"color-blue.a":"}",
+		"color-red.b":"\\colorred{",
+		"color-red.a":"}"
+	}
+}
