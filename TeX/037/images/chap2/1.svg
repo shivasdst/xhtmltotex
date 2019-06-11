@@ -23,20 +23,77 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="173.67564"
-     inkscape:cy="81.962194"
+     inkscape:zoom="1.4"
+     inkscape:cx="176.96715"
+     inkscape:cy="119.30663"
      inkscape:document-units="px"
-     inkscape:current-layer="textext-f6b15aa2-17"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
      inkscape:window-width="1024"
      inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="false" />
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5308"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5310"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4368"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4489"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4350"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
     <inkscape:perspective
        id="perspective10"
        inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
@@ -44,6 +101,66 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 526.18109 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-6"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4368-2"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4368-1"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-9-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4368-1-3"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend-9-9-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4368-1-3-6"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
+    </marker>
   </defs>
   <metadata
      id="metadata7">
@@ -65,47 +182,41 @@
     <path
        sodipodi:nodetypes="cccc"
        id="path2816"
-       d="m 9.901026,934.19333 0,-15.15229 112.126934,0 0,13.63706"
+       d="m 19.416255,951.36592 0,-15.15229 112.126935,0 0,13.63706"
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        sodipodi:nodetypes="cc"
        id="path2818"
-       d="m 79.60155,918.53596 0,16.66752"
+       d="m 89.116779,935.70855 0,16.66752"
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        sodipodi:nodetypes="cc"
        id="path2820"
-       d="m 51.822356,918.53596 0,-19.69797"
+       d="m 61.337585,935.70855 0,-19.69797"
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 183.60155,876.15016 0,55.05332"
+       d="m 189.60155,868.06897 0,63.13454"
        id="path4125"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 183.09903,947.32531 0,13.63706"
+       d="m 189.09903,947.32531 0,13.63706"
        id="path4600"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0" />
     <path
        sodipodi:nodetypes="cc"
-       id="path4602"
-       d="m 265.60155,876.15016 0,55.05332"
-       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:connector-curvature="0" />
-    <path
-       sodipodi:nodetypes="cc"
        id="path4604"
-       d="m 267.09903,947.32531 0,13.63706"
+       d="m 293.09903,947.32531 0,13.63706"
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <g
-       transform="translate(54.25,738.53571)"
+       transform="translate(60.25,738.53571)"
        ns0:text="{\\kan bANa}\n\n{\\kan duNuDx}\n\n{\\kan (pati) maramagULa}"
        ns0:preamble="/home/sriranga/Desktop/eps-figs/nudi-package.tex"
        id="g4817">
@@ -643,7 +754,7 @@
                sodipodi:role="line"
                id="tspan3637"
                x="209.83286"
-               y="212.27066">(ಪತ್ನಿ: ಕುಂದಾಚ್ಚಿ )</tspan><tspan
+               y="212.27066" /><tspan
                sodipodi:role="line"
                x="209.83286"
                y="223.63429"
@@ -652,7 +763,7 @@
         <flowRoot
            xml:space="preserve"
            id="flowRoot3659"
-           style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+           style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
              id="flowRegion3661"><rect
                id="rect3663"
                width="81.317276"
@@ -663,58 +774,81 @@
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            x="-25.016491"
-           y="127.95709"
+           y="123.95709"
            id="text3760"
            sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
              id="tspan3762"
              x="-25.016491"
-             y="127.95709">       ಪಲ್ಲವ</tspan><tspan
+             y="123.95709">       ಪಲ್ಲವ</tspan><tspan
              sodipodi:role="line"
              x="-25.016491"
-             y="140.45709"
-             id="tspan3764">ಪಲ್ಲವ ಯುವರಾಜ</tspan><tspan
+             y="136.45709"
+             id="tspan3764" /><tspan
              sodipodi:role="line"
              x="-25.016491"
-             y="152.95709"
-             id="tspan3768">  (ಪಲ್ಲವಧಿರಾಜ)</tspan></text>
+             y="148.95709"
+             id="tspan3768" /><tspan
+             sodipodi:role="line"
+             x="-25.016491"
+             y="161.45709"
+             id="tspan3526" /></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="203.78308"
-           y="266.34799"
+           x="224.28815"
+           y="276.95462"
            id="text3830"
            sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             x="203.78308"
-             y="266.34799"
+             x="224.28815"
+             y="276.95462"
              id="tspan3834">ಅರಕೇಸಿ</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="-26.266418"
+           y="154.65189"
+           id="text3760-3"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3762-6"
+             x="-26.266418"
+             y="154.65189" /><tspan
+             sodipodi:role="line"
+             x="-26.266418"
+             y="163.43439"
+             id="tspan3764-7">ಪಲ್ಲವ ಯುವರಾಜ</tspan><tspan
+             sodipodi:role="line"
+             x="-26.266418"
+             y="175.93439"
+             id="tspan3768-5">  (ಪಲ್ಲವಧಿರಾಜ)</tspan></text>
       </g>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="226.16884"
-         y="155.69568"
+         x="196.73228"
+         y="154.18045"
          id="text3625"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3627"
-           x="226.16884"
-           y="155.69568">ದಿಂಡಿಕ(ಗ)ರಾಜ,</tspan><tspan
+           x="196.73228"
+           y="154.18045">ದಿಂಡಿಕ(ಗ)ರಾಜ,</tspan><tspan
            sodipodi:role="line"
-           x="226.16884"
-           y="168.19568"
+           x="196.73228"
+           y="166.68045"
            id="tspan3631">ದಿಂಡಿಕ ಮಹಾಪ್ರಭು</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="182.81404"
+         x="192.81404"
          y="202.53984"
          id="text3674"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3676"
-           x="182.81404"
+           x="192.81404"
            y="202.53984">ಯುವರಾಜ ದುಂಡು </tspan></text>
       <text
          xml:space="preserve"
@@ -730,131 +864,155 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="119.49624"
-         y="134.01802"
+         x="123.49624"
+         y="125.02817"
          id="text3812"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
-           x="119.49624"
-           y="134.01802"
+           x="123.49624"
+           y="125.02817"
            id="tspan3816">ಸಗರ</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="200.81351"
-         y="133.51294"
+         x="218.81351"
+         y="124.92664"
          id="text3820"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3822"
-           x="200.81351"
-           y="133.51294">ಬಾಣ</tspan><tspan
+           x="218.81351"
+           y="124.92664">ಬಾಣ</tspan><tspan
            sodipodi:role="line"
-           x="200.81351"
-           y="146.01294"
+           x="218.81351"
+           y="137.42664"
            id="tspan3824" /></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="179.07494"
+         x="197.07494"
          y="233.01295"
          id="text3826"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3828"
-           x="179.07494"
-           y="233.01295">ಪರಮಗೂಳ </tspan></text>
+           x="197.07494"
+           y="233.01295">   ಪರಮ ಗೂಳ </tspan><tspan
+           sodipodi:role="line"
+           x="197.07494"
+           y="245.51295"
+           id="tspan7335">(ಪತ್ನಿ: ಕುಂದಾಚ್ಚಿ) </tspan><tspan
+           sodipodi:role="line"
+           x="197.07494"
+           y="258.01294"
+           id="tspan7331" /></text>
     </g>
-    <path
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       id="path4604-7"
-       d="m 266.45946,980.20475 0,13.63706"
-       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       id="path4604-0-9"
-       d="m 279.278,898.33291 -13.63706,0"
-       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       id="path4604-0"
-       d="m 158.32621,939.2644 -13.63706,0"
-       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       id="path4604-0-3"
-       d="m 184.35285,938.46617 -3.53554,0"
-       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="0.10152531"
-       y="942.82025"
+       x="9.6167545"
+       y="959.9928"
        id="text3772"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3774"
-         x="0.10152531"
-         y="942.82025">ಜಯ </tspan></text>
+         x="9.6167545"
+         y="959.9928">ಜಯ </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="102.02541"
-       y="944.7796"
+       x="111.54064"
+       y="961.95215"
        id="text3782"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3784"
-         x="102.02541"
-         y="944.7796">(ಮಗಳು)</tspan><tspan
+         x="111.54064"
+         y="961.95215">(ಮಗಳು)</tspan><tspan
          sodipodi:role="line"
-         x="102.02541"
-         y="957.2796"
+         x="111.54064"
+         y="974.45215"
          id="tspan3786" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="70.710678"
-       y="945.78979"
+       x="80.225906"
+       y="962.96234"
        id="text3788"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3790"
-         x="70.710678"
-         y="945.78979">ವೃದ್ಧಿ</tspan><tspan
+         x="80.225906"
+         y="962.96234">ವೃದ್ಧಿ</tspan><tspan
          sodipodi:role="line"
-         x="70.710678"
-         y="958.28979"
+         x="80.225906"
+         y="975.46234"
          id="tspan3792" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="165.15994"
+       x="171.15994"
        y="939.72888"
        id="text3794"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3796"
-         x="165.15994"
-         y="939.72888">ಪತಿ </tspan></text>
+         x="171.15994"
+         y="939.72888">ಪತಿ:</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="185.90868"
+       x="187.90868"
        y="939.70856"
        id="text3798"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3800"
-         x="185.90868"
+         x="187.90868"
          y="939.70856">ಮರುವರ್ಮ </tspan><tspan
          sodipodi:role="line"
-         x="185.90868"
+         x="187.90868"
          y="952.20856"
          id="tspan3802" /></text>
+    <path
+       sodipodi:nodetypes="cc"
+       id="path2820-3"
+       d="m 60.350283,886.52709 0,-19.69797"
+       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4604-2"
+       d="m 291.16504,916.24281 0,13.63706"
+       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4604-70"
+       d="m 291.67011,865.73519 0,13.63706"
+       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       id="path4604-7"
+       d="m 292.17519,989.98397 0,13.63703"
+       style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       id="path4604-0-5-6"
+       d="m 227.0975,968.54244 34.23749,0"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-9-9)"
+       inkscape:transform-center-x="6.3380085"
+       inkscape:transform-center-y="1.104421" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       id="path4604-0-5-6-2"
+       d="m 134.79333,936.72042 34.23749,0"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-9-9-0)"
+       inkscape:transform-center-x="6.3380085"
+       inkscape:transform-center-y="1.104421" />
   </g>
 </svg>

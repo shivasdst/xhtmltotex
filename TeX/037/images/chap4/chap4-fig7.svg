@@ -13,7 +13,7 @@
    height="850.39368"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="chap4-fig7.svg">
   <sodipodi:namedview
      id="base"
@@ -28,7 +28,7 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
+     inkscape:window-width="1024"
      inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="24"
@@ -7945,7 +7945,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7972,21 +7972,6 @@
        id="path62179"
        inkscape:path-effect="#path-effect62181"
        inkscape:original-d="m 196.57535,418.06822 0,-8.70735 135.27395,0 0,8.70735" />
-    <text
-       xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
-       x="260.21957"
-       y="348.69455"
-       id="text4894"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4896"
-         x="260.21957"
-         y="348.69455">ಕಲಿದೇವರ ಪಾದಪದ್ಮಾರಾಧ</tspan><tspan
-         sodipodi:role="line"
-         x="260.21957"
-         y="361.19455"
-         id="tspan4898">ನಾಗಯ್ಯ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
@@ -8038,5 +8023,20 @@
          id="tspan4918"
          x="195.88416"
          y="430.34976">ಶಿಂಗನ ಮಾರೆಯ ನಾಯಕ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="208.76793"
+       y="351.28564"
+       id="text5140"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5142"
+         x="208.76793"
+         y="351.28564">ಕಲಿದೇವರ ಪಾದಪದ್ಮಾರಾಧಕ </tspan><tspan
+         sodipodi:role="line"
+         x="208.76793"
+         y="363.78564"
+         id="tspan5144">            ನಾಗಯ್ಯ </tspan></text>
   </g>
 </svg>
