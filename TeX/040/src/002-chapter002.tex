@@ -462,32 +462,8 @@ If any of these happen to you, call an ambulance right away, and head to a hospi
 
 \newpage
  
- \makeatletter
-\def\@makechapterhead#1{%
-  \vspace*{1\p@}%
-  \vspace*{7\p@}%
-  {\parindent \z@ \raggedleft \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-        {\fontsize{19}{12}\selectfont\bfseries \@chapapp\space\thechapter  -A} %% previously \huge  was \LARGE 
-        \vskip 4pt
-        \hrule height 1pt 
-        \par\nobreak
-        \vskip 5\p@
-      \fi
-    \fi
-    \interlinepenalty\@M
-    \huge\bfseries #1\par\nobreak
-    \vskip 6pt
-
-        \hrule height 1pt 
-    \vskip 20\p@
-  }}
-\makeatother
+\renewcommand{\thechapter}{\arabic{chapter}A}
 \chapter{Hypertension and Diabetes}\label{chap13A}
-\addtocontents{toc}{\protect\contentsline{chapter}{\protect \numberline{\thechapter A}
-   Hypertension and Diabetes}
-{\thepage}}
 
 \textit{Hypertension} or high blood pressure is commonly seen in approximately 60\% of diabetics.
 
@@ -600,230 +576,241 @@ It is recommended to use ACE (angiotensin converting enzyme)\break inhibitors (s
 \bibitem{chap13–A–key05} Bakris GL, Sowers JR, Giles TD, Black HR, Izzo JL Jr, et al. Treatment of hypertension in patients with diabetes– an update. J Am Soc Hypertens. 2010; 4(2):62–7.
 \end{thebibliography}
 
-\end{document}
+\newpage
+ 
+\setcounter{chapter}{12}
+\renewcommand{\thechapter}{\arabic{chapter}B}
 \chapter{Cholesterol and Diabetes}\label{chap13B}
 
-\textit{Cholesterol} is a soft waxy substance present both in blood and inside human cells. It is a form of fat. The word cholesterol originates from the Greek words ‘chole’ meaning bile and ‘sterol’ meaning solid. In other words, solidified fat seen in bile juice. The liver secretes bile juice, and the liver is the main source of cholesterol synthesis.
+\textit{Cholesterol} is a soft waxy substance present both in blood and inside\break human cells. It is a form of fat. The word cholesterol originates from the Greek words ‘chole’ meaning bile and ‘sterol’ meaning solid. In other words, solidified fat seen in bile juice. The liver secretes bile juice, and the liver is the main source of cholesterol synthesis.
 
 Of all the medical terms, “cholesterol” is one name that evokes universal dislike among the general public. It is blamed for heart attacks, strokes, high blood pressure, etc. Unfortunately for cholesterol, this is all true!
 
-But it would be wrong to blame cholesterol for all our indiscretions. We humans have a tendency to misuse anything and everything God has given us. God gave us a vegetable, and we fry it and douse it with salt and call it potato chips. God gave us fruit, and we drown it in sugar and call it jam. God gave us pure water, and we adulterate it with artificial flavors to make colas. The list is endless.
+But it would be wrong to blame cholesterol for all our indiscretions. We humans have a tendency to misuse anything and everything God has given us. God gave us a vegetable, and we fry it and douse it with salt and call it potato chips. God gave us fruit, and we drown it in sugar and call it jam. God gave us pure water, and we adulterate it with\break artificial flavors to make colas. The list is endless.
 
-God did not create cholesterol to cause heart attacks. He meant cholesterol to be a vital part of the human cell membrane; to be an essential element in the synthesis of sex hormones such as testosterone and estrogen, without which no human can have an offspring; and to offer many other benefits for mankind.
+God did not create cholesterol to cause heart attacks. He meant cholesterol to be a vital part of the human cell membrane; to be an\break essential element in the synthesis of sex hormones such as testosterone and estrogen, without which no human can have an offspring; and to offer many other benefits for mankind.
 
-Moreover, not all cholesterol is created equal. The good form of cholesterol, namely HDL cholesterol actually protects against heart disease!
+Moreover, not all cholesterol is created equal. The good form of cholesterol, namely HDL cholesterol actually protects against heart\break disease!
 
-The bad cholesterols are the LDL (Low Density Lipoprotein) and triglycerides. They promote heart disease. They tend to stick to the insides of the blood vessels. The body’s immune system tries to scrape these off, but actually converts the fat into a more toxic form. This toxic form of cholesterol now attracts more immune cells, which try to destroy it, but some immune cells die in the fight. Hence a miniature battlefield is created at this site. The combination of bad cholesterol, immune cells and dead cells result in ‘cholesterol plaque’ formation. This plaque progressively increases in size and occludes the blood vessel either partially or completely.
+The bad cholesterols are the LDL (Low Density Lipoprotein) and triglycerides. They promote heart disease. They tend to stick to the insides of the blood vessels. The body’s immune system tries to scrape these off, but actually converts the fat into a more toxic form. This toxic form of cholesterol now attracts more immune cells, which try to destroy it, but some immune cells die in the fight. Hence a mini\-ature battlefield is created at this site. The combination of bad chole\-sterol, immune cells and dead cells result in ‘cholesterol plaque’ formation. This plaque progressively increases in size and occludes the blood\break vessel either partially or completely.
 
-\begin{figure}
-\includegraphics{images/044.jpg}
-\caption{Cornary Arteries \& Plaque Formation:}
+\begin{figure}[h]
+\centering
+\textbf{\textit{Cornary Arteries \& Plaque Formation:}}\\
+\includegraphics[scale=1.9]{images/044.jpg}
 \end{figure}
 
 Unfortunately people with diabetes are prone to having unhealthy cholesterol levels, and hence are at higher risk of cardiac disease. This condition is termed \textit{“diabetic dyslipidemia.”}
 
-\colorblue{\textbf{\textit{Diabetic dysplipidemia}}}
+\noindent{\textbf{\textit{Diabetic dysplipidemia}}}
 
 This is a characteristic pattern of cholesterol in people with diabetes, in which the good cholesterol i.e. HDL cholesterol levels are low; bad cholesterol and triglyceride levels are high.
 
 While the exact cause for this pattern is not clear, it is most likely a result of defective insulin action.
 
-\colorred{\textit{This pattern is not just limited to full–blown diabetes, but is also seen in the ‘prediabetes’ stage! Thus, while the person is blissfully unaware of being at risk for diabetes, the ‘seeds of destruction’ are being sown (cholesterol plaques in the blood vesels).}}
+\textcolor{red}{\textit{This pattern is not just limited to full–blown diabetes, but is also seen in the ‘prediabetes’ stage! Thus, while the person is blissfully unaware of being at risk for diabetes, the ‘seeds of destruction’ are being sown (cholesterol plaques in the blood vesels).}}
 
-\colorblue{\textbf{Managing cholesterol in diabetes}}
+\noindent{\textbf{Managing cholesterol in diabetes}}
 
 The first step in management is diagnosis. \textit{There are no symptoms of high cholesterol, only complications!}
 
-Cholesterol levels are checked by a blood test known as ‘lipid panel’. This should be checked after an overnight fast to avoid inaccuracies.
+Cholesterol levels are checked by a blood test known as ‘lipid\break panel’. This should be checked after an overnight fast to avoid\break inaccuracies.
 
-\colorblue{\textbf{Cholesterol targets in diabetes}}
+\noindent{\textbf{Cholesterol targets in diabetes}}
 
-The American Diabetic Association and the American Heart Association recommend the following targets to reduce the risk of cardiovascular disease and death:
+The American Diabetic Association and the American Heart\break Association recommend the following targets to reduce the risk of\break cardiovascular disease and death:
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item LDL Cholesterol should be less than 100 mg/dl
+\item HDL Cholesterol should be higher than 40 mg/dl for men and\break 50mg/dL for women
+\item Triglycerides should be less than 150 mg/dl
+\end{enumerate}
 
- \item HDL Cholesterol should be higher than 40 mg/dl for men and 50mg/dL for women
-
- \item Triglycerides should be less than 150 mg/dl
-
-\textbf{How can I achieve these cholesterol goals?}
+\noindent\textbf{How can I achieve these cholesterol goals?}
 
 One should be heartened to know that there is considerable overlap among measures aimed to control blood sugar and cholesterol and high blood pressure. In other words you get 3 for the price of 1!
 
 Thus, the recommended measures are largely the same as described in the previous chapters, namely:
 
+\begin{enumerate}
+\itemsep=0pt
 \item Diet: \textit{A DASH (Dietary Approaches to Stop Hypertension)} diet is helpful to control cholesterol as well. In addition to the DASH diet, it is important to make smart food choices.
+\item Enjoy regular physical activity. At least 30 minutes of total exercise time on most days of the week.
+\item Maintain a healthy weight (prevent obesity)
+\item Avoid smoking
+\item Avoid excess alcohol
+\item Take medicines as advised
+\end{enumerate}
 
- \item Enjoy regular physical activity. At least 30 minutes of total exercise time on most days of the week.
+\noindent\textbf{Eating smart, the key to eating healthy}
 
- \item Maintain a healthy weight (prevent obesity)
-
- \item Avoid smoking
-
- \item Avoid excess alcohol
-
- \item Take medicines as advised
-
-\textbf{Eating smart, the key to eating healthy}
-
-Eating healthy does not have to mean depriving yourself of taste buds of any pleasure. ‘Knowledge is power’ when it comes to diet. For example did you know that by avoiding saturated fats (butter, animal meats, other milk products, coconut oil, palm oil, etc) and trans fats (hydrogenated oils used in fast food restaurants, frozen pizzas, coffee creamers, etc), and instead using mono and polyunsaturated fats (seen in olive oil, sunflower oil, canola oil, nuts, seeds, fish etc), you can actually lower your cholesterol level!
+Eating healthy does not have to mean depriving yourself of taste buds of any pleasure. ‘Knowledge is power’ when it comes to diet. For example did you know that by avoiding saturated fats (butter, animal meats, other milk products, coconut oil, palm oil, etc) and trans fats (hydrogenated oils used in fast food restaurants, frozen pizzas,\break coffee creamers, etc), and instead using mono and polyunsaturated fats (seen in olive oil, sunflower oil, canola oil, nuts, seeds, fish etc), you can\break actually lower your cholesterol level!
 
 Diet in diabetes is discussed in greater detail later in this book.
 
+\newpage
+\renewcommand{\thechapter}{\arabic{chapter}}
 \chapter{\textit{Kidney Disease} in Diabetes}\label{chap14}
 
-\colorblue{\textbf{The human kidneys}}
+\noindent{\textbf{The human kidneys}}
 
-Our body has 2 kidneys, each about the size of a fist. They are located on either side of our spine below the rib cage.
+Our body has 2 kidneys, each about the size of a fist. They are\break located on either side of our spine below the rib cage.
 
-\begin{figure}
-\includegraphics{images/045.jpg}
-\end{figure}
+\begin{wrapfigure}{l}{5cm}
+\centering
+\includegraphics[scale=1.1]{images/045.jpg}
+\vskip-.5cm
+\end{wrapfigure}
 
-The kidneys are extremely sophisticated machines that perform several vital functions. If you think urine formation is the kidney’s only job, then you don’t know the kidney well enough! It secretes critical hormones that help maintain our blood pressure, notably renin. In addition, it converts vitamin D to its active form. Activated vitamin D is important for maintaining our bone strength. Kidneys also secrete a hormone called erythropoietin that is vital in stimulating the bone marrow to make red blood cells.
+The kidneys are extremely sophisticated machines that perform several vital functions. If you think urine formation is the kidney’s only job, then you don’t know the kidney well enough! It secretes critical hormones that help maintain our blood pressure, notably renin. In addition, it converts vitamin D to its\break active form. Activated vitamin D is important for maintaining our bone strength. Kidneys also secrete a hormone called erythropoietin that is vital in stimulating the bone\break marrow to make red blood cells.
 
-\begin{figure}
-\caption{Nephron}
-\includegraphics{images/046.jpg}
-\end{figure}
+\begin{wrapfigure}{r}{6.4cm}
+\centering
+\textbf{\textit{Nephron}}\\
+\includegraphics[scale=1.4]{images/046.jpg}
+\vskip-.5cm
+\end{wrapfigure}
 
 Urine formation in the human body is one of nature’s marvels. It helps excrete toxic byproducts of the various chemical reactions that take place in our body every minute. It also helps maintain the fluid and pH balance in the body.
 
-Urine formation happens inside tiny units of the kidneys known as nephrons. There are approximately 1 million nephrons in each kidney. So each human body has a total of about two million nephrons or filtration units.
+Urine formation happ\-ens inside tiny units of the kidneys known as neph\-rons. There are approximately 1 million nephrons in each kidney. So each hu\-man body has a total of about two million neph\-rons or filtration units.
 
 Each nephron is composed of a cluster of very tiny blood vessels called capillaries. The walls of these capillaries have tiny pores or holes in them. This capillary cluster is called the glomerulus. The glomerulus acts as a sieve or a filter through which blood is filtered. The pores of this filter are large enough to allow fluids, body salts, glucose and urea (by product of protein) to leak out, but small enough to prevent proteins in the blood from leaking out. Every minute these nephrons filter out 125 ml of urine, which equates to 7.5 liters every hour and a whopping 180 liters every day!
 
 Can you imagine urinating 180 liters a day? Of course not. Because the nephrons are so sophisticated that they reabsorb 99\% of these 180 liters, to produce only about 2 liters of urine per day. This is possible because surrounding the glomerulus or capillary cluster is a very advanced collection system.
 
-In addition to reabsorbing water, this collecting system will reabsorb all the glucose from the filtrate. It will assess how much electrolytes (such as sodium, potassium, etc) the body needs, and reabsorbs only that much, allowing the rest to flow out in the urine.
+In addition to reabsorbing water, this collecting system will re\-absorb all the glucose from the filtrate. It will assess how much ele\-ctrolytes (such as sodium, potassium, etc) the body needs, and reab\-sorbs only that much, allowing the rest to flow out in the urine.
 
 In the final stage (called the secretion stage), this collection system will excrete ammonia and by–products of medicines that we use into the urine.
 
-\begin{figure}
-\includegraphics{images/047.jpg}
-\end{figure}
+\begin{wrapfigure}{l}{5.9cm}
+\centering
+\includegraphics[scale=1.4]{images/047.jpg}
+\vskip-.5cm
+\end{wrapfigure}
 
-These three stages of filtration, reabsorption and secretion happen in every nephron. So each of 2 million nephrons produces a small quantity of urine. This urine is collected by the kidney and transported to the urinary bladder by two tubes known as ureters. Once the urinary bladder fills up, we get the urge to urinate.
+These three stages of filtration, reabsorption and secretion happen in every neph\-ron. So each of 2 million nephrons produces a small quantity of urine. This urine is collected by the kidney and transported to the urinary bla\-dder by two tubes known as ureters. Once the urinary bladder fills up, we get the urge to urinate.
 
 Now you know the incredible story behind each drop of urine, which is nothing but finely filtered blood!
 
-\colorblue{\textbf{Diabetic kidney disease or diabetic nephropathy}}
+\noindent{\textbf{Diabetic kidney disease or diabetic nephropathy}}
 
-Diabetes is the \#1 cause of chronic kidney damage in many countries around the world. For example in the US, it accounts for 40\% of all new cases of chronic kidney disease.\footnote{}
+Diabetes is the \#1 cause of chronic kidney damage in many countries around the world. For example in the US, it accounts for 40\% of all new cases of chronic kidney disease.$^{\text{\cite{chap14–key01}}}$
 
-\colorred{\textit{In the first survey of the causes of chronic kidney diseases in India that was published in 2012, diabetes was the main cause accounting for 31\% of cases.}} High blood pressure in comparison accounted for 13\% of cases. In fact the combination of diabetes and hypertension is responsible for more than 2/3 of all cases of chronic kidney disease according to the National Kidney Foundation of the United States. According to their research, 30\% of patients with type 1 diabetes, and up to 40\% of patients with type 2 diabetes will eventually develop diabetic nephropathy.
+\begin{wrapfigure}{l}{6cm}
+\centering
+\textbf{\textit{Diabetes Affects the Kidney}}\\
+\includegraphics[scale=1.4]{images/048.jpg}
+\vskip-.4cm
+\end{wrapfigure}
 
-\begin{figure}
-\caption{Diabetes Affects the Kidney}
-\includegraphics{images/048.jpg}
-\end{figure}
+\textcolor{red}{\textit{In the first survey of the causes of chronic kidney di\-seases in India that was published in 2012, diabetes was the main cause accounting for 31\% of cases.}} High blood pressure in comparison accounted for 13\% of cases. In fact the combination of diabetes and hypertension is res\-ponsible for more than 2/3 of all cases of chronic kidney disease according to the National Kidney Foundation of the United States. According to their research, 30\% of patients with type 1 diabetes, and up to 40\% of patients with type 2 diabetes will eventually develop diabetic nephropathy.
 
-\colorred{\textit{You will be not happy to know that diabetics of Indian origin in the UK had a 10–fold higher risk than Caucasians of developing kidney failure requiring dialysis.}}\footnote{}\colorred{\textit{while Indians living in the Netherlands had a 40–fold higher risk than Caucasians.}}\footnote{}
+\textcolor{red}{\textit{You will be not happy to know that diabetics of Indian origin in the UK had a 10–fold higher risk than Caucasians of developing kidney failure requiring dialysis.}}$^{\text{\cite{chap14–key02}}}$ \textcolor{red}{\textit{while Indians living in the Netherlands had a 40–fold higher risk than Caucasians.}}$^{\text{\cite{chap14–key03}}}$
 
-\textbf{How does diabetes damage the kidneys?}
+\noindent\textbf{How does diabetes damage the kidneys?}
 
-Diabetes attacks the kidneys on several fronts:
+\noindent Diabetes attacks the kidneys on several fronts:
 
-\item Primarily it overworks the kidneys. As you know there is excess glucose in the body of diabetics. And whose job is it to remove this excess? The poor kidney’s of course, since urine is the only exit route for this excess sugar. In order to remove this excess sugar, excess filtration has to take place in the nephrons. It is because of this excess filtration that people with diabetes have to urinate excessively. But the industrious kidneys never complain and go about their extra work quietly. But eventually this workload takes a toll on them and causes damage.
-
- \item Secondly, you would recall that excess glucose forms AGEs or Advanced Glycation End products. These AGEs accumulate in the nephrons, and in the walls of the blood vessels. This damages the filtration system in the nephrons, which starts leaking protein..
-
- \item Thirdly, diabetes causes nerve damage, which affects the nerves that are supposed to stimulate the urinary bladder to empty itself at regular intervals. The bladder becomes lazy since there is inadequate stimulation from the nerves. Hence large amounts of urine accumulate in the bladder before the person gets the urge to urinate. This exerts backpressure through the ureters on the filtration systems in the nephrons, and causes damage.
-
- \item 
- Finally, due to the presence of excess sugar that has leaked into the urine, bacteria thrive in the urine, causing frequent urinary infections. These infections cause scarring of the kidneys in the long run.\supskpt{\footnote{}}
+\begin{enumerate}[\ding{118}]
+\itemsep=0pt
+\item Primarily it overworks the kidneys. As you know there is excess glucose in the body of diabetics. And whose job is it to remove this excess? The poor kidney’s of course, since urine is the only exit route for this excess sugar. In order to remove this excess sugar, excess filtration has to take place in the nephrons. It is because of this excess filtration that people with diabetes have to urinate exce\-ssively. But the industrious kidneys never complain and go about their extra work quietly. But eventually this workload takes a toll on them and causes damage.
+\item Secondly, you would recall that excess glucose forms AGEs or Adva\-nced Glycation End products. These AGEs accumulate in the neph\-rons, and in the walls of the blood vessels. This damages the filtration system in the nephrons, which starts leaking protein..
+\item Thirdly, diabetes causes nerve damage, which affects the nerves that are supposed to stimulate the urinary bladder to empty itself at regular intervals. The bladder becomes lazy since there is ina\-dequate stimulation from the nerves. Hence large amounts of urine accumulate in the bladder before the person gets the urge to urinate. This exerts backpressure through the ureters on the filtration systems in the nephrons, and causes damage.
+\item Finally, due to the presence of excess sugar that has leaked into the urine, bacteria thrive in the urine, causing frequent urinary infe\-ctions. These infections cause scarring of the kidneys in the long run.$^{\text{\cite{chap14–key04}}}$
 
  \textbf{\textit{(Dr. Sooraj Tejaswi, the co–author of this book, is a co–author for this research publication)}}
+ \end{enumerate}
 
 
-\textbf{Risk factors for diabetic nephropathy}
+\noindent\textbf{Risk factors for diabetic nephropathy}
 
 Based on scientific research, the following have been identified as factors that increase susceptibility to diabetic nephropathy:
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Longer duration of diabetes
+\item Males
+\item Older age
+\item Smoking
+\item Poor blood sugar control
+\item Poor blood pressure control
+\item Certain ethnic groups – namely African Americans, Native American Indians, etc.
+\end{enumerate}
 
- \item Males
-
- \item Older age
-
- \item Smoking
-
- \item Poor blood sugar control
-
- \item Poor blood pressure control
-
- \item Certain ethnic groups – namely African Americans, Native American Indians, etc.
-
-\textbf{What are the symptoms of diabetic nephropathy?}
+\noindent\textbf{What are the symptoms of diabetic nephropathy?}
 
 Diabetes is called the ‘silent killer’. Just like termites eat a tree from the inside, diabetes damages the body from the inside. Kidney damage seldom causes symptoms. But when it does, it is usually too late!
 
 Symptoms of chronic kidney disease due to diabetic nephropathy are vague and include:
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Fatigue
+\item Nausea and in some cases vomiting
+\item Loss of appetite
+\item Lack of proper sleep
+\item Poor concentration
+\item Itching all over the body
+\item Fluid accumulation in the body (such as swelling of feet, puffiness around the eyes)
+\end{enumerate}
 
- \item Nausea and in some cases vomiting
+\vskip-.5cm
+Most of these symptoms are vague, and can be seen in many ways. This is one of the reasons for the delay in diagnosing diabetic nephro\-pathy.
 
- \item Loss of appetite
+\vskip 8pt
+\noindent\textbf{Is there a way to diagnose diabetic nephropathy before it is too late?}
 
- \item Lack of proper sleep
-
- \item Poor concentration
-
- \item Itching all over the body
-
- \item Fluid accumulation in the body (such as swelling of feet, puffiness around the eyes)
-
-Most of these symptoms are vague, and can be seen in many ways. This is one of the reasons for the delay in diagnosing diabetic nephropathy.
-
-\textbf{Is there a way to diagnose diabetic nephropathy before it is too late?}
-
-Absolutely! Diagnosis is easily achieved by a simple urine test. The urine sample is tested for presence of protein, specifically albumin. Albumin is the main protein in blood. If the filtration system of the kidneys is healthy, it does not allow albumin to leak out. So presence of small amounts of protein in urine alerts us to the fact that the kidneys are under attack and are sustaining damage. This stage is called ‘microalbuminuria’ or small amount of albumin in the urine. At this stage kidneys leak up to 300 mg of albumin per day. It is important to test the urine sample at least 2 times within 3 to 6 months, before confirming the presence of microalbuminuria. This is because leakage of protein into the urine can also be seen in some common conditions like fever, following intense exercise, etc.
+Absolutely! Diagnosis is easily achieved by a simple urine test. The urine sample is tested for presence of protein, specifically albumin.\break Albumin is the main protein in blood. If the filtration system of the kidneys is healthy, it does not allow albumin to leak out. So presence of small amounts of protein in urine alerts us to the fact that the kidneys are under attack and are sustaining damage. This stage is called ‘microalbuminuria’ or small amount of albumin in the urine. At this stage kidneys leak up to 300 mg of albumin per day. It is important to test the urine sample at least 2 times within 3 to 6 months, before confirming the presence of microalbuminuria. This is because leakage of protein into the urine can also be seen in some common conditions like fever, following intense exercise, etc.
 
 By intervening at the stage of microalbuminuria, the damage can be slowed down, and kidney can be protected.
 
-\textbf{When should urine be checked for microalbuminuria?}
+\vskip 8pt
+\noindent\textbf{When should urine be checked for microalbuminuria?}
 
 Type 1 diabetics who have had the disease for 5 years or more should check their urine sample at least every year for the rest of their life.
 
 Type 2 diabetics should check as soon as they are diagnosed, and regularly thereafter.
 
-\colorblue{\textbf{The stage of microalbuminuria}}
+\vskip 8pt
+\noindent{\textbf{The stage of microalbuminuria}}
 
 Your body arrives at a major crossroads when it reaches the stage of microalbuminuria. The road you choose to take (or not take) at this juncture could either mean an early death or a long productive life!
 
-In the first ever survey conducted in India, 26.9\% of diabetes patients were found to have microalbuminuria in a study conducted in Chennai.\footnote{} A subsequent study out of North India conducted by the All India Institute of Medical Sciences (AIIMS, New Delhi) found a microalbuminuria prevalence of 25.5\% among diabetics.\footnote{}
+In the first ever survey conducted in India, 26.9\% of diabetes\break patients were found to have microalbuminuria in a study conducted in Chennai.$^{\text{\cite{chap14–key05}}}$ A subsequent study out of North India conducted by the All India Institute of Medical Sciences (AIIMS, New Delhi) found a\break microalbuminuria prevalence of 25.5\% among diabetics.$^{\text{\cite{chap14–key06}}}$
 
-In type 1 diabetes, if no action is taken after microalbuminuria develops, 80\% of patients continue to leak increasing amounts of albumin into the urine. Moreover, albumin leakage into urine increases at the rate of 10–20\% per year. This ultimately leads to kidney failure in 50\% of patients by 10 years, and in 75\% by 20 years.
+In type 1 diabetes, if no action is taken after microalbuminuria\break develops, 80\% of patients continue to leak increasing amounts of\break albumin into the urine. Moreover, albumin leakage into urine increases at the rate of 10–20\% per year. This ultimately leads to kidney failure in 50\% of patients by 10 years, and in 75\% by 20 years.
 
 In type 2 diabetes, after the stage of microalbuminuria, 20–40\% will continue to experience increasing amounts of protein leakage into the urine. By 20 years, 20\% of patients will have renal failure. The numbers definitely suggest that in type 2 diabetes, there is a lower risk of kidney failure. But the real reason behind this statistics is somewhat gruesome as explained below!
 
-Type 2 diabetes patients are usually older than patients with type 1 diabetes. By the time they develop microalbuminuria, they are also very likely to have co–existent heart disease (coronary artery disease). These patients are at high risk of dying from premature coronary artery disease. So they may not live long enough to develop renal failure!
+Type 2 diabetes patients are usually older than patients with type 1 diabetes. By the time they develop microalbuminuria, they are also very likely to have co–existent heart disease (coronary artery disease). These patients are at high risk of dying from premature coronary\break artery disease. So they may not live long enough to develop renal\break failure!
 
-\textit{Microalbuminuria} goes hand–in–hand with coronary artery disease. In a study out of Copenhagen (in the country of Denmark) there was a 2–times higher risk of coronary artery disease in diabetic patients with microalbuminuria when compared to diabetics with no protein leakage in urine.\footnote{} A recently published study from Denver, Colorado, compared diabetes patients who decreased their microalbuminuria level with those who did not. After 10 years, among those who decreased their levels, only 4.7\% died of heart disease. But of the diabetes patients who did not decrease their microalbuminuria levels, 24.4\% died because of heart disease. So the writing on the wall is clear. \colorred{\textit{The finding of micro levels of albumin in urine should serve as a mega wakeup call for us.}} If we do not take control of the situation with aggressive measures to prevent heart disease, then premature death is very likely a mere formality. Measures to prevent cardiovascular death are described in chapters 11 and 12. The good news is that anything you do to protect your heart will protect the kidneys too.
+\textit{Microalbuminuria} goes hand–in–hand with coronary artery disease. In a study out of Copenhagen (in the country of Denmark) there was a 2–times higher risk of coronary artery disease in diabetic patients with microalbuminuria when compared to diabetics with no protein lea\-kage in urine.$^{\text{\cite{chap14–key07}}}$ A recently published study from Denver, Colorado, compared diabetes patients who decreased their microalbuminuria\break level with those who did not. After 10 years, among those who\break decreased their levels, only 4.7\% died of heart disease. But of the dia\-betes patients who did not decrease their microalbuminuria levels,\break 24.4\% died because of heart disease. So the writing on the wall is clear. \textcolor{red}{\textit{The finding of micro levels of albumin in urine should serve as a mega wakeup call for us.}} If we do not take control of the situation with aggressive measures to prevent heart disease, then premature death is very likely a mere formality. Measures to prevent cardiovascular death are des\-cribed in chapters 11 and 12. The good news is that anything you do to protect your heart will protect the kidneys too.
 
-\colorblue{\textbf{Can diabetic nephropathy be prevented?}}
+\noindent{\textbf{Can diabetic nephropathy be prevented?}}
 
 Prevention is definitely possible. Diabetes has several faces. To some people it may show itself in the form of heart disease, to some as eye disease, and in others as kidney disease. But do not despair, because the solution is pretty much the same regardless of its avatars. The same measures recommended for prevention of coronary artery disease, namely “controlling the ABCs”, hold good for nephropathy as well.
 
-\item 
- \textbf{A1c} or tight control of blood sugar levels.
+\begin{enumerate}[\ding{118}]
+\itemsep=0pt
+\item \textbf{A1c} or tight control of blood sugar levels.
 
- Tight blood sugar control prevented and slowed the progression of diabetic nephropathy by 50\% in the DCCT (Diabetes Control and Complications Trial) study conducted between 1983 and 1993.
+Tight blood sugar control prevented and slowed the progression of diabetic nephropathy by 50\% in the DCCT (Diabetes Control and Complications Trial) study conducted between 1983 and 1993.
 
- In another very large and lengthy study (UK Prospective Diabetes Study) conducted between 1977 and 1997, keeping the HBA1c level around 7\% resulted in a 25\% reduction in nephropathy when compared to HBA1c levels around 8\%
-
- \item \textbf{B –} Blood pressure maintenance below 130/80 mm Hg is recommended based on several studies.
-
- \item \textbf{C –} Cholesterol control
+In another very large and lengthy study (UK Prospective Diabetes Study) conducted between 1977 and 1997, keeping the HBA1c level around 7\% resulted in a 25\% reduction in nephropathy when compared to HBA1c levels around 8\%
+\item \textbf{B –} Blood pressure maintenance below 130/80 mm Hg is recomme\-nded based on several studies.
+\item \textbf{C –} Cholesterol control
+\end{enumerate}
 
 In addition, one should follow common sense interventions such as:
 
-\item Maintaining a healthy body weight\footnote{}
-
- \item Avoiding cigarette smoking
-
- \item Avoiding excess salt intake
+\begin{enumerate}[•]
+\itemsep=0pt
+\item Maintaining a healthy body weight$^{\text{\cite{chap14–key08}}}$
+\item Avoiding cigarette smoking
+\item Avoiding excess salt intake
+\end{enumerate}
 
 Do all these recommendations sound very familiar? You bet, since these are the same measures recommended in the previous chapters on heart disease, cholesterol and high blood pressure!
 
@@ -831,82 +818,67 @@ One additional measure that may help prevent worsening of kidney disease in diab
 
 If these measures are not adequate to control nephropathy, the next step in management is medication.
 
-\colorblue{\textbf{Medications for diabetic nephropathy – an ACE up our sleeve!}}
+\noindent{\textbf{Medications for diabetic nephropathy – an ACE up our sleeve!}}
 
-The advent of the group of medications known as ACE inhibitors is just what the doctor ordered to tame the complications of diabetes. ACE inhibitors (Angiotensin Converting Enzyme inhibitors) and its sister group of drugs ARBs (Angiotensin Receptor Blockers) have revolutionized pharmacological management of diabetic nephropathy. Not only that, they have changed the face of diabetic heart disease as well.
+The advent of the group of medications known as ACE\break inhibitors is just what the doctor ordered to tame the complications of diabetes. ACE inhibitors (Angiotensin Converting Enzyme inhibitors) and its sister group of drugs ARBs (Angiotensin Receptor Blockers) have revolutionized pharmacological management of diabetic nephropathy. Not only that, they have changed the face of diabetic heart disease as well.
 
-As their name suggests, they mainly block the action of the hormone angiotensin (angio = blood vessel; tensin = causes tension or increased pressure). The basic problem in diabetic nephropathy is damage inflicted by the increased pressure inside the glomerulus, specifically on the special capillary network. ACE inhibitors and ARBs help decrease the pressure inside the glomerulus, and thus help protect and preserve them.
+As their name suggests, they mainly block the action of the hormone angiotensin (angio = blood vessel; tensin = causes tension or increased pressure). The basic problem in diabetic nephropathy is\break damage inflicted by the increased pressure inside the glomerulus, spe\-cifically on the special capillary network. ACE inhibitors and ARBs help decrease the pressure inside the glomerulus, and thus help protect and preserve them.
 
-I was the principal investigator (PI) of the first ever (and so far the only) trial conducted in Mysore or the State of Karnataka that studied the effect of ARBs in diabetic nephropathy. It was found that Valsartan (an ARB) decreased protein leakage in the urine of diabetics by 40\% after only 8 weeks of treatment in patients with diabetic microalbuminuria. I was invited to present this encouraging research finding at the American Diabetes Association’s 68th Scientific Sessions held at San Francisco, USA, in June 2008. This is the world’s largest annual meeting on diabetes. Further our research was published in the journal ‘Diabetes Care’, the official journal of the American Diabetes Association.
+I was the principal investigator (PI) of the first ever (and so far the only) trial conducted in Mysore or the State of Karnataka that studied the effect of ARBs in diabetic nephropathy. It was found that Valsartan (an ARB) decreased protein leakage in the urine of diabetics by 40\%\break after only 8 weeks of treatment in patients with diabetic microalbuminuria. I was invited to present this encouraging research finding at the American Diabetes Association’s 68th Scientific Sessions held at San Francisco, USA, in June 2008. This is the world’s largest annual meeting on diabetes. Further our research was published in the journal ‘Diabetes Care’, the official journal of the American Diabetes Association.
 
 Several other studies around the world have consistently shown the beneficial effects of ACE inhibitors and ARBs in diabetes and kidney disease. It is a well known fact now that they can prevent, delay, decrease, and even reverse protein leakage from the kidneys, thereby improving kidney health. While the maximum benefit is derived if the drug is used early in the process, it can still work wonders at later stages of the disease process as well.
 
-\textbf{The dark side of diabetic nephropathy}
+\noindent\textbf{The dark side of diabetic nephropathy}
 
 While on the one hand it is very heartening to witness the rapid strides being made in dealing with diabetic nephropathy, on the other hand it is equally tragic to see countless people in our country falling prey to kidney failure due to ignorance, laziness or poverty.
 
 The kidneys fight valiantly for many years despite the destruction inflicted upon it by diabetes. But without help from you and your doctor, it wages a losing battle. Kidney function gradually deteriorates, and each glomerulus filters lesser and lesser amounts of urine. Normally the glomerular filtration rate is around 120 ml/min. Once this drops to less than 60 ml/min, it indicates that more than half of the nephrons are damaged. A level below 15 ml/min is not compatible with life unless regular dialysis is done. This stage is called End Stage Renal Disease or ESRD. The kidneys are as good as non–existent at this stage, and dialysis or kidney transplant is the only means of staying alive.
 
-Philosophically speaking, we humans often realize the value of many things in our life only after we have lost them. This is very true of the kidneys too. The true value and versatility of the kidney becomes painfully obvious to us at the stage of ESRD. Staying alive becomes a daily challenge as patients experience the following life threatening situations on a daily basis:
+Philosophically speaking, we humans often realize the value of\break many things in our life only after we have lost them. This is very true of the kidneys too. The true value and versatility of the kidney becomes painfully obvious to us at the stage of ESRD. Staying alive becomes a daily challenge as patients experience the following life threatening situations on a daily basis:
 
-\item Out of control blood pressure: This is because of fluid overload, and from overproduction of renin and angiotensin hormones. There is excess fluid in the body, since the damaged glomerulus does not filter it. But since there is very little to no urine formation, the kidney thinks there is inadequate fluid in the body, and hence tries to compensate by secreting renin and angiotensin hormones, which cause more fluid overload in the body.
+\begin{enumerate}[•]
+\itemsep=1pt
+\item Out of control blood pressure: This is because of fluid overload, and from overproduction of renin and angiotensin hormones. There is excess fluid in the body, since the damaged glomerulus does not\break filter it. But since there is very little to no urine formation, the kidney thinks there is inadequate fluid in the body, and hence tries to compensate by secreting renin and angiotensin hormones, which cause more fluid overload in the body.
+\item Heart failure: The heart struggles to cope with the excess fluid\break accumulating in the body, and this fluid accumulates in the lungs too because of back flow from the heart causing the person to drown in his own body fluid!
+\item Excess urea in the body: Since very little urine is produced, urea is not excreted out in urine. This is a poison causing fatigue, lack of appetite, confusion, and eventually a coma. It can also irritate the outer lining of the heart and cause a condition known as \textit{‘uremic\break pericarditis’}.
+\item Excess potassium in blood (hyperkalemia): Excess potassium triggers irregular heart rhythms, and can cause instant death. A frequent mistake on the part of patients with diabetes and kidney failure is drinking tender coconut water. Tender coconuts are ever–present around hospitals and nursing homes in India. While, it is wonderfully refreshing and electrolyte rich, it is rich in potassium, and can be deadly in kidney failure!
+\item \textit{Anemia:} Damaged kidneys stop producing erythropoietin, the hormone essential to stimulate the bone marrow to produce red blood cells. This results in anemia. The anemia causes immense fatigue. Frequent blood transfusions may be required to treat this anemia.
+\item Low calcium: This is because vitamin D is essential to maintain normal levels of calcium in the body and the kidney is vital in activating vitamin D.
+\item \textit{Acidosis:} Several acids that are normally excreted in urine start accumulating to toxic levels in kidney failure. This lowers the pH of the body, and all biochemical processes become erratic and rapidly shut down causing death!
+\item \textit{Malnutrition:} Accumulation of poisonous urea and acids cause severe anorexia (lack of appetite), which causes severe malnutrition, and deterioration of overall health.
+\end{enumerate}
 
- \item Heart failure: The heart struggles to cope with the excess fluid accumulating in the body, and this fluid accumulates in the lungs too because of back flow from the heart causing the person to drown in his own body fluid!
+\noindent{\textbf{\textit{Dialysis}}}
 
- \item Excess urea in the body: Since very little urine is produced, urea is not excreted out in urine. This is a poison causing fatigue, lack of appetite, confusion, and eventually a coma. It can also irritate the outer lining of the heart and cause a condition known as \textit{‘uremic pericarditis’}.
+Dialysis is a lifesaving treatment for renal failure or end stage\break renal disease. It is a boon that prolongs the life of millions of patients worldwide. Dr. Willem Kolf engineered the first dialysis machine in 1943 using animal intestines, beverage cans and a washing machine!
 
- \item Excess potassium in blood (hyperkalemia): Excess potassium triggers irregular heart rhythms, and can cause instant death. A frequent mistake on the part of patients with diabetes and kidney failure is drinking tender coconut water. Tender coconuts are ever–present around hospitals and nursing homes in India. While, it is wonderfully refreshing and electrolyte rich, it is rich in potassium, and can be deadly in kidney failure!
-
- \item \textit{Anemia:} Damaged kidneys stop producing erythropoietin, the hormone essential to stimulate the bone marrow to produce red blood cells. This results in anemia. The anemia causes immense fatigue. Frequent blood transfusions may be required to treat this anemia.
-
- \item Low calcium: This is because vitamin D is essential to maintain normal levels of calcium in the body and the kidney is vital in activating vitamin D.
-
- \item \textit{Acidosis:} Several acids that are normally excreted in urine start accumulating to toxic levels in kidney failure. This lowers the pH of the body, and all biochemical processes become erratic and rapidly shut down causing death!
-
- \item \textit{Malnutrition:} Accumulation of poisonous urea and acids cause severe anorexia (lack of appetite), which causes severe malnutrition, and deterioration of overall health.
-
-\colorblue{\textbf{\textit{Dialysis}}}
-
-Dialysis is a lifesaving treatment for renal failure or end stage renal disease. It is a boon that prolongs the life of millions of patients worldwide. Dr. Willem Kolf engineered the first dialysis machine in 1943 using animal intestines, beverage cans and a washing machine!
-
-The first dialysis facility in India was established in 1961 at the Christian Medical College, Vellore.\footnote{}
+The first dialysis facility in India was established in 1961 at the Christian Medical College, Vellore.$^{\text{\cite{chap14–key09}}}$
 
 Despite commendable human effort, it is impossible to recreate God’s work. Dialysis is only an incomplete attempt at replacing the lost kidneys’ functions. It filters out the toxins that accumulate in blood, but it cannot perform other kidney functions such as production of erythropoietin and activation of vitamin D.
 
 There are two types of dialysis, namely hemodialysis and peritoneal dialysis.
 
-\colorred{\textit{Diabetes is the most common reason for patients to require dialysis}}. Unfortunately diabetics requiring dialysis fare much worse than dialysis patients without diabetes (for example hypertensive patients with kidney failure requiring dialysis). In fact according the United States database of dialysis patients, only 30\% of diabetics were found to surviving 5 years after initiation of dialysis. Most of the deaths occurred due to heart disease. Diabetics with kidney failure have a tendency to develop premature heart attacks.
+\textcolor{red}{\textit{Diabetes is the most common reason for patients to require dialysis}}.\break Unfortunately diabetics requiring dialysis fare much worse than dia\-lysis patients without diabetes (for example hypertensive patients with kidney failure requiring dialysis). In fact according the United States database of dialysis patients, only 30\% of diabetics were found to survi\-ving 5 years after initiation of dialysis. Most of the deaths occurred due to heart disease. Diabetics with kidney failure have a tendency to\break develop premature heart attacks.
 
-\colorblue{\textbf{\textit{Kidney transplant}}}
+\noindent{\textbf{\textit{Kidney transplant}}}
 
 Kidney transplantation is a much better alternative to dialysis in patients with ESRD, and should always be pursued if possible. But unlike dialysis which is almost universally available and can be done in almost any patient, kidney transplantation has limitations – a matching donor kidney should be available, the patient should be healthy enough to undergo a major surgery, and most importantly patients should be in a position to afford the costs of surgery and medications that need to be taken lifelong after surgery to prevent rejection of the transplanted kidney.
 
-\colorblue{\textit{In conclusion, with regard to diabetic nephropathy, a stitch in time definitely saves nine! We have several ways of trying to prevent the onset and progression of this condition. But it all starts with you taking that first step to go to your doctor’s clinic/hospital/office and getting your urine sample tested!}}
-
-\section*{References}
+\textcolor{blue}{\textit{In conclusion, with regard to diabetic nephropathy, a stitch in time defi\-nitely saves nine! We have several ways of trying to prevent the onset and progression of this condition. But it all starts with you taking that first step to go to your doctor’s clinic/hospital/office and getting your urine sample tested!}}
 
 \begin{thebibliography}{99}
 \bibitem{chap14–key01} Diabetes Care, 2004; 27(S1): 79.
+\bibitem{chap14–key02} Burden AC, McNally PG, Freehally J, \& Walls J. Increased incidence of end–stage renal failure secondary to diabetes in Asian ethnic groups in the United Kingdom. Diabetes Med. 1992; 9 (7): 641–5.
+\bibitem{chap14–key03} Lightstone L, Rees AJ, Tomson C, Wallis J, et al. high incidence of end–stage renal disease in Indo–Asians in the UK. QJM. 1995; 88 (3): 191–5.
+\bibitem{chap14–key04} Goswamin R, Bal CS, Tejaswi S, Punjabi GV, et al. Prevalence of urinary tract infection and renal scars in patients with diabetes mellitus. Diabetes Res Clin Pract. 2001; 53 (3): 181–6.
+\bibitem{chap14–key05} Unnikrishnan RI, Rema M, Pradeepa R, Deepa M, et al. Prevalence and risk factors of diabetic nephropathy in an urban South Indian population: the Chennai Urban Rural Epidemiology Study (CURES 45). Diabetes Care. 2007; 30 (8): 2019–24.
+\bibitem{chap14–key06} Kanakamani J, Ammini AC, Gupta N, Dwivedi SN. Prevalence of microalbuminuria among patients with type 2 diabetes mellitus– a hospital–based study from North India. Diabetes Technol Ther. 2010; 12 (2): 161–6.
+\bibitem{chap14–key07} Kalusen K, Borch–Johnsen K, Feldt–Rasmussen B, Jensen G, et al. Very low levels of microalbuminuria are associated with\break increased risk of coronary heart disease and death independently of renal function, hypertension, and diabetes. Circulation. 2004; 110 (1): 32–5.
+\bibitem{chap14–key08} Rossi MC, Nicolucci A, Pellegrini F, Comaschi M, et al. Obesity and changes in urine albumin/creatinine ration in patients with type 2 diabetes: the DEMAND study. Nutr Metab Cardiovasc Dis. 2010; 20 (2): 110–6.
+\bibitem{chap14–key09} Chugh KS. Three decades of nephrology. J Postgrad Med. 1994; 40 (3): 103–8.
+\end{thebibliography}
 
- \bibitem{chap14–key02} Burden AC, McNally PG, Freehally J, \& Walls J. Increased incidence of end–stage renal failure secondary to diabetes in Asian ethnic groups in the United Kingdom. Diabetes Med. 1992; 9 (7): 641–5.
-
- \bibitem{chap14–key03} Lightstone L, Rees AJ, Tomson C, Wallis J, et al. high incidence of end–stage renal disease in Indo–Asians in the UK. QJM. 1995; 88 (3): 191–5.
-
- \bibitem{chap14–key04} Goswamin R, Bal CS, Tejaswi S, Punjabi GV, et al. Prevalence of urinary tract infection and renal scars in patients with diabetes mellitus. Diabetes Res Clin Pract. 2001; 53 (3): 181–6.
-
- \bibitem{chap14–key05} Unnikrishnan RI, Rema M, Pradeepa R, Deepa M, et al. Prevalence and risk factors of diabetic nephropathy in an urban South Indian population: the Chennai Urban Rural Epidemiology Study (CURES 45). Diabetes Care. 2007; 30 (8): 2019–24.
-
- \bibitem{chap14–key06} Kanakamani J, Ammini AC, Gupta N, Dwivedi SN. Prevalence of microalbuminuria among patients with type 2 diabetes mellitus– a hospital–based study from North India. Diabetes Technol Ther. 2010; 12 (2): 161–6.
-
- \bibitem{chap14–key07} Kalusen K, Borch–Johnsen K, Feldt–Rasmussen B, Jensen G, et al. Very low levels of microalbuminuria are associated with increased risk of coronary heart disease and death independently of renal function, hypertension, and diabetes. Circulation. 2004; 110 (1): 32–5.
-
- \bibitem{chap14–key08} Rossi MC, Nicolucci A, Pellegrini F, Comaschi M, et al. Obesity and changes in urine albumin/creatinine ration in patients with type 2 diabetes: the DEMAND study. Nutr Metab Cardiovasc Dis. 2010; 20 (2): 110–6.
-
- \bibitem{chap14–key09} Chugh KS. Three decades of nephrology. J Postgrad Med. 1994; 40 (3): 103–8.
-
- \end{thebibliography}
-
-
+\renewcommand{\thechapter}{\arabic{chapter}}
 \chapter{Diabetic Eye Disease}\label{chap15}
 
 The eyes are our windows to the world. It is through our eyes that we marvel at God’s creation, appreciate the myriad colors of flowers and birds, peer down the deepest canyons and gaze at the highest peaks. Life without eyesight is like being locked up in a prison cell without any windows.
@@ -915,517 +887,526 @@ The importance of eyesight is known to us from time immemorial. Our ancestors ha
 
 So would it not be a tragedy if we squander this beautiful gift of God due to our own ignorance or lethargy. This is precisely what can happen in diabetes.
 
-\colorblue{\textbf{Parts of a human eye}}
+\noindent{\textbf{Parts of a human eye}}
 
-\begin{figure}
-\includegraphics{images/049.jpg}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=2.4]{images/049.jpg}
+\vskip-.3cm
 \end{figure}
 
 Even though the human eye is of the size of a golf ball or smaller, it has several minute structures inside it that perform the functions of a very sophisticated camera. Just as the camera captures light to create a picture on film, the eyes capture light, and transmit these light impulses to the brain to form an image inside the brain.
 
-The anterior or front part of the outer layer of the eye is transparent and is called the cornea. Its function is to allow light inside the eye, and also to focus light onto the back of the eye. After passing through the cornea, light enters the inside of the eyes via the pupil. As you may have noticed, the size of the pupil can alter to control the amount of light entering the eyes. After passing through the pupil, light encounters a lens, which further helps to focus the light onto the back of the eye. Between the lens and the back of the eye, there is a jelly–like substance called the vitreous. The vitreous helps to maintain the shape of the eye.
+The anterior or front part of the outer layer of the eye is transpa\-rent and is called the cornea. Its function is to allow light inside the eye, and also to focus light onto the back of the eye. After passing through the cornea, light enters the inside of the eyes via the pupil. As you may have noticed, the size of the pupil can alter to control the amount of light entering the eyes. After passing through the pupil, light encou\-nters a lens, which further helps to focus the light onto the back of the eye. Between the lens and the back of the eye, there is a jelly–like substance called the vitreous. The vitreous helps to maintain the shape of the eye.
 
-At the back of the eye is the all–important retina. The retina is like the film in a camera (not the digital cameras of today, but the SLR cameras of the good old days). All light entering the eye is focused onto the retina. The retina has special cells that convert light into electrical signals. These signals are sent to the brain via the optic nerve. The brain interprets these electrical signals and forms an image. There is one particular spot on the retina called macula where the vision is extra–sharp. The macula is nourished by tiny blood vessels found both inside the retina, and behind the retina.
+At the back of the eye is the all–important retina. The retina is like the film in a camera (not the digital cameras of today, but the SLR came\-ras of the good old days). All light entering the eye is focused onto the retina. The retina has special cells that convert light into ele\-ctrical signals. These signals are sent to the brain via the optic nerve. The brain interprets these electrical signals and forms an image. There is one particular spot on the retina called macula where the vision is extra–sharp. The macula is nourished by tiny blood vessels found both inside the retina, and behind the retina.
 
 So what part of the eye is affected by diabetes? Sadly, diabetes can affect all the structures described above. Hence diabetes is a constant threat to our vision.
 
-\colorblue{\textbf{Eye diseases caused by diabetes}}
+\noindent{\textbf{Eye diseases caused by diabetes}}
 
 Now let us discuss the different eye diseases caused by diabetes in order of decreasing magnitude.
 
-\textbf{\textit{Cataracts}}
+\noindent\textbf{\textit{Cataracts}}
 
-This is a condition in which the lens inside the eyes becomes cloudy, thereby blocking light. The name cataract comes from the Latin word ‘cataracta’, which means waterfall. Just as the water rushing down a waterfall appears white, the lens turns white when a cataract develops. The more severe the cataract, the more opaque the lens becomes. Cataracts are the \# 1 cause of blindness worldwide according to the World Health Organization (WHO), accounting for 47.8\% of all cases.\footnote{}
+This is a condition in which the lens inside the eyes becomes cloudy, thereby blocking light. The name cataract comes from the Latin word ‘cataracta’, which means waterfall. Just as the water rushing down a waterfall appears white, the lens turns white when a cataract deve\-lops. The more severe the cataract, the more opaque the lens becomes. Cataracts are the \# 1 cause of blindness worldwide according to the World Health Organization (WHO), accounting for 47.8\% of all cases.$^{\text{\cite{chap15–key01}}}$
 
-\begin{figure}
-\includegraphics{images/050.jpg}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=2.3]{images/050.jpg}
 \end{figure}
 
-\colorred{\textit{People with diabetes are 60\% more likely to develop cataracts than non–diabetics according to the American Diabetic Association. To further complicate matters, diabetics tend to get cataracts at a younger age, and the cataracts in diabetics progress faster.}}
+\textcolor{red}{\textit{People with diabetes are 60\% more likely to develop cataracts than non–diabetics according to the American Diabetic Association. To further complicate matters, diabetics tend to get cataracts at a younger age, and the cataracts in diabetics progress faster.}}
 
 The best way to prevent cataracts is to protect your eyes from the sun’s ultraviolet (UV) rays. According to the United States Environmental Protection Agency (EPA) this can be best achieved by staying indoors during times of strongest UV radiation, namely midday and summer time. Also, be aware that UV rays are reflected by water, sand, etc even if you are in the shade. If you have to go out at these times use of sunglasses and anti–glare lenses for those requiring prescription glasses is advised.
 
 When cataracts are severe, eye specialists can remove the diseased lenses and replace them with new ones. This type of surgery is very common nowadays. But in diabetics this surgery can result in other complications such as glaucoma and retinopathy. Hence, it is best to prevent cataracts in diabetics by means of simple measures described above.
 
-\textbf{\textit{Glaucoma}}
+\clearpage
+\noindent\textbf{\textit{Glaucoma}}
 
-After cataracts, glaucoma is the 2nd leading cause of blindness worldwide accounting for 12.3\% of cases as per the WHO.
+After cataracts, glaucoma is the 2nd leading cause of blindness\break worldwide accounting for 12.3\% of cases as per the WHO.
 
 Glaucoma is a condition in which there is pressure build–up inside the eyeball. This increased pressure pinches on the optic nerve and the blood vessels that supply the retina. Left untreated, both the retina and the optic nerve sustain damage and result in loss of vision.
 
-\begin{figure}
-\includegraphics{images/051.jpg}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=2.2]{images/051.jpg}
 \end{figure}
 
 Diabetics are 40\% more likely to suffer from glaucoma than people without diabetes. The longer someone has diabetes, the greater the chances of developing glaucoma.
 
-\colorblue{\textit{But glaucoma can be treated with medications or by surgery. The main obstacle to treating glaucoma is not diagnosing it, since in the early stages there are no prominent symptoms. This is one of the reasons why annual eye check–ups and measurement of eye pressure are critical to protect vision in diabetics.}}
+\textcolor{blue}{\textit{But glaucoma can be treated with medications or by surgery. The main obstacle to treating glaucoma is not diagnosing it, since in the early stages there are no prominent symptoms. This is one of the reasons why annual eye check–ups and measurement of eye pressure are critical to protect vision in diabetics.}}
 
-\textbf{\textit{Diabetic retinopathy}}
+\noindent\textbf{\textit{Diabetic retinopathy}}
 
-This is a general term for all disorders of the retina caused by diabetes. It is the most common of the so–called ‘microvascular complications’ of diabetes, the other two being \textit{nephropathy} (kidney damage) and \textit{neuropathy} (nerve damage). Microvascular complications refer to diseases that occur as a result of damage to small (or micro) blood vessels.
-
-\begin{figure}
-\includegraphics{images/052.jpg}
-\caption{Healthy Retina}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.3]{images/052.jpg}\\
+\textbf{\textit{Healthy Retina}}
 \end{figure}
 
-
-\begin{figure}
-\includegraphics{images/053.jpg}
-\caption{Diabetic Retinopathy}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.3]{images/053.jpg}\\
+\textbf{\textit{Diabetic Retinopathy}}
+\vskip-.5cm
 \end{figure}
 
-Most type 1 diabetics develop retinopathy within 20 years of having the disease.\footnote{} And type 2 diabetics may begin to develop retinopathy as early as 7 years \textbf{before} the diagnosis of diabetes!\footnote{} In the United States it accounts for 10,000 new cases of blindness every year. A study conducted by Sankara Nethralaya in Chennai found that 18\% of diabetics have retinopathy.\footnote{} But this figure was higher (30\%) in a recent study conducted on Indians living in Singapore.\footnote{}
+This is a general term for all disorders of the retina caused by dia\-betes. It is the most common of the so–called ‘microvascular complications’ of diabetes, the other two being \textit{nephropathy} (kidney damage) and \textit{neuropathy} (nerve damage). Microvascular complications refer to diseases that occur as a result of damage to small (or micro) blood\break vessels.
 
-Risk factors for diabetic retinopathy include:
+Most type 1 diabetics develop retinopathy within 20 years of having the disease.$^{\text{\cite{chap15–key02}}}$ And type 2 diabetics may begin to develop retinopathy as early as 7 years \textbf{before} the diagnosis of diabetes!$^{\text{\cite{chap15–key03}}}$ In the United States it accounts for 10,000 new cases of blindness every year. A study conducted by Sankara Nethralaya in Chennai found that 18\% of diabetics have retinopathy.$^{\text{\cite{chap15–key04}}}$ But this figure was higher (30\%) in a recent study conducted on Indians living in Singapore.$^{\text{\cite{chap15–key05}}}$
 
+\vskip 8pt
+\noindent Risk factors for diabetic retinopathy include:
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Poorly controlled diabetes
+\item Duration of diabetes– longer the disease, higher the risk
+\item Poorly controlled blood pressure
+\item Genes
+\end{enumerate}
 
- \item Duration of diabetes– longer the disease, higher the risk
-
- \item Poorly controlled blood pressure
-
- \item Genes
-
-\textbf{The stages of diabetic retinopathy}
+\noindent\textbf{The stages of diabetic retinopathy}
 
 Diabetic retinopathy has four stages:
-
+\begin{enumerate}
+\itemsep=0pt
 \item Mild Non–proliferative retinopathy
+\item Moderate Non–proliferative retinopathy
+\item Severe Non–proliferative retinopathy
+\item Proliferative retinopathy
+\end{enumerate}
 
- \item Moderate Non–proliferative retinopathy
+\begin{wrapfigure}{l}{6cm}
+\centering
+\textbf{\textit{Non–proliferative Diabetic Retinopathy}}\\
+\includegraphics[scale=1.4]{images/054.jpg}
+\vskip-.4cm
+\end{wrapfigure}
 
- \item Severe Non–proliferative retinopathy
+At the root of the pro\-blem lies damage to the walls of the small blood vessels su\-pplying the retina. In the early phases the walls of the affe\-cted blood vessels become weak and balloon out to form what are known as ‘micro\-aneurysms’. Fluid can leak from these blood vessels and cause swelling of the retina. If this leakage happens to\break occur at the macula (the site of extra–sharp vision), it cau\-ses a condition known as ‘macular edema’. This is a dangerous condi\-tion that can lead to permanent vision loss. However, if treated in time, this condition can be reversed.
 
- \item Proliferative retinopathy
-
-At the root of the problem lies damage to the walls of the small blood vessels supplying the retina. In the early phases the walls of the affected blood vessels become weak and balloon out to form what are known as ‘microaneurysms’. Fluid can leak from these blood vessels and cause swelling of the retina. If this leakage happens to occur at the macula (the site of extra–sharp vision), it causes a condition known as ‘macular edema’. This is a dangerous condition that can lead to permanent vision loss. However, if treated in time, this condition can be reversed.
-
-\begin{figure}
-\caption{\colorblue{\textbf{Non–proliferative Diabetic Retinopathy}}}
-\includegraphics{images/054.jpg}
-\end{figure}
-
-The microaneurysms can also bleed into the retina and form so–called ‘dot hemorrhages’ since they appear like small dots on examining the eye.
+The microaneurysms can also bleed into the retina and form\break so–called ‘dot hemorrhages’ since they appear like small dots on\break examining the eye.
 
 The changes described up to this stage, namely microaneurysms, macular edema, dot hemorrhages, are all part of the stage described as “non–proliferative retinopathy”. This stage does not result in blindness, except in case of macular edema.
 
-\begin{figure}
-\caption{\colorblue{\textbf{Proliferative Diabetic Retinopathy}}}
-\includegraphics{images/055.jpg}
-\end{figure}
+\begin{wrapfigure}{r}{6cm}
+\centering
+\textbf{\textit{Proliferative Diabetic Retinopathy}}\\
+\includegraphics[scale=1.5]{images/055.jpg}
+\end{wrapfigure}
 
-Further progression of the disease leads to the next stage called \textit{“proliferative retinopathy”}. During this stage, the damage to the blood vessels continues to the point where they completely shut down. In response, new capillaries or blood vessels start growing into the retina (hence the term ‘proliferative’, since there is a proliferation of new blood vessels). But alas! these new recruits are not as sturdy as the original ones. They are weak, and leak blood into the vitreous, a condition called ‘vitreous hemorrhage’. In addition, these new blood vessels cause scar tissue to form in the eye. This scar tissue shrinks over time, and when that happens, it pulls on the retina, causing the retina to detach, resulting in ‘retinal detachment’. Both vitreous hemorrhage and \textit{retinal detachment} can cause blindness.
+Further progression of the disease leads to the next stage called \textit{“proliferative retinopa\-thy”}. During this stage, the damage to the blood vessels continues to the point where they completely shut down. In response, new capillaries or blood vessels start growing into the retina (hence the term ‘proliferative’, since there is a proliferation of new blood vessels). But alas! these new recruits are not as sturdy as the original ones. They are weak, and leak blood into the vitreous, a condition called ‘vitreous hemorrhage’. In addi\-tion, these new blood vessels cause scar tissue to form in the eye. This scar tissue shrinks over time, and when that happens, it pulls on the retina, causing the retina to detach, resulting in ‘retinal deta\-chment’. Both vitreous hemorrhage and \textit{retinal detachment} can cause blindness.
 
-\textbf{How can diabetic retinopathy be detected early?}
+\noindent\textbf{How can diabetic retinopathy be detected early?}
 
-This is possible only by a dilated eye exam by a qualified ophthalmologist.
+This is possible only by a dilated eye exam by a qualified ophtha\-lmologist.
 
-\textbf{When should I have my eyes tested for diabetic retinopathy?}
+\noindent\textbf{When should I have my eyes tested for diabetic retinopathy?}
 
-According to recommendations of the American Diabetes Association:
+\noindent According to recommendations of the American Diabetes Association:
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item If you are between 10 years and 29 years old, and have had diabetes for at least 5 years, you should have dilated eye exams every year.
+\item If you are above 30 years of age, you should have annual dilated eye exams. This is regardless of how long you have had diabetes.
+\item If you are pregnant or planning to get pregnant, you should have a dilated eye test.
+\item If you notice any changes in vision, you should immediately have an eye exam. These changes may include blurry vision, seeing double, seeing spots, trouble reading signs or books, pain or pressure in the eyes, redness of the eyes that does not go away, etc.
+\end{enumerate}
 
- \item If you are above 30 years of age, you should have annual dilated eye exams. This is regardless of how long you have had diabetes.
+\noindent\textbf{Can diabetic retinopathy be treated?}
 
- \item If you are pregnant or planning to get pregnant, you should have a dilated eye test.
+The answer is a resounding yes. Rapid and huge strides have been made in treatment of this condition. The role of laser has become central in its treatment. Using laser, the ophthalmologist makes tiny burns on the retina. These burns seal the blood vessels and prevent them from leaking and stop them from growing or proliferating. If there is bleeding into the vitreous, then surgery may be done to\break remove the vitreous. If the retina has detached, then it is possible to reattach the retina surgically. The type of treatment depends on the stage of the disease. But the key ingredient for success is early dete\-ction. The best results are obtained when the vision is still normal.
 
- \item If you notice any changes in vision, you should immediately have an eye exam. These changes may include blurry vision, seeing double, seeing spots, trouble reading signs or books, pain or pressure in the eyes, redness of the eyes that does not go away, etc.
-
-\textbf{Can diabetic retinopathy be treated?}
-
-The answer is a resounding yes. Rapid and huge strides have been made in treatment of this condition. The role of laser has become central in its treatment. Using laser, the ophthalmologist makes tiny burns on the retina. These burns seal the blood vessels and prevent them from leaking and stop them from growing or proliferating. If there is bleeding into the vitreous, then surgery may be done to remove the vitreous. If the retina has detached, then it is possible to reattach the retina surgically. The type of treatment depends on the stage of the disease. But the key ingredient for success is early detection. The best results are obtained when the vision is still normal.
-
-\textbf{Can diabetic retinopathy be prevented?}
+\noindent\textbf{Can diabetic retinopathy be prevented?}
 
 You will be pleased to know that you have considerable control over your own vision, despite having diabetes.
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item The single most important intervention on your part to prevent or halt retinopathy is to achieve good diabetes control.
-
- \item Control of high blood pressure.
-
- \item Quitting tobacco smoking.
-
- \item Regular eye exams by a qualified ophthalmologist.
-
-
-\section*{References}
+\item Control of high blood pressure.
+\item Quitting tobacco smoking.
+\item Regular eye exams by a qualified ophthalmologist.
+\end{enumerate}
 
 \begin{thebibliography}{99}
 \bibitem{chap15–key01} Bulletin of the World Health Organization. 2004; 82:844–51.
-
- \bibitem{chap15–key02} UK Prospective Diabetes Study (UKPDS) Group. Intensive blood–glucose control with sulphonylureas or insulin compared with conventional treatment and risk of complications in patients with type 2 diabetes (UKPDS 33). Lancet. 1998; 352(9131):837–53.
-
- \bibitem{chap15–key03} Fong DS, Aiella LP, Ferris FL, \& Klein R. Diabetic retinopathy. Diabetes Care. 2004; 27:2540–53.
-
- \bibitem{chap15–key04} Raman R, Rani PK, Reddi Rachepalle S, Gnanamoorthy P, et al. Prevalence of diabetic retinopathy in India: Sankara Nethralaya Diabetic Retinopathy Epidemiology and Molecular Genetics Study report 2. Opthalmology. 2009; 116(2):311–8.
-
- \bibitem{chap15–key05} Zheng Y, Lamoureux EL, Lavanya R, Wiu R, et al. Prevalence and risk factors of diabetic retinopathy in migrant Indians in an urbanized society in Asia: the Singapore Indian eye study. Opthalmology. 2012; 119(10):2119–24.
-
- \end{thebibliography}
+\bibitem{chap15–key02} UK Prospective Diabetes Study (UKPDS) Group. Intensive blood–glucose control with sulphonylureas or insulin compared with conventional treatment and risk of complications in patients with type 2 diabetes (UKPDS 33). Lancet. 1998; 352(9131):837–53.
+\bibitem{chap15–key03} Fong DS, Aiella LP, Ferris FL, \& Klein R. Diabetic retinopathy. Diabetes Care. 2004; 27:2540–53.
+\bibitem{chap15–key04} Raman R, Rani PK, Reddi Rachepalle S, Gnanamoorthy P, et al. Prevalence of diabetic retinopathy in India: Sankara Nethralaya Diabetic Retinopathy Epidemiology and Molecular Genetics Study report 2. Opthalmology. 2009; 116(2):311–8.
+\bibitem{chap15–key05} Zheng Y, Lamoureux EL, Lavanya R, Wiu R, et al. Prevalence and risk factors of diabetic retinopathy in migrant Indians in an urba\-nized society in Asia: the Singapore Indian eye study. Opthalmo\-logy. 2012; 119(10):2119–24.
+\end{thebibliography}
 
 
 \chapter{\textit{Diabetic Neuropathy}}\label{chap16}
 
 A beautiful sunrise, the chirping of birds, the fragrance of flowers, the refreshing taste of morning tea, the cool morning air, are sensations we enjoy everyday, thanks to our nervous system. Each one of these sensations – sight, sound, smell, taste and touch, are conveyed to our brain in the form of electrical signals by our vast nervous system. The brain interprets these signals to create the corresponding sensations.
 
-\colorblue{\textit{The total length of all the nerves in our body is almost 45 miles! In order to process the vast number of nerve signals, the human brain has more than 1 billion nerve cells called neurons!}} But diabetes can bring this vast empire of communication to its knees.
+\textcolor{blue}{\textit{The total length of all the nerves in our body is almost 45 miles! In order to process the vast number of nerve signals, the human brain has more than 1 billion nerve cells called neurons!}} But diabetes can bring this vast empire of communication to its knees.
 
-\textbf{How does diabetes affect the nerves?}
+\noindent\textbf{How does diabetes affect the nerves?}
 
-Excess sugar in the blood damages the tiny blood vessels that supply the nerves. As a result the nerves are starved of nutrients and oxygen and slowly lose function. This condition is called diabetic neuropathy.
+Excess sugar in the blood damages the tiny blood vessels that\break supply the nerves. As a result the nerves are starved of nutrients and oxygen and slowly lose function. This condition is called diabetic neuropathy.
 
-\textbf{What are the factors that increase the risk of diabetic neuropathy?}
+\noindent\textbf{What are the factors that increase the risk of diabetic neuropathy?}
 
-Based on currently available scientific research, the following factors have been identified:
+Based on currently available scientific research, the following\break factors have been identified:
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Poor glucose control (higher HBA1c level)
+\item Longer duration of diabetes (risk increases with disease duration)
+\item Age (risk increases with age)
+\item Cigarette smoking
+\item High cholesterol levels
+\item Alcohol intake
+\end{enumerate}
 
- \item Longer duration of diabetes (risk increases with disease duration)
+\noindent\textbf{How common is diabetic neuropathy?}
 
- \item Age (risk increases with age)
+\textcolor{red}{\textit{It is the most common complication of diabetes!}} The longer a person has diabetes the higher the probability of having neuropathy. As early as 1 year after having diabetes, about 7\% will have neuropathy. But this number shoots up to 50\% for those with diabetes for more than 25 years.$^{\text{\cite{chap16–key01}}}$
 
- \item Cigarette smoking
-
- \item High cholesterol levels
-
- \item Alcohol intake
-
-\textbf{How common is diabetic neuropathy?}
-
-\colorred{\textit{It is the most common complication of diabetes!}} The longer a person has diabetes the higher the probability of having neuropathy. As early as 1 year after having diabetes, about 7\% will have neuropathy. But this number shoots up to 50\% for those with diabetes for more than 25 years.\footnote{}
-
-\textbf{What are the symptoms of diabetic neuropathy?}
+\noindent\textbf{What are the symptoms of diabetic neuropathy?}
 
 The symptoms depend on the type of nerves that are affected. The human body has 3 types of nerves:
 
+\begin{enumerate}
+\itemsep=0pt
 \item \textbf{Sensory nerves:} These nerves connect our five sense organs (eyes, ears, nose, tongue, skin) to the brain. They receive sensory stimuli such as how an object appears (color, shape, size, etc) and how it feels (is it soft or firm, hot or cold), or how it smells or tastes.
+\item \textbf{Motor nerves:} These nerves help the brain control the various muscles in the body. They carry signals from the brain to our muscles. This enables us to move our different body parts (face, trunk, limbs), and perform various activities such as opening and closing our eyes, turning our head, walking, lifting, etc. Reme\-mber that these nerves are under our conscious control. In other words, they cannot act on their own.
+\item \textbf{Autonomic nerves:} These nerves are not under our conscious control. They control the vital functions of our body such as breathing, heartbeat, blood pressure, digestion, sweating, pupil size as it adjusts to light and dark, etc. We have to be extremely thankful to our creator that these vital functions happen on their own. Can you imagine having to remember to breathe 10–15 times every minute, or making our heart beat 60 times per\break minute, every minute of our life!
+\end{enumerate}
 
- \item \textbf{Motor nerves:} These nerves help the brain control the various muscles in the body. They carry signals from the brain to our muscles. This enables us to move our different body parts (face, trunk, limbs), and perform various activities such as opening and closing our eyes, turning our head, walking, lifting, etc. Remember that these nerves are under our conscious control. In other words, they cannot act on their own.
+\noindent In addition to the above classification based on function, nerves can be classified based on their location into:
 
- \item \textbf{Autonomic nerves:} These nerves are not under our conscious control. They control the vital functions of our body such as breathing, heartbeat, blood pressure, digestion, sweating, pupil size as it adjusts to light and dark, etc. We have to be extremely thankful to our creator that these vital functions happen on their own. Can you imagine having to remember to breathe 10–15 times every minute, or making our heart beat 60 times per minute, every minute of our life!
-
-In addition to the above classification based on function, nerves can be classified based on their location into:
-
+\begin{enumerate}[a)]
+\itemsep=0pt
 \item \textbf{Cranial nerves:} These 12 nerves are located in the cranium or the human skull.
+\item \textbf{Peripheral nerves:} These nerves are located throughout the\break human body (in the hands, legs, chest, abdomen and pelvis).
+\end{enumerate}
 
- \item \textbf{Peripheral nerves:} These nerves are located throughout the human body (in the hands, legs, chest, abdomen and pelvis).
-
-Both the cranial and peripheral nerves have a combination of sensory, motor and autonomic nerves fibers, and can perform all 3 basic nerve functions namely– sensation, muscle control and autonomic control.
+Both the cranial and peripheral nerves have a combination of sensory, motor and autonomic nerves fibers, and can perform all 3\break basic nerve functions namely– sensation, muscle control and autono\-mic control.
 
 Diabetes most commonly affects the peripheral nerves, with \textgreater  50\% of all cases of diabetic neuropathy involving peripheral nerves. Among peripheral nerves, the sensory function of the peripheral nerves is most commonly affected. As a result, patients have the following complaints:
 
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Numbness of feet and hands, which decreases the ability to feel pain, heat and cold. Patients often complain that they feel like they are “walking on cotton”, even if they are walking on a hard surface
+\item Tingling and burning sensation in hands and feet. Patients may complain that they feel their limbs are “on fire” or someone is “poking them with needles”
+\item Sharp pains in hands and feet, which are especially worse at night
+\item Extreme sensitivity of skin to even light touch.
+\end{enumerate}
 
- \item Tingling and burning sensation in hands and feet. Patients may complain that they feel their limbs are “on fire” or someone is “poking them with needles”
+\noindent Though sensory nerve function is most commonly affected, sometimes the motor function of nerves can also be affected. When this happens, patient may complain of:
 
- \item Sharp pains in hands and feet, which are especially worse at night
-
- \item Extreme sensitivity of skin to even light touch.
-
-Though sensory nerve function is most commonly affected, sometimes the motor function of nerves can also be affected. When this happens, patient may complain of:
-
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Weakness in the feet and legs
-
- \item Feeling unsteady while standing or walking.
+\item Feeling unsteady while standing or walking.
+\end{enumerate}
 
 Diabetic neuropathy is often known as “glove and stocking” neuropathy, since it commonly affects the hands and feet (parts of the body where gloves and stockings are worn).
 
 The 3rd type of nerve function is autonomic control of the vital functions of the body. When this is affected by diabetes, it results in a condition known as \textit{“autonomic neuropathy”}. This causes many debilitating symptoms. These are listed below by the specific organ system affected.
-
+\begin{enumerate}[•]
+\itemsep=0pt
 \item \textbf{Cardiovascular system}
- \item Variations in the heart rate, ranging from a very rapid heart rate to a very slow heart rate
+\begin{enumerate}[o]
+\itemsep=0pt
+\item Variations in the heart rate, ranging from a very rapid heart rate to a very slow heart rate
+\item Variations in blood pressure. This is a serious complication. Normally when we stand up from a sitting or lying down position, majority of the blood tends to pool in the lower legs due to gra\-vity. As a result, the amount of blood entering the heart decreases, and hence less blood is pumped out with each heartbeat. This can cause low blood pressure. But the human body counters this pheno\-menon, by automatically increasing the heart rate, and by compressing the blood vessels of the skin, legs and abdomen, so that the blood is diverted from the skin, legs and abdomen into the heart. But diabetes sabotages this wonderful mechanism. Therefore, diabetic patients with autonomic neuropathy, can feel dizzy when they stand up, and some may even faint!
+\end{enumerate}
+\item \textbf{Gastrointestinal system}
+\begin{enumerate}[o]
+\itemsep=0pt
+\item The stomach muscles get paralyzed, resulting in nausea, vomiting, bloating, and abdominal pain. This is described in more detail in chapter 19.
+\item Bowel habits are affected, causing severe diarrhea at night, or\break severe constipation.
+\item Loss of control over the muscles of the anus and rectum, or lack of sensation in this area, may result in embarrassment due to stool accidentally leaking out. This is known as fecal incontinence.
+\end{enumerate}
+\item \textbf{Urinary system}
+\begin{enumerate}[o]
+\itemsep=0pt
+\item The bladder muscles get paralyzed, and fail to empty the bladder, even when the bladder becomes full. As a result, urine may overflow, causing social embarrassment.
+\item The bladder muscles may not contract properly to empty the\break bladder completely when urinating. So a small amount of urine is left behind in the bladder, and this creates the urge to urinate again and again.
+\item Due to the stagnation of urine in the bladder, there is a higher risk of bladder infections.
+\end{enumerate}
+\item \textbf{Genital system}
+\begin{enumerate}[o]
+\itemsep=0pt
+\item Men may suffer from impotence (inability to obtain or maintain an erection), while women may suffer from excessive vaginal\break dryness.
+\end{enumerate}
+\item \textbf{Sweat glands}
+\begin{enumerate}[o]
+\itemsep=0pt
+\item A unique combination of lack of sweating all over the body, but with excess sweating in the face and trunk, can develop. The skin gets excessively dry due to lack of lubrication by sweat. Dry skin is at risk to break down and form ulcers.
+\item Excessive sweating while eating, even if the food is not hot or spicy.
+\end{enumerate}
+\item \textbf{Pupils of the eye}
+\begin{enumerate}[o]
+\itemsep=0pt
+\item The muscles controlling the diameter of the pupils malfunction, and hence the pupil is not able to adjust its size to avoid excess light during the day, and allows more light during the dark, thus affecting vision.
+\end{enumerate}
+\end{enumerate}
 
- \item Variations in blood pressure. This is a serious complication. Normally when we stand up from a sitting or lying down position, majority of the blood tends to pool in the lower legs due to gravity. As a result, the amount of blood entering the heart decreases, and hence less blood is pumped out with each heartbeat. This can cause low blood pressure. But the human body counters this phenomenon, by automatically increasing the heart rate, and by compressing the blood vessels of the skin, legs and abdomen, so that the blood is diverted from the skin, legs and abdomen into the heart. But diabetes sabotages this wonderful mechanism. Therefore, diabetic patients with autonomic neuropathy, can feel dizzy when they stand up, and some may even faint!
+Finally, diabetes can also affect the cranial nerves, or the nerves inside our skull. Mostly commonly the 3rd and 6th cranial nerves are affected. These nerves control the movements of the eyeball. As a\break result patient often have \textit{diplopia} or “double vision”, due to inability of the two eyeballs to focus on a single object.
 
+\noindent\textbf{What are the complications of diabetic neuropathy?}
 
- \item \textbf{Gastrointestinal system}
- \item The stomach muscles get paralyzed, resulting in nausea, vomiting, bloating, and abdominal pain. This is described in more detail in chapter 19.
-
- \item Bowel habits are affected, causing severe diarrhea at night, or severe constipation.
-
- \item Loss of control over the muscles of the anus and rectum, or lack of sensation in this area, may result in embarrassment due to stool accidentally leaking out. This is known as fecal incontinence.
-
-
- \item \textbf{Urinary system}
- \item The bladder muscles get paralyzed, and fail to empty the bladder, even when the bladder becomes full. As a result, urine may overflow, causing social embarrassment.
-
- \item The bladder muscles may not contract properly to empty the bladder completely when urinating. So a small amount of urine is left behind in the bladder, and this creates the urge to urinate again and again.
-
- \item Due to the stagnation of urine in the bladder, there is a higher risk of bladder infections.
-
-
- \item \textbf{Genital system}
- \item Men may suffer from impotence (inability to obtain or maintain an erection), while women may suffer from excessive vaginal dryness.
-
-
- \item \textbf{Sweat glands}
- \item A unique combination of lack of sweating all over the body, but with excess sweating in the face and trunk, can develop. The skin gets excessively dry due to lack of lubrication by sweat. Dry skin is at risk to break down and form ulcers.
-
- \item Excessive sweating while eating, even if the food is not hot or spicy.
-
-
- \item \textbf{Pupils of the eye}
- \item The muscles controlling the diameter of the pupils malfunction, and hence the pupil is not able to adjust its size to avoid excess light during the day, and allows more light during the dark, thus affecting vision.
-
-
-
-Finally, diabetes can also affect the cranial nerves, or the nerves inside our skull. Mostly commonly the 3rd and 6th cranial nerves are affected. These nerves control the movements of the eyeball. As a result patient often have \textit{diplopia} or “double vision”, due to inability of the two eyeballs to focus on a single object.
-
-\textbf{What are the complications of diabetic neuropathy?}
-
-The most dreaded complication is a foot ulcer requiring foot or leg amputation. This is explained in detail in the following chapter on diabetic foot complications.
-
-\section*{Reference}
+The most dreaded complication is a foot ulcer requiring foot or leg amputation. This is explained in detail in the following chapter on\break diabetic foot complications.
 
 \begin{thebibliography}{99}
 \bibitem{chap16–key01} Pirart J. Diabetes mellitus and its degenerative complications: a prospective study of 4,400 patients observed between 1947 and 1973. Diabetes Care. 1978; 1:168–88.
-
- \end{thebibliography}
+\end{thebibliography}
 
 
 \chapter{Diabetic Foot Disease}\label{chap17}
 
-The feet are at the core of human evolution. We must all be very thankful to our ancient predecessors who decided to climb down from their tree habitats, and walk on two feet! This freed up our hands to channelize our ever–increasing creativity and invent tools and technology, as we continued to evolve over millions of years. But this evolutionary adaptation also brought with it unique challenges for the human feet. Our feet now have to bear our entire body weight, and hence the bones and other supporting structures of the feet are prone to wear and tear related damage. We make this worse by wearing ill–fitting footwear.
+The feet are at the core of human evolution. We must all be very thankful to our ancient predecessors who decided to climb down from their tree habitats, and walk on two feet! This freed up our hands to channe\-lize our ever–increasing creativity and invent tools and technology, as we continued to evolve over millions of years. But this evolutionary adaptation also brought with it unique challenges for the human feet. Our feet now have to bear our entire body weight, and hence the bones and other supporting structures of the feet are prone to wear and tear related damage. We make this worse by wearing ill–fitting footwear.
 
-Diabetes exploits this vulnerability by causing ulcers, infections, and bone damage in the feet. This is loosely termed \textit{“Diabetic Foot Disease”}.
+Diabetes exploits this vulnerability by causing ulcers, infections, and bone damage in the feet. This is loosely termed \textit{“Diabetic Foot\break Disease”}.
 
-Of all the complications diabetes causes, foot complications tend to get the least attention. It is but expected that people would be more concerned about their heart, eyes or kidneys, than their feet. But did you know that foot complications are the most expensive of all diabetes complications! A study from Chennai found that diabetic patients with foot complications spent 32.3\% of their total income toward treatment. In comparison, diabetic subjects with healthy feet spent 9.3\% of their total income on treatment.\footnote{}
+\begin{wrapfigure}{r}{4.5cm}
+\centering
+{\small\textbf{\textit{Skin and fat form a protective “cushion” that absorbs pressure and protects your foot from infection}}}\\
+\includegraphics[scale=.8]{images/056.jpg}
+\end{wrapfigure}
 
-\begin{figure}
-\caption{Skin and fat form a protective “cushion” that absorbs pressure and protects your foot from infection}
-\includegraphics{images/056.jpg}
+Of all the complications diabetes causes, foot complications tend to get the least attention. It is but expected that people would be more concerned about their heart, eyes or kidneys, than their feet. But did you know that foot complications are the most expensive of all diabetes complications! A study from Chennai found that diabetic\break patients with foot complications spent 32.3\% of their total income toward treatment. In comparison, diabetic subjects with healthy feet spent 9.3\% of their total income on treatment.$^{\text{\cite{chap17–key01}}}$
+
+Diabetic foot infection is the most common reason a person with diabetes gets admitted to the hospital.$^{\text{\cite{chap17–key02}}}$ In fact, a diabetic patient with foot infection is 55–155 times more likely to require a hospital admi\-ssion compared to a diabetic patient without a foot infection.$^{\text{\cite{chap17–key03}}}$ Up to 75\% of all lower limb amputations are caused by diabetes.$^{\text{\cite{chap17–key04}}}$
+
+This problem is further magnified in India because of our incli\-nation to walk bare foot, either because of religious reasons and/or economic reasons. Thus, both the rich who walk bare foot for religious reasons, and the poor who cannot afford footwear, can be affected. Add to this the poor conditions of our roads, and the risk of foot injury and infection further increases, especially if walking bare foot.
+
+\noindent\textbf{How does diabetes cause foot disease?}
+
+\noindent Diabetes creates some unique situations, which can lead to foot disease.
+
+\begin{enumerate}[i.]
+\itemsep=0pt
+\item Inability to feel pain: Diabetes causes peripheral neuropathy,\break which predominantly affects the sensory nerves. As a result, the patients cannot feel harmful stimuli such as sharp objects, heat or cold, which damage the skin.
+\item Abnormal weight bearing on the foot: This is a consequence of weakness of the foot muscles. Diabetes affects the nerves that control these muscles (diabetic motor neuropathy). Deprived of adequate neural stimulation, the muscles become lazy, lose their strength and shrink in size. With no muscle mass, the foot\break becomes deformed. The weight of the body is now distributed abnormally on the deformed foot, causing increased pressure in certain areas. These high–pressure areas when injured by sharp objects, heat or cold, develop ulcers or wounds.
+\item Autonomic neuropathy due to diabetes decreases the blood\break supply to the foot. Thus the foot that is already insensitive and deformed is weakened further by lack of adequate oxygen and\break nutrition. This makes it susceptible to injury. In addition, it also struggles to heal after an ulcer or wound forms due to the lack of adequate blood supply.
+\item Autonomic neuropathy also leads to decreased sweating in the skin of the foot. The skin turns dry and cracks, and fissures develop through which bacteria can enter and cause foot infections.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=2.3]{images/057.jpg}
+\vskip-.1cm
 \end{figure}
 
-Diabetic foot infection is the most common reason a person with diabetes gets admitted to the hospital.\footnote{} In fact, a diabetic patient with foot infection is 55–155 times more likely to require a hospital admission compared to a diabetic patient without a foot infection.\footnote{} Up to 75\% of all lower limb amputations are caused by diabetes.\footnote{}
+\noindent\textbf{What are the two main foot diseases caused by diabetes?}
 
-This problem is further magnified in India because of our inclination to walk bare foot, either because of religious reasons and/or economic reasons. Thus, both the rich who walk bare foot for religious reasons, and the poor who cannot afford footwear, can be affected. Add to this the poor conditions of our roads, and the risk of foot injury and infection further increases, especially if walking bare foot.
-
-\textbf{How does diabetes cause foot disease?}
-
-Diabetes creates some unique situations, which can lead to foot disease.
-
-\item Inability to feel pain: Diabetes causes peripheral neuropathy, which predominantly affects the sensory nerves. As a result, the patients cannot feel harmful stimuli such as sharp objects, heat or cold, which damage the skin.
-
- \item Abnormal weight bearing on the foot: This is a consequence of weakness of the foot muscles. Diabetes affects the nerves that control these muscles (diabetic motor neuropathy). Deprived of adequate neural stimulation, the muscles become lazy, lose their strength and shrink in size. With no muscle mass, the foot becomes deformed. The weight of the body is now distributed abnormally on the deformed foot, causing increased pressure in certain areas. These high–pressure areas when injured by sharp objects, heat or cold, develop ulcers or wounds.
-
- \item Autonomic neuropathy due to diabetes decreases the blood supply to the foot. Thus the foot that is already insensitive and deformed is weakened further by lack of adequate oxygen and nutrition. This makes it susceptible to injury. In addition, it also struggles to heal after an ulcer or wound forms due to the lack of adequate blood supply.
-
- \item Autonomic neuropathy also leads to decreased sweating in the skin of the foot. The skin turns dry and cracks, and fissures develop through which bacteria can enter and cause foot infections.
-
-
-\begin{figure}
-\includegraphics{images/057.jpg}
-\end{figure}
-
-\textbf{What are the two main foot diseases caused by diabetes?}
-
+\begin{enumerate}
+\itemsep=0pt
 \item Diabetic foot ulcer
+\item \textit{Charcot’s joint}
+\end{enumerate}
 
- \item \textit{Charcot’s joint}
+\noindent{\textbf{What is diabetic foot ulcer?}}
 
-\colorblue{\textbf{What is diabetic foot ulcer?}}
+\begin{wrapfigure}{r}{4.5cm}
+\centering
+\includegraphics[scale=.8]{images/058.jpg}\\
+\textbf{\textit{Diabetic foot ulcer}}
+\vskip-.5cm
+\end{wrapfigure}
 
-Diabetic foot ulcer is major complication of diabetes. Up to 15–25\% of all patients with diabetes will have this complication at some point in their life. When the foot is affected, the person is unable to perform his job, and often loses his source of income. This affects the entire family both economically and psychologically. Once formed, the ulcer heals very slowly due to lack of adequate blood supply or nutrition to this area, as the blood vessels in this area are also affected by diabetes. Even if the ulcer heals, there is a high risk of it recurring. \colorred{\textit{This is probably the single most common reason for leg amputations.}} In severe cases, the ulcer can get infected, and this infection can spread throughout the body and poison us to death!
+Diabetic foot ulcer is major compli\-cation of diabetes. Up to 15–25\% of all patients with diabetes will have this complication at some point in their life. When the foot is affected, the person is unable to perform his job, and often loses his source of income. This affects the entire family both economically and psychologically. Once formed, the ulcer heals very slowly due to lack of adequate blood supply or nutrition to this area, as the blood vessels in this area are also affected by diabetes. Even if the ulcer heals, there is a high risk of it recurring. \textcolor{red}{\textit{This is probably the single most common reason for leg amputations.}} In severe cases, the ulcer can get infected, and this infection can spread throughout the body and poison us to death!
 
-\begin{figure}
-\includegraphics{images/058.jpg}
-\caption{\textit{Diabetic foot ulcer}}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.2]{images/059.jpg}\\
+\textbf{\textit{Diabetic foot ulcer at its worst}}
 \end{figure}
 
+But this is not something that happens overnight. \textcolor{blue}{\textit{It comes with suffi\-cient warning, and there are several simple interventions that can\break prevent this frightful complication. But first we need to understand the diffe\-rent stages of this disease.}}
 
-\begin{figure}
-\includegraphics{images/059.jpg}
-\caption{\textit{Diabetic foot ulcer at its worst}}
-\end{figure}
-
-But this is not something that happens overnight. \colorblue{\textit{It comes with sufficient warning, and there are several simple interventions that can prevent this frightful complication. But first we need to understand the different stages of this disease.}}
-
-\colorblue{\textbf{First stage of the disease}}
+\noindent{\textbf{First stage of the disease}}
 
 This is the dawn of the disease. There is no break in the skin, but the necessary ingredients to launch an assault on the skin have assembled. These include:
 
-\begin{figure}
-\includegraphics{images/060.jpg}
-\end{figure}
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\includegraphics[scale=.7]{images/060.jpg} &
+\includegraphics[scale=.8]{images/061.jpg} &
+\includegraphics[scale=.8]{images/062.jpg}
+\end{tabular}
+\end{center}
 
-
-\begin{figure}
-\includegraphics{images/061.jpg}
-\end{figure}
-
-
-\begin{figure}
-\includegraphics{images/062.jpg}
-\end{figure}
-
+\begin{enumerate}[a.]
+\itemsep=0pt
 \item Skin abnormality– dry skin (due to lack of sweat), callus formation.
+\item Bone deformity – such as hammer toe, etc.
+\item Joint deformity– Charcot joint (this is explained in detail later).
+\item Nerve problems – diabetic peripheral neuropathy, motor neuropathy, autonomic neuro\-pathy.
+\item Decreased blood flow– due to atherosclerosis and autonomic neuro\-pathy.
+\end{enumerate}
 
- \item Bone deformity – such as hammer toe, etc.
+This stage offers several early warning signs, which if identified and acted upon, can prevent the potentially gruesome outcomes of\break diabetic foot ulcer such as amputation and death.
 
- \item Joint deformity– Charcot joint (this is explained in detail later).
-
- \item Nerve problems– diabetic peripheral neuropathy, motor neuropathy, autonomic neuropathy.
-
- \item Decreased blood flow– due to atherosclerosis and autonomic neuropathy.
-
-This stage offers several early warning signs, which if identified and acted upon, can prevent the potentially gruesome outcomes of diabetic foot ulcer such as amputation and death.
-
-\textbf{How can we identify these early warning signs?}
+\noindent\textbf{How can we identify these early warning signs?}
 
 This does not require any expensive tests. The following simple and easy methods can help:
 
+\begin{enumerate}[i.] 
+\itemsep=0pt
 \item Inspecting the feet daily, especially in between toes and the soles, will alert us to skin changes (dry, cracked, fissured, callus formation), and foot deformities (hammer toe, loss of muscle mass). You should definitely have your doctor check your feet during your consultation or clinic visit.
+\item Early detection of nerve damage in the feet by your doctor by using a tuning fork or a monofilament.
+\item Early detection of decreased blood supply to the feet by your doctor by feeling the pulse in your feet.
 
- \item Early detection of nerve damage in the feet by your doctor by using a tuning fork or a monofilament.
+\begin{center}
+\begin{tabular}{@{}c@{}}
+\includegraphics[scale=.9]{images/063.jpg}\\
+{\small\textbf{\textit{Early detection of nerve damage in the}}}\\
+{\small\textbf{\textit{doctor's office by Vibrotherm test}}}
+\end{tabular}
+\end{center}
+\end{enumerate}
 
- \item Early detection of decreased blood supply to the feet by your doctor by feeling the pulse in your feet.
+\noindent\textbf{Once we know that the foot is at risk for an ulcer due to diabetes, what measures can be taken to prevent an ulcer from developing?}
 
-
-\begin{figure}
-\includegraphics{images/063.jpg}
-\caption{Early detection of nerve damage in the doctor's office by Vibrotherm test}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.8]{images/064.jpg}\\
+\textbf{\textit{Detecting decreased\\ blood supply}}
 \end{figure}
 
-\textbf{Once we know that the foot is at risk for an ulcer due to diabetes, what measures can be taken to prevent an ulcer from developing?}
+A few basic common sense measures can go a long way in preve\-nting serious complications of diabetic foot. These include:
 
-\begin{figure}
-\includegraphics{images/064.jpg}
-\caption{Detecting decreased blood supply}
-\end{figure}
-
-A few basic common sense measures can go a long way in preventing serious complications of diabetic foot. These include:
-
+\begin{enumerate}[a.]
+\itemsep=0pt
 \item Apply skin lotions or moisturizers to prevent cracking and fissuring that can develop due to dry skin.
+\item Clip nails regularly.
+\item Wearing the right fitting shoes. Sometimes, people with diabetes may need custom–fit shoes. As previously mentioned,
+ \begin{figure}[h]
+\centering
+\includegraphics[scale=.8]{images/065.jpg}
+\end{figure}
+many diabetics have deformed feet. Just as you have your tailor stitch shirts or trousers that are the right fit for you, shoes may also need to be specially designed for the exact shape and size of your feet to prevent creating areas of excess pressure in your feet. In fact, there are many companies that specialize in building custom footwear for\break diabetics.
+\item Avoid wearing shoes for prolonged periods of time. This can cause sustained pressure on certain parts of the foot, and can lead to\break ulcers. It is recommended to remove shoes every 4 hours, inspect the feet, and to stretch the feet.
+\end{enumerate}
 
- \item Clip nails regularly.
+\begin{wrapfigure}{r}{4cm}
+\centering
+\includegraphics[scale=.5]{images/066.jpg}
+\end{wrapfigure}
 
- \item 
- Wearing the right fitting shoes. Sometimes, people with diabetes may need custom–fit shoes. As previously mentioned, many diabetics have deformed feet. Just as you have your tailor stitch shirts or trousers that are the right fit for you, shoes may also need to be specially designed for the exact shape and size of your feet to prevent creating areas of excess pressure in your feet. In fact, there are many companies that specialize in building custom footwear for diabetics.
 
-\begin{figure}\end{figure}
+If you follow the above reco\-mmenda\-tions, you will be able to not only save your feet, but even your life!
 
- \item 
- Avoid wearing shoes for prolonged periods of time. This can cause sustained pressure on certain parts of the foot, and can lead to ulcers. It is recommended to remove shoes every 4 hours, inspect the feet, and to stretch the feet.
+\noindent{\textbf{Second stage of diabetic ulcer}}
 
-\begin{figure}\end{figure}
+Unfortunately, many diabetics in our country have progression of foot disease due to lack of awareness, and lack of proper medical care. Hence, they can deve\-lop the second stage of diabetic foot ulcer.
 
-If you follow the above recommendations, you will be able to not only save your feet, but even your life!
+In this stage, the skin that had a\break callus in the first stage later develops a\break superficial ulcer. Unless treated pro\-perly, the ulcer spreads deeper into the foot.
 
-\colorblue{\textbf{Second stage of diabetic ulcer}}
 
-Unfortunately, many diabetics in our country have progression of foot disease due to lack of awareness, and lack of proper medical care. Hence, they can develop the second stage of diabetic foot ulcer.
+\noindent\textbf{Treatment}
+\begin{enumerate}[•]
+\itemsep=0pt
+\item Removing the dead skin at the site of the ulcer, to enable healthy tissue to grow back.
+\item Avoiding weight bearing on the affected foot to prevent pressure points, because this will delay healing. This can be done by using a walker or crutches, and in some cases, special casts and foam\break dressings.
+\item Changing dressings daily.
+\item Administering antibiotics if the ulcer is infected.
+\item Surgery to correct the foot deformity may be necessary if the ulcer(s) keep coming back.
+\end{enumerate}
 
-In this stage, the skin that had a callus in the first stage later develops a superficial ulcer. Unless treated properly, the ulcer spreads deeper into the foot.
-
-\textbf{Treatment}
-
-\begin{figure}
-\includegraphics{images/067.jpg}
-\caption{Illustration of ulcer due to repetitive stress}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=2.4]{images/067.jpg}\\
+\textbf{\textit{Illustration of ulcer due to repetitive stress}}
 \end{figure}
 
-\item Removing the dead skin at the site of the ulcer, to enable healthy tissue to grow back.
-
- \item Avoiding weight bearing on the affected foot to prevent pressure points, because this will delay healing. This can be done by using a walker or crutches, and in some cases, special casts and foam dressings.
-
- \item Changing dressings daily.
-
- \item Administering antibiotics if the ulcer is infected.
-
- \item Surgery to correct the foot deformity may be necessary if the ulcer(s) keep coming back.
-
-\colorblue{\textbf{Stage 3 of the diabetic ulcer}}
+\noindent{\textbf{Stage 3 of the diabetic ulcer}}
 
 If stage 2 is not identified or addressed correctly, the superficial ulcer that was only involving the skin spreads deeper to involve the tendons and joint coverings (called joint capsules).
 
-\colorblue{\textbf{Stage 4 of the diabetic ulcer}}
+\noindent{\textbf{Stage 4 of the diabetic ulcer}}
 
 The ulcer now has crossed the skin and tendons, to involve the bone.
 
 At this stage treatment is much more aggressive. Not only is the dead skin removed, but sometimes even the infected bone has to be removed. Most of the treatment has to be done in the hospital, sometimes even by a surgeon in the operating room. Antibiotics are frequently given through the veins to control infection in the ulcer.
 
-\colorblue{\textbf{Stage 5 of the diabetic ulcer – \textit{Diabetic Gangrene}}}
+\noindent{\textbf{Stage 5 of the diabetic ulcer – \textit{Diabetic Gangrene}}}
 
 This is the most serious stage of the disease, and can easily cost a person his life!
 
 Gangrene is derived from a Latin word “gangraena” and the Greek word “gangraina”, both of which mean “death or decay of tissue”.
 
-\textbf{There are 2 kinds of gangrene– dry and wet.}
+\noindent\textbf{There are 2 kinds of gangrene– dry and wet.}
 
-In \textbf{dry gangrene}, the chief cause of tissue death is lack of oxygen and nutrients. The entire human body is supplied with oxygen and nutrients by a constantly flowing stream of blood through the arteries. But diabetes damages these vital lifelines. The arteries get clogged inside, and the nerves controlling the arteries are damaged as well (autonomic neuropathy). In this context, minor injuries such as puncture wounds, abrasions, etc, fail to heal well, because the damaged tissue is not getting adequate oxygen and nutrients. This causes the tissue to eventually die of starvation from both oxygen and food. Eventually the dead part of the foot will fall off on its own, a phenomenon known as “autoamputation”.
+In \textbf{dry gangrene}, the chief cause of tissue death is lack of oxygen and nutrients. The entire human body is supplied with oxygen and\break nutrients by a constantly flowing stream of blood through the arte\-ries. But diabetes damages these vital lifelines. The arteries get clogged\break inside, and the nerves controlling the arteries are damaged as well (auto\-nomic neuropathy). In this context, minor injuries such as pun\-cture wounds, abrasions, etc, fail to heal well, because the damaged tissue is not getting adequate oxygen and nutrients. This causes the tissue to eve\-ntually die of starvation from both oxygen and food. Eventually the dead part of the foot will fall off on its own, a phenomenon known as “autoamputation”.
 
-\begin{figure}
-\includegraphics{images/068.jpg}
-\caption{Day 1 – Ulcer Rt Foot}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.4]{images/068.jpg}
 \end{figure}
 
-In \textbf{wet gangrene}, the chief cause of tissue death is overwhelming infection. Bacteria creep into the feet of diabetics through cracks and fissures in the skin. The oxygen–deficient environment due to decreased blood supply in the feet of diabetics provides a fertile breeding ground for bacteria. They multiply in large numbers and clog up the veins. Veins are in charge of carrying blood back to the heart from the various parts of the body. When they are blocked, blood stagnates in tissues and promotes bacterial growth. In response to this, the body sends its soldiers (the white blood cells) to fight the bacteria. In this fight a large number of bacteria and white blood cells die, and the fluid content of these cells spill out. The swelling that results from this leakage increases the pressure in this area. This increased pressure squeezes the already damaged blood vessels. Thus, the blood supply to this area gets completely cut off, and results in more cell death.
+In \textbf{wet gangrene}, the chief cause of tissue death is overwhel\-ming infection. Bacteria creep into the feet of diabetics through cracks and fissures in the skin. The oxygen–deficient environment due to decrea\-sed blood supply in the feet of diabetics provides a fertile breeding ground for bacteria. They multiply in large numbers and clog up the veins. Veins are in charge of carrying blood back to the heart from the various parts of the body. When they are blocked, blood stagnates in tissues and promotes bacterial growth. In response to this, the body sends its soldiers (the white blood cells) to fight the bacteria. In this fight a large number of bacteria and white blood cells die, and the fluid content of these cells spill out. The swelling that results from this leakage increases the pressure in this area. This increased pressure squeezes the already damaged blood vessels. Thus, the blood supply to this area gets completely cut off, and results in more cell death.
 
-The stagnant blood and fluids leaking from dead cells causes a ‘wet’ gangrene. This type of gangrene is much more dangerous than dry gangrene. The bacteria produce large amounts of toxins, which can spread throughout the body via blood, and cause a toxic shock resulting in death.
+The stagnant blood and fluids leaking from dead cells causes a ‘wet’ gangrene. This type of gangrene is much more dangerous than dry gangrene. The bacteria produce large amounts of toxins, which can spread throughout the body via blood, and cause a toxic shock resu\-lting in death.
 
-Gangrene is a medical emergency! Immediate surgery is required to remove the dead tissues where bacteria are breeding and manufacturing life–threatening toxins. This often requires amputations of the feet and in some cases the entire limb, in order to save the rest of the body.
+Gangrene is a medical emergency! Immediate surgery is required to remove the dead tissues where bacteria are breeding and manufa\-cturing life–threatening toxins. This often requires amputations of the feet and in some cases the entire limb, in order to save the rest of the body.
 
-The following pictures of diabetic gangrene are from a 65–year old patient of mine, with a 15–year history of diabetes. He was also a chain smoker. He had recently spent a lot of time driving to and in Bengaluru. He had developed a small callus with surrounding redness in the right sole. He had a fever. This was a sign of infection. Though he was advised immediate care at the hospital, he refused. He went home with antibiotics, promising to come back the next day. But his fever got worse the next day and he was too sick to leave home. On the third day i.e. 48 hours later, his right foot was gangrenous. He had to be rushed to the hospital for foot surgery. Eventually with insulin, antibiotics, dressing changes and rest, he recovered well, but had lost a part of his foot forever.
+The following pictures of diabetic gangrene are from a 65–year old patient of mine, with a 15–year history of diabetes. He was also a chain smoker. He had recently spent a lot of time driving to and in Bengaluru. He had developed a small callus with surrounding redness in the right sole. He had a fever. This was a sign of infection. Though he was advi\-sed immediate care at the hospital, he refused. He went home with antibiotics, promising to come back the next day. But his fever got worse the next day and he was too sick to leave home. On the third day i.e. 48 hours later, his right foot was gangrenous. He had to be rushed to the hospital for foot surgery. Eventually with insulin, antibiotics, dressing changes and rest, he recovered well, but had lost a part of his foot forever.
 
-\textbf{Diabetic foot ulcer in India}
+\noindent\textbf{Diabetic foot ulcer in India}
 
-A study comparing patients with diabetic foot disease in Germany and in India showed that 48\% of German patients had problems with blood vessels in the foot, but only 13\% of Indian patients had problems with blood supply.\footnote{} There is also scientific evidence that shows that Indians are less affected by diabetic neuropathy than Caucasians. But still many diabetics in India fall victim to diabetic foot ulcers. There are some unique social and cultural behaviors to explain this:
+\begin{wrapfigure}{l}{5.5cm}
+\centering
+\includegraphics[scale=.6]{images/069.jpg}\\
+\textbf{\textit{Day 1 – Ulcer Rt Foot}}
+\vskip-.5cm
+\end{wrapfigure}
 
-\begin{figure}
-\includegraphics{images/069.jpg}
-\caption{Day 1 – Ulcer Rt Foot}
+A study comparing patients with diabetic foot disease in Germany and in India showed that 48\% of German patients had pro\-blems with blood vessels in the foot, but only 13\% of Indian\break patients had problems with blood supply.$^{\text{\cite{chap17–key05}}}$ There is also scientific evidence that shows that Indians are less affected by diabetic\break neuropathy than Caucasians. But still many diabetics in India fall victim to diabetic foot ulcers. There are some unique social and cultural behaviors to explain this:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.6]{images/070.jpg}\\
+\textbf{\textit{Day 3 – Wet gangrene   After partial amputation}}
+\vskip-.5cm
 \end{figure}
 
-
-\begin{figure}
-\includegraphics{images/070.jpg}
-\caption{Day 3 – Wet gangrene         After partial amputation}
-\end{figure}
-
+\begin{enumerate}[•]
+\itemsep=0pt
 \item Walking barefoot while going to temples, etc exposes the feet to sharp objects like stones, etc. Also bacteria in the dust and soil get a chance to enter the feet through skin breaks.
+\item Walking barefoot over hot coals is a religious tradition in some part of the country. This causes severe burns and injury to the feet.
+\item Some people refrain from wearing footwear made of leather to\break temples.
+\item Many living in poverty cannot afford to wear footwear.
+\end{enumerate}
 
- \item Walking barefoot over hot coals is a religious tradition in some part of the country. This causes severe burns and injury to the feet.
+\noindent{\textbf{\textit{Charcot joint}}}
 
- \item Some people refrain from wearing footwear made of leather to temples.
+This is a strange and debilitating complication of diabetes that\break affects the joints. Jean–Martin Charcot, a French neurologist, first\break described it in 1868.
 
- \item Many living in poverty cannot afford to wear footwear.
+\begin{wrapfigure}{l}{5cm}
+\centering
+\includegraphics[scale=1.5]{images/071.jpg}\\
+\textbf{\textit{Charcot foot}}
+\vskip-.5cm
+\end{wrapfigure}
 
-\colorblue{\textbf{\textit{Charcot joint}}}
+In nature there is a harmony between creation and destruction. When there is too much creation (like our population) or too much destruction (like our environment), it leads to problems. The same is true of our bones. There is creation or laying down of new bone by one type of cells (called osteoblasts), and this new bone is remodeled to\break remove excess or faulty bone by another type of cells (called osteoclasts). There is an imbalance between bone formation and bone\break remodeling in Charcot joint or Charcot foot.
 
-This is a strange and debilitating complication of diabetes that affects the joints. Jean–Martin Charcot, a French neurologist, first described it in 1868.
+The most commonly affected joint (60\% of all cases) is located in the front part of the foot (tarso–metatarsal joint). Other joints commonly involved are the joints between the fingers and the hand (metata\-rso\-pha\-la\-ngeal) in 30\% cases, and the ankle joint in 30\% of cases.
 
-In nature there is a harmony between creation and destruction. When there is too much creation (like our population) or too much destruction (like our environment), it leads to problems. The same is true of our bones. There is creation or laying down of new bone by one type of cells (called osteoblasts), and this new bone is remodeled to remove excess or faulty bone by another type of cells (called osteoclasts). There is an imbalance between bone formation and bone remodeling in Charcot joint or Charcot foot.
-
-\begin{figure}
-\includegraphics{images/071.jpg}
-\caption{Charcot foot}
-\end{figure}
-
-The most commonly affected joint (60\% of all cases) is located in the front part of the foot (tarso–metatarsal joint). Other joints commonly involved are the joints between the fingers and the hand (metatarsophalangeal) in 30\% cases, and the ankle joint in 30\% of cases.
-
-The condition usually presents as a red, swollen, warm foot or ankle. Astonishingly, despite all this swelling and redness, the patient does not feel any pain!
+The condition usually presents as a red, swollen, warm foot or\break ankle. Astonishingly, despite all this swelling and redness, the patient does not feel any pain!
 
 Underneath these skin changes, the joint is being destroyed. If this continues, the whole joint becomes severely deformed, and the skin overlying the joint gets ulcerated. Due to delays in diagnosis or misdiagnosis, more than half of these patients will develop an ulcer, and eventually this will need an amputation.
 
-\section*{References}
-
 \begin{thebibliography}{99}
 \bibitem{chap17–key01} Shobhana R, Rao PR, Lavanya A, Vijay V, \& Ramachandran A. Cost burden to diabetic patients with food complications– a study from southern India. J Assoc Physicians India. 2000; 48 (12): 1147–50.
+\bibitem{chap17–key02} Lavery LA, Armstrong DG, Wunderlich RP, Tredwell J, \& Boulton AJ. Diabetic foot syndrome: evaluating the prevalence and incidence of foot pathology in Mexican Americans and non–Hispanic whites from a diabetes disease management cohort. Diabetes Care. 2003; 26 (5): 1435–8.
+\bibitem{chap17–key03} Lavery LA, Armstrong DG, Wunderlich RP, Mohler MJ, et al. Risk factors for foot infections in individuals with diabetes. Diabetes Care. 2006; 29 (6): 1288–93.
+\bibitem{chap17–key04} Viswananth V. The diabetic foot: perspectives from Chennai, South India. Inj J Low Extrem Wounds. 2007; 6 (1): 34–6.
+\bibitem{chap17–key05} Morbach S, Lutale JK, Viswanathan V, Mollenberg J, et al. Regional differences in risk factors and clinical presentations of diabetic foot lesions. Diabet Med. 2004; 21 (1): 91–5.
+\end{thebibliography}
 
- \bibitem{chap17–key02} Lavery LA, Armstrong DG, Wunderlich RP, Tredwell J, \& Boulton AJ. Diabetic foot syndrome: evaluating the prevalence and incidence of foot pathology in Mexican Americans and non–Hispanic whites from a diabetes disease management cohort. Diabetes Care. 2003; 26 (5): 1435–8.
-
- \bibitem{chap17–key03} Lavery LA, Armstrong DG, Wunderlich RP, Mohler MJ, et al. Risk factors for foot infections in individuals with diabetes. Diabetes Care. 2006; 29 (6): 1288–93.
-
- \bibitem{chap17–key04} Viswananth V. The diabetic foot: perspectives from Chennai, South India. Inj J Low Extrem Wounds. 2007; 6 (1): 34–6.
-
- \bibitem{chap17–key05} Morbach S, Lutale JK, Viswanathan V, Mollenberg J, et al. Regional differences in risk factors and clinical presentations of diabetic foot lesions. Diabet Med. 2004; 21 (1): 91–5.
-
- \end{thebibliography}
-
-
+\end{document}
 \chapter{Skin Disease and Diabetes}\label{chap18A}
 
 The skin is the largest organ in our body with a total surface area of two square meters. Up to 30\% of all diabetics suffer from some form or skin disease according to the American Diabetes Association. The skin condition may either be a direct consequence of diabetes, or a common condition that can affect anyone, but which is made worse by diabetes. While in general, skin conditions in diabetes are not very dangerous, they can lead to dangerous complications if not managed promptly (such as diabetic foot and gangrene). Also one type of skin condition could lead to another (for example dry skin can lead to skin infections).
