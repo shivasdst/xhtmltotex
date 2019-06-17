@@ -29,4 +29,23 @@
 \input src/002-chapter002.tex
 \input src/003-chapter003.tex
 
+\newpage
+
+\lhead[\it\bfseries \thepage]{\it\bfseries Index}
+\makeatletter
+\renewenvironment{theindex}{
+  \vspace*{-20\p@}%
+\@makeschapterhead{\indexname}
+   \markboth{\it\bfseries Index}%
+                        {\it\bfseries\indexname}%
+\addtocontents{toc}{\protect\contentsline{chapter}{Index}{\thepage-333}}
+\thispagestyle{plain}\let\item\@idxitem
+
+\begin{multicols}{3}
+\par\bigskip}%
+{\end{multicols}}%
+
+\makeatother
+\printindex
+
 \end{document}
