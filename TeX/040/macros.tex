@@ -18,9 +18,16 @@
 \usepackage{colortbl}
 %~ \usepackage{hyperref}
 \usepackage{imakeidx}
+\usepackage{tocbasic}
+
+\usepackage{tocloft}
+\renewcommand\cftchapafterpnum{\vskip-5pt}
+\cftsetindents{chapter}{1em}{2em}
+
 
 \definecolor{lightblue}{rgb}{0.13,0.6,1}
-\definecolor{darkorange}{rgb}{1,0.41,0}
+\definecolor{blue}{rgb}{0,0.3,0.7}
+\definecolor{darkorange}{rgb}{0.8,0.2,0.0}
 
 
 \usepackage[papersize={140mm,215mm},textwidth=110mm,
@@ -46,13 +53,13 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 
 %%fancy header settings
 \fancypagestyle{plain}{%
-\chead[]{}
-\lhead[]{}
-\rhead[]{}
-\cfoot[]{}
+ \chead[]{}
+ \lhead[]{}
+ \rhead[]{}
+ \cfoot[]{}
 }
-\lhead[\small\thepage]{\small World’s Invisible Enemy : Diabetes}
-\rhead[\small World’s Invisible Enemy : Diabetes]{\small\thepage}
+\lhead[\small\thepage]{\small\em World’s Invisible Enemy : Diabetes}
+\rhead[\small \em\leftmark]{\small\thepage}
 \chead[]{}
 \lfoot[]{}
 \rfoot[]{}
@@ -116,3 +123,5 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 %~ \makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
 %~ \makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
 \makeindex[title=Index,program=makeindex,options=-s mystyle.ist]
+
+

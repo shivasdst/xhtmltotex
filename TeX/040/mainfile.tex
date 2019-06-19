@@ -20,6 +20,7 @@
 \input src/000f-acknowledgements
 \newpage
 \input src/000g-preface
+\newpage
 
 \tableofcontents
 
@@ -38,8 +39,8 @@
 %~ \@makeschapterhead{\indexname}
    %~ \markboth{\it\bfseries Index}%
                         %~ {\it\bfseries\indexname}%
-%~ \addtocontents{toc}{\protect\contentsline{chapter}{Index}{\thepage-333}}
-%~ \thispagestyle{plain}\let\item\@idxitem
+\addtocontents{toc}{\protect\contentsline{chapter}{Index}{\thepage}}
+\thispagestyle{plain}\let\item\@idxitem
 
 %~ \begin{multicols}{3}
 %~ \par\bigskip}%
