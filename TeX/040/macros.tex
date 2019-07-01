@@ -60,8 +60,9 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
  \rhead[]{}
  \cfoot[]{}
 }
-\lhead[\small\thepage]{\small\em World’s Invisible Enemy: Diabetes}
-\rhead[\small \em\leftmark]{\small\thepage}
+
+\lhead[\small\thepage]{\small\em\leftmark}
+\rhead[\small\em World’s Invisible Enemy: Diabetes ]{\small\thepage}
 \chead[]{}
 \lfoot[]{}
 \rfoot[]{}
@@ -78,7 +79,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 \makeatletter
 \renewenvironment{thebibliography}[1]
      {\section*{References}%
-      \@mkboth{References}{References}%
+      %~ \@mkboth{References}{References}%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth
@@ -118,6 +119,7 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
         \hrule height 1pt 
     \vskip 20\p@
   }}
+       
 \makeatother
 
 \setlength{\parskip}{.5em}
