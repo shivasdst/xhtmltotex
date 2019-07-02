@@ -21,6 +21,8 @@
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
 
+\setcounter{tocdepth}{0}
+
 %%longtable settings
 \setlength\LTleft{30pt}
 \setlength{\LTpre}{0pt}
@@ -90,6 +92,9 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 \def\kan#1{{\kannadafont\textkannada{#1}}}
 \def\engfoot#1{\eng{#1}}
 
+\def\notesname{ಅಡಿ ಟಿಪ್ಪಣಿಗಳು}%
+\renewcommand{\contentsname}{ವಿಷಯಾನುಕ್ರಮಣಿಕೆ}
+
 %%fancy header settings
 \fancypagestyle{plain}{%
 \chead[]{}
@@ -146,7 +151,6 @@ leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
 %                    \@afterindentfalse
 %                    \secdef\@chapter\@schapter}
 
-\def\notesname{ಅಡಿ ಟಿಪ್ಪಣಿಗಳು}%
 
 
 %\def\@makeenmark{\relax{\kern1pt}\small\@theenmark}
