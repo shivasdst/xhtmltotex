@@ -14,7 +14,7 @@
    height="212.59842"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="1.svg">
   <sodipodi:namedview
      id="base"
@@ -23,14 +23,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="176.96715"
-     inkscape:cy="119.30663"
+     inkscape:zoom="2.8"
+     inkscape:cx="212.07649"
+     inkscape:cy="117.82509"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
-     inkscape:window-width="1024"
+     inkscape:window-width="1366"
      inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="24"
@@ -170,7 +170,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -998,21 +998,5 @@
        id="path4604-7"
        d="m 292.17519,989.98397 0,13.63703"
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       id="path4604-0-5-6"
-       d="m 227.0975,968.54244 34.23749,0"
-       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-9-9)"
-       inkscape:transform-center-x="6.3380085"
-       inkscape:transform-center-y="1.104421" />
-    <path
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       id="path4604-0-5-6-2"
-       d="m 134.79333,936.72042 34.23749,0"
-       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-9-9-0)"
-       inkscape:transform-center-x="6.3380085"
-       inkscape:transform-center-y="1.104421" />
   </g>
 </svg>
