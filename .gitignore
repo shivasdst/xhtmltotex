@@ -15,3 +15,5 @@
 /TeX/*/.junk/
 /TeX/*/proofs/
 /*/proofs/
+constants.php
+xhtmltotex.php
