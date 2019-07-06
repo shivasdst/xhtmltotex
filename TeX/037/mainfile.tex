@@ -2,9 +2,31 @@
 
 \input macros
 
+\usepackage{xfrac}
+\usepackage{textcomp}
+\usepackage{fontspec}
+
 \makeatletter
 \g@addto@macro\@floatboxreset{\centering}
 \makeatother
+
+%%%%%%%%%%
+\newcommand{\gobbletocpage}{%
+  \renewcommand{\addcontentsline}[3]{%
+    \addtocontents{##1}{\protect\contentsline{##2}{##3}{\relax}}}
+}%
+\newcommand{\restoretocpage}{%
+  \renewcommand{\addcontentsline}[3]{%
+   \addtocontents{##1}{\protect\contentsline{##2}{##3}{\thepage}}}
+}%
+%%%%%%%%%%%%%%%%%
+
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ }   
+\restoretocpage
+}
 
 \begin{document}
 
@@ -12,24 +34,252 @@
 
 \frontmatter
 
-\input src/000a-abhipraya
-\input src/000b-abhipraya
-\input src/000c-samaropa
-\input src/000f-modala-matu
+\input src/title
+\newpage
+\input src/copyright
+\newpage
+\input src/000a-abhipraya %consider .tex file only not .xhtml
+\input src/000b-abhipraya %consider .tex file only not .xhtml
+\input src/modalamatu %consider .tex file only not .xhtml
+\input src/000h-sankethaksharasuchi
 
+\renewcommand{\contentsname}{ವಿಷಯಾನುಕ್ರಮಣಿಕೆ}
 \tableofcontents
 
 \mainmatter
 
 \input src/001-chapter001
+%\addtocontents{toc}{\protect\contentsline{chapter}{\protect\numberline{\thechapter}Title of this chapter}{}{chapter.\thechapter}}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ಮಂಡ್ಯ  ಜಿಲ್ಲೆಯ ಭೂಗೋಳ, ಪುರಾತತ್ವ,  ಸ್ಥಳಪುರಾಣ ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ದಾಖಲೆಗಳಲ್ಲಿ ಮಂಡ್ಯ ಹೆಸರಿನ ನಿಷ್ಪತ್ತಿ,  ಶಾಸನಗಳಲ್ಲಿ ಮಂಡ್ಯ ಹೆಸರಿನ ನಿಷ್ಪತ್ತಿ, ಪ್ರಾಕೃತಿಕವಾಗಿ ಮಂಡ್ಯ ಸ್ಥಳನಾಮ ನಿಷ್ಪತ್ತಿ, ಮಂಡ್ಯ ಜಿಲ್ಲೆಯ ರಚನೆಯ ಹಿನ್ನೆಲೆ, ಮಂಡ್ಯ ಜಿಲ್ಲೆಯ ಕೈಫಿಯತ್ತುಗಳು, ಮಂಡ್ಯ ಜಿಲ್ಲೆಯಲ್ಲಿರುವ ಶಾಸನಗಳ ಪ್ರಕಟಣೆ ಹಾಗೂ ಅಧ್ಯಯನದ ಆರಂಭ, ಮಂಡ್ಯ ಜಿಲ್ಲೆಯ ಬಗ್ಗೆ ಇದುವರೆಗಿನ ಪ್ರಮುಖ ಅಧ್ಯಯನಗಳು, ಕೃತಿಯ ಉದ್ದೇಶ ಮತ್ತು ವೈಶಿಷ್ಟ್ಯ,}   
+\restoretocpage
+}
 \input src/002-chapter002
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ತಲಕಾಡಿನ ಗಂಗರು:} ಒಂದನೆಯ ಶಿವಮಾರ,   ಶ್ರೀಪುರುಷ, ಒಂದನೆಯ ಮಾರಸಿಂಹ (ಯುವರಾಜ ಮಾರಸಿಂಹ), ಒಂದನೆಯ ರಾಚಮಲ್ಲ, ಒಂದನೆಯ ನೀತಿಮಾರ್ಗ ಎಱೆಗಂಗ, ಇಮ್ಮಡಿ ರಾಚಮಲ್ಲ ಮತ್ತು ಒಂದನೆಯ ಬೂತುಗ, ಇಮ್ಮಡಿ  ನೀತಿಮಾರ್ಗ ಎಱೆಗಂಗ-ಎಱೆಯಪ್ಪ, ಮೂರನೆಯ ರಾಚಮಲ್ಲ,  ಇಮ್ಮಡಿ ಬೂತುಗ, ಎರಡನೆಯ ಮಾರಸಿಂಹ, ನಾಲ್ಕನೇ ರಾಚಮಲ್ಲ  ಸತ್ಯವಾಕ್ಯ ಗೋವಿಂದರ -ರಕ್ಕಸಗಂಗ, ಲೋಕವಿದ್ಯಾಧರ, ಪೃಥ್ವೀಗಂಗ.} 
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ನೊಳಂಬರು, ರಾಷ್ಟ್ರಕೂಟರು, ಸಗರ ವಂಶ, ಚೋಳರು}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ಹೊಯ್ಸಳರು: ಹೊಯ್ಸಳ ವಂಶದ ಮೂಲಕಥೆ, ವಿನಯಾದಿತ್ಯ,  ಎಱೆಯಂಗ, ಒಂದನೆಯ ಬಲ್ಲಾಳ, ವಿಷ್ಣುವರ್ಧನ, ಒಂದನೆಯ ನಾರಸಿಂಹ, ವೀರಬಲ್ಲಾಳ ಅಥವಾ ಇಮ್ಮಡಿ ಬಲ್ಲಾಳ, ಎರಡನೆಯ ನಾರಸಿಂಹ, ಸೋಮೇಶ್ವರ ಅಥವಾ ವೀರಸೋಮೇಶ್ವರ, ಮೂರನೆಯ ವೀರ ನರಸಿಂಹ, ಮುಮ್ಮಡಿ ಬಲ್ಲಾಳ. }   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಪಾಂಡ್ಯರು}}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ವಿಜಯನಗರ ಸಾಮ್ರಾಜ್ಯ:} ಒಂದನೆಯ ಹರಿಹರ, ಒಂದನೆಯ ಬುಕ್ಕರಾಯ, ಒಂದನೆಯ ಬುಕ್ಕರಾಯನ ಮಗ ಕಂಪಣ್ಣ, ಎರಡನೆಯ ಹರಿಹರ, ಎರಡನೆಯ ಬುಕ್ಕರಾಯ, ಚಿಕ್ಕರಾಯ, ಒಂದನೆಯ ದೇವರಾಯ, ವೀರ ವಿಜಯರಾಯ, ಎರಡನೆಯ ದೇವರಾಯ ಅಥವಾ ಪ್ರೌಢದೇವರಾಯ, ಮಲ್ಲಿಕಾರ್ಜುನ, ವಿರೂಪಾಕ್ಷ ಅಥವಾ ಮುಮ್ಮಡಿ ವಿರೂಪಾಕ್ಷ, ಸಾಳುವ  ನರಸಿಂಹ ಅಥವಾ ನರಸಿಂಗ ರಾಯ ಒಡೆಯ, ತುಳುವ ನರಸನಾಯಕ ಅಥವಾ ವೀರನರಸಿಂಹ, ಕೃಷ್ಣದೇವರಾಯ, ಅಚ್ಯುತರಾಯ,  ಸದಾಶಿವರಾಯ, ಶ್ರೀರಂಗರಾಯ, ತಿರುಮಲ, ಶ್ರೀರಂಗರಾಜ, ವೆಂಕಟಪತಿ ದೇವರಾಯ, ರಾಮದೇವರಾಯ, ಗೋಪಾಳರಾಜನ ಮಗ ಶ್ರೀರಂಗರಾಜ.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಉಮ್ಮತ್ತೂರಿನ ಪ್ರಭುಗಳು}}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಮೈಸೂರಿನ ಒಡೆಯರು:} ರಾಜ ಒಡೆಯರು, ಆರನೆಯ ಚಾಮರಾಜ ಒಡೆಯರು, ಕಂಠೀರವ ನರಸರಾಜ ಒಡೆಯರು, ದೊಡ್ಡ ದೇವರಾಜ ಒಡೆಯರು ಅಥವಾ ದೇವರಾಜ ಒಡೆಯರು, ಚಿಕದೇವರಾಜ ಒಡೆಯರು, ಒಂದನೇ ಕೃಷ್ಣರಾಜ ಒಡೆಯರು, ಇಮ್ಮಡಿ ಕೃಷ್ಣರಾಜ ಒಡೆಯರು, ದಳವಾಯಿ ದೇವರಾಜಯ್ಯ ಮತ್ತು ನಂಜರಾಜಯ್ಯ, ಮುಮ್ಮಡಿ ಕೃಷ್ಣರಾಜ ಒಡೆಯರು, ಕೃಷ್ಣರಾಜ ಒಡೆಯರು ಮಾಡಿದ ಧರ್ಮಕಾರ್ಯಗಳು, ಕೃಷ್ಣರಾಜಒಡೆಯರ ಅಧಿಕಾರಿಗಳು, ಊಳಿಗದವರು ಮತ್ತು ಪ್ರಜೆಗಳು ಮಾಡಿದ ಧರ್ಮಕಾರ್ಯಗಳು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಚನ್ನಪಟ್ಟಣದ ಪಾಳೆಯಗಾರರು, ಹದಿನಾಡು ಪಾಳೆಯಗಾರರು,  ಹೈದರ್​ಅಲಿ ಮತ್ತು ಟಿಪ್ಪೂಸುಲ್ತಾನ್​.}}   
+\restoretocpage
+}
 \input src/003-chapter003
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಗಂಗರ ಕಾಲದ ಆಡಳಿತ ವ್ಯವಸ್ಥೆ:} ರಾಜಪ್ರತಿನಿಧಿಗಳು, ಮಾಂಡಲಿಕರು, ಅಮಾತ್ಯರು ಅಥವಾ ಮಂತ್ರಿಗಳು, ಪೆರ್ಗ್ಗಡೆ ಅಥವಾ ಹೆಗ್ಗಡೆ, ಕರಣ ಅಥವಾ ಶ್ರೀಕರಣ, ಗಾಮುಂಡರು, ಷಣ್ಣವತಿ ಸಹಸ್ರ ವಿಷಯ ಪ್ರಕೃತಯಃ, ಬೀಳವೃತ್ತಿ, ಪೆರ್ಮ್ಮಾನಡಿ ಜೀವಿತ.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಹೊಯ್ಸಳರ ಕಾಲದ ಆಡಳಿತ ವ್ಯವಸ್ಥೆ:} ಮಹಾಮಂಡಳೇಶ್ವರರು/ಮಂಡಳೇಶ್ವರರು/ಮಂಡಳೀಕರು/ನಾಡಮಂಡಳೀ\-ಕರು, ಮಹಾಸಾಮಂತರು, ಸಾಮಂತರು, ಮಹಾಪ್ರಭು/ಪ್ರಭು/ವಿಭು,  ಶ್ರೀಮನ್ಮಹಾಪ್ರಧಾನ ದಂಡನಾಯಕರು/\-ಸಚಿವರು/ಮಂತ್ರಿಗಳು, ಮಹಾಪ್ರಧಾನ ಸರ್ವಾಧಿಕಾರಿಗಳು$-$ ಹೆಗ್ಗಡೆಗಳು$-$ ಹಿರಿಯಹೆಗ್ಗಡೆಗಳು$-$  ಮಹಾ\-ಪಸಾಯ್ತರು$-$ಶ್ರೀಕರಣರು,  ಶ್ರೀಮನ್ಮಹಾಪ್ರಧಾನ ಹೆಗ್ಗಡೆಗಳು, ದಂಡನಾಯಕರುಗಳು/ದಂಡಾಧೀಶರುಗಳು,\break ಸೇನಾಪತಿಗಳು/ಸೇನಾಧಿಪತಿಗಳು/ ಚಮೂಪರು, ಎಡಗೈಯ ಸೇನಾನಾಯಕರು /ಬಲಗೈಯ ಸೇನಾನಾಯಕರು, ಹುಲಿಯ ಜಂಗುಳಿ ಪ್ರಮುಖ ಮುಖ್ಯರು, ಶ್ರೀಕರಣದ ಹೆಗ್ಗಡೆಗಳು, ಬಹಿತ್ರದ ಹೆಗ್ಗಡೆಗಳು,  ಮಹಾ ಪಸಾ\-ಯ್ತರು(ಪಸಾಯಿತರು), ಭಂಢಾರಿಗಳು / ಹಿರಿಯ ಭಂಡಾರಿ / ಮಾಣಿಕ ಭಂಡಾರಿ,  ಹಡುವಳ/ಹಡೆವಳ/ಹಡಪದ, ಪೆರ್ಗಡೆ/ಹಿರಿಯ ಹೆಗ್ಗಡೆಗಳು,  ಹೆಗ್ಗಡೆಗಳು, ಸುಂಕದ ಹೆಗ್ಗಡೆಗಳು,  ಸುಂಕದ ಅಧಿಕಾರಿಗಳು,  ಇತರ ಅಧಿಕಾರಿಗಳು, ಸೇನಬೋವರು,  ಪ್ರಾಂತೀಯ ಆಡಳಿತ ವ್ಯವಸ್ಥೆ$-$ಪ್ರಭುಗಾವುಂಡರು$-$ಪ್ರಜೆಗಾವುಂಡರು$-$ಗಾವುಂಡರು, ಊರಿನ ಕಾರ್ಯಗಳಲ್ಲಿ ಗಾವುಂಡರ ಉಪಸ್ಥಿತಿ, ಹಳ್ಳಿಯನ್ನು ಪಟ್ಟಣವನ್ನಾಗಿ ಮಾಡುವುದು/ಸಂತೆಯನ್ನು ಏರ್ಪಡಿಸುವುದು, ಗವುಡು ಮರ್ಯಾದೆ, ಉಂಬಳಿ, ಗವುಡು ಗೊಡಗೆ, ಊರಿನ ರಕ್ಷಣೆಯಲ್ಲಿ ಗಾಮುಂಡರು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ವಿಜಯನಗರ ಕಾಲದ ಆಡಳಿತ ವ್ಯವಸ್ಥೆ:} ಮಹಾಪ್ರಧಾನರು/ಮಹಾಪ್ರಧಾನದಂಡನಾಯಕರು/ಮಂತ್ರಿಗಳು, ಮಹಾ\-ಮಂಡಲೇಶ್ವರರು/ಮಹಾಸಾಮಂತರು, ನಾಯಕರು/ಮಹಾನಾಯಕರು (ನಾಯಂಕರ), ಸ್ಥಳೀಯ ಅಧಿಕಾರ ವರ್ಗ, ಗಾವುಂಡರು/ಗವುಡುಗಳು/ಪ್ರಜೆಗಾವುಂಡರು, ನಾಡಗವುಡರು, ಸೇನುಬೋವರು/ಕರಣಿಕರು, ಬಲುಮನುಷ ಅಥವಾ ಕಾರ್ಯಕೆಕರ್ತ, ತಳವಾರಿಕೆ, ರಾಯಸದವರು, ಇತರ ಅಧಿಕಾರಿಗಳು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಮೈಸೂರಿನ ಒಡೆಯರ ಕಾಲದ ಆಡಳಿತ}}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಆಡಳಿತ ವಿಭಾಗಗಳು:} ಪ್ರಾಚೀನ ಆಡಳಿತ ವಿಭಾಗಗಳು, ಗಂಗವಾಡಿ ತೊಂಬತ್ತಾರು ಸಾವಿರ, ಹೊಯ್ಸಳ ದೇಶ/ರಾಜ್ಯ/\-ನಾಡು/ಮಂಡಲ, ಕರ್ಣಾಟ/ಕರ್ಣಾಟಕ/ಕರ್ನಾಟ/ಕರ್ನಾಟಕ, ಮೈಸೂರು ಸೀಮೆ, ಮೈಸೂರು ಸಂಸ್ಥಾನ, ಗಂಗರು ಮತ್ತು ಹೊಯ್ಸಳರ ಕಾಲದ ಆಡಳಿತ ವಿಭಾಗಗಳು/ನಾಡುಗಳು, ವಿಜಯನಗರ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಕಾಲದ ಆಡಳಿತ ವಿಭಾಗಗಳು, ಪೆನುಗೊಂಡೆ ಮಹಾರಾಜ್ಯ, ನಾಗಮಂಗಲ ರಾಜ್ಯ, ಶ್ರೀರಂಗಪಟ್ಟಣ ರಾಜ್ಯ, ಆಲುಗೋಡು ರಾಜ್ಯ, ಮೇಲುಕೋಟೆ ರಾಜ್ಯ, ನಾಡುಗಳು, ಸೀಮೆಗಳು, ಸ್ಥಳಗಳು, ವೇಂಠೆಯ/ಮಾಗಣಿ/ವಳಿತ, ಹೋಬಳಿಗಳು, ತಾಲ್ಲೂಕುಗಳು.}   
+\restoretocpage
+}
 \input src/004-chapter004
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಶೈವಧರ್ಮ:} ಗಂಗರ ಕಾಲದ ಶಾಸನೋಕ್ತ ಶೈವ ದೇವಾಲಯಗಳು, ಹೊಯ್ಸಳರ ಕಾಲದ ಶಾಸನೋಕ್ತ ಶೈವ ದೇವಾಲಯಗಳು, ವಿಜಯನಗರ ಕಾಲದ ಶಾಸನೋಕ್ತ ಶೈವದೇವಾಲಯಗಳು, ಶಾಸನೋಕ್ತವಲ್ಲದ ಇತರ  ಕೆಲವು ಶೈವದೇವಾಲಯಗಳು, ಶಾಸನೋಕ್ತ ಭೈರವ ದೇವಾಲಯಗಳು,  ಶಕ್ತಿ ದೇವತೆಗಳ ಆರಾಧನೆ,  ದುರ್ಗಿ ಅಥವಾ ಚಾಮುಂಡೇಶ್ವರಿ, ಮಾರಿಗುಡಿಗಳು, ಕಿಕ್ಕೇರಿಯ ಬೀರಾದೇವಿ,  ಸೂರ್ಯ ಪ್ರತಿಷ್ಠೆ,  ಜಿಲ್ಲೆಯ ಶೈವ ಯತಿಗಳ ಪರಂಪರೆ, ಪಂಚಮಠ ಸ್ಥಾನಗಳು-ಪಂಚಮಠ ಸ್ಥಾನಪತಿಗಳು. }   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಜೈನಧರ್ಮ:} ಬಸದಿಗಳ ನಿರ್ಮಾಣ ಮತ್ತು ದತ್ತಿ – ಗಂಗರ ಕಾಲ, ಹೊಯ್ಸಳರ ಕಾಲ, ವಿಜಯನಗರ ಮತ್ತು ಮೈಸೂರು ಒಡೆಯರ ಕಾಲ ಜೈನಯತಿಪರಂಪರೆ – ಗಂಗರ ಕಾಲ, ಹೊಯ್ಸಳರ ಕಾಲ, ಜೈನತೀರ್ಥಗಳು, ಜೈನಧರ್ಮದ ಇಳಿಮುಖ.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ವೈದಿಕಧರ್ಮ-ಅಗ್ರಹಾರಗಳು ಮತ್ತು ಬ್ರಹ್ಮದೇಯಗಳು:} ಗಂಗರ ಕಾಲದ ಅಗ್ರಹಾರಗಳು, ಚೋಳರ ಕಾಲದ ಅಗ್ರಹಾರಗಳು, ಹೊಯ್ಸಳರ ಕಾಲದ ಅಗ್ರಹಾರಗಳು ವಿಜಯನಗರ ಕಾಲದ ಅಗ್ರಹಾರಗಳು, ಮೈಸೂರು ಒಡೆಯರ ಕಾಲದ ಅಗ್ರಹಾರಗಳು, ಬ್ರಹ್ಮಪುರಿ/ಘಟಿಕಾಸ್ಥಾನ, ಶ್ರುತಿ-ಶ್ರೋತ್ರಿಯೂರು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಶ್ರೀವೈಷ್ಣವಧರ್ಮ:} ಮಂಡ್ಯ ಜಿಲ್ಲೆಯಲ್ಲಿ ಶ್ರೀವೈಷ್ಣವಧರ್ಮ, ಶ್ರೀರಾಮಾನುಜಾಚಾರ್ಯರು,  ಶ್ರೀ ರಾಮಾನುಜಾ\-ಚಾರ್ಯರು ತೊಂಡನೂರಿನಲ್ಲಿ-  ಮೇಲುಕೋಟೆಯಲ್ಲಿ , ಶ್ರೀರಾಮಾನುಜಾ\-ಚಾರ್ಯರು ಮತ್ತು ಅವರ ನೇರ ಶಿಷ್ಯರು, ಯತಿರಾಜಮಠ ಅಥವಾ ರಾಮಾನುಜಮಠ, ರಾಮಾನುಜಕೂಟ, ರಾಮಾನುಜಾಚಾರ್ಯರ ದೇವಾಲಯ ಮತ್ತು ಅದಕ್ಕೆ ದತ್ತಿ, ರಾಮಾನುಜಾಚಾರ್ಯರ ಪ್ರಶಸ್ತಿ, ರಾಮಾನುಜಾಚಾರ್ಯರ ನಂತರದ ವೈಷ್ಣವ ಯತಿಗಳು ಮತ್ತು ಸ್ಥಾನಪತಿಗಳು, ಜಿಲ್ಲೆಯ ಪ್ರಾಚೀನ ಶ್ರೀವೈಷ್ಣವ ಕ್ಷೇತ್ರಗಳು-ಶ್ರೀವೈಷ್ಣವ ದೇವಾಲಯಗಳು ಮತ್ತು   ಅವುಗಳಿಗೆ ದತ್ತಿ, ಮಾರೆಹಳ್ಳಿ, ತೊಣ್ಣೂರು/ತೊಂಡನೂರು ಅಗ್ರಹಾರ/ ಯಾದವ ನಾರಾಯಣ ಚತುರ್ವೇದಿ ಮಂಗಲ, ಮೇಲುಕೋಟೆ ದೇವಾಲಯದ ಶಾಸನೋಕ್ತ ದತ್ತಿಗಳು ಮತ್ತು ಉತ್ಸವಗಳು, ಮೇಲುಕೋಟೆಯಲ್ಲಿ ಶಾಸನೋಕ್ತ ನಿರ್ಮಾಣಗಳು ಮತ್ತು ಜೀರ್ಣೋದ್ಧಾರ,  ಮೇಲುಕೋಟೆಯ ಸುತ್ತಲಿನ ಶ್ರೀವೈಷ್ಣವ ಕ್ಷೇತ್ರಗಳು ಮತ್ತು ದೇವಾಲಯ\-ಗಳು, ಶಾಸನೋಕ್ತವಲ್ಲದ ಜಿಲ್ಲೆಯ ಇತರ ಪ್ರಮುಖ ಶ್ರೀವೈಷ್ಣವ ದೇವಾಲಯಗಳು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ದ್ವೈತ ಮತ ಅಥವಾ ಮಾಧ್ವಪಂಥ (ವೈಷ್ಣವಪಂಥ)} }   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ವೀರಶೈವಧರ್ಮ:} ಹೊಯ್ಸಳರ ಕಾಲದ ವೀರಶೈವ ಶಾಸನಗಳು ಮತ್ತು ದೇವಾಲಯಗಳು, ವಿಜಯನಗರ ಕಾಲದ ವೀರಶೈವ ಶಾಸನಗಳು ಮತ್ತು ದೇವಾಲಯಗಳು, ಶಿವಪುರಗಳು, ಸುಧರ್ಮಪುರ ಅಥವಾ ಪುರಧರ್ಮಗಳು, ಮೈಸೂರು ಒಡೆಯರ ಕಾಲದ ವೀರಶೈವಧರ್ಮದ ಶಾಸನಗಳು ಮತ್ತು ದೇವಾಲಯಗಳು, ವೀರಶೈವಧರ್ಮ ಮತ್ತು ಬ್ರಾಹ್ಮಣರು, ಬಸವಣ್ಣನವರ ಪ್ರತಿಮೆಯ ಸ್ಥಾಪನೆ.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಇಸ್ಲಾಂ ಧರ್ಮ.}}   
+\restoretocpage
+}
 \input src/005-chapter005
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ವೀರಗಲ್ಲು/ಮಾಸ್ತಿಕಲ್ಲು/ವೇಳೆವಾಳಿ/ನಿಸಿದಿಗಲ್ಲು:} ವೀರಗಲ್ಲುಗಳು, ಯುದ್ಧದಲ್ಲಿ ಮಡಿದ ವೀರರ ವೀರಗಲ್ಲುಗಳು, ಯುದ್ಧದಲ್ಲಿ ಗೆದ್ದುಬಂದ ವೀರರ ವೀರಗಲ್ಲುಗಳು ಪ್ರಶಸ್ತಿ ಶಾಸನಗಳು,  ಊರಳಿವು,  ತುರುಗಾಳಗ (ತುರುಗೊಳ್​$-$\-ತುರುಗೋಳ್​), ಪೆಣ್ಪುಯ್ಯಲ್​, ಗಡಿವಿವಾದ ಅಥವಾ ಸೀಮಾ ಸಂಬಂಧಿ ಹೋರಾಟದ ವೀರಗಲ್ಲುಗಳು, ಕಳ್ಳರೊಡನೆ ಹೋರಾಡಿ ಮಡಿದ ವೀರರ ವೀರಗಲ್ಲುಗಳು, ಪ್ರಾಣಿಗಳೊಡನೆ ಹೋರಾಡಿ ಮಡಿದ ವೀರರ ವಿರಗಲ್ಲುಗಳು, ದಾಯಾದಿ ಕಲಹದಲ್ಲಿ ಮಡಿದವರ ವೀರಗಲ್ಲುಗಳು, ಮಾಸ್ತಿಕಲ್ಲು, ವೇಳೆವಾಳಿ/ಲೆಂಕವಾಳಿ/ಗರುಡರು, ಕಂನಡಿಗ ಮೊನೆಯಾಳ್ತನ, ಧಾರ್ಮಿಕ ಆತ್ಮಬಲಿದಾನ(ನಿಸಿದಿಗಲ್ಲು).}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಸ್ತ್ರೀಯರು :} ರಾಣಿಯರು/ರಾಜಮನೆತನದ ಸ್ತ್ರೀಯರು, ಸಾಮಂತ ಮನೆತನದ ಸ್ತ್ರೀಯರು, ದಂಡನಾಯಕಿತ್ತಿಯರು, ವೀರರ ಪತ್ನಿಯರು, ಗಾವುಂಡಿಯರು, ಸೆಟ್ಟಿತಿಯರು, ಅಧಿಕಾರಿಗಳ ಪತ್ನಿಯರು, ಸಾಮಾನ್ಯ ಸ್ತ್ರೀಯರು, ಜೈನ\-ಧರ್ಮದ ಮಹಿಳೆಯರು, ಶೈವ ಧರ್ಮದ ಮಹಿಳೆಯುರು, ವೈಷ್ಣವ ಧರ್ಮದ ಮಹಿಳೆಯರು, ವೀರಶೈವಧರ್ಮದ ಮಹಿಳೆಯರು ಇಸ್ಲಾಂ ಧರ್ಮದ ಮಹಿಳೆಯರು, ಕ್ರಿಶ್ಚಿಯನ್​ ಮಹಿಳೆಯರು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಶಾಸನೋಕ್ತ ಕುಲಗಳು.} }   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಶಿಲ್ಪಿಗಳು/ರೂವಾರಿಗಳು/ಕುಶಲ ಕರ್ಮಿಗಳು:} ದೇವಾಲಯವನ್ನು ನಿರ್ಮಿಸಿದ ಶಿಲ್ಪಿಗಳು, ಪಂಚಾಳದವರು/ ಪಾಂಚಾಳದವರು, ರೂವಾರಿಗಳು, ಕಲ್ಲುಕುಟಿಗರು, ಓಜ/ಓವಜ, ಆಚಾರಿ, ಕಮ್ಮಾರ, ಅಕ್ಕಸಾಲೆ, ಕಂಚುಗಾರ ಕುಲಾನ್ವಯ ಕೊತ್ತಳಿ, ವಿಜಯನಗರ ಕಾಲದ ತಾಮ್ರಶಾಸನ ರೂವಾರಿಗಳು, ಸಭಾಪತಿ, ವಿಜಯನಗರ ಕಾಲದ ತಾಮ್ರ ಶಾಸನ ರೂವಾರಿಗಳು, ಸ್ಥಳೀಯ ಶಾಸನ ಬರಹಗಾರರು, ರೂವಾರಿಗಳು.}   
+\restoretocpage
+}
 \input src/006-chapter006
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ಭೂಮಿಯ ವಿಧಗಳು, ಗದ್ದೆ, ಬೆದ್ದಲು, ತೋಟ, ತುಡಿಕೆ, ಮರ,  ಗದ್ದೆಯ ಅಳತೆಗಳು, ಬೆದ್ದಲು/ಕೆಯ್​/ಹೊಲ, ಬೆದ್ದಲು ಅಥವಾ ಹೊಲದ ಅಳತೆ, ತೋಟಗಳು, ಭೂಮಿಯ ಗುತ್ತಗೆ/ವಾರ, ಬೆಳೆಗಳ ಮೇಲೆ ತೆರಿಗೆ/ಸುಂಕ,\break ವ್ಯವ\-ಸಾಯಗಾರರು/ಒಕ್ಕಲು ಮಕ್ಕಳು, ಬೀಳು ಭೂಮಿ/ಮೊರಡಿ/ಬೋರೆ, ನಂದನವನಗಳು/ಪುಷ್ಪೋದ್ಯಾನಗಳು, ತೋಪುಗಳು, ಮರಗಿಡಗಳು.}   
+\restoretocpage
+}
 \input src/007-chapter007
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ಕೆರೆಕಟ್ಟೆಗಳು ಹಾಗೂ ಅವುಗಳ ನಿರ್ಮಾಣದ ಹಿನ್ನೆಲೆ, ಕೆರೆಗಳ ವರ್ಗೀಕರಣ, ಕೆರೆಗಳ ಉದ್ದ ಅಗಲ ಆಳ, ಪ್ರಾಚೀನ ಮಂಡ್ಯ ಜಿಲ್ಲೆಯಲ್ಲಿದ್ದ ಕೆರೆಗಳ ಅಂದಾಜು, ಕೆರೆಗಳ ನಿರ್ಮಾಣ ಮತ್ತು ಜೀರ್ಣೋದ್ಧಾರ, ಕೆರೆಗಳ ನಿರ್ಮಾಣ ಮತ್ತು ಜೀರ್ಣೋದ್ಧಾರ, ಕೆರೆಗಳಳ ನಿರ್ಮಾಣ ಜೀರ್ಣೋದ್ಧಾರ ಮತ್ತು ಕೆರೆಯ ನಿರ್ವಹಣೆಗೆ ದತ್ತಿ,  ಗಂಗರ ಕಾಲ,  ಹೊಯ್ಸಳರ ಕಾಲ,  ಪೆರಮಾಳೆ ದೇವನಿಂದ ಕೆರೆಗಳ ವಿಸ್ತರಣೆ, ಕೆರೆಗಳ ನಿರ್ಮಾಣ ಮತ್ತು ಜೀರ್ಣೋದ್ಧಾರ ವಿಜಯನಗರ ಕಾಲ, ಮೈಸೂರು ಒಡೆಯರ ಕಾಲ,  ಶಾಸನೋಕ್ತ ಕೆರೆಗಳು, ಗಂಗರ ಕಾಲ,  ಹೊಯ್ಸಳರ ಕಾಲ,  ವಿಜಯನಗರ ಕಾಲ, ಮೈಸೂರು ಒಡೆಯರ ಕಾಲ, ಕೆರೆಯ ತೂಬುಗಳು, ಕೆರೆಯ ಏರಿ, ಕೆರೆಯ ಕೋಡಿಗಳು, ಕೆರೆ ಕಾಲುವೆಗಳ ಕೆಳಗಿನ ಗದ್ದೆ ಬಯಲುಗಳು, ಮಣಲಗದ್ದೆ, ಬೀಜವರಿ ಗದ್ದೆ$-$ಬಿತ್ತುವಟ್ಟ, ಕಪಿಲೆ/ಯಾತ(ಏತ).}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಅಣೆಕಟ್ಟುಗಳು/ಕಟ್ಟೆಗಳು/ಕಟ್ಟುಕಾಲುವೆಗಳು:} ಗಂಗರ ಕಾಲದ ಅಣೆಕಟ್ಟುಗಳು ಅಥವಾ ಸೇತುಬಂಧಗಳು, ಹೊಯ್ಸಳರ ಕಾಲದ ಅಣೆಕಟ್ಟುಗಳು ಅಥವಾ ಕಟ್ಟು ಕಾಲುವೆಗಳು, ವಿಜಯನಗರ ಕಾಲದ ಅಣೆ, ಅಚ್ಚುಕಟ್ಟು, ಕಾಲುವೆಗಳು, ಮೈಸೂರು ಅರಸರ ಕಾಲದ ಅಣೆ ಅಚ್ಚುಕಟ್ಟುಗಳು, ನದಿಗಳು, ಹಳ್ಳಕೊಳ್ಳಗಳು, ದೇವಾಲಯದ ಸರೋವರಗಳು ಮತ್ತು ಕೊಳಗಳು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\newpage}
 \input src/008-chapter008
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ವರ್ತಕರು, ಅನಂತ ಬಣಂಜು ಧರ್ಮ, ವರ್ತಕರ ಪ್ರಕಾರಗಳು ಮತ್ತು ಅವರ ಸಂಘಗಳು, ದೇಸಿ, ಉಭಯದೇಸಿ, ನಾನಾದೇಸಿ, ಪರದೇಸಿ, ಸೆಟ್ಟಿಗಳು,  ಹೊಯ್ಸಳ ಸೆಟ್ಟಿ/ ಸೆಟ್ಟಿವಟ್ಟ,  ಪಟ್ಟಣಸ್ವಾಮಿ/ಪಟ್ಟಣಸೆಟ್ಟಿ/ಸೆಟ್ಟಿವಟ್ಟ,  ತೆಲ್ಲಿಗರು, ಬಳಗಾರ ಕುಲ, ಮುನ್ನುರ್ವರು, ನಖರ, ಗವರೆ, ವಡ್ಡವ್ಯವಹಾರಿ/ಮಹಾವಡ್ಡವ್ಯವಹಾರಿ,  ಪಟ್ಟಣೀಕರಣ, ಹಣಕಾಸು, ನಾಣ್ಯಗಳು. }   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+ಸುಂಕ/ಆಯ/ಇತರ ತೆರಿಗೆಗಳು: ಒಳವಾರು, ಹೊರವಾರು, ಪೂರ್ವಾಯ, ಅಪೂರ್ವಾಯ, ಪತ್ತೊಂದಿ ಅಥವಾ ದಶವಂದ, ಸಿದ್ಧಾಯ, ಕಟ್ಟುಗುತ್ತಗೆ, ಪಿಂಡಾದಾನ, ಕುಳವ ಕಟ್ಟಿಸುವುದು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ವಿವಿಧ ಬಗೆಯ ತೆರಿಗೆಗಳು/ ಸುಂಕಗಳು:} ರಾಜನಿಗೆ ಅಥವಾ ರಾಜ್ಯಾಡಳಿತಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ತೆರಿಗೆಗಳು, ಸೇನೆ ಹಾಗೂ ವೀರರಿಗೆ ಸಂಬಂಧಿಸಿದ ತೆರಿಗೆಗಳು, ಸೇವೆ ಮತ್ತು  ಸೇವಕರಿಗೆ ಸಂಬಂಧಿಸಿದ ತೆರಿಗೆಗಳು, ವ್ಯಾಪಾರದ ಮೇಲಿನ ತೆರಿಗೆಗಳು, ಪ್ರಾಣಿಗಳ ಮೇಲಿನ ತೆರಿಗೆಗಳು, ಆಹಾರ ಪದಾರ್ಥಗಳ ಮೇಲಿನ ತೆರಿಗೆಗಳು, ಕೃಷಿ ತೆರಿಗೆಗಳು, ಕೆರೆ, ಕಟ್ಟೆ, ನೀರಾವರಿ ಮೇಲಿನ ತೆರಿಗೆಗಳು, ವೃತ್ತಿಯ ಮೇಲಿನ ತೆರಿಗೆಗಳು ಮತ್ತು ಗೌರವಧನ, ದಂಡರೂಪದ ತೆರಿಗೆಗಳು, ಪೌರಸೇವೆಯ ತೆರಿಗೆಗಳು, ವಿದ್ಯಾಭ್ಯಾಸದ ತೆರಿಗೆಗಳು, ಜನರಿಗೆ ಹಾಗೂ ಜಾತಿಗೆ ಸಂಬಂಧಿಸಿದ ತೆರಿಗೆಗಳು, ಬಾಲವಣ, ಇತರ ಕೆಲವು ತೆರಿಗೆಗಳು, ದೇವರು, ದೇವಾಲಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ತೆರಿಗೆಗಳು, ಜೀವಿತ, ನಿಬಂಧ, ನಿಯೋಗ,(ಅಧಿಕಾರಿಗಳ ಮತ್ತು ಕೆಲಸಗಾರರ ವೇತನ ಮತ್ತು ತೆರಿಗೆಗಳು), ಪೆರ್ಮ್ಮಾನಡಿ ಜೀವಿತ, ವಿವಿದ ಬಗೆಯ ಕೊಡುಗೆಗಳು ಮತ್ತು ಅವುಗಳ ಮೇಲಿನ ತೆರಿಗೆ,  ಕೊಡುಗೆಗಳು, ಉಂಬಳಿ, ಮಾನ್ಯಗಳು, ಬಳಿವಳಿ/ಬಳುವಳಿ, ವಿಭಾಗ ಪತ್ರ (ಪಾಲುಪಾರೀಕತ್ತು), ಸಾಲ, ಕ್ರಯ ಅಥವಾ ಕ್ರಯದಾನ, ಬಡ್ಡಿಯನ್ನು ವಿಧಿಸುವುದು.}   
+\restoretocpage
+}
+\addtocontents{toc}{\vskip -.5cm}
+{
+\gobbletocpage
+\addcontentsline{toc}{chapter}{\numberline{}\normalfont
+{\bf ಧಾನ್ಯಗಳು, ಎಣ್ಣೆ  ತುಪ್ಪದ ಅಳತೆ.} }   
+\restoretocpage
+}
 \input src/009-chapter009
-
-
+\input src/000c-samaropa %consider .tex file only not .xhtml
+\addtocontents{toc}{\protect\contentsline{chapter}{ಸಮಾರೋಪ}{\thepage}{}}
+\input src/000g-paramarshanagranthagalu
+\addtocontents{toc}{\protect\contentsline{chapter}{ಪರಾಮರ್ಶನ ಗ್ರಂಥಗಳು}{\thepage}{}}
+\addtocontents{toc}{\protect\contentsline{chapter}{ಛಾಯಾಚಿತ್ರಗಳು}{}{}}
+\newpage
+\input src/map
 \end{document}
