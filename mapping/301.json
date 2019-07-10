@@ -1,0 +1,8 @@
+{
+	"attrmapping": {
+		"quote-author.b":"\n~\\hfill{\\fontsize{11pt}{13.75pt}\\selectfont ",
+		"quote-author.a":"}",
+		"verse-sp.b":"\n\\begin{verse}\n{\\fontsize{11pt}{13.75pt}\\selectfont\n",
+		"verse-sp.a":"}\n\\end{verse}\n"		
+	}
+}
