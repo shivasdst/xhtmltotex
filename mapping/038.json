@@ -14,6 +14,8 @@
 		"myframe.a":"}",	
 		"tamil.b":"\\tamil{",
 		"tamil.a":"}",	
+		"tamilshri.b":"\\tamilshri{",
+		"tamilshri.a":"}",	
 		"img-center.b":"\\centerline{",
 		"img-center.a":"}",	
 		"author-affiliation.b":"\\authoraffiliation{",
