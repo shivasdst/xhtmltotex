@@ -13,28 +13,25 @@
 %~ \chead[]{}
 %~ \cfoot[]{}
 %~ 
-%~ \input src/titlepage
-%~ \newpage
- %~ 
-%~ \input src/copyright
-%~ \newpage
- %~ 
-%~ \input src/contents
-%~ \newpage
- %~ 
-%~ \input src/trans_scheme
-%~ \newpage
- %~ 
-%~ \input src/about
-%~ \newpage
- %~ 
-%~ \input src/key_partners
-%~ \newpage
- %~ 
-%~ \input src/ack
-%~ \newpage
- %~ 
-%~ \input src/editorial
+
+%\input src/titlepage
+%\newpage
+%\input src/copyright
+\newpage
+\input src/contents
+\newpage
+\input src/trans_scheme
+\newpage
+\input src/000d-about
+\newpage
+\input src/000e-key-partners
+\newpage
+\input src/000f-acknowledgements
+\newpage
+ 
+\input src/000g-series-editorial
+\newpage
+\input src/000h-volume-editorial
 %~ \newpage
 %~ \centerline{\small\textsl{This page left blank intentionally}}
 %~ \thispagestyle{empty}
@@ -45,8 +42,9 @@
 \mainmatter
 
 \lhead[\small\thepage\quad ]{}
-%~ \chead[]{}
-%~ \cfoot[]{}
+\rhead[]{\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
 
 \makeatother
 

@@ -10,7 +10,7 @@ $id = $argv[1];
 $xhtmltotex = new Xhtmltotex($id);
 $xhtmlFiles = $xhtmltotex->getXhtmlFiles($id);
 // var_dump($xhtmlFiles);
-
+//var_dump($xhtmltotex->footnotes);
 $xhtmltotex->processFiles($id,$xhtmlFiles);
 
 
