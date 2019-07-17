@@ -81,9 +81,9 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\selecteng{\selectlanguage{english}\fontsize{10}{12}\selectfont}
 
 \def\Authorline#1{\edef\remauthor{#1}{\iflanguage{english}{\englishfont\Large\bfseries\begin{flushright} -- \,#1\end{flushright}}{\devanagarifont\Large\bfseries --\,#1}}%
-\lhead[\thepage\quad {\iflanguage{english}{\englishfont\bfseries #1}{\devanagarifont\large\bfseries #1}}]{}}
+\lhead[\thepage\quad {\iflanguage{english}{\englishfont #1}{\devanagarifont\large #1}}]{}}
 
-\def\retainauthsanskrit{\lhead[\thepage\quad {\devanagarifont\large\bfseries \remauthor}]{}}
+\def\retainauthsanskrit{\lhead[\thepage\quad {\devanagarifont\large \remauthor}]{}}
 
 \def\eleven{\fontsize{9}{11}\selectfont}
 
