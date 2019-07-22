@@ -75,13 +75,15 @@ leftmargin=20mm,rightmargin=20mm,cropmarks,footskip=0.6cm]{zwpagelayout}
 \def\supskpt#1{#1}
 \def\versenum#1{\hfill #1}
 
+\def\namesinorder#1{\\{\rm\sl\small #1}}
+
 \def\selectdev{\selectlanguage{sanskrit}\fontsize{13}{15}\selectfont}
 \def\selecteng{\selectlanguage{english}\fontsize{10}{12}\selectfont}
 
 \def\Authorline#1{\edef\remauthor{#1}{\iflanguage{english}{\englishfont\Large\bfseries\begin{flushright} -- \,#1\end{flushright}}{\devanagarifont\Large\bfseries --\,#1}}%
-\lhead[\thepage\quad {\iflanguage{english}{\englishfont\bfseries #1}{\devanagarifont\large\bfseries #1}}]{}}
+}
 
-\def\retainauthsanskrit{\lhead[\thepage\quad {\devanagarifont\large\bfseries \remauthor}]{}}
+\def\retainauthsanskrit{\lhead[\thepage\quad {\devanagarifont\large \remauthor}]{}}
 
 \def\eleven{\fontsize{9}{11}\selectfont}
 
