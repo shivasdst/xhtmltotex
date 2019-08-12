@@ -48,6 +48,13 @@
 \thispagestyle{empty}
 \input src/025-chapter025.tex
 \input src/026-chapter026.tex
+
+\makeatletter
+\renewcommand\chapter{\global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+
 \input src/027-chapter027.tex
 \input src/028-chapter028.tex
 \input src/029-chapter029.tex
