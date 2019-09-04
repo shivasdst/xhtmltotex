@@ -25,16 +25,69 @@
 \input src/000d-preface
 \input src/000e-preface
 \input src/000f-preface
+\thispagestyle{empty}
+\vfill\eject
+\thispagestyle{empty}
+\newpage
+\makeatletter
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। ॐ नमो नारायणाय ।।}\relax}} 
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
 \input src/000g-preface
 
 \newpage
-\tableofcontents
+%\tableofcontents
 \label{prelims}
 \mainmatter
 
 \thispagestyle{empty}
 %\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
 {
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{5\p@}%
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{श्रीः}\relax}} 
+
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। श्री गुरुराजो विजयते ।।}\relax}} 
+
+\medskip
+
+\centerline{{\fontsize{13pt}{13pt}\selectfont ನರಸಿಂಹೋಖಲಾಜ್ಞಾನಮತಾಂತದಿವಾಕರಃ ।\relax}} 
+
+\centerline{{\fontsize{13pt}{13pt}\selectfont ಜಯತ್ಯಮಿತಸುಜ್ಞಾನಸುಖಶಕ್ತಿಪಯೋನಿಧಿ: ।।\relax}} 
+
+\medskip
+
+\centerline{{\fontsize{13pt}{13pt}\selectfont ನ ಮಾಧವಸಮೋ ದೇವೋ ನ ಚ ಮಧ್ವಸಮೋ ಗುರುಃ ।\relax}} 
+
+\centerline{{\fontsize{13pt}{13pt}\selectfont ನ ತದ್ವಾಕ್ಯಸಮಂ ಶಾಸ್ತಂ ನ ಚ ತಸ್ಯ ಸಮಃ ಪುಮಾನ್ ।।\relax}} 
+\vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %\LARGE\bfseries \@chapapp\space \thechapter
+	\vskip 4pt
+%        \hrule height 2pt
+        \par\nobreak
+        \vskip 5\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+{\fontsize{32pt}{24pt}\selectfont \bfseries #1}\par\nobreak
+\smallskip 
+
+%\hrule height 2pt   
+ \vskip 5\p@  
+  }}
+\makeatother
+\setcounter{page}{0}
 \input src/001-chapter001.tex
 \label{lastpage}
 }
