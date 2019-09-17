@@ -1,0 +1,272 @@
+%%importing packages
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec,graphicx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{xstring}
+\usepackage{polyglossia}
+\usepackage{titlesec}
+\usepackage{xpatch}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{cancel}
+%\usepackage{color}
+%\usepackage{longfbox}
+\usepackage{ifthen}
+\usepackage{tfrupee}
+%\usepackage{pifont}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[belowskip=-10pt,aboveskip=0pt,justification=centering]{caption}
+
+\usepackage{tfrupee}
+%~ \usepackage{newunicodechar}
+  %~ \newunicodechar{₹}{\rupee}
+
+
+\floatstyle{plain}
+
+%~ \usepackage{tikz}
+%~ \newcommand*\mycirc[1]{%
+  %~ \tikz[baseline=(C.base)]\node[draw,circle,inner sep=.7pt](C) {#1};\:
+%~ }
+
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+%%longtable settings
+\setlength\LTleft{30pt}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+%%parskip setting
+\setlength{\parskip}{4pt}
+
+\xpatchcmd{\verse}{\itemsep}{\advance\topsep-0.6em\itemsep}{}{}
+\xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+\xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+
+\setmainlanguage[numerals=Kannada]{kannada}
+\setotherlanguages{english}
+
+
+
+\usepackage[papersize={140mm,215mm},textwidth=110mm,
+textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=17.5mm,
+leftmargin=15mm,rightmargin=15mm,cropmarks]{zwpagelayout}
+
+
+
+%%page settings for the book with geometry package
+%~ \usepackage{geometry}
+%~ \usepackage{atbegshi}
+%~ \geometry{paper=a5paper,layoutsize={120mm,182mm},layouthoffset=13.5mm,layoutvoffset=14mm,width=90mm,left=15mm,right=15mm,height=146mm,headheight=5mm,headsep=4mm,top=15mm,bottom=12mm,includehead=false,includefoot=true,showcrop=true}
+
+%%defining fonts
+\setmainfont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+\newfontfamily\kannadafont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setotherlanguages{sanskrit}
+
+\newfontfamily\englishfont[
+	Script=Latin,
+	Ligatures=TeX,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic,
+]{GentiumBasic}
+
+\newfontfamily\devanagarifont[
+	Script=Devanagari,
+	BoldFont=SHREE_DEV_OTF_0702
+]{SHREE_DEV_OTF_0701}
+
+\def\dev#1{{\devanagarifont\textsanskrit{#1}}}
+\def\devnag#1{{\dev{#1}}}
+
+\def\devinlineapp#1{{\fontsize{11}{15}\selectfont\dev{#1}}}
+\def\devinline#1{{\fontsize{13}{15}\selectfont\dev{#1}}}
+
+%%user defined commands
+\long\def\titlea#1{\centerline{{\fontsize{18}{30}\selectfont\textbf{#1}}}\smallskip}
+\long\def\bookTitle#1{\centerline{{\fontsize{35}{37}\selectfont\textbf{#1}}}\smallskip}
+\long\def\titleb#1{\centerline{{\fontsize{18}{30}\selectfont\textbf{#1}}}\vskip 0.75cm}
+\long\def\titlec#1{\centerline{{\fontsize{18}{22}\selectfont\textbf{#1}}}\vfill}
+\def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
+\def\titletopline#1{\hfill #1\vskip 2cm}
+\def\authorcaption#1{\centerline{{\large\bfseries #1}}\smallskip}
+\def\copyrightpub#1{\centerline{{\bfseries #1}}}
+\def\copyrightpubcaption#1{\centerline{{\bf #1}}}
+\def\copyrightpubaddr#1{\centerline{#1}}
+\def\pagecount#1{#1 \pageref{prelims}+\pageref{lastpage}}
+\newenvironment{myquote}[1]{\medskip\par\bgroup\fontsize{10}{12}\selectfont\noindent\leftskip=10pt\rightskip=10pt#1}{\par\egroup\medskip}
+\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
+\def\general#1{#1}
+\def\vauthor#1{{\hfill #1}}
+\def\supskpt#1{$^{#1}$}
+
+\def\blank#1{\phantom{#1}}
+
+\def\enginline#1{{\fontsize{12}{14}\selectfont\eng{#1}}}
+\def\publisher#1{{\fontsize{20pt}{22pt}\selectfont\bfseries #1}}
+\def\place#1{{\fontsize{14pt}{16pt}\selectfont #1}}
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\kan#1{{\kannadafont\textkannada{#1}}}
+\def\engfoot#1{\eng{#1}}
+
+\def\indentsecionsintoc{\addtocontents{toc}{\protect\bgroup\leftskip=1.5em\rightskip=2.3em\fontsize{11}{13}\selectfont\noindent}}
+\def\addsectiontoTOC#1{\addcontentsline{toc}{section}{#1}}
+\def\chapterend{%
+\vskip 20pt
+%\centerline{{\small\rule[3.25pt]{1cm}{0.6pt}$\;$\ding{105}$\;$\ding{105}$\;$\ding{105}$\;$\rule[3.25pt]{1cm}{0.6pt}}}
+\label{chap\thechapter:end}%
+}
+
+\long\def\myframe#1{
+\begin{center}
+\begin{longfbox}[width=7cm,padding=6pt,rounded,border-width=0.6pt]
+\large #1~\hfill\phantom{.}
+\end{longfbox}
+\end{center}
+}
+
+
+\newcommand\numinwords[1]{\expandafter\xwords\csname c@#1\endcsname}
+\def\xwords#1{\ifcase#1\or
+ಒಂದು\or
+ಎರಡು\or
+ಮೂರು\or
+ನಾಲ್ಕು\or
+ಐದು\or
+ಆರು\or
+ಏಳು\or
+ಎಂಟು\or
+ಒಂಬತ್ತು\or
+ಹತ್ತು\or
+\else
+I need more words\fi}
+
+\newcommand{\arabictokannada}[1]%
+{%
+\StrSubstitute{#1}{0}{೦}[\num]%
+\StrSubstitute{\num}{1}{೧}[\num]%
+\StrSubstitute{\num}{2}{೨}[\num]%
+\StrSubstitute{\num}{3}{೩}[\num]%
+\StrSubstitute{\num}{4}{೪}[\num]%
+\StrSubstitute{\num}{5}{೫}[\num]%
+\StrSubstitute{\num}{6}{೬}[\num]%
+\StrSubstitute{\num}{7}{೭}[\num]%
+\StrSubstitute{\num}{8}{೮}[\num]%
+\StrSubstitute{\num}{9}{೯}[\num]%
+\StrSubstitute{\num}{10}{೧೦}[\num]%
+\StrSubstitute{\num}{11}{೧೧}[\num]%
+\StrSubstitute{\num}{12}{೧೨}[\num]%
+}
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[]{}
+}
+\lhead[\small\thepage]{\small\em ನಾರಾಯಣಶಬ್ದಾರ್ಥಃ}
+\rhead[\small\em ನಾರಾಯಣಶಬ್ದಾರ್ಥಃ]{\small\thepage}
+\chead[]{}
+\lfoot[]{}
+\rfoot[]{}
+\cfoot[]{}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\pagestyle{fancy}
+
+
+%%redefining macros
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+%~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
+%~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictodevnag{\thepage}}}}
+\makeatletter
+
+\titleformat*{\section}{\large\bfseries}
+\titlespacing*{\section}{0pt}{*1.5}{*1}
+
+\renewcommand\labelitemi{\eng{\textbullet}}
+
+\renewenvironment{thebibliography}[1]
+     {\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+
+\def\@dottedtocline#1#2#3#4#5{\ifnum #1>\c@tocdepth\else{{#4}\kern3pt{\normalfont\normalcolor\arabictokannada{#5};}}\fi}
+  
+\makeatother
+
+\linespread{1.04}
+\pretolerance=-1
+\tolerance=4000
+\hfuzz=1pt
+%~ \hbadness=10000
+%~ \tolerance=1
+%~ \emergencystretch=\maxdimen
+%~ \hyphenpenalty=10000
+%~ \hbadness=10000
+
+\brokenpenalty9999\relax
+
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \Large\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    \vskip 30\p@
+  }}
+  \makeatother
