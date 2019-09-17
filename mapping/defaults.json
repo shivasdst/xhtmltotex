@@ -1,5 +1,7 @@
 {
 	"tagmapping": {
+		"dev.b":"\\dev{",
+		"dev.a":"}",
 		"br.b":"\\\\",
 		"br.a":"",
 		"em.b":"\\textit{",
@@ -58,6 +60,8 @@
 		"level5-title.a":"}",						
 		"en.b":"\\enginline{",
 		"en.a":"}",		
+		"blank.b":"\\phantom{",
+		"blank.a":"}",		
 		"enfoot.b":"\\engfoot{",
 		"enfoot.a":"}",						
 		"vertical-delimiter.b":"\\delimiter",
