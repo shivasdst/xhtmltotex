@@ -50,25 +50,14 @@
 
 \thispagestyle{empty}
 %\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
+
 {
 \makeatletter
 \def\@makechapterhead#1{%
   \vspace*{5\p@}%
-\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{श्रीः}\relax}} 
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{श्रीः}\relax}}
 
-\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। श्री गुरुराजो विजयते ।।}\relax}} 
-
-%~ \medskip
-
-%~ \centerline{{\fontsize{13pt}{13pt}\selectfont ನರಸಿಂಹೋಖಲಾಜ್ಞಾನಮತಾಂತದಿವಾಕರಃ ।\relax}} 
-
-%~ \centerline{{\fontsize{13pt}{13pt}\selectfont ಜಯತ್ಯಮಿತಸುಜ್ಞಾನಸುಖಶಕ್ತಿಪಯೋನಿಧಿ: ।।\relax}} 
-
-%~ \medskip
-
-%~ \centerline{{\fontsize{13pt}{13pt}\selectfont ನ ಮಾಧವಸಮೋ ದೇವೋ ನ ಚ ಮಧ್ವಸಮೋ ಗುರುಃ ।\relax}} 
-
-%~ \centerline{{\fontsize{13pt}{13pt}\selectfont ನ ತದ್ವಾಕ್ಯಸಮಂ ಶಾಸ್ತಂ ನ ಚ ತಸ್ಯ ಸಮಃ ಪುಮಾನ್ ।।\relax}} 
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। श्री गुरुराजो विजयते ।।}\relax}}
 \vspace*{10\p@}%
   {\parindent \z@ \centering \normalfont
     \ifnum \c@secnumdepth >\m@ne
@@ -92,6 +81,7 @@
 \input src/001-chapter001.tex
 \label{lastpage}
 }
+
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
                     %~ \thispagestyle{plain}%
