@@ -1,9 +1,7 @@
-\documentclass[12pt,twoside,openany]{book}
+\documentclass[12pt]{book}
 
 \input macros
 \input dictionary42
-
-
 
 \makeatletter
 \g@addto@macro\@floatboxreset{\bf\centering}
@@ -25,7 +23,6 @@
 \input src/000c-publishernote
 \newpage
 \input src/000d-preface
-
 %~ \thispagestyle{empty}
 %~ \vfill\eject
 %~ \thispagestyle{empty}
@@ -42,13 +39,17 @@
   %~ }}
 %~ \makeatother
 
-
-\newpage
 %\tableofcontents
 \label{prelims}
+
 \mainmatter
 
 \thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+~\phantom{a}
+\newpage
+
 %\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
 
 {
@@ -77,6 +78,7 @@
  \vskip 5\p@  
   }}
 \makeatother
+\thispagestyle{empty}
 \setcounter{page}{0}
 \input src/001-chapter001.tex
 \label{lastpage}
