@@ -1,0 +1,95 @@
+\documentclass[12pt]{book}
+
+\input macros
+%\input dictionary43
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\bf\centering}
+\makeatother
+
+\begin{document}
+
+\fontsize{13}{15}\selectfont
+\frontmatter
+
+%\input src/title
+%\newpage
+%\input src/copyright
+%\newpage
+
+%\input src/000b-copyright
+%\rhead[]{{\fontsize{10}{12}\selectfont ಮುನ್ನುಡಿ\quad\arabictokannada{\thepage}}}
+
+%\input src/000c-publishernote
+%\newpage
+%\input src/000d-preface
+%~ \thispagestyle{empty}
+%~ \vfill\eject
+%~ \thispagestyle{empty}
+%~ \newpage
+%~ \makeatletter
+%~ \def\@makeschapterhead#1{%
+  %~ \vspace*{50\p@}%
+%~ \centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। ॐ नमो नारायणाय ।।}\relax}} 
+  %~ {\parindent \z@ \centering
+    %~ \normalfont
+    %~ \interlinepenalty\@M
+    %~ \Huge \bfseries  #1\par\nobreak
+    %~ \vskip 40\p@
+  %~ }}
+%~ \makeatother
+
+%\tableofcontents
+\label{prelims}
+
+\mainmatter
+
+%\thispagestyle{empty}
+%\newpage
+%\thispagestyle{empty}
+%~\phantom{a}
+%\newpage
+
+%\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
+
+{
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{5\p@}%
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{श्रीः}\relax}}
+
+\centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। श्री गुरुराजो विजयते ।।}\relax}}
+\vspace*{10\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %\LARGE\bfseries \@chapapp\space \thechapter
+	\vskip 4pt
+%        \hrule height 2pt
+        \par\nobreak
+        \vskip 5\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+{\fontsize{25pt}{25pt}\selectfont \bfseries #1}\par\nobreak
+\smallskip 
+
+%\hrule height 2pt   
+ \vskip 5\p@  
+  }}
+\makeatother
+\thispagestyle{empty}
+\setcounter{page}{0}
+\input src/001-chapter001.tex
+\label{lastpage}
+}
+
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\ifthenelse{\arabic{chapter} > 0}{\chapterend}{}\fi
+                    %~ \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+\chapterend
+\end{document}
