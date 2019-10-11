@@ -1,7 +1,7 @@
 \documentclass[12pt]{book}
 
 \input macros
-\input dictionary42
+\input dictionary
 
 \makeatletter
 \g@addto@macro\@floatboxreset{\bf\centering}
@@ -19,10 +19,13 @@
 
 %\input src/000b-copyright
 %\rhead[]{{\fontsize{10}{12}\selectfont ಮುನ್ನುಡಿ\quad\arabictokannada{\thepage}}}
-
 \input src/000c-publishernote
 \newpage
-\input src/000d-preface
+\selectlanguage{english}
+\input src/000d-publishernote
+\newpage
+\selectlanguage{kannada}
+%\input src/000d-preface
 %~ \thispagestyle{empty}
 %~ \vfill\eject
 %~ \thispagestyle{empty}
@@ -44,11 +47,11 @@
 
 \mainmatter
 
-\thispagestyle{empty}
-\newpage
-\thispagestyle{empty}
-~\phantom{a}
-\newpage
+%\thispagestyle{empty}
+%\newpage
+%\thispagestyle{empty}
+%~\phantom{a}
+%\newpage
 
 %\rhead[]{{\fontsize{10}{12}\selectfont \leftmark\quad\arabictokannada{\thepage}}}
 
@@ -59,10 +62,13 @@
 \centerline{{\fontsize{13pt}{13pt}\selectfont\dev{श्रीः}\relax}}
 
 \centerline{{\fontsize{13pt}{13pt}\selectfont\dev{।। श्री गुरुराजो विजयते ।।}\relax}}
+
+\bigskip
 \vspace*{10\p@}%
   {\parindent \z@ \centering \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
+      \centerline{{\fontsize{18pt}{18pt}\selectfont \textbf{ಶ್ರೀವಾಯುಪುರಾಣಾಂತರ್ಗತ}}}
         %\LARGE\bfseries \@chapapp\space \thechapter
 	\vskip 4pt
 %        \hrule height 2pt
