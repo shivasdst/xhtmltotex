@@ -13,8 +13,8 @@
    height="354.33069"
    id="svg3184"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 7">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig4.svg">
   <defs
      id="defs3186" />
   <sodipodi:namedview
@@ -24,15 +24,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="117.26108"
-     inkscape:cy="264.87721"
+     inkscape:zoom="2.8"
+     inkscape:cx="186.31869"
+     inkscape:cy="109.9851"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
-     inkscape:window-width="1366"
-     inkscape:window-height="744"
+     inkscape:window-width="1600"
+     inkscape:window-height="876"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -279,7 +279,7 @@
          y="979.94336">ಪ್ರಾರಬ್ಧ</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:Sans;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="204.65739"
        y="979.45856"
        id="text3276"
@@ -287,6 +287,124 @@
          sodipodi:role="line"
          id="tspan3278"
          x="204.65739"
-         y="979.45856">ಅಪ್ರಾರಬ್ಧ (ಸಂಚಿತ)</tspan></text>
+         y="979.45856">ಅಪ್ರಾರಬ್ಧ (ಸಂಚಿತ)</tspan><tspan
+         sodipodi:role="line"
+         x="204.65739"
+         y="998.46063"
+         id="tspan4246"> (ಅಪರೋಕ್ಷಜ್ಞಾನದಿಂದ </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:Sans;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="27.575138"
+       y="996.16962"
+       id="text3228-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3230-6"
+         x="27.575138"
+         y="996.16962">(ಅನುಭವದಿಂದಲೇ</tspan><tspan
+         sodipodi:role="line"
+         x="27.575138"
+         y="1015.1717"
+         id="tspan3232-7" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="114.23389"
+       y="995.85358"
+       id="text4198"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="114.23389"
+         y="995.85358"
+         id="tspan4214">ನಾಶ  </tspan><tspan
+         sodipodi:role="line"
+         x="114.23389"
+         y="1011.4786"
+         id="tspan4218"></tspan><tspan
+         sodipodi:role="line"
+         x="114.23389"
+         y="1027.1035"
+         id="tspan4220" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-142.7298"
+       y="-988.33417"
+       id="text4202"
+       sodipodi:linespacing="125%"
+       transform="scale(-1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan4204"
+         x="-142.7298"
+         y="-988.33417">(</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="27.142857"
+       y="1012.3608"
+       id="text4222"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4224"
+         x="27.142857"
+         y="1012.3608">ವಿಶೇಷ ಸಂದರ್ಭಗಳಲ್ಲಿ </tspan><tspan
+         sodipodi:role="line"
+         x="27.142857"
+         y="1027.9858"
+         id="tspan4236" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="40.357143"
+       y="1028.0752"
+       id="text4226"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4228"
+         x="40.357143"
+         y="1028.0752">ಉಪಮರ್ದನ ಉಂಟು</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="31.785713"
+       y="1024.5037"
+       id="text4230"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4232"
+         x="31.785713"
+         y="1024.5037"></tspan><tspan
+         sodipodi:role="line"
+         x="31.785713"
+         y="1040.1287"
+         id="tspan4234" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-148.15938"
+       y="-1019.987"
+       id="text4242"
+       sodipodi:linespacing="125%"
+       transform="scale(-1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan4244"
+         x="-148.15938"
+         y="-1019.987">(</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="208.5965"
+       y="1013.7225"
+       id="text4248"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4250"
+         x="208.5965"
+         y="1013.7225">ಫಲದಾಯಕವಲ್ಲ ದ್ವೇಷಿಗಳಿಗೆ</tspan><tspan
+         sodipodi:role="line"
+         x="208.5965"
+         y="1029.3474"
+         id="tspan4252">ಹಂಚಿಹೋಗುವುದು)</tspan></text>
   </g>
 </svg>

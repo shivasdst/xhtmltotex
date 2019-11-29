@@ -13,8 +13,8 @@
    height="354.33069"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig1.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,15 +24,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="164.46165"
-     inkscape:cy="110.17667"
+     inkscape:zoom="2.8"
+     inkscape:cx="90.372208"
+     inkscape:cy="146.84881"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
-     inkscape:window-width="1366"
-     inkscape:window-height="744"
+     inkscape:window-width="1600"
+     inkscape:window-height="876"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1" />
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -189,17 +189,6 @@
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <text
        sodipodi:linespacing="125%"
-       id="text3046"
-       y="902.71802"
-       x="117.78571"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Sans Bold"
-       xml:space="preserve"><tspan
-         y="902.71802"
-         x="117.78571"
-         id="tspan3048"
-         sodipodi:role="line">ನ</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
        id="text3050"
        y="902.36078"
        x="154.85716"
@@ -305,5 +294,20 @@
        id="path3099"
        d="m 56.072574,830.19776 0,15.57915"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3083-3-7"
+       y="903.63135"
+       x="119.67068"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Sans Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="903.63135"
+         x="119.67068"
+         id="tspan3085-6-5"
+         sodipodi:role="line">ರ</tspan><tspan
+         y="918.63135"
+         x="119.67068"
+         sodipodi:role="line"
+         id="tspan4215" /></text>
   </g>
 </svg>
