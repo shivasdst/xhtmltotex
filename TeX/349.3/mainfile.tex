@@ -103,13 +103,13 @@ Vol. V, P. 441$-$537)
 \makeatletter
 
 \def\@makeschapterhead#1{%
-  \vspace*{50\p@}%
+  \vspace*{-60\p@}%
   {\parindent \z@ \raggedright
     \normalfont
     \interlinepenalty\@M
-    \Huge \bfseries ಪದ ಸೂಚಿ\par\nobreak
+    \centering \Huge \bfseries ಶಬ್ದಸೂಚಿ\par\nobreak
     
-    \vskip 20\p@
+    \vskip 2\p@
   }}
 
 \renewcommand{\@idxitem}{\par\hangindent 20\p@}
@@ -118,7 +118,7 @@ Vol. V, P. 441$-$537)
 \makeatother
 
 \lhead[\small\thepage\quad ಪದ ಸೂಚಿ]{}
-\rhead[]{\small ಪದ ಸೂಚಿ\quad\thepage}
+\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\thepage}
 \label{index}
 \printindex
 
