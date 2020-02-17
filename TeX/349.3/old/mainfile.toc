@@ -1,0 +1,52 @@
+\contentsline {chapter}{\numberline {1.}ಕೊಲಂಬೊ}{1}
+\contentsline {chapter}{\numberline {2.}ವೇದಾಂತ}{13}
+\contentsline {chapter}{\numberline {3.}ಪಾಂಬನ್ನಿನ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{29}
+\contentsline {chapter}{\numberline {4.}ನಿಜವಾದ ಪೂಜೆ}{33}
+\contentsline {chapter}{\numberline {5.}ರಾಮನಾಡಿನ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{35}
+\contentsline {chapter}{\numberline {6.}ಪರಮಕುಡಿಯ ಅಭಿನಂದನೆಗೆ ಉತ್ತರ}{45}
+\contentsline {chapter}{\numberline {7.}ಮನಮಧುರೆಯ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{52}
+\contentsline {chapter}{\numberline {8.}ಮಧುರೆಯ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{57}
+\contentsline {chapter}{\numberline {9.}ವೇದಾಂತದ ಧ್ಯೇಯ}{63}
+\contentsline {chapter}{\numberline {10.}ಮದ್ರಾಸಿನ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{83}
+\contentsline {chapter}{\numberline {11.}ನನ್ನ ಸಮರನೀತಿ}{89}
+\contentsline {chapter}{\numberline {12.}ಭಾರತೀಯರ ಜೀವನದಲ್ಲಿ ವೇದಾಂತದ ಅನುಷ್ಠಾನ}{108}
+\contentsline {chapter}{\numberline {13.}ಭಾರತದ ಮಹಾಪುರುಷರು}{125}
+\contentsline {chapter}{\numberline {14.}ನಮ್ಮ ಪ್ರಸ್ತುತ ಕರ್ತವ್ಯ}{144}
+\contentsline {chapter}{\numberline {15.}ಭಾರತದ ಭವಿಷ್ಯ}{159}
+\contentsline {chapter}{\numberline {16.}ದಾನ}{177}
+\contentsline {chapter}{\numberline {17.}ಕಲ್ಕತ್ತೆಯ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{178}
+\contentsline {chapter}{\numberline {18.}ವೇದಾಂತ ದರ್ಶನದ ವಿವಿಧ ಮುಖಗಳು}{192}
+\contentsline {chapter}{\numberline {19.}ಆಲ್ಮೋರದ ಬಿನ್ನವತ್ತಳೆಗೆ ಉತ್ತರ}{214}
+\contentsline {chapter}{\numberline {20.}ಭಕ್ತಿ}{219}
+\contentsline {chapter}{\numberline {21.}ಹಿಂದೂಧರ್ಮದ ಸಾಮಾನ್ಯ ತತ್ತ್ವಗಳು}{227}
+\contentsline {chapter}{\numberline {22.}ಭಕ್ತಿ}{246}
+\contentsline {chapter}{\numberline {23.}ವೇದಾಂತ}{253}
+\contentsline {chapter}{\numberline {24.}ವೇದಾಂತ ತತ್ತ್ವ}{290}
+\contentsline {chapter}{\numberline {25.}ಇಂಗ್ಲೆಂಡಿನಲ್ಲಿ ಭಾರತೀಯ ಆಧ್ಯಾತ್ಮಿಕ ಪ್ರಭಾವ}{296}
+\contentsline {chapter}{\numberline {26.}ಸಂನ್ಯಾಸ–ಅದರ ಆದರ್ಶ ಮತ್ತು ಅನುಷ್ಠಾನ}{302}
+\contentsline {chapter}{\numberline {27.}ನಾನು ಕಲಿತುದೇನು?}{305}
+\contentsline {chapter}{\numberline {28.}ನಾವು ಜನ್ಮವೆತ್ತಿದ ಧರ್ಮ}{309}
+\contentsline {chapter}{\numberline {29.}ಪ್ರಾಚ್ಯ ಮತ್ತು ಪಾಶ್ಚಾತ್ಯ}{319}
+\contentsline {chapter}{\numberline {30.}ಅಮೆರಿಕ ವೃತ್ತಪತ್ರಿಕೆಯ ವರದಿಗಳು}{395}
+\contentsline {section}{\numberline {30.1}ಧರ್ಮಕ್ಷೇತ್ರದಲ್ಲಿ ವ್ಯಾಪಾರದ ಸ್ವಭಾವದವರು}{412}
+\contentsline {section}{\numberline {30.2}ಹಿಂದೂ ಸಂನ್ಯಾಸಿ}{417}
+\contentsline {section}{\numberline {30.3}ಮಾನವನ ಗುರಿ}{418}
+\contentsline {section}{\numberline {30.4}ಔದಾರ್ಯಕ್ಕಾಗಿ ಒಂದು ಮನವಿ}{421}
+\contentsline {section}{\numberline {30.5}ಪುನರ್ಜನ್ಮ}{424}
+\contentsline {section}{\numberline {30.6}ತುಲನಾತ್ಮಕ ಮತಧರ್ಮಶಾಸ್ತ್ರ}{426}
+\contentsline {section}{\numberline {30.7}ಇಂಡಿಯಾ ದೇಶದ ಆಚಾರ ವ್ಯವಹಾರಗಳು}{429}
+\contentsline {section}{\numberline {30.8}ಹಿಂದೂದರ್ಶನ}{433}
+\contentsline {section}{\numberline {30.9}ಪವಾಡಗಳು}{436}
+\contentsline {section}{\numberline {30.10}ಮಾನವನ ದಿವ್ಯತೆ}{437}
+\contentsline {section}{\numberline {30.11}ಭಗವತ್ ಪ್ರೇಮ}{443}
+\contentsline {section}{\numberline {30.12}ಏಷ್ಯಾಜ್ಯೋತಿಯ ಧರ್ಮವಾದ ಬೌದ್ಧ ಧರ್ಮ}{445}
+\contentsline {section}{\numberline {30.13}ಭಾರತ ಮಹಿಳೆಯರು}{446}
+\contentsline {section}{\numberline {30.14}ಇಂಡಿಯಾ ದೇಶದ ಆದಿವಾಸಿಗಳು}{448}
+\contentsline {section}{\numberline {30.15}ಅಮೆರಿಕಾ ದೇಶದ ಪುರುಷರ ಅಣಕ}{449}
+\contentsline {section}{\numberline {30.16}ಸುಡುವುದನ್ನು ಹೋಲಿಸಿರುವುದು}{449}
+\contentsline {section}{\numberline {30.17}ತಾಯಂದಿರು ಪವಿತ್ರರು}{450}
+\contentsline {section}{\numberline {30.18}ಇವರ ಭಾವನೆಗಳು}{451}
+\contentsline {section}{\numberline {30.19}ಒಂದು ಚರ್ಚೆ}{451}
+\contentsline {section}{\numberline {30.20}ಅಮೇರಿಕದ ಬೋಸ್ಟನಿನ ಟ್ವೆಂಟಿಯತ್ ಸೆಂಚುರಿ ಕ್ಲಬ್ಬಿನಲ್ಲಿ}{464}
+\contentsline {section}{\numberline {30.21}ಬ್ರುಕ್‍ಲಿನ್ ಎಥಿಕಲ್ ಸೊಸೈಟಿಯಲ್ಲಿ}{465}
+\contentsline {section}{\numberline {30.22}ಯೋಗ, ವೈರಾಗ್ಯ, ತಪಸ್ಸು ಮತ್ತು ಪ್ರೇಮ}{467}

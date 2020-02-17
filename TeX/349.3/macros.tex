@@ -14,6 +14,9 @@
 \usepackage{longfbox}
 \usepackage{ifthen}
 \usepackage{pifont}
+\usepackage{verbatim}
+\usepackage{imakeidx}
+
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
@@ -257,7 +260,7 @@ I need more words\fi}
     ~\thispagestyle{empty}\newpage}
 
 
-\titleformat*{\section}{\large\bfseries}
+\titleformat*{\section}{\centering\Large\bfseries}
 \titlespacing*{\section}{0pt}{*1.5}{*1}
 
 \renewcommand\labelitemi{\eng{\textbullet}}
@@ -313,7 +316,7 @@ I need more words\fi}
   }}
 
 \def\@makechapterhead#1{%
-  {~\vskip 13pt\parindent \z@ \centering \normalfont
+  {~\vskip -20pt\parindent \z@ \centering \normalfont
     \ifnum \c@secnumdepth >\m@ne
       \if@mainmatter
         \LARGE\bfseries \arabictokannada{\thechapter}. 
@@ -352,10 +355,14 @@ I need more words\fi}
                         \listparindent\itemindent
                         \rightmargin  \leftmargin
                         \advance\leftmargin 1.5em}%
-                \item\relax\fontsize{11}{13}\selectfont}
+                \item\relax\bf\fontsize{12}{13.5}\selectfont}
                {\endlist}
   
 \makeatother
+
+
+\def\dsize#1{{\fontsize{11}{13}\selectfont#1}\relax}
+
 
 %~ %%parskip setting
 %\setlength{\parskip}{1pt}
@@ -371,6 +378,19 @@ I need more words\fi}
 %~ \hbadness=10000
 
 \brokenpenalty9999\relax
+
+
+%~ \makeatletter
+%~ \def\@fnsymbol#1{\ensuremath{\ifcase#1\or *\or \dagger\or \ddagger\or
+  %~ \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+  %~ \or \ddagger\ddagger\or \mathsection\mathsection 
+  %~ \or \mathparagraph\mathparagraph \or \|\|\or *{*}*
+  %~ \or \dagger\dagger\dagger \or \ddagger\ddagger\ddagger\or
+  %~ \mathsection\mathsection\mathsection\or \mathparagraph\mathparagraph
+  %~ \mathparagraph \or \|\|\|\else\@ctrerr\fi}}
+   %~ \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%~ \makeatother
+
 
 \newcommand{\sethyphenation}[3][]{%
   \sbox0{\begin{otherlanguage}[#1]{#2}

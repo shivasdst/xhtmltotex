@@ -98,5 +98,29 @@ Vol. V, P. 441$-$537)
 ~\thispagestyle{empty}
 \newpage
 \input src/030-chapter030.tex
+\newpage
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries ಪದ ಸೂಚಿ\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+\lhead[\small\thepage\quad ಪದ ಸೂಚಿ]{}
+\rhead[]{\small ಪದ ಸೂಚಿ\quad\thepage}
+\label{index}
+\printindex
+
 \end{document}
 
