@@ -12,22 +12,58 @@
 \newpage
 
 \input src/copyright
-
 \newpage
 
 \tableofcontents
 
+%\setcounter{page}{1}
+%\input src/000c-preface
+%\newpage
+%~\thispagestyle{empty}
+
+%\newpage
+%~\thispagestyle{empty}
+%\vfill
+
+%\begin{center}
+%{\LARGE\bfseries ಕೊಲಂಬೊ ಇಂದ ಆಲ್ಮೋರಕೆ}
+%\end{center}
+
+%\vfill
+%\newpage
+~\thispagestyle{empty}
+%\newpage
+
+
 \mainmatter
+
+%\	rhead[]{{\fontsize{10}{12}\selectfont\leftmark\quad\arabictokannada{\thepage}}}
 
 \input src/001-chapter001.tex
 \input src/002-chapter002.tex
-
-\newpage
-~
-\thispagestyle{empty}
-
-\newpage
-
 \input src/003-chapter003.tex
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{-60\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \centering \Huge \bfseries ಶಬ್ದಸೂಚಿ\par\nobreak
+    
+    \vskip 2\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+\lhead[\small\thepage\quad ಪದ ಸೂಚಿ]{}
+\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\thepage}
+\label{index}
+\printindex
+
 \end{document}
 
