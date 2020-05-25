@@ -27,9 +27,12 @@
 \setlength{\LTpre}{0pt}
 \setlength{\LTpost}{0pt}
 
-\xpatchcmd{\verse}{\itemsep}{\advance\topsep-1.2em\itemsep}{}{}
+\xpatchcmd{\verse}{\itemsep}{\advance\topsep-1.5em\itemsep}{}{}
 \xpatchcmd{\flushright}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
 \xpatchcmd{\flushleft}{\itemsep}{\advance\topsep-1em\itemsep}{}{}
+
+
+
 
 %\setmainlanguage[numerals=Kannada]{kannada}
 \setotherlanguages{english}
@@ -351,18 +354,19 @@ I need more words\fi}
 
 \renewenvironment{verse}
                {\let\\\@centercr
-                \list{}{\itemsep      \z@
+                \list{}{\itemsep    \z@
                         \itemindent   -1.5em%
                         \listparindent\itemindent
                         \rightmargin  \leftmargin
-                        \advance\leftmargin 1.5em}%
-                \item\relax\bf\fontsize{12}{13.5}\selectfont}
+                        \advance\leftmargin .75em}%
+                \item\relax\bf\fontsize{13}{13.5}\selectfont}
                {\endlist}
   
 \makeatother
 
 
 \def\dsize#1{{\fontsize{11}{13}\selectfont#1}\relax}
+
 
 
 %~ %%parskip setting
