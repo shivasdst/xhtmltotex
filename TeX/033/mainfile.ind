@@ -1,0 +1,610 @@
+
+\begin{theindex}
+
+	\label{begin:index}
+
+	\providecommand*\lettergroupDefault[1]{}
+	\providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+  \lettergroupDefault{default}
+  \item \textit{1984}\kern2pt\hfill {65}
+
+  \indexspace
+
+  \lettergroup{A}
+  \item \textit{abhihitānvaya}\kern2pt\hfill {117}, {163}
+  \item Abhinavagupta\kern2pt\hfill {237}, {240}
+  \item \textit{adharmajijñāsā}\kern2pt\hfill {104}
+  \item \textit{adhikāra}\kern2pt\hfill {163}, {164}, {222}
+  \item \textit  {adhikaraṇa}\kern2pt\hfill {163}
+  \item \textit{adhyāhāra}\kern2pt\hfill {73}
+  \item \textit{Adhyātma Rāmāyaṇa}\kern2pt\hfill {220}
+  \item \textit{adṛṣṭārthaka}\kern2pt\hfill {76}
+  \item ahistoricism\kern2pt\hfill {98}
+  \item \textit{ākṛti}\kern2pt\hfill {69}
+  \item \textit{alaṅkāra}\kern2pt\hfill {240}
+  \item Alaṅkāraśāstra\kern2pt\hfill {252}
+  \item \textit{allegorisis}\kern2pt\hfill {99}, {100}
+  \item ambiguity\kern2pt\hfill {159}
+  \item anthropology\kern2pt\hfill {160}
+  \item \textit{anumāna}\kern2pt\hfill {44}, {162}
+  \item \textit{anuṣaṅga}\kern2pt\hfill {73}
+  \item \textit{anuvāda}\kern2pt\hfill {72}
+  \item \textit{anvitābhidhāna}\kern2pt\hfill {117}, {163}
+  \item \textit{apakarṣa}\kern2pt\hfill {73}
+  \item \textit{apaśabda}\kern2pt\hfill {158}
+  \item \textit  {apauruṣeya}\kern2pt\hfill {50}, {67}, {74}--{76}, {78}, {90}, {117}
+  \item Appayya Dīkṣita\kern2pt\hfill {106}, {125}
+  \item \textit  {apūrva}\kern2pt\hfill {104}, {117}
+  \item Aristotle\kern2pt\hfill {182}, {184}, {187}, {221}, {230}
+  \item Arnason, J. P.\kern2pt\hfill {104}
+  \item \textit  {artha}\kern2pt\hfill {83}, {158}, {162}, {166}, {168}, {195}
+  \item \textit{arthāpatti}\kern2pt\hfill {57}
+  \item \textit{Arthaśāstra}\kern2pt\hfill {77}, {225}, {251}, {260}
+  \item \textit{Artha–jñāna}\kern2pt\hfill {158}
+  \item \textit{arthavāda}\kern2pt\hfill {72}, {75}, {86}, {90}, {116}
+  \item Artificial Intelligence\kern2pt\hfill {145}, {146}, {154}, {159}, {165}
+  \item Aryan Invasion Theory\kern2pt\hfill {246}
+  \item Asante, Moefi\kern2pt\hfill {182}
+  \item \textit{āśrama}\kern2pt\hfill {79}, {84}, {113}, {194}
+  \item Ast, Friedrich\kern2pt\hfill {101}
+  \item \textit{Atharvaveda}\kern2pt\hfill {77}
+  \item \textit  {atideśa}\kern2pt\hfill {74}
+  \item \textit  {ātman}\kern2pt\hfill {104}
+  \item \textit{aucitya}\kern2pt\hfill {240}
+  \item \textit{avāntara–vākya}\kern2pt\hfill {157}
+  \item \textit{avatāra}\kern2pt\hfill {75}, {90}
+  \item Āyurveda\kern2pt\hfill {251}
+
+  \indexspace
+
+  \lettergroup{B}
+  \item Balagangadhara, S. N.\kern2pt\hfill {276}, {277}, {279}, {282}
+  \item Balasubramaniam, R.\kern2pt\hfill {194}
+  \item \textit{Bhagavadgītā}\kern2pt\hfill {42}, {82}, {230}, {249}
+  \item \textit{Bhāgavata}\kern2pt\hfill {85}
+  \item \textit{bhakti}\kern2pt\hfill {187}, {209}, {217}
+  \item Bhāmaha\kern2pt\hfill {251}
+  \item \textit{Bhāratabhāvadīpa}\kern2pt\hfill {85}
+  \item Bhartṛhari\kern2pt\hfill {157}, {158}
+  \item \textit  {bhāṣya}\kern2pt\hfill {164}
+  \item Bhoja\kern2pt\hfill {239}, {251}, {252}
+  \item \textit{bhūtārthavāda}\kern2pt\hfill {72}, {75}
+  \item Bilimoria, Purushottam\kern2pt\hfill {89}
+  \item Blair, Eric Arthur\kern2pt\hfill {65}
+  \item Brahe, Tycho\kern2pt\hfill {185}
+  \item \textit{brahman}\kern2pt\hfill {74}, {80}, {87}, {107}, {108}
+  \item \textit{Brahmāṇḍapurāṇa}\kern2pt\hfill {77}
+  \item Brāhmī\kern2pt\hfill {245}, {246}
+  \item Breckenridge, C. A.\kern2pt\hfill {103}, {151}
+  \item Briggs, D.\kern2pt\hfill {209}, {211}, {228}
+  \item Bronkhorst, J.\kern2pt\hfill {98}, {115}
+  \item Brunton, Paul\kern2pt\hfill {234}
+  \item Buddha, the\kern2pt\hfill {56}, {59}, {61}, {62}
+  \item Buddhism\kern2pt\hfill {105}, {167}
+  \item Bull, M.\kern2pt\hfill {153}
+
+  \indexspace
+
+  \lettergroup{C}
+  \item Campbell, J.\kern2pt\hfill {207}, {209}, {211}, {222}, {223}
+  \item Carey, J.\kern2pt\hfill {217}, {218}, {220}
+  \item Carpentier, C.\kern2pt\hfill {211}
+  \item Cartwright, Nancy\kern2pt\hfill {192}, {193}
+  \item Chakraborty, Biswadeep\kern2pt\hfill {71}
+  \item \textit{chandas}\kern2pt\hfill {162}, {197}
+  \item \textit  {Chāndogya Upaniṣad}\kern2pt\hfill {76}
+  \item Chattopadhyay, P. K.\kern2pt\hfill {194}
+  \item Chekuri, Christopher\kern2pt\hfill {70}
+  \item Cherniak, Alex\kern2pt\hfill {249}
+  \item Chomsky, Noam\kern2pt\hfill {155}
+  \item Christians, C.\kern2pt\hfill {217}, {218}, {220}
+  \item Clooney, Francis X.\kern2pt\hfill {82}
+  \item \textit{codanā}\kern2pt\hfill {43}, {45}, {46}, {48}, {49}, {53}, {58}
+  \item Coedes, George\kern2pt\hfill {261}
+  \item colonialism\kern2pt\hfill {177}, {183}--{185}
+  \item colonization\kern2pt\hfill {178}, {183}, {198}, {201}
+  \item Comparative Linguistics\kern2pt\hfill {147}, {150}
+  \item condition\kern2pt\hfill {199}
+  \item consciousness\kern2pt\hfill {196}
+  \item Context–free Grammar\kern2pt\hfill {159}
+  \item Continuity Theories\kern2pt\hfill {155}
+  \item Copernicus\kern2pt\hfill {185}
+  \item Critical Philology\kern2pt\hfill {252}
+  \item cyclic time\kern2pt\hfill {71}
+  \item cyclicity of time\kern2pt\hfill {71}
+
+  \indexspace
+
+  \lettergroup{D}
+  \item Daṇḍin\kern2pt\hfill {242}, {243}, {251}
+  \item Dante\kern2pt\hfill {256}, {258}
+  \item \textit{darśana}\kern2pt\hfill {118}, {187}, {195}, {196}, {273}, {280}
+  \item De Man, Paul\kern2pt\hfill {149}
+  \item decolonised\kern2pt\hfill {186}
+  \item decolonization\kern2pt\hfill {184}
+  \item Veda–s\kern2pt\hfill {66}, {67}
+  \item desacralisation\kern2pt\hfill {107}, {232}, {234}, {236}--{238}, {243}, {254}, {260}, {262}, {265}, {271}--{275}, {280}, {284}, {285}
+  \item Descartes, Rene\kern2pt\hfill {152}
+  \item Devasthali, G. V.\kern2pt\hfill {61}
+  \item Devy, G. N.\kern2pt\hfill {71}, {88}, {95}
+  \item Dhanurveda\kern2pt\hfill {251}
+  \item Dharampal\kern2pt\hfill {194}
+  \item \textit  {dharma}\kern2pt\hfill {42}--{48}, {56}, {58}, {62}, {77}--{85}, {90}, {98}, {99}, {103}, {107}--{109}, {113}, {115}, {117}--{122}, {151}, {156}, {158}, {168}, {179}, {195}, {197}, {201}, {212}, {215}, {216}, {223}, {225}, {228}, {232}, {233}, {251}, {253}, {260}, {267}, {271}, {278}, {280}, {282}
+  \item \textit{dharmajijñāsā}\kern2pt\hfill {104}, {108}, {120}--{122}
+  \item Dharmaśāstra\kern2pt\hfill {69}, {71}, {78}, {81}, {84}, {85}, {103}, {116}, {119}
+  \item \textit{dhvani}\kern2pt\hfill {240}
+  \item Dialectic Dharmism\kern2pt\hfill {122}
+  \item Discontinuity Theories\kern2pt\hfill {155}
+  \item Donagan, A.\kern2pt\hfill {111}
+  \item \textit{dṛṣṭārthaka}\kern2pt\hfill {76}
+  \item \textit{dṛśya}\kern2pt\hfill {241}, {242}
+  \item Durant, Will\kern2pt\hfill {234}
+  \item Durkheim, E.\kern2pt\hfill {279}
+  \item Dvāpara\kern2pt\hfill {75}, {76}
+  \item Dwivedi, Prabhunath\kern2pt\hfill {86}
+
+  \indexspace
+
+  \lettergroup{E}
+  \item Einstein, Albert\kern2pt\hfill {190}
+  \item Eliade, Mircea\kern2pt\hfill {274}, {275}
+  \item embodied knowing\kern2pt\hfill {278}, {280}
+  \item Embree, A. T.\kern2pt\hfill {213}
+  \item \textit{emic scholarship}\kern2pt\hfill {164}, {166}
+  \item empiricism\kern2pt\hfill {186}, {196}, {200}
+  \item \textit{etic scholarship}\kern2pt\hfill {98}, {164}, {166}
+  \item Euhemerization\kern2pt\hfill {213}
+  \item Euler, Leonhard\kern2pt\hfill {185}
+  \item Eurocentricity\kern2pt\hfill {70}
+  \item exegesis\kern2pt\hfill {99}
+
+  \indexspace
+
+  \lettergroup{F}
+  \item Feyerabend, Paul\kern2pt\hfill {190}, {191}
+  \item Fisher, Elaine\kern2pt\hfill {68}
+  \item Fitzgerald, James\kern2pt\hfill {85}
+  \item Five waves of Indology\kern2pt\hfill {272}
+  \item Foucher, Alfred\kern2pt\hfill {261}
+  \item functionalism\kern2pt\hfill {256}, {258}, {279}
+
+  \indexspace
+
+  \lettergroup{G}
+  \item Gadamer, Hans Georg\kern2pt\hfill {88}
+  \item Gāndharvaveda\kern2pt\hfill {251}
+  \item Geertz, Clifford\kern2pt\hfill {256}
+  \item globalisation\kern2pt\hfill {236}, {254}, {256}, {260}, {262}, {263}, {265}
+  \item Gonda, Jan\kern2pt\hfill {89}
+  \item Gonzalez–Reimann, L.\kern2pt\hfill {210}, {220}, {228}, {229}
+  \item \textit{Gopatha Brāhmaṇa}\kern2pt\hfill {156}
+  \item Gould, R.\kern2pt\hfill {208}, {210}
+  \item Gramsci, Antonio\kern2pt\hfill {256}
+  \item \textit{guṇavāda}\kern2pt\hfill {72}
+  \item Gupta, Roshan\kern2pt\hfill {83}, {95}
+
+  \indexspace
+
+  \lettergroup{H}
+  \item Hansberry, W. L.\kern2pt\hfill {182}
+  \item Harappa\kern2pt\hfill {246}
+  \item Harpham, G.\kern2pt\hfill {149}, {150}
+  \item Hegel, G. W. F.\kern2pt\hfill {70}, {111}
+  \item \textit{hegemonic discourse}\kern2pt\hfill {179}--{181}, {183}, {189}, {193}, {194}
+  \item Hegemonic Discourse\kern2pt\hfill {210}
+  \item Heidegger, Martin\kern2pt\hfill {261}, {266}
+  \item Helārāja\kern2pt\hfill {157}
+  \item Herder, G. J.\kern2pt\hfill {111}
+  \item Herder, Johann\kern2pt\hfill {256}
+  \item Mīmāṁsā\kern2pt\hfill {68}, {71}, {76}, {84}, {97}, {99}--{101}, {104}, {122}, {160}
+  \item hermeneutics of derision\kern2pt\hfill {98}, {99}, {103}, {104}, {106}, {107}, {122}
+  \item hermeneutics of suspicion\kern2pt\hfill {103}, {106}, {122}
+  \item hierophany\kern2pt\hfill {274}
+  \item Hinduism\kern2pt\hfill {105}, {167}
+  \item historical consciousness\kern2pt\hfill {66}--{70}, {83}, {84}, {95}
+  \item historicism\kern2pt\hfill {111}, {112}, {147}, {168}
+  \item historicism, theory of\kern2pt\hfill {112}
+  \item history in India\kern2pt\hfill {67}
+  \item history–centrism\kern2pt\hfill {278}
+  \item Hoefer, C.\kern2pt\hfill {192}, {193}
+  \item Hook, Sydney\kern2pt\hfill {79}
+  \item Hossain, Purba\kern2pt\hfill {69}, {80}, {84}
+  \item Houben, Jan E. M.\kern2pt\hfill {67}, {71}
+
+  \indexspace
+
+  \lettergroup{I}
+  \item Ibbotson, P.\kern2pt\hfill {155}, {156}
+  \item Ibn Shatir\kern2pt\hfill {185}
+  \item \textit{Iliad}\kern2pt\hfill {258}
+  \item Indianization\kern2pt\hfill {261}--{263}
+  \item Information entropy\kern2pt\hfill {164}
+  \item Information theory\kern2pt\hfill {164}
+  \item Itihāsa\kern2pt\hfill {74}
+  \item Itihāsa\kern2pt\hfill {67}--{69}, {71}, {75}--{79}, {84}, {88}--{90}, {106}, {109}, {113}, {114}, {122}, {207}, {209}--{213}, {215}--{217}, {220}, {224}
+
+  \indexspace
+
+  \lettergroup{J}
+  \item Jaimini\kern2pt\hfill {41}, {42}, {59}--{62}, {72}, {102}, {116}, {119}
+  \item Jalki, Dunkin\kern2pt\hfill {67}
+  \item James, G. G. M.\kern2pt\hfill {181}, {182}, {193}
+  \item Jha, Bhaskar\kern2pt\hfill {117}, {119}
+  \item Jha, Ganga Natha\kern2pt\hfill {73}, {95}
+  \item Jones, Sir William\kern2pt\hfill {78}, {98}, {103}, {148}, {149}, {155}
+  \item Joshi, J. P.\kern2pt\hfill {194}
+
+  \indexspace
+
+  \lettergroup{K}
+  \item Kak, Subhash\kern2pt\hfill {246}
+  \item Kalhaṇa\kern2pt\hfill {252}
+  \item Kali\kern2pt\hfill {69}, {75}
+  \item Kālidāsa\kern2pt\hfill {84}
+  \item \textit{kalpa–sūtra}\kern2pt\hfill {116}
+  \item \textit{kāma}\kern2pt\hfill {195}
+  \item Kane, P. V.\kern2pt\hfill {61}, {119}
+  \item Kannan, K. S.\kern2pt\hfill {250}
+  \item Kant, Immanuel\kern2pt\hfill {190}, {222}
+  \item Kapoor, Kapil\kern2pt\hfill {162}, {164}
+  \item \textit{karma}\kern2pt\hfill {65}
+  \item \textit{karman}\kern2pt\hfill {81}, {82}, {95}, {98}, {103}, {114}, {120}, {216}
+  \item \textit{Kārya–kāraṇa–bhāva}\kern2pt\hfill {158}
+  \item \textit{kathā}\kern2pt\hfill {163}
+  \item \textit{Kaṭha Upaniṣad}\kern2pt\hfill {75}, {107}
+  \item Katju, Markandeya\kern2pt\hfill {74}
+  \item Kātyāyana\kern2pt\hfill {119}
+  \item Kauṭilya\kern2pt\hfill {77}
+  \item \textit{kavi}\kern2pt\hfill {241}, {248}, {249}
+  \item \textit{kāvya}\kern2pt\hfill {231}, {232}, {235}--{237}, {239}--{241}, {243}, {244}, {247}, {249}--{251}, {253}, {255}, {260}, {261}, {263}, {267}, {274}
+  \item \textit{Kāvyādarśa}\kern2pt\hfill {242}, {243}, {251}
+  \item \textit{Kāvyālaṅkāra}\kern2pt\hfill {251}
+  \item \textit{Kāvyamīmāṁsā}\kern2pt\hfill {251}
+  \item Kepler, Johannes\kern2pt\hfill {185}
+  \item Korada, Subrahmanyam\kern2pt\hfill {109}, {156}--{158}
+  \item \textit{kāvya}\kern2pt\hfill {266}
+  \item \textit{kratvartha}\kern2pt\hfill {79}
+  \item Krishnamachariar, M.\kern2pt\hfill {240}--{243}
+  \item Kṛṣṇa Yajvan\kern2pt\hfill {83}
+  \item Kṛta\kern2pt\hfill {69}, {75}
+  \item Kumārila\kern2pt\hfill {56}, {68}, {72}, {73}, {76}, {85}, {86}, {88}, {96}
+
+  \indexspace
+
+  \lettergroup{L}
+  \item Veda–s\kern2pt\hfill {66}--{68}
+  \item \textit{laghukāvya}\kern2pt\hfill {243}
+  \item Lal, B. B.\kern2pt\hfill {246}
+  \item Laugākṣī Bhāskara\kern2pt\hfill {73}
+  \item \textit{laukika}\kern2pt\hfill {161}
+  \item Lienhard, Siegfried\kern2pt\hfill {243}, {267}
+  \item linear time\kern2pt\hfill {71}
+  \item \textit  {liṅga}\kern2pt\hfill {72}--{74}, {86}
+  \item Little, D.\kern2pt\hfill {110}, {111}
+  \item logic
+    \subitem Buddhist\kern2pt\hfill {188}
+    \subitem Jaina\kern2pt\hfill {188}
+    \subitem non–Western\kern2pt\hfill {188}, {189}
+    \subitem Western\kern2pt\hfill {188}
+  \item Luhmann, Niklas\kern2pt\hfill {256}
+
+  \indexspace
+
+  \lettergroup{M}
+  \item Macdonell, Arthur A.\kern2pt\hfill {60}, {65}, {128}
+  \item machine learning\kern2pt\hfill {154}, {159}, {165}
+  \item Maddison, Angus\kern2pt\hfill {194}
+  \item Madhavananda, Swami\kern2pt\hfill {83}
+  \item \textit  {madhyamā}\kern2pt\hfill {157}
+  \item \textit{Mahābhārata}\kern2pt\hfill {71}, {76}--{78}, {83}, {85}, {95}, {156}, {213}, {224}, {229}
+  \item \textit  {Mahābhāṣya}\kern2pt\hfill {41}, {60}, {156}
+  \item Mahākāvya\kern2pt\hfill {242}
+  \item Maharishi Mahesh Yogi\kern2pt\hfill {121}
+  \item \textit{mahāvākya}\kern2pt\hfill {156}
+  \item \textit{mahāyuga}\kern2pt\hfill {75}
+  \item Maher, J. M.\kern2pt\hfill {209}, {211}, {228}
+  \item Malhotra, Rajiv\kern2pt\hfill {104}, {105}, {109}, {122}, {151}, {154}, {166}, {179}, {180}, {196}, {200}, {207}, {211}, {212}, {215}--{217}, {221}, {223}--{225}, {237}, {250}, {272}--{274}, {278}
+  \item man, the individual?\kern2pt\hfill {199}
+  \item \textit{Mānava Dharmaśāstra}\kern2pt\hfill {103}
+  \item Manning, C. D.\kern2pt\hfill {165}
+  \item \textit{manodharmajijñāsā}\kern2pt\hfill {104}
+  \item \textit{mantra}\kern2pt\hfill {78}, {82}, {85}--{87}, {116}, {239}, {280}
+  \item \textit{Mantrabhāgavata}\kern2pt\hfill {85}
+  \item \textit  {Mantrarāmāyaṇa}\kern2pt\hfill {85}--{88}, {90}
+  \item Mantzavinos, C.\kern2pt\hfill {100}--{102}
+  \item \textit{Manusmṛti}\kern2pt\hfill {74}, {75}
+  \item Marx, Karl\kern2pt\hfill {279}
+  \item Massey\kern2pt\hfill {221}
+  \item Max Muller, Friedrich\kern2pt\hfill {68}, {98}, {150}
+  \item McCrea, L.\kern2pt\hfill {210}
+  \item textual\kern2pt\hfill {152}
+  \item \textit  {Mīmāṁsā}\kern2pt\hfill {67}, {76}
+  \item Mīmāṁsā\kern2pt\hfill {99}, {103}--{106}, {108}, {115}, {116}, {118}--{122}, {162}, {180}
+  \item Mīmāṁsaka\kern2pt\hfill {45}, {59}, {78}, {80}, {82}, {95}, {104}, {105}, {107}, {108}, {117}--{119}
+  \item \textit{Mīmāṁsā Paribhāṣā}\kern2pt\hfill {83}
+  \item \textit  {Mīmāṁsā sūtra}\kern2pt\hfill {61}, {67}, {72}, {74}, {79}--{82}, {86}, {96}, {103}, {118}, {119}
+  \item Minkowski, Christopher Z.\kern2pt\hfill {87}, {88}
+  \item Mishra, P. D.\kern2pt\hfill {251}
+  \item \textit{mokṣa}\kern2pt\hfill {44}, {69}, {75}, {80}, {81}, {83}, {156}, {158}, {219}
+  \item Moyers\kern2pt\hfill {211}
+  \item Mughals\kern2pt\hfill {167}
+
+  \indexspace
+
+  \lettergroup{N}
+  \item \textit{nāmadheya}\kern2pt\hfill {116}
+  \item Nasiruddin Tusi\kern2pt\hfill {185}
+  \item \textit{Nāṭyaśāstra}\kern2pt\hfill {221}, {237}, {249}--{251}
+  \item Neo–Orientalist\kern2pt\hfill {113}, {200}
+  \item Neo–orientalist\kern2pt\hfill {196}
+  \item Neo–Orientalists\kern2pt\hfill {167}, {178}, {179}, {193}, {271}--{273}, {281}, {284}
+  \item Neo–orientalists\kern2pt\hfill {167}
+  \item nescience\kern2pt\hfill {97}--{99}, {120}, {122}, {168}, {178}
+  \item Newton, Isaac\kern2pt\hfill {185}, {186}
+  \item Nietzsche, F.\kern2pt\hfill {111}, {146}, {149}, {153}, {168}
+  \item \textit{Nighaṇṭu}\kern2pt\hfill {78}
+  \item Nīlakaṇṭha\kern2pt\hfill {85}--{88}, {90}
+  \item \textit{Nirukta}\kern2pt\hfill {61}, {78}, {96}, {162}
+  \item \textit  {nirukta}\kern2pt\hfill {197}
+  \item \textit{nirvāṇa}\kern2pt\hfill {69}
+  \item \textit{niṣedha}\kern2pt\hfill {116}
+  \item Nyāya\kern2pt\hfill {80}, {109}, {162}, {180}, {190}
+
+  \indexspace
+
+  \lettergroup{O}
+  \item Organ, Troy Wilson\kern2pt\hfill {81}
+  \item Orientalism\kern2pt\hfill {148}, {151}, {233}, {244}, {284}
+  \item origins of science\kern2pt\hfill {178}
+  \item Orwell, George\kern2pt\hfill {65}, {95}
+
+  \indexspace
+
+  \lettergroup{P}
+  \item \textit{pada}\kern2pt\hfill {158}
+  \item \textit{padārthadharma}\kern2pt\hfill {44}
+  \item \textit{pada–vākya–pramāṇa–jñāna}\kern2pt\hfill {157}
+  \item \textit{Padavākyārtha}\kern2pt\hfill {158}
+  \item \textit{pakṣadharma}\kern2pt\hfill {44}
+  \item Panikkar, Raimundo\kern2pt\hfill {82}, {95}
+  \item Pāṇini\kern2pt\hfill {102}, {156}, {162}
+  \item \textit  {pāpa}\kern2pt\hfill {104}
+  \item \textit  {parā}\kern2pt\hfill {157}
+  \item \textit{pāramārthika sat}\kern2pt\hfill {152}, {218}, {220}, {223}, {231}, {234}, {235}, {265}, {273}
+  \item Pāriplava rite\kern2pt\hfill {76}
+  \item Parpola, Asko\kern2pt\hfill {98}
+  \item \textit  {paśyantī}\kern2pt\hfill {157}
+  \item Patañjali\kern2pt\hfill {102}, {119}
+  \item paths\kern2pt\hfill {197}
+  \item Patton, Laurie L.\kern2pt\hfill {78}, {86}
+  \item \textit{pauruṣeya}\kern2pt\hfill {44}, {75}, {76}, {90}
+  \item \textit{pavitratā }\kern2pt\hfill {271}, {272}, {280}
+  \item Perrett, Roy\kern2pt\hfill {67}, {80}
+  \item \textit  {phala}\kern2pt\hfill {104}
+  \item three–dimensional\kern2pt\hfill {108}, {145}--{154}, {158}, {160}, {163}, {164}, {166}--{169}, {236}, {252}, {271}, {281}
+    \subitem  Liberation\kern2pt\hfill {281}
+    \subitem  political\kern2pt\hfill {281}
+  \item philosophy of science\kern2pt\hfill {180}, {184}, {189}--{192}, {198}
+  \item Plato\kern2pt\hfill {182}, {183}
+  \item Pollock, Sheldon\kern2pt\hfill {42}, {43}, {45}, {50}, {59}, {66}--{70}, {76}, {78}--{82}, {84}, {86}--{89}, {95}, {97}--{99}, {102}--{110}, {112}, {115}, {120}, {122}, {145}, {146}, {150}--{154}, {164}, {166}--{168}, {177}--{180}, {185}, {193}, {201}, {207}--{210}, {212}--{214}, {216}--{225}, {228}, {229}, {231}, {233}, {235}--{244}, {246}--{249}, {251}--{255}, {257}, {259}--{264}, {266}, {267}, {271}, {273}, {274}, {281}
+  \item Pompa, L.\kern2pt\hfill {152}
+  \item Popper, K.\kern2pt\hfill {111}--{113}
+  \item Prabhākara\kern2pt\hfill {56}, {72}, {117}
+  \item \textit  {prakaraṇa}\kern2pt\hfill {73}, {86}, {163}
+  \item \textit{Prakṛti}\kern2pt\hfill {74}
+  \item \textit{Prakṛtipratyayārtha}\kern2pt\hfill {158}
+  \item \textit  {prakṛti–yajña}\kern2pt\hfill {116}
+  \item \textit{prakṛti}\kern2pt\hfill {158}
+  \item \textit{pramāṇa}\kern2pt\hfill {43}, {45}--{49}, {55}--{58}, {120}, {157}, {161}--{163}, {178}, {195}, {201}
+  \item \textit{prameya}\kern2pt\hfill {104}, {178}, {195}, {201}
+  \item \textit{praśasti}\kern2pt\hfill {236}, {247}, {252}--{254}, {262}, {266}
+  \item \textit{pratyakṣa}\kern2pt\hfill {43}, {55}, {162}
+  \item \textit{pratyakṣamūla}\kern2pt\hfill {43}
+  \item \textit{pratyaya}\kern2pt\hfill {158}
+  \item \textit{pravacana}\kern2pt\hfill {163}
+  \item \textit{praxis}\kern2pt\hfill {197}
+  \item \textit{prayojana}\kern2pt\hfill {104}, {158}, {178}, {194}, {195}, {201}
+  \item Preston, J.\kern2pt\hfill {191}, {192}
+  \item Price, D. H.\kern2pt\hfill {108}, {160}
+  \item primace\kern2pt\hfill {199}
+  \item primacy\kern2pt\hfill {196}
+  \item Probabilistic Context–free Grammar\kern2pt\hfill {159}
+  \item \textit  {punarjanma}\kern2pt\hfill {104}
+  \item \textit  {puṇya}\kern2pt\hfill {104}
+  \item Purāṇa\kern2pt\hfill {71}, {77}, {78}, {84}, {88}, {90}, {114}
+  \item \textit{puruṣārtha}\kern2pt\hfill {79}, {83}, {85}, {107}, {108}, {113}, {115}, {179}, {195}, {197}, {198}
+  \item Puruṣasūkta\kern2pt\hfill {42}
+  \item \textit{puruṣārtha}\kern2pt\hfill {84}
+  \item Pūrva Mīmāṁsā\kern2pt\hfill {41}, {66}, {67}, {69}, {71}, {79}, {80}, {97}, {98}, {104}, {109}, {118}
+  \item \textit{pūrvapakṣa}\kern2pt\hfill {66}, {109}, {177}, {183}, {237}, {241}, {242}
+  \item \textit{Pūrvottara–mīmāṁsā–vāda–nakṣatramālā}\kern2pt\hfill {106}
+
+  \indexspace
+
+  \lettergroup{Q}
+  \item Quantum Information theory\kern2pt\hfill {164}
+  \item Qubit\kern2pt\hfill {164}
+
+  \indexspace
+
+  \lettergroup{R}
+  \item Radhakrishnan, S.\kern2pt\hfill {208}
+  \item \textit{Raghuvaṁśa}\kern2pt\hfill {84}
+  \item \textit{rājadharma}\kern2pt\hfill {253}, {260}
+  \item Rājaśekhara\kern2pt\hfill {88}, {95}, {164}, {251}
+  \item \textit{Rājataraṅgiṇī}\kern2pt\hfill {252}
+  \item Raju, C. K.\kern2pt\hfill {110}, {183}--{190}, {193}, {282}
+  \item \textit{rājya}\kern2pt\hfill {231}, {253}
+  \item Rāma\kern2pt\hfill {214}, {215}, {219}--{221}, {225}, {228}, {229}
+  \item Ramanujan, P.\kern2pt\hfill {115}--{117}
+  \item \textit{Rāma–rājya}\kern2pt\hfill {216}
+  \item \textit{Rāmāyaṇa}\kern2pt\hfill {76}, {78}, {85}, {88}, {90}, {95}, {207}--{210}, {212}--{225}, {228}, {229}, {233}, {236}
+  \item Rām–līlā\kern2pt\hfill {207}, {209}, {213}--{216}, {219}--{221}, {225}
+  \item \textit{rasa}\kern2pt\hfill {240}
+  \item Rāvaṇa\kern2pt\hfill {211}--{214}, {219}, {221}, {222}, {224}, {229}
+  \item \textit{Ṛg Veda}\kern2pt\hfill {42}, {44}, {68}, {74}, {78}, {82}, {85}--{87}, {95}, {137}, {162}, {246}, {249}--{251}
+  \item Rhetoric\kern2pt\hfill {152}
+  \item rhetoric\kern2pt\hfill {148}
+  \item Ricoeur, P.\kern2pt\hfill {103}
+  \item \textit{rīti}\kern2pt\hfill {240}
+  \item ritual\kern2pt\hfill {248}, {277}, {283}, {286}
+  \item \textit{Ṛktantra}\kern2pt\hfill {156}
+  \item root model of order\kern2pt\hfill {277}, {282}, {284}, {285}
+  \item Rosenzweig, Franz\kern2pt\hfill {256}
+  \item Roy, Rammohun\kern2pt\hfill {184}
+  \item Rāma\kern2pt\hfill {224}
+  \item Rūpa Gosvāmin\kern2pt\hfill {237}
+  \item \textit{rūpaka}\kern2pt\hfill {243}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item \textit  {Śābara Bhāṣya}\kern2pt\hfill {68}, {72}, {73}, {80}, {95}
+  \item Śabarasvāmin\kern2pt\hfill {41}, {43}, {44}, {47}, {50}, {60}, {80}, {86}, {95}, {119}
+  \item \textit{śabda}\kern2pt\hfill {82}, {109}, {117}, {120}, {145}, {157}, {158}, {161}, {162}, {166}, {168}, {195}
+  \item \textit{śābdabodhamīmāṁsā}\kern2pt\hfill {163}
+  \item \textit{ṣaḍdarśana}\kern2pt\hfill {67}
+  \item \textit{Sāhityadarpaṇa}\kern2pt\hfill {242}
+  \item Sahlins, Marshall\kern2pt\hfill {279}, {285}
+  \item Said, Edward\kern2pt\hfill {149}, {151}, {208}
+  \item Śaka–s\kern2pt\hfill {247}, {248}, {255}
+  \item Salomon, Richard\kern2pt\hfill {244}, {245}
+  \item \textit{Sāma Veda}\kern2pt\hfill {250}, {251}
+  \item \textit{sambandha}\kern2pt\hfill {158}
+  \item \textit{sampradāya}\kern2pt\hfill {193}, {195}, {272}, {273}
+  \item \textit{samrāṭ}\kern2pt\hfill {232}
+  \item \textit{saṁskāra}\kern2pt\hfill {83}, {97}, {120}
+  \item \textit{saṁskṛti}\kern2pt\hfill {272}--{274}
+  \item \textit{sanātana–dharma}\kern2pt\hfill {180}, {195}, {197}, {251}, {271}, {272}
+  \item sane\kern2pt\hfill {146}, {199}
+  \item Śaṅkarācārya\kern2pt\hfill {56}, {75}, {76}
+  \item Sanskritization\kern2pt\hfill {258}, {259}
+  \item Śāntiparvan\kern2pt\hfill {156}
+  \item Sarasvati, Swami Chandrashekharendra\kern2pt\hfill {251}
+  \item Sarasvatī, Swami Chandrashekharendra\kern2pt\hfill {251}
+  \item Sarkar, Kishori Lal\kern2pt\hfill {73}
+  \item \textit  {śāstra}\kern2pt\hfill {177}--{181}, {193}--{201}, {210}, {217}, {222}, {235}, {240}, {247}, {260}, {271}, {274}, {280}
+  \item \textit{śāstra–paddhati}\kern2pt\hfill {163}, {168}
+  \item \textit{Śatapatha Brāhmaṇa}\kern2pt\hfill {42}, {76}, {77}, {83}
+  \item Sāyaṇācārya\kern2pt\hfill {95}
+  \item Schleicher, August\kern2pt\hfill {155}
+  \item Schubert, L.\kern2pt\hfill {159}
+  \item science, origins of\kern2pt\hfill {181}--{185}
+  \item secularization\kern2pt\hfill {107}
+  \item propositional\kern2pt\hfill {161}
+  \item semantics\kern2pt\hfill {159}, {161}, {166}
+  \item Shah, Prakash\kern2pt\hfill {276}
+  \item Shakespeare, William\kern2pt\hfill {258}
+  \item Shamasastry, R.\kern2pt\hfill {78}
+  \item Sheldrake, R.\kern2pt\hfill {190}
+  \item Shendge, Malati J.\kern2pt\hfill {83}
+  \item Shivaji\kern2pt\hfill {78}
+  \item \textit{siddhānta}\kern2pt\hfill {66}, {241}, {242}
+  \item \textit{śikṣā}\kern2pt\hfill {162}, {197}
+  \item Singhal, K. C.\kern2pt\hfill {83}, {95}
+  \item Skinner, Q.\kern2pt\hfill {100}, {101}
+  \item SKSEC Project\kern2pt\hfill {66}
+  \item \textit{Ślokavārttika}\kern2pt\hfill {73}
+  \item \textit{smṛti}\kern2pt\hfill {74}, {75}, {79}, {107}, {163}, {280}, {281}
+  \item Speaks, J.\kern2pt\hfill {161}, {162}
+  \item \textit{śraddhā}\kern2pt\hfill {207}, {217}, {219}, {222}, {223}
+  \item \textit{śravya}\kern2pt\hfill {241}, {242}
+  \item Sri Aurobindo\kern2pt\hfill {121}, {187}, {232}, {258}, {267}, {281}
+  \item Srila Prabhupada\kern2pt\hfill {121}
+  \item \textit{Śṛṅgāraprakāśa}\kern2pt\hfill {251}
+  \item \textit{śruti}\kern2pt\hfill {73}, {76}, {85}, {107}, {163}
+  \item \textit{sthalapurāṇa}\kern2pt\hfill {115}
+  \item \textit{stotra}\kern2pt\hfill {280}
+  \item supreme\kern2pt\hfill {197}
+  \item \textit{sūtra}\kern2pt\hfill {109}
+  \item \textit{svadharma}\kern2pt\hfill {232}
+  \item \textit{svarāṭ}\kern2pt\hfill {232}
+  \item Swadeshi Indology\kern2pt\hfill {177}, {179}, {191}, {200}, {201}
+  \item Swami, H H Devamrita\kern2pt\hfill {151}
+
+  \indexspace
+
+  \lettergroup{T}
+  \item \textit{Taittirīya Āraṇyaka}\kern2pt\hfill {42}, {132}
+  \item \textit{Taittirīya Prātiśākhya}\kern2pt\hfill {60}
+  \item \textit{Taittirīya Saṁhitā}\kern2pt\hfill {130}
+  \item \textit{Tantravārttika}\kern2pt\hfill {86}, {88}
+  \item Tatacharya, N. S. Ramanuja\kern2pt\hfill {163}
+  \item Thapar, Romila\kern2pt\hfill {67}, {71}, {80}, {84}, {89}
+  \item The Hermeneutic Circle\kern2pt\hfill {101}
+  \item Western\kern2pt\hfill {146}, {155}, {169}
+  \item Western\kern2pt\hfill {146}, {164}, {166}, {169}
+  \item Trautmann, Thomas\kern2pt\hfill {70}
+  \item Tretā\kern2pt\hfill {75}, {76}
+  \item Tripathi, Radhavallabh\kern2pt\hfill {251}
+  \item Tripathi, V.\kern2pt\hfill {194}
+  \item Turner, J.\kern2pt\hfill {147}--{149}, {155}
+
+  \indexspace
+
+  \lettergroup{U}
+  \item understantd\kern2pt\hfill {197}
+  \item Universal Grammar Theory\kern2pt\hfill {155}
+  \item \textit{upakarṣa}\kern2pt\hfill {73}
+  \item \textit{upāsanā}\kern2pt\hfill {280}
+  \item Upaveda\kern2pt\hfill {251}
+  \item Uśanas\kern2pt\hfill {249}
+  \item \textit{uttarapakṣa}\kern2pt\hfill {66}
+
+  \indexspace
+
+  \lettergroup{V}
+  \item \textit{vaidika}\kern2pt\hfill {161}
+  \item \textit  {vaikharī}\kern2pt\hfill {157}
+  \item \textit{vākya}\kern2pt\hfill {73}, {86}, {157}, {158}
+  \item \textit{Vākyapadīya}\kern2pt\hfill {157}, {158}
+  \item Vālmīki\kern2pt\hfill {76}, {86}, {90}, {102}, {219}, {220}, {230}
+  \item Varma, P.\kern2pt\hfill {223}
+  \item \textit{varṇa}\kern2pt\hfill {79}, {113}, {157}
+  \item \textit{Vāyupurāṇa}\kern2pt\hfill {77}
+  \item Vedānta\kern2pt\hfill {162}
+  \item \textit{Veda–s}\kern2pt\hfill {236}, {237}, {239}, {247}, {249}, {251}, {280}
+  \item vedicization\kern2pt\hfill {66}
+  \item Vedicization\kern2pt\hfill {67}--{69}, {95}
+  \item vedi–cosmologically\kern2pt\hfill {156}
+  \item vernacularisatio\kern2pt\hfill {233}
+  \item Vico, Giambattista\kern2pt\hfill {66}, {110}, {152}, {153}, {217}, {235}
+  \item videśī\kern2pt\hfill {145}
+  \item \textit{vidhi}\kern2pt\hfill {72}, {76}, {82}, {86}, {116}, {195}
+  \item \textit{vidyāsthāna}\kern2pt\hfill {194}
+  \item \textit{Vikṛti}\kern2pt\hfill {74}
+  \item \textit{vikṛti–yajña}\kern2pt\hfill {116}
+  \item Viśvanātha\kern2pt\hfill {242}
+  \item \textit{vivakṣā}\kern2pt\hfill {239}
+  \item Vivekananda, Swami\kern2pt\hfill {234}
+  \item Vyākaraṇa\kern2pt\hfill {109}, {156}--{158}, {166}
+  \item \textit{vyakti}\kern2pt\hfill {69}
+  \item Vyāsa\kern2pt\hfill {76}, {102}
+  \item \textit{vyāvahārika sat}\kern2pt\hfill {152}, {220}, {223}, {234}--{236}, {239}, {255}, {257}, {260}, {265}, {273}
+
+  \indexspace
+
+  \lettergroup{W}
+  \item Walters, O. W.\kern2pt\hfill {262}
+  \item Weber, Max\kern2pt\hfill {256}, {260}, {279}
+  \item without–centric\kern2pt\hfill {274}
+
+  \indexspace
+
+  \lettergroup{Y}
+  \item \textit{yajña}\kern2pt\hfill {42}, {44}, {52}, {53}, {71}, {74}, {76}, {79}, {81}, {82}, {108}, {116}, {117}, {120}, {138}, {140}
+  \item Yājñavalkya\kern2pt\hfill {194}
+  \item \textit{Yajur Veda}\kern2pt\hfill {250}
+  \item \textit{Yajurveda}\kern2pt\hfill {44}
+  \item Yāska\kern2pt\hfill {61}, {62}, {78}, {85}, {86}
+  \item \textit{Yogyatā}\kern2pt\hfill {158}
+  \item \textit{yuga}\kern2pt\hfill {69}, {74}--{76}, {82}, {90}, {95}
+
+  \indexspace
+
+  \lettergroup{Z}
+  \item Zimmer, H. R.\kern2pt\hfill {222}
+\label{bookend}\end{theindex}
