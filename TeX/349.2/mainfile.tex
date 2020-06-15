@@ -2,6 +2,14 @@
 
 \input macros
 
+
+%\usepackage{tocloft}
+
+%\renewcommand\cftchapafterpnum{\vskip-7pt}
+%\renewcommand\cftsecafterpnum{\vskip5pt}
+
+
+
 \begin{document}
 
 \fontsize{13pt}{14.75pt}\selectfont %%linespread 1.04 (516) - finalized for second print
@@ -35,9 +43,26 @@
 %\newpage
 
 
-\mainmatter
+%\mainmatter
 
 %\	rhead[]{{\fontsize{10}{12}\selectfont\leftmark\quad\arabictokannada{\thepage}}}
+\newpage
+
+~\thispagestyle{empty}
+
+\begin{center}
+\includegraphics[scale=0.85]{images/SV21.jpg}
+\end{center}
+
+\newpage 
+
+~\thispagestyle{empty}
+
+\begin{center}
+\includegraphics[scale=0.85]{images/SV22.jpg}
+\end{center}
+
+\mainmatter
 
 \input src/001-chapter001.tex
 \input src/002-chapter002.tex
