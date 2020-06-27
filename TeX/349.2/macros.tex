@@ -217,8 +217,8 @@ I need more words\fi}
 
 %%redefining macros
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
-%~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
-%~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictodevnag{\thepage}}}}
+ %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
+ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
 \makeatletter
 \renewcommand\partname{ಭಾಗ}
 \renewcommand\contentsname{ವಿಷಯಸೂಚಿಕೆ}
