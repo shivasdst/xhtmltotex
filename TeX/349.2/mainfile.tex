@@ -2,6 +2,14 @@
 
 \input macros
 
+
+%\usepackage{tocloft}
+
+%\renewcommand\cftchapafterpnum{\vskip-7pt}
+%\renewcommand\cftsecafterpnum{\vskip5pt}
+
+
+
 \begin{document}
 
 \fontsize{13pt}{14.75pt}\selectfont %%linespread 1.04 (516) - finalized for second print
@@ -13,6 +21,8 @@
 
 \input src/copyright
 \newpage
+
+\pagenumbering{\select@language{kannada}}
 
 \tableofcontents
 
@@ -35,13 +45,37 @@
 %\newpage
 
 
-\mainmatter
+%\mainmatter
 
 %\	rhead[]{{\fontsize{10}{12}\selectfont\leftmark\quad\arabictokannada{\thepage}}}
+\newpage
+
+~\thispagestyle{empty}
+
+\begin{center}
+\includegraphics[scale=0.89]{images/SV21.jpg}
+\end{center}
+
+\newpage 
+
+~\thispagestyle{empty}
+
+\begin{center}
+\includegraphics[scale=0.89]{images/SV22.jpg}
+\end{center}
+
+\mainmatter
 
 \input src/001-chapter001.tex
 \input src/002-chapter002.tex
 \input src/003-chapter003.tex
+\newpage
+
+\vfill
+\newpage
+~\thispagestyle{empty}
+\newpage
+
 
 \makeatletter
 
@@ -60,8 +94,8 @@
 \renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
 \makeatother
 
-\lhead[\small\thepage\quad ಪದ ಸೂಚಿ]{}
-\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\thepage}
+\lhead[\small\arabictokannada{\thepage}\quad ಪದ ಸೂಚಿ]{}
+\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\arabictokannada{\thepage}}
 \label{index}
 \printindex
 
