@@ -1,0 +1,12 @@
+{
+	"tagmapping": {
+		"u.b":"\\underline{",
+		"u.a":"}",
+		"span.b":"",
+		"span.a":""			
+	},
+	"attrmapping": {
+		"ref.b":"",
+		"ref.a":""		
+	}
+}
