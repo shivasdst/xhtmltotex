@@ -7,6 +7,12 @@
 \g@addto@macro\@floatboxreset{\centering}
 \makeatother
 
+\IfFileExists{\jobname.ent}{
+   \theendnotes
+}{
+   %no endnotes
+}
+
 \begin{document}
 
 \frontmatter
@@ -22,9 +28,9 @@
 \input src/copyright
 \newpage
 
-\lhead[]{}
-\input src/contents
-\newpage
+%\lhead[]{}
+%\input src/contents
+%\newpage
 
 \input src/trans_scheme
 \newpage
@@ -39,15 +45,7 @@
 
 \input src/000e-key-partners
 \input src/000f-acknowledgements
-\newpage
-
-\centerline{{\small\textsl{This page left blank intentionally}}}
-\thispagestyle{empty}
-
-\newpage
-\lhead[\small\thepage\quad Sharda Narayanan]{}
-\rhead[]{Introduction - Vedic Tradition has No Racism\quad\small\thepage}
-\input src/000g-introduction
+\input src/000g-volume-editorial
 \newpage
 
 
@@ -61,7 +59,7 @@
 
 \newpage
 \rhead[]{\thechapter. Comparative Study in Aṣṭādhyāyī and Tolkāppiyam\quad\small\thepage}
-\input src/01chapter01 %from .xhtml file
+\input src/001-chapter-01 %from .xhtml file
 %\input src/01-chapter1
 \clearpage
 
@@ -70,7 +68,7 @@
 
 \newpage
 \rhead[]{\thechapter. Mangala-sūtra and Wedding Attire in the Sangam Age\quad\small\thepage}
-\input src/02chapter02
+\input src/002-chapter-02
 %\input src/02-chapter2 %from .xhtml file
 \clearpage
 
@@ -79,7 +77,7 @@
 
 \setcounter{chapter}{2}
 \rhead[]{\thechapter. A Study of Vedic References in the Sixth \textit{Tirumuṟai}...\quad\small\thepage}
-\input src/03-chapter3
+\input src/003-chapter-03
 \clearpage
 
 %\centerline{{\small\textsl{This page left blank intentionally}}}
@@ -88,18 +86,18 @@
 %\newpage
 
 \rhead[]{\thechapter. Thirukkural and its Affiliation to Sanātana Dharma\quad\small\thepage}
-\input src/04-chapter4
+\input src/004-chapter-04
 \clearpage
 
 \centerline{{\small\textsl{This page left blank intentionally}}}
 \thispagestyle{empty}
 
 \rhead[]{\thechapter. Unique Aspects of Tamil Grammar in Comparison...\quad\small\thepage}
-\input src/05-chapter5
+\input src/005-chapter-05
 \clearpage
 
 \rhead[]{\thechapter. The Science and Nescience of Comparative Linguistics\quad\small\thepage}
-\input src/06-chapter6
+\input src/006-chapter-06
 \clearpage
 
 \centerline{{\small\textsl{This page left blank intentionally}}}
@@ -108,52 +106,18 @@
 \newpage
 
 \rhead[]{\thechapter. A Taste of Their Own Medicine: AIT and The Evidence\quad\small\thepage}
-\input src/07-chapter7
+\input src/007-chapter-07
 \clearpage
 
 \rhead[]{\thechapter. What falsifies Aryan Invasion Theory (AIT)?\quad\small\thepage}
-\input src/08-chapter8
+\input src/008-chapter-08
 \clearpage
-
-%\centerline{{\small\textsl{This page left blank intentionally}}}
-%\thispagestyle{empty}
- 
-%\newpage
-
-\rhead[]{\thechapter. Yogic Perceptions of Aryan-Dravidian Controversy\quad\small\thepage}
-\input src/09-chapter9
-\clearpage
-
-\rhead[]{\thechapter. \textit{Rāmāyaņa} and \textit{Mahābhārata}: Interaction with Tamil...\quad\small\thepage}
-\input src/10-chapter10
-\clearpage
-
-\rhead[]{\thechapter. The Bharatanāṭyaṃ \textit{Yajña}\quad\small\thepage}
-\input src/11-chapter11
-\clearpage
-
-%\makeatletter
-%\def\@makeschapterhead#1{%
-%  \vspace*{50\p@}%
-%  {\parindent \z@ \raggedleft
-%    \normalfont
-%    \interlinepenalty\@M
-%    \LARGE \bfseries Appendix\\[4pt] #1\par\nobreak
-    
-%    \vskip 20\p@
-%  }}
-%\makeatother
-
-\centerline{{\small\textsl{This page left blank intentionally}}}
-\thispagestyle{empty}
-
-\newpage
 
 \lhead[\small\thepage\quad Appendix - Our Contributors]{}
 \rhead[]{\small Appendix - Our Contributors\quad \thepage}
 \chead[]{}
 \cfoot[]{}
-\input src/12-our-contributors12
+\input src/009-our-contributors
 \newpage
 
 %\lhead[\small\thepage\quad Appendix - Table 3]{}
