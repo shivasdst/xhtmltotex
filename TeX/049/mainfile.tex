@@ -1,0 +1,162 @@
+\documentclass[10pt,twoside,openany]{book}
+
+\usepackage{rotating}
+\input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\lhead[\small\thepage]{}
+\rhead[]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+\input src/titlepage
+\newpage
+ 
+\input src/copyright
+\newpage
+
+\lhead[]{}
+\input src/contents
+\newpage
+
+\input src/trans_scheme
+\newpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+%\newpage
+
+\input src/000d-about
+\newpage
+
+\input src/000e-key-partners
+\input src/000f-acknowledgements
+\newpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\lhead[\small\thepage\quad ]{}
+\rhead[]{\small\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
+\rhead[]{\small Volume Editorial\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small H. R. Meera]{} 
+\input src/000g-volume-editorial
+\newpage
+
+\mainmatter
+
+
+\newpage
+\rhead[]{\small\thechapter. The Music of Muttusvāmi Dīkṣita – ...\quad\small\thepage}
+\input src/001-chapter-01 %from .xhtml file
+%\input src/01-chapter1
+\clearpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+%\newpage
+\rhead[]{\small\thechapter. The Non-translatables of (South) Indian Music\quad\small\thepage}
+\input src/002-chapter-02
+%\input src/02-chapter2 %from .xhtml file
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{chapter}{2}
+\rhead[]{\small\thechapter. Tyāgarāja’s Philosophy and Rebuttal of Allegations\quad\small\thepage}
+\input src/003-chapter-03
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+ 
+\newpage
+
+\rhead[]{\small\thechapter. Experimentation in Karnatic Music – How Far is Too Far?\quad\small\thepage}
+\input src/004-chapter-04
+\clearpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+\rhead[]{\small\thechapter. Christian Attempts to Appropriate Karnatic Music:...\quad\small\thepage}
+\input src/005-chapter-05
+\clearpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+ 
+\newpage
+
+\rhead[]{\small\thechapter. A Critique of ‘A Southern Music: The Karnatik story’\quad\small\thepage}
+\input src/006-chapter-06
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\rhead[]{\small\thechapter. Is Karnatic Music a Bastion of Brahminical Patriarchy?\quad\small\thepage}
+\input src/007-chapter-07
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\rhead[]{\small\thechapter. Role of Patronage in Karnatic Music – Past, Present and...\quad\small\thepage}
+\input src/008-chapter-08
+\clearpage
+
+\lhead[\small\thepage\quad Our Contributors]{}
+\rhead[]{\small Our Contributors\quad \thepage}
+\chead[]{}
+\cfoot[]{}
+\input src/009-our-contributors
+\newpage
+
+%\lhead[\small\thepage\quad Appendix - Table 3]{}
+%\rhead[]{\small Appendix - Table 3\quad \thepage}
+
+%\input src/Appendixtable3
+
+%~ \phantom{a}
+%~ \thispagestyle{empty}
+%\newpage
+\end{document}
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+
+\lhead[\small\thepage\quad Index]{}
+\rhead[]{Index\quad\small\thepage}
+\label{index}
+\printindex
+
