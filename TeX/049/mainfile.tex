@@ -31,17 +31,14 @@
 
 %\centerline{{\small\textsl{This page left blank intentionally}}}
 %\thispagestyle{empty}
-
 %\newpage
 
-\input src/000c-authors-words
+\input src/000d-about
+\input src/000e-key-partners
+\input src/000f-acknowledgements
 \newpage
-
-%\input src/000e-key-partners
-%\input src/000f-acknowledgements
-%\newpage
-%\centerline{{\small\textsl{This page left blank intentionally}}}
-%\thispagestyle{empty}
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
 
 \newpage
 \lhead[\small\thepage\quad ]{}
@@ -50,9 +47,9 @@
 \cfoot[]{}
 \rhead[]{\small Volume Editorial\quad\small\thepage}
 \lhead[{\small\thepage}\quad\small K. S. Kannan]{} 
-\input src/000d-volume-editorial
+\input src/000g-volume-editorial
 \newpage
-
+\input src/000h-authors-words
 \mainmatter
 
 
@@ -134,7 +131,25 @@
 \thispagestyle{empty}
 
 \newpage
-\rhead[]{\small\thechapter. Bibliography\quad\small\thepage}
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+%		\setcounter{endnote}{0}%
+%        \huge\bfseries Anubandha\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
+\rhead[]{\small Bibliography\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small Bibliography]{} 
 \input src/099c-bibliography
 \clearpage
 
