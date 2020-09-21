@@ -3,7 +3,13 @@
 		"u.b":"\\underline{",
 		"u.a":"}",
 		"span.b":"",
-		"span.a":""			
+		"span.a":"",			
+		"sup.b":"^",
+		"sup.a":"",
+		"sub.b":"ZZ95ZZ",
+		"sub.a":"",
+		"img.b":"",
+		"img.a":""
 	},
 	"attrmapping": {
 		"ref.b":"",
@@ -39,6 +45,10 @@
 		"enumalpha.b":"\n\\begin{enumerate}",
 		"enumalpha.a":"\n\\end{enumerate}\n",		
 		"enumromi.b":"\n\\begin{enumerate}",
-		"enumromi.a":"\n\\end{enumerate}\n"		
+		"enumromi.a":"\n\\end{enumerate}\n",
+		"eq-inline.b":"$",
+		"eq-inline.a":"$",
+		"eq-rm.b":"{\\rm ",
+		"eq-rm.a":"}"				
 	}
 }
