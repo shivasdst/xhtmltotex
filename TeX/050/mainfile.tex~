@@ -1,0 +1,193 @@
+\documentclass[10pt,twoside,openany]{book}
+
+\usepackage{rotating}
+\input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\lhead[\small\thepage]{}
+\rhead[]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+\input src/titlepage
+\newpage
+ 
+\input src/copyright
+\newpage
+
+\lhead[]{}
+\input src/contents
+\newpage
+
+\input src/trans_scheme
+\newpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+%\newpage
+
+%\input src/000d-about
+%\input src/000e-key-partners
+%\input src/000f-acknowledgements
+\newpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\lhead[\small\thepage\quad ]{}
+\rhead[]{\small\thechapter. \leftmark\quad\small\thepage}
+\chead[]{}
+\cfoot[]{}
+\rhead[]{\small Volume Editorial\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small K. S. Kannan]{} 
+\input src/000c-volume-editorial
+%\newpage
+%\input src/000h-authors-words
+\mainmatter
+
+
+\newpage
+\rhead[]{\small\thechapter. \textit{Pūrva-pakṣa} of Neo-Orientalist Chronology\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small Manogna Sastry and Megh Kalyanasundaram]{} 
+\input src/001-chapter-01 %from .xhtml file
+%\input src/01-chapter1
+%\clearpage
+
+\end{document}
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+%\newpage
+\rhead[]{\small\thechapter. \quad\small\thepage}
+\input src/002-chapter-02
+%\input src/02-chapter2 %from .xhtml file
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{chapter}{2}
+\rhead[]{\small\thechapter. {\em Lakṣaṇa} – An Enquiry into the {\em Pramāṇa}-s\quad\small\thepage}
+\input src/003-chapter-03
+\clearpage
+
+
+\rhead[]{\small\thechapter. A Pramāṇa-Parīkṣā of Three-Dimensional Philology\quad\small\thepage}
+\input src/004-chapter-04
+\clearpage
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+\rhead[]{\small\thechapter. Conclusion\quad\small\thepage}
+\setcounter{chapter}{04}
+\input src/005-chapter-05
+\clearpage
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+ 
+\newpage
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+%		\setcounter{endnote}{0}%
+        \huge\bfseries Anubandha\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
+\setcounter{chapter}{0}
+\rhead[]{\small Anubandha 1\quad\small\thepage}
+\input src/006-chapter-06
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\rhead[]{\small Anubandha 2\quad\small\thepage}
+\input src/007-chapter-07
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+%		\setcounter{endnote}{0}%
+%        \huge\bfseries Anubandha\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
+\rhead[]{\small Bibliography\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small Bibliography]{} 
+\input src/099c-bibliography
+\clearpage
+
+%\lhead[\small\thepage\quad Our Contributors]{}
+%\rhead[]{\small Our Contributors\quad \thepage}
+%\chead[]{}
+%\cfoot[]{}
+%\input src/009-our-contributors
+%\newpage
+
+%\lhead[\small\thepage\quad Appendix - Table 3]{}
+%\rhead[]{\small Appendix - Table 3\quad \thepage}
+
+%\input src/Appendixtable3
+
+%~ \phantom{a}
+%~ \thispagestyle{empty}
+%\newpage
+\end{document}
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+
+\lhead[\small\thepage\quad Index]{}
+\rhead[]{Index\quad\small\thepage}
+\label{index}
+\printindex
+
