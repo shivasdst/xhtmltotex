@@ -1,0 +1,222 @@
+\documentclass[10pt,twoside,openany]{book}
+
+\usepackage{rotating}
+\input macros
+
+\makeatletter
+\g@addto@macro\@floatboxreset{\centering}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\lhead[\small\thepage]{}
+\rhead[]{\small\thepage}
+\chead[]{}
+\cfoot[]{}
+
+%\input src/titlepage
+%\newpage
+ 
+%\input src/copyright
+%\newpage
+
+%\lhead[]{}
+%\input src/contents
+%\newpage
+
+%\input src/trans_scheme
+%\newpage
+
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+%\newpage
+
+%\input src/000d-about
+%\input src/000e-key-partners
+%\input src/000f-acknowledgements
+%\newpage
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+%\newpage
+%\lhead[\small\thepage\quad ]{}
+%\rhead[]{\small\thechapter. \leftmark\quad\small\thepage}
+%\chead[]{}
+%\cfoot[]{}
+%\rhead[]{\small Volume Editorial\quad\small\thepage}
+%\lhead[{\small\thepage}\quad\small K. S. Kannan]{} 
+%\input src/000c-volume-editorial
+%\newpage
+%\input src/000h-authors-words
+\mainmatter
+
+
+\newpage
+\rhead[]{\small\thechapter. Introduction\quad\small\thepage}
+%\lhead[{\small\thepage}\quad\small Manogna Sastry and Megh Kalyanasundaram]{} 
+\input src/001-chapter01
+\newpage
+
+\rhead[]{\small\thechapter. Iron in Bronze Age Cultures of Old World\quad\small\thepage}
+\input src/002-chapter02
+%\input src/02-chapter2 %from .xhtml file
+
+\end{document}
+
+\newpage
+\setcounter{chapter}{2}
+\rhead[]{\small\thechapter. Hindu-Buddhist Framework : Detonator of Western Indology\quad\small\thepage}
+\input src/003-chapter-03
+\clearpage
+
+\rhead[]{\small\thechapter. The Upaniṣad-s: The Source of the Buddha’s Teachings\quad\small\thepage}
+\input src/004-chapter-04
+\clearpage
+%\centerline{{\small\textsl{This page left blank intentionally}}}
+%\thispagestyle{empty}
+
+\rhead[]{\small\thechapter. Vedic Roots of Buddhism\quad\small\thepage}
+\setcounter{chapter}{04}
+\input src/005-chapter-05
+\clearpage
+
+\rhead[]{\small\thechapter. Brāhmanism, Buddhism and Mīmāṁsā\quad\small\thepage}
+\input src/006-chapter-06
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+\clearpage
+
+\rhead[]{\small\thechapter. Chronology Beyond ‘Sanskrit Cosmopolis’\quad\small\thepage}
+\input src/007-chapter-07
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+\clearpage
+
+\rhead[]{\small\thechapter. “Hinduism : a Precursor to Nazism?”\quad\small\thepage}
+\input src/008-chapter-08
+\clearpage
+
+\rhead[]{\small\thechapter. A Rejoinder to \textit{A Rasa Reader}: An Insider View\quad\small\thepage}
+\input src/009-chapter-09
+\clearpage
+
+\rhead[]{\small\thechapter. Othering and Indian Population Genetics\quad\small\thepage}
+\input src/010-chapter-10
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+\clearpage
+
+\rhead[]{\small\thechapter. Our Contributors\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small Our Contributors]{} 
+\input src/011-our-contributors
+
+\end{document}
+
+ 
+\newpage
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+%		\setcounter{endnote}{0}%
+        \huge\bfseries Anubandha\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
+\setcounter{chapter}{0}
+\rhead[]{\small Anubandha 1\quad\small\thepage}
+\input src/006-chapter-06
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\rhead[]{\small Anubandha 2\quad\small\thepage}
+\input src/007-chapter-07
+
+
+\clearpage
+
+\centerline{{\small\textsl{This page left blank intentionally}}}
+\thispagestyle{empty}
+
+\newpage
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+%		\setcounter{endnote}{0}%
+%        \huge\bfseries Anubandha\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \iflanguage{sanskrit}{\devanagarifont\LARGE\bfseries #1}{\englishfont\LARGE\bfseries #1}\par\nobreak
+    \vskip 20\p@
+  }}
+\makeatother
+\rhead[]{\small Bibliography\quad\small\thepage}
+\lhead[{\small\thepage}\quad\small Bibliography]{} 
+\input src/099c-bibliography
+\clearpage
+
+%\lhead[\small\thepage\quad Our Contributors]{}
+%\rhead[]{\small Our Contributors\quad \thepage}
+%\chead[]{}
+%\cfoot[]{}
+%\input src/009-our-contributors
+%\newpage
+
+%\lhead[\small\thepage\quad Appendix - Table 3]{}
+%\rhead[]{\small Appendix - Table 3\quad \thepage}
+
+%\input src/Appendixtable3
+
+%~ \phantom{a}
+%~ \thispagestyle{empty}
+%\newpage
+\end{document}
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \interlinepenalty\@M
+    \LARGE \bfseries #1\par\nobreak
+    
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+
+\lhead[\small\thepage\quad Index]{}
+\rhead[]{Index\quad\small\thepage}
+\label{index}
+\printindex
+
