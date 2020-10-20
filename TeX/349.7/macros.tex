@@ -14,6 +14,9 @@
 \usepackage{longfbox}
 \usepackage{ifthen}
 \usepackage{pifont}
+\usepackage{verbatim}
+\usepackage{imakeidx}
+\usepackage{wrapfig}
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
@@ -379,5 +382,8 @@ I need more words\fi}
     \hyphenation{#3}\end{otherlanguage}}}
 
 \input dictionary
+\setcounter{tocdepth}{0}
+\frenchspacing
+\makeindex[title=Index,program=xindy,options=-I omega -M mystyle.xdy -L english,columnseprule=true,columns=2]
 
 \frenchspacing

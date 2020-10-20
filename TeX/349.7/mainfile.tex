@@ -152,6 +152,37 @@
 \input src/107-chapter107.tex
 \input src/108-chapter108.tex
 \input src/109-chapter109.tex
+\newpage
+
+\vfill
+\newpage
+~\thispagestyle{empty}
+\newpage
+
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{-60\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \centering \Huge \bfseries ಶಬ್ದಸೂಚಿ\par\nobreak
+    
+    \vskip 2\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+\lhead[\small\arabictokannada{\thepage}\quad ಪದ ಸೂಚಿ]{}
+\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\arabictokannada{\thepage}}
+\label{index}
+\printindex
+
+
 \end{document}
 
 
