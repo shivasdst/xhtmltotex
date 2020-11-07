@@ -17,10 +17,13 @@
 \usepackage{verbatim}
 \usepackage{imakeidx}
 \usepackage{wrapfig}
-
 \usepackage{footnote}
 \usepackage{footmisc}
 \usepackage{chngcntr}
+
+\usepackage{perpage}
+\MakePerPage{footnote}
+
 
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
@@ -193,7 +196,59 @@ I need more words\fi}
 \StrSubstitute{\num}{54}{೫೪}[\num]%
 \StrSubstitute{\num}{55}{೫೫}[\num]%
 \StrSubstitute{\num}{56}{೫೬}[\num]%
-\StrSubstitute{\num}{57}{೫೭}%
+\StrSubstitute{\num}{57}{೫೭}[\num]%
+\StrSubstitute{\num}{58}{೫೮}[\num]%
+\StrSubstitute{\num}{59}{೫೯}[\num]%
+\StrSubstitute{\num}{60}{೬೦}[\num]%
+\StrSubstitute{\num}{61}{೬೧}[\num]%
+\StrSubstitute{\num}{62}{೬೨}[\num]%
+\StrSubstitute{\num}{63}{೬೩}[\num]%
+\StrSubstitute{\num}{64}{೬೪}[\num]%
+\StrSubstitute{\num}{65}{೬೫}[\num]%
+\StrSubstitute{\num}{66}{೬೬}[\num]%
+\StrSubstitute{\num}{67}{೬೭}[\num]%
+\StrSubstitute{\num}{68}{೬೮}[\num]%
+\StrSubstitute{\num}{69}{೬೯}[\num]%
+\StrSubstitute{\num}{70}{೭೦}[\num]%
+\StrSubstitute{\num}{71}{೭೧}[\num]%
+\StrSubstitute{\num}{72}{೭೨}[\num]%
+\StrSubstitute{\num}{73}{೭೩}[\num]%
+\StrSubstitute{\num}{74}{೭೪}[\num]%
+\StrSubstitute{\num}{75}{೭೫}[\num]%
+\StrSubstitute{\num}{76}{೭೬}[\num]%
+\StrSubstitute{\num}{77}{೭೭}[\num]%
+\StrSubstitute{\num}{78}{೭೮}[\num]%
+\StrSubstitute{\num}{79}{೭೯}[\num]%
+\StrSubstitute{\num}{80}{೮೦}[\num]%
+\StrSubstitute{\num}{81}{೮೧}[\num]%
+\StrSubstitute{\num}{82}{೮೨}[\num]%
+\StrSubstitute{\num}{83}{೮೩}[\num]%
+\StrSubstitute{\num}{84}{೮೪}[\num]%
+\StrSubstitute{\num}{85}{೮೫}[\num]%
+\StrSubstitute{\num}{86}{೮೬}[\num]%
+\StrSubstitute{\num}{87}{೮೭}[\num]%
+\StrSubstitute{\num}{88}{೮೮}[\num]%
+\StrSubstitute{\num}{89}{೮೯}[\num]%
+\StrSubstitute{\num}{90}{೯೦}[\num]%
+\StrSubstitute{\num}{91}{೯೧}[\num]%
+\StrSubstitute{\num}{92}{೯೨}[\num]%
+\StrSubstitute{\num}{93}{೯೩}[\num]%
+\StrSubstitute{\num}{94}{೯೪}[\num]%
+\StrSubstitute{\num}{95}{೯೫}[\num]%
+\StrSubstitute{\num}{96}{೯೬}[\num]%
+\StrSubstitute{\num}{97}{೯೭}[\num]%
+\StrSubstitute{\num}{98}{೯೮}[\num]%
+\StrSubstitute{\num}{99}{೯೯}[\num]%
+\StrSubstitute{\num}{100}{೧೦೦}[\num]%
+\StrSubstitute{\num}{101}{೧೦೧}[\num]%
+\StrSubstitute{\num}{102}{೧೦೨}[\num]%
+\StrSubstitute{\num}{103}{೧೦೩}[\num]%
+\StrSubstitute{\num}{104}{೧೦೪}[\num]%
+\StrSubstitute{\num}{105}{೧೦೫}[\num]%
+\StrSubstitute{\num}{106}{೧೦೬}[\num]%
+\StrSubstitute{\num}{107}{೧೦೭}[\num]%
+\StrSubstitute{\num}{108}{೧೦೮}[\num]%
+\StrSubstitute{\num}{109}{೧೦೯}%
 }
 
 %%fancy header settings
@@ -217,8 +272,8 @@ I need more words\fi}
 
 %%redefining macros
 \renewcommand\chaptermark[1]{\markboth{#1}{}}
-%~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
-%~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictodevnag{\thepage}}}}
+ %~ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
+ \def\addcontentsline#1#2#3{\addtocontents{#1}{\protect\contentsline{#2}{#3}{\protect\arabictokannada{\thepage}}}}
 \makeatletter
 \renewcommand\partname{ಭಾಗ}
 \renewcommand\contentsname{ವಿಷಯಸೂಚಿಕೆ}
