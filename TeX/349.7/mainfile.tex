@@ -14,14 +14,37 @@
 \input src/copyright
 \newpage
 
+%\pagenumbering{\select@language{kannada}}
+
 \tableofcontents
+
+\newpage
+~
+\thispagestyle{empty}
+
+\newpage
+~
+\thispagestyle{empty}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.95]{images/SV1.eps}
+\end{figure}
 
 \newpage
 
 ~
 \thispagestyle{empty}
 
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.95]{images/SV2.eps}
+\end{figure}
+
 \mainmatter
+
+
+\counterwithout*{footnote}{chapter}
 
 \input src/001-chapter001.tex
 \def\spacebeforechapterheading{\vskip 0pt}
@@ -152,6 +175,7 @@
 \input src/107-chapter107.tex
 \input src/108-chapter108.tex
 \input src/109-chapter109.tex
+
 \newpage
 
 \vfill
