@@ -3,6 +3,9 @@
 \usepackage{rotating}
 \input macros
 
+\usepackage[perpage]{footmisc}
+%\MakePerPage{footnote}
+
 \makeatletter
 \g@addto@macro\@floatboxreset{\centering}
 \makeatother
@@ -135,10 +138,8 @@
 %~ \phantom{a}
 %~ \thispagestyle{empty}
 %\newpage
-\end{document}
 
 \makeatletter
-
 \def\@makeschapterhead#1{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedleft
@@ -154,9 +155,10 @@
 \renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
 \makeatother
 
-
 \lhead[\small\thepage\quad Index]{}
 \rhead[]{Index\quad\small\thepage}
 \label{index}
 \printindex
+\end{document}
+
 
