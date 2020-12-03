@@ -39,6 +39,10 @@
 		"enumalpha.b":"\n\\begin{enumerate}",
 		"enumalpha.a":"\n\\end{enumerate}\n",		
 		"enumromi.b":"\n\\begin{enumerate}",
-		"enumromi.a":"\n\\end{enumerate}\n"		
+		"enumromi.a":"\n\\end{enumerate}\n",
+		"centerquote.b":"\n\\begin{centerquote}\n",
+		"centerquote.a":"\n\\end{centerquote}\n",
+		"longquote.b":"\n\\begin{longquote}\n",
+		"longquote.a":"\n\\end{longquote}\n"
 	}
 }
