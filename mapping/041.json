@@ -29,6 +29,6 @@
 		"enumalpha.b":"\n\\begin{enumerate}",
 		"enumalpha.a":"\n\\end{enumerate}\n",		
 		"enumromi.b":"\n\\begin{enumerate}",
-		"enumromi.a":"\n\\end{enumerate}\n"		
+		"enumromi.a":"\n\\end{enumerate}\n"
 	}
 }
