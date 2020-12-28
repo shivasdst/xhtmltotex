@@ -5,10 +5,6 @@
 		"letterfrom.b":"\n{\\flushright\n",
 		"letterfrom.a":"\\par}\n",
 		"letterto.b":"\n{\\centering\n",
-		"letterto.a":"\\par}\n",
-		"letterdp.b":"\n{\\flushright\\letterdp\n",
-		"letterdp.a":"\\par}\n",
-		"pranam.b":"\n\\pranam{",
-		"pranam.a":"}"
-	}
+		"letterto.a":"\\par}\n"
+		}
 }
