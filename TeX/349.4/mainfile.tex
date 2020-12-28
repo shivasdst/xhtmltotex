@@ -4,7 +4,9 @@
 
 \begin{document}
 
-\fontsize{13pt}{14.75pt}\selectfont
+\fontsize{13pt}{14.75pt}\selectfont 
+
+\frontmatter
 
 \mainmatter
 
@@ -15,5 +17,35 @@
 
 
 \input src/001-chapter001
+
+\end{document}
+
+\vfill
+\newpage
+~\thispagestyle{empty}
+\newpage
+
+\makeatletter
+
+\def\@makeschapterhead#1{%
+  \vspace*{-60\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \centering \Huge \bfseries ಶಬ್ದಸೂಚಿ\par\nobreak
+    
+    \vskip 2\p@
+  }}
+
+\renewcommand{\@idxitem}{\par\hangindent 20\p@}
+\renewcommand*\subitem{\@idxitem \hspace*{10\p@}}
+\renewcommand*\subsubitem{\@idxitem \hspace*{15\p@}}
+\makeatother
+
+\lhead[\small\thepage\quad ಪದ ಸೂಚಿ]{}
+\rhead[]{\small ಶಬ್ದಸೂಚಿ\quad\thepage}
+\label{index}
+\printindex
+
 \end{document}
 
