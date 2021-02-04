@@ -377,13 +377,11 @@ class Xhtmltotex{
 						$line .= "\n\n" . str_replace('&', 'ZZ38ZZ', $tmpline);
 
 					}
-					elseif($node->nodeName == 'figure')
-						$line = $line . "\n\n" . $this->parseFigureElement($node);
 					elseif($node->nodeName == 'img')
 						$line .= $this->parseImgElement($node);
 					else{
 						
-						//~ echo "\n" . $node->nodeName . ' -> ' . $node->nodeValue . "\n";
+						// echo "\n" . $node->nodeName . "\n";
 						$line .= $this->mapping[$node->nodeName . ".b"] . $this->parseInlineElement($node) . $this->mapping[$node->nodeName . ".a"];
 						// echo "\t --> " . $line . "\n";
 					}
@@ -601,10 +599,8 @@ class Xhtmltotex{
 					// echo "\t --> " . $key . ' -> ' . $value . "\n";
 					if($key == 'href'){
 
-						if($endnotemark != ''){
+						if($endnotemark != '')
 							$tmpString = $endnotemark;
-							//echo $tmpString; 
-						}
 						elseif(preg_match('/^999\-aside/', $attributes['href'][0]) && $endnotemark == '' ){
 							$tmpString = $footcmd. '{' . $footNoteText . '}';
 							//~ echo "\n.." . $tmpString . "..\n";
@@ -695,7 +691,7 @@ class Xhtmltotex{
 		$floatEnv = '';
 		$imgLine = '';
 		$floatCenter = '';
-		//var_dump($attributes);
+		// var_dump($attributes);
 
 		foreach ($attributes as $key => $value) {
 			
@@ -934,7 +930,7 @@ class Xhtmltotex{
 		// echo $imgNode->nodeName . "\n";	
 
 		$attributes = $this->getAttributesForElement($imgNode);
-		//var_dump($attributes);
+		// var_dump($attributes);
 
 		if(isset($attributes['data-scale']))
 			$line = "\\includegraphics[scale=". $attributes['data-scale'][0] ."]{" . $attributes['src'][0] . "}"; 
@@ -945,9 +941,8 @@ class Xhtmltotex{
 		$line = $this->generalReplacements($line);
 		// $line .= "\n\n";
 
-		//echo "\t --> " . $line . "\n";
 		return $line;
-
+		// echo "\t --> " . $line . "\n";
 	} 
 
 
@@ -1039,8 +1034,8 @@ class Xhtmltotex{
 		$data = str_replace(" ॥", "~॥", $data);
 
 		//below line is for rkmath mysore books
-//		$data = str_replace("-", "–", $data);
-//		$data = str_replace('\–', '\-', $data);
+		$data = str_replace("-", "–", $data);
+		$data = str_replace('\–', '\-', $data);
 		 
 		 //replace degree symbol(°) with \circ
 		 $data = str_replace('°', '\circ', $data);
