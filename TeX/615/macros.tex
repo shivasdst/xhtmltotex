@@ -1,0 +1,122 @@
+%importing packages
+\usepackage[utf8]{inputenc}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{rotating}
+
+%%page settings for the book
+\usepackage[papersize={140mm,215mm},textwidth=100mm,
+textheight=170mm,headheight=6mm,headsep=4mm,topmargin=17.5mm,botmargin=1.15cm,
+leftmargin=20mm,rightmargin=20mm,footskip=0.6cm]{zwpagelayout}
+\usepackage[justification=centering]{caption}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\setdefaultlanguage{kannada} % (english)
+\setotherlanguages{english}
+
+\setmainfont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+
+\newfontfamily\englishfont[
+	Script=Latin,
+	BoldFont=GentiumBasic-Bold,
+	ItalicFont=GentiumBasic-Italic,
+	BoldItalicFont=GentiumBasic-BoldItalic
+]{GentiumBasic}
+
+\newfontfamily\kannadafont[
+	Script=Kannada,
+	BoldFont=SHREE-KAN-OTF-0850-Bold,
+	ItalicFont=SHREE-KAN-OTF-0850-Italic,
+	BoldItalicFont=SHREE-KAN-OTF-0850-Bold-Italic,
+	HyphenChar="200C
+]{SHREE-KAN-OTF-0850}
+
+\newfontfamily\gentiumplus[
+	Script=Latin
+]{GentiumPlus}
+
+\def\eng#1{{\englishfont\textenglish{#1}}}
+\def\gplus#1{{\gentiumplus #1}}
+\def\kan#1{{\kannadafont\textkannada{#1}}}
+
+
+\def\enginline#1{{\fontsize{10}{12}\selectfont\eng{#1}}}
+
+\long\def\bookTitle#1{\vfill\centerline{{\fontsize{30}{32}\selectfont\textbf{#1}}}\vfill}
+\def\titleauthor#1{\centerline{{\LARGE\textbf{#1}}}\vfill}
+\def\delimiter{\bigskip\centerline{*\quad*\quad*}\bigskip}
+\def\general#1{#1}
+\long\def\supskpt#1{$^{#1}$}
+\def\namesinorder#1{\\ {\rm\sl\small #1}}
+
+%%fancy header settings
+\fancypagestyle{plain}{%
+\chead[]{}
+\lhead[]{}
+\rhead[]{}
+\cfoot[{\thepage}]{{\thepage}}
+}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+%%user defined commands
+
+\def\sizenine{\fontsize{9}{11}\selectfont}
+
+%%general settings
+\pretolerance=9000
+\parindent=0pt
+\setlength{\parskip}{5pt}
+
+
+%%redefining macros
+\makeatletter
+
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-2.2ex \@plus -1.3ex \@minus -.3ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\iflanguage{sanskrit}{\devanagarifont\Large\bfseries}{\englishfont\Large\bfseries}}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\iflanguage{sanskrit}{\devanagarifont\large\bfseries}{\englishfont\large\bfseries}}}
+
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-2.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
+
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {-3.25ex \@plus -1ex \@minus -.2ex}%
+                                    {1em}%
+                                    {\iflanguage{sanskrit}{\devanagarifont\bfseries}{\englishfont\bfseries}}}
+                                     
+
+\renewcommand\thesection{\@arabic\c@section}
+\renewcommand\thesubsubsection{\@arabic\c@subsubsection}
+\renewcommand\theparagraph{\thesubsubsection.\@alph\c@paragraph}
+
+\makeatother
+
+
+\def\fsize#1#2{\fontsize{#1}{#2}\selectfont }
+
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+    
+\input dictionary    
