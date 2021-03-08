@@ -1,0 +1,12 @@
+{
+	"tagmapping": {
+		"sup.b":"",
+		"sup.a":"",
+		"sub.b":"\\subs{",
+		"sub.a":"}"	
+	},	
+	"attrmapping": {
+		"bigletter.b":"",
+		"bigletter.a":""	
+	}
+}
